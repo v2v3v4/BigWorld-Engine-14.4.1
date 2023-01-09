@@ -1,2 +1,2 @@
-# bigworld-code-r10-trunk
+BigWorld Engine Open Source Edition 2014
  
