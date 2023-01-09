@@ -1,0 +1,78 @@
+
+/** Inventory page styles **/
+
+.character
+{
+	border:				1px solid #64D3D5;
+	background-color:	#095288;
+	margin:				16px 16px 16px 16px;
+	padding:			0.5em;
+}
+
+.character-portrait
+{
+	border:				1px solid #00CCCC;
+	padding:			0.5em;
+	margin-bottom:		7px;
+	text-align:			center;
+	background-color:	#0F2443;
+	width:				150px;
+	float:				left;
+}
+
+
+.character-info
+{
+	width:				30em;
+	margin-left:		auto;
+	margin-right:		auto;
+}
+
+table.character-info tr td
+{
+	text-align:			center;
+}
+
+.character-description
+{
+	padding:			.25em;
+	color:				#FFFFFF;
+	clear:				both;
+}
+
+.character-title
+{
+	font-weight:		bold;
+	color:				#00CCCC;
+}
+
+table.character-statistics
+{
+	width:				250px;
+	border:				1px solid #64D3D5;
+	font-weight:		bold;
+	font-size:			11px;
+	color:				#FF6600;
+	margin:				0 7px 7px 174px;
+	background-color:	#FFFFFF;
+}
+
+table.character-statistics tr th
+{
+	text-align: 		right;
+	padding:			0.15em 0.15em 0.15em 0;
+	border-top:			1px dashed #64D3D5;
+}
+
+table.character-statistics tr td
+{
+	text-align:			left;
+	padding:			0.15em 1em 0.15em 1em;
+	border-top:			1px dashed #64D3D5;
+}
+
+table.character-statistics tr.alt1-first th, table.character-statistics tr.alt1-first td
+{
+	border-top-style:	none;
+}
+

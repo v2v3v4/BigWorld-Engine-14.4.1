@@ -1,0 +1,488 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug_noCuda|Win32">
+      <Configuration>Debug_noCuda</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_noCuda|x64">
+      <Configuration>Debug_noCuda</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_noCuda|Win32">
+      <Configuration>Release_noCuda</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_noCuda|x64">
+      <Configuration>Release_noCuda</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1AEB7681-57D8-48EE-813D-5C41CC38B647}</ProjectGuid>
+    <RootNamespace>nvtt</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_noCuda|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_noCuda|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_noCuda|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_noCuda|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_noCuda|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_noCuda|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_noCuda|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_noCuda|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\build\vc10\$(Configuration).$(Platform)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\obj\vc10\$(Configuration).$(Platform)\$(ProjectName)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\build\vc9\$(Configuration).$(Platform)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\..\obj\vc9\$(Configuration).$(Platform)\$(ProjectName)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\build\vc10\$(Configuration).$(Platform)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\obj\vc10\$(Configuration).$(Platform)\$(ProjectName)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\build\vc9\$(Configuration).$(Platform)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\..\obj\vc9\$(Configuration).$(Platform)\$(ProjectName)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug_noCuda|Win32'">..\..\..\lib\vc10\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_noCuda|Win32'">..\..\..\obj\vc10\$(Configuration).$(Platform)\$(ProjectName)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug_noCuda|x64'">..\..\..\lib\vc10\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_noCuda|x64'">..\..\..\obj\vc10\$(Configuration).$(Platform)\$(ProjectName)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_noCuda|Win32'">..\..\..\lib\vc10\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_noCuda|Win32'">..\..\..\obj\vc10\$(Configuration).$(Platform)\$(ProjectName)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_noCuda|x64'">..\..\..\lib\vc10\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_noCuda|x64'">..\..\..\obj\vc10\$(Configuration).$(Platform)\$(ProjectName)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release_noCuda|Win32'">$(ProjectName)_$(Configuration)_$(Platform)</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug_noCuda|Win32'">$(ProjectName)_$(Configuration)_$(Platform)</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug_noCuda|x64'">$(ProjectName)_$(Configuration)_$(Platform)</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release_noCuda|x64'">$(ProjectName)_$(Configuration)_$(Platform)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..;..\..\..\src;..\..\..\gnuwin32\include;$(CUDA_INC_PATH);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;NVTT_EXPORTS;NVTT_SHARED;NVCORE_EXPORTS;NVCORE_SHARED;NVIMAGE_EXPORTS;NVIMAGE_SHARED;NVMATH_EXPORTS;NVMATH_SHARED;HAVE_CUDA;__SSE2__;__SSE__;__MMX__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libpng.lib;jpeg.lib;tiff.lib;cudart.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\gnuwin32\lib;$(CUDA_LIB_PATH);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>..\..\..\lib\vc9\$(ProjectName)_$(Configuration)_$(Platform).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..;..\..\..\src;..\..\..\gnuwin32\include;$(CUDA_INC_PATH);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;NVTT_EXPORTS;NVTT_SHARED;NVCORE_EXPORTS;NVCORE_SHARED;NVIMAGE_EXPORTS;NVIMAGE_SHARED;NVMATH_EXPORTS;NVMATH_SHARED;HAVE_CUDA;__SSE2__;__SSE__;__MMX__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>cudart.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\gnuwin32\lib;$(CUDA_LIB_PATH);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>..\..\..\lib\vc9\$(ProjectName)_$(Configuration)_$(Platform).lib</ImportLibrary>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <OmitFramePointers>false</OmitFramePointers>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>..;..\..\..\src;..\..\..\gnuwin32\include;$(CUDA_INC_PATH);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;NVTT_EXPORTS;NVTT_SHARED;NVCORE_EXPORTS;NVCORE_SHARED;NVIMAGE_EXPORTS;NVIMAGE_SHARED;NVMATH_EXPORTS;NVMATH_SHARED;HAVE_CUDA;__SSE2__;__SSE__;__MMX__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>libpng.lib;jpeg.lib;tiff.lib;cudart.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\gnuwin32\lib;$(CUDA_PATH)\lib\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>..\..\..\lib\vc9\$(ProjectName)_$(Configuration)_$(Platform).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>..;..\..\..\src;..\..\..\gnuwin32\include;$(CUDA_INC_PATH);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;NVTT_EXPORTS;NVTT_SHARED;NVCORE_EXPORTS;NVCORE_SHARED;NVIMAGE_EXPORTS;NVIMAGE_SHARED;NVMATH_EXPORTS;NVMATH_SHARED;HAVE_CUDA;__SSE2__;__SSE__;__MMX__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>cudart.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\gnuwin32\lib;$(CUDA_PATH)\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>..\..\..\lib\vc9\$(ProjectName)_$(Configuration)_$(Platform).lib</ImportLibrary>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_noCuda|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..;..\..\..\src;..\..\..\gnuwin32\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;__SSE2__;__SSE__;__MMX__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <ProgramDataBaseFileName>$(OutDir)$(ProjectName)_$(Configuration)_$(Platform).pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+    </ClCompile>
+    <Lib>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+    </Lib>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_noCuda|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..;..\..\..\src;..\..\..\gnuwin32\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;__SSE2__;__SSE__;__MMX__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <ProgramDataBaseFileName>$(OutDir)$(ProjectName)_$(Configuration)_$(Platform).pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+    </ClCompile>
+    <Lib>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Lib>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_noCuda|Win32'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>false</OmitFramePointers>
+      <AdditionalIncludeDirectories>..;..\..\..\src;..\..\..\gnuwin32\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;__SSE2__;__SSE__;__MMX__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <ProgramDataBaseFileName>$(OutDir)$(ProjectName)_$(Configuration)_$(Platform).pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+    </ClCompile>
+    <Lib>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Lib>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_noCuda|x64'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>false</OmitFramePointers>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>..;..\..\..\src;..\..\..\gnuwin32\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;__SSE2__;__SSE__;__MMX__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <ProgramDataBaseFileName>$(OutDir)$(ProjectName)_$(Configuration)_$(Platform).pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+    </ClCompile>
+    <Lib>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Lib>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\src\nvmath\Box.h" />
+    <ClInclude Include="..\..\..\src\nvmath\Color.h" />
+    <ClInclude Include="..\..\..\src\nvmath\Matrix.h" />
+    <ClInclude Include="..\..\..\src\nvmath\Plane.h" />
+    <ClInclude Include="..\..\..\src\nvmath\Vector.h" />
+    <ClInclude Include="..\..\..\src\nvtt\cuda\Bitmaps.h" />
+    <ClInclude Include="..\..\..\src\nvtt\CompressDXT.h" />
+    <ClInclude Include="..\..\..\src\nvtt\CompressionOptions.h" />
+    <ClInclude Include="..\..\..\src\nvtt\Compressor.h" />
+    <ClInclude Include="..\..\..\src\nvtt\CompressRGB.h" />
+    <ClInclude Include="..\..\..\src\nvtt\cuda\CudaCompressDXT.h" />
+    <ClInclude Include="..\..\..\src\nvtt\cuda\CudaMath.h" />
+    <ClInclude Include="..\..\..\src\nvtt\cuda\CudaUtils.h" />
+    <ClInclude Include="..\..\..\src\nvtt\InputOptions.h" />
+    <ClInclude Include="..\..\..\src\nvtt\nvtt.h" />
+    <ClInclude Include="..\..\..\src\nvtt\nvtt_wrapper.h" />
+    <ClInclude Include="..\..\..\src\nvtt\OptimalCompressDXT.h" />
+    <ClInclude Include="..\..\..\src\nvtt\OutputOptions.h" />
+    <ClInclude Include="..\..\..\src\nvtt\QuickCompressDXT.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="..\..\..\src\nvimage\BlockDXT.h" />
+    <ClInclude Include="..\..\..\src\nvimage\ColorBlock.h" />
+    <ClInclude Include="..\..\..\src\nvimage\DirectDrawSurface.h" />
+    <ClInclude Include="..\..\..\src\nvimage\Filter.h" />
+    <ClInclude Include="..\..\..\src\nvimage\FloatImage.h" />
+    <ClInclude Include="..\..\..\src\nvimage\Image.h" />
+    <ClInclude Include="..\..\..\src\nvimage\ImageIO.h" />
+    <ClInclude Include="..\..\..\src\nvimage\NormalMap.h" />
+    <ClInclude Include="..\..\..\src\nvimage\nvimage.h" />
+    <ClInclude Include="..\..\..\src\nvimage\PixelFormat.h" />
+    <ClInclude Include="..\..\..\src\nvimage\PsdFile.h" />
+    <ClInclude Include="..\..\..\src\nvimage\Quantize.h" />
+    <ClInclude Include="..\..\..\src\nvimage\TgaFile.h" />
+    <ClInclude Include="..\..\..\src\nvcore\Containers.h" />
+    <ClInclude Include="..\..\..\src\nvcore\Debug.h" />
+    <ClInclude Include="..\..\..\src\nvcore\DefsVcWin32.h" />
+    <ClInclude Include="..\..\..\src\nvcore\Library.h" />
+    <ClInclude Include="..\..\..\src\nvcore\Memory.h" />
+    <ClInclude Include="..\nvconfig.h" />
+    <ClInclude Include="..\..\..\src\nvcore\nvcore.h" />
+    <ClInclude Include="..\..\..\src\nvcore\Ptr.h" />
+    <ClInclude Include="..\..\..\src\nvcore\StrLib.h" />
+    <ClInclude Include="..\..\..\src\nvtt\squish\clusterfit.h" />
+    <ClInclude Include="..\..\..\src\nvtt\squish\colourblock.h" />
+    <ClInclude Include="..\..\..\src\nvtt\squish\colourfit.h" />
+    <ClInclude Include="..\..\..\src\nvtt\squish\colourset.h" />
+    <ClInclude Include="..\..\..\src\nvtt\squish\fastclusterfit.h" />
+    <ClInclude Include="..\..\..\src\nvtt\squish\maths.h" />
+    <ClInclude Include="..\..\..\src\nvtt\squish\simd.h" />
+    <ClInclude Include="..\..\..\src\nvtt\squish\simd_sse.h" />
+    <ClInclude Include="..\..\..\src\nvtt\squish\weightedclusterfit.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\nvmath\Plane.cpp" />
+    <ClCompile Include="..\..\..\src\nvtt\CompressDXT.cpp" />
+    <ClCompile Include="..\..\..\src\nvtt\CompressionOptions.cpp" />
+    <ClCompile Include="..\..\..\src\nvtt\Compressor.cpp" />
+    <ClCompile Include="..\..\..\src\nvtt\CompressRGB.cpp" />
+    <ClCompile Include="..\..\..\src\nvtt\cuda\CudaCompressDXT.cpp" />
+    <ClCompile Include="..\..\..\src\nvtt\cuda\CudaUtils.cpp" />
+    <ClCompile Include="..\..\..\src\nvtt\InputOptions.cpp" />
+    <ClCompile Include="..\..\..\src\nvtt\nvtt.cpp" />
+    <ClCompile Include="..\..\..\src\nvtt\nvtt_wrapper.cpp" />
+    <ClCompile Include="..\..\..\src\nvtt\OptimalCompressDXT.cpp" />
+    <ClCompile Include="..\..\..\src\nvtt\OutputOptions.cpp" />
+    <ClCompile Include="..\..\..\src\nvtt\QuickCompressDXT.cpp" />
+    <ClCompile Include="..\..\..\src\nvimage\BlockDXT.cpp" />
+    <ClCompile Include="..\..\..\src\nvimage\ColorBlock.cpp" />
+    <ClCompile Include="..\..\..\src\nvimage\DirectDrawSurface.cpp" />
+    <ClCompile Include="..\..\..\src\nvimage\Filter.cpp" />
+    <ClCompile Include="..\..\..\src\nvimage\FloatImage.cpp" />
+    <ClCompile Include="..\..\..\src\nvimage\Image.cpp" />
+    <ClCompile Include="..\..\..\src\nvimage\ImageIO.cpp" />
+    <ClCompile Include="..\..\..\src\nvimage\NormalMap.cpp" />
+    <ClCompile Include="..\..\..\src\nvimage\Quantize.cpp" />
+    <ClCompile Include="..\..\..\src\nvcore\Debug.cpp" />
+    <ClCompile Include="..\..\..\src\nvcore\Library.cpp" />
+    <ClCompile Include="..\..\..\src\nvcore\Memory.cpp" />
+    <ClCompile Include="..\..\..\src\nvcore\StrLib.cpp" />
+    <ClCompile Include="..\..\..\src\nvcore\TextReader.cpp" />
+    <ClCompile Include="..\..\..\src\nvcore\TextWriter.cpp" />
+    <ClCompile Include="..\..\..\src\nvtt\squish\clusterfit.cpp" />
+    <ClCompile Include="..\..\..\src\nvtt\squish\colourblock.cpp" />
+    <ClCompile Include="..\..\..\src\nvtt\squish\colourfit.cpp" />
+    <ClCompile Include="..\..\..\src\nvtt\squish\colourset.cpp" />
+    <ClCompile Include="..\..\..\src\nvtt\squish\fastclusterfit.cpp" />
+    <ClCompile Include="..\..\..\src\nvtt\squish\maths.cpp" />
+    <ClCompile Include="..\..\..\src\nvtt\squish\weightedclusterfit.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\src\nvtt\cuda\CompressKernel.cu">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug_noCuda|Win32'">true</ExcludedFromBuild>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_noCuda|Win32'">$(CUDA_BIN_PATH)\nvcc.exe -ccbin "$(VCInstallDir)bin" -c -D_DEBUG -DWIN32 -D_CONSOLE -D_MBCS -Xcompiler /EHsc,/W3,/nologo,/Od,/Zi,/RTC1,/MDd -I"$(CUDA_INC_PATH)" -I./ -o $(IntDir)%(Filename).obj ..\\..\\..\\src\\nvtt\\cuda\\CompressKernel.cu
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug_noCuda|Win32'">CudaMath.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_noCuda|Win32'">$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug_noCuda|x64'">true</ExcludedFromBuild>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(CUDA_BIN_PATH)\nvcc.exe" -m32 -ccbin "$(VCInstallDir)bin" -c -D_DEBUG -DWIN32 -D_CONSOLE -D_MBCS -Xcompiler /EHsc,/W3,/nologo,/Od,/Zi,/RTC1,/MDd -I"$(CUDA_INC_PATH)" -I./ -o $(IntDir)%(Filename).obj ..\\..\\..\\src\\nvtt\\cuda\\CompressKernel.cu
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CudaMath.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(CUDA_BIN_PATH)\nvcc.exe" -m64 -ccbin "$(VCInstallDir)bin" -c -D_DEBUG -DWIN32 -D_CONSOLE -D_MBCS -Xcompiler /EHsc,/W3,/nologo,/Od,/Zi,/RTC1,/MDd -I"$(CUDA_INC_PATH)" -I./ -o $(IntDir)%(Filename).obj ..\\..\\..\\src\\nvtt\\cuda\\CompressKernel.cu
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CudaMath.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_noCuda|Win32'">true</ExcludedFromBuild>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_noCuda|Win32'">$(CUDA_BIN_PATH)\nvcc.exe -ccbin "$(VCInstallDir)bin" -c -DNDEBUG -DWIN32 -D_CONSOLE -D_MBCS -Xcompiler /EHsc,/W3,/nologo,/O2,/Zi,/MD -I"$(CUDA_INC_PATH)" -I./ -o $(IntDir)%(Filename).obj ..\\..\\..\\src\\nvtt\\cuda\\CompressKernel.cu
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release_noCuda|Win32'">CudaMath.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_noCuda|Win32'">$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_noCuda|x64'">true</ExcludedFromBuild>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(CUDA_BIN_PATH)\nvcc.exe" -m32 -ccbin "$(VCInstallDir)bin" -c -DNDEBUG -DWIN32 -D_CONSOLE -D_MBCS -Xcompiler /EHsc,/W3,/nologo,/O2,/Zi,/MD -I"$(CUDA_INC_PATH)" -I./ -o $(IntDir)%(Filename).obj ..\\..\\..\\src\\nvtt\\cuda\\CompressKernel.cu
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CudaMath.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(CUDA_BIN_PATH)\nvcc.exe" -m64 -ccbin "$(VCInstallDir)bin" -c -DNDEBUG -DWIN32 -D_CONSOLE -D_MBCS -Xcompiler /EHsc,/W3,/nologo,/O2,/Zi,/MD -I"$(CUDA_INC_PATH)" -I./ -o $(IntDir)%(Filename).obj ..\\..\\..\\src\\nvtt\\cuda\\CompressKernel.cu
+</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CudaMath.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuildStep Include="..\..\..\src\nvtt\cuda\ConvolveKernel.cu">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug_noCuda|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug_noCuda|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_noCuda|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release_noCuda|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </CustomBuildStep>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="nvtt.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

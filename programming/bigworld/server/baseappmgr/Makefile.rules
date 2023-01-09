@@ -1,0 +1,33 @@
+$(call includeUnitTestDirectory)
+
+name  := baseappmgr
+type  := binary
+bindir = $(BW_SERVER_BIN_DIR)
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =								\
+	main								\
+	baseapp								\
+	baseappmgr							\
+	baseappmgr_config					\
+	login_conditions_config				\
+	message_handlers					\
+	reply_handlers						\
+	watcher_forwarding_baseapp			\
+	../baseapp/baseapp_int_interface	\
+	../loginapp/login_int_interface		\
+	../../lib/db/dbapp_interface		\
+
+
+buildTimeFile := main
+
+dependsOn = db 		\
+			server
+
+incFlags_$(binName) += -I$(BW_ABS_SRC_SERVER)
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - baseappmgr

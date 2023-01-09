@@ -1,0 +1,153 @@
+diff -ruN Pympler-0.3.0.orig/pympler/muppy.py Pympler-0.3.0/pympler/muppy.py
+--- Pympler-0.3.0.orig/pympler/muppy.py	2012-10-06 22:39:30.000000000 +0700
++++ Pympler-0.3.0/pympler/muppy.py	2013-04-01 11:56:23.495039790 +0700
+@@ -1,10 +1,21 @@
++#------------------------------------------------------------
++# Changes have been made to this file in order to make
++# use of sys.getobjects() function which is only available in
++# Python build with Py_TRACE_REFS enabled.
++#
++# Made by BigWorld, 2013 
++#------------------------------------------------------------
++
+ import gc
++import sys # BigWorld change
+ 
+ from pympler import summary
+ from pympler.util import compat
+ 
+ from inspect import isframe, stack
+ 
++Py_TRACE_REFS = hasattr( sys, "getobjects" ) # BigWorld change
++
+ # default to asizeof if sys.getsizeof is not available (prior to Python 2.6)
+ try:
+     from sys import getsizeof as _getsizeof
+@@ -33,22 +44,32 @@
+     # Do not initialize local variables before calling gc.get_objects or those
+     # will be included in the list. Furthermore, ignore frame objects to
+     # prevent reference cycles.
+-    tmp = gc.get_objects()
++  	# BigWorld change
++    if Py_TRACE_REFS:
++        tmp = sys.getobjects(0)
++    else:
++        tmp = gc.get_objects()
+     tmp = [o for o in tmp if not isframe(o)]
+ 
+-    res = []
+-    for o in tmp:
+-        # gc.get_objects returns only container objects, but we also want
+-        # the objects referenced by them
+-        refs = get_referents(o)
+-        for ref in refs:
+-            if not _is_containerobject(ref):
+-                # we already got the container objects, now we only add
+-                # non-container objects
+-                res.append(ref)
+-    res.extend(tmp)
+-    if remove_dups:
+-        res = _remove_duplicates(res)
++    res = None
++    # BigWorld change
++    if not Py_TRACE_REFS: 
++        res = []
++        for o in tmp:
++            # gc.get_objects returns only container objects, but we also want
++            # the objects referenced by them
++            refs = get_referents(o)
++            for ref in refs:
++                if not _is_containerobject(ref):
++                    # we already got the container objects, now we only add
++                    # non-container objects
++                    res.append(ref)
++        res.extend(tmp)
++        
++        if remove_dups:
++            res = _remove_duplicates(res)
++    else:
++        res = tmp
+ 
+     if include_frames:
+         for sf in stack()[2:]:
+diff -ruN Pympler-0.3.0.orig/pympler/tracker.py Pympler-0.3.0/pympler/tracker.py
+--- Pympler-0.3.0.orig/pympler/tracker.py	2012-10-06 22:39:30.000000000 +0700
++++ Pympler-0.3.0/pympler/tracker.py	2013-04-01 11:56:23.495039790 +0700
+@@ -1,3 +1,11 @@
++#------------------------------------------------------------
++# Changes have been made to this file in order to make
++# use of sys.getobjects() function which is only available in
++# Python build with Py_TRACE_REFS enabled.
++#
++# Made by BigWorld, 2013 
++#------------------------------------------------------------
++
+ """The tracker module allows you to track changes in the memory usage over
+ time.
+ 
+@@ -10,6 +18,7 @@
+ 
+ """
+ import gc
++import sys # BigWorld change
+ import inspect
+ 
+ from pympler import muppy, summary
+@@ -188,7 +197,11 @@
+                     res.append(o)
+             return res
+ 
+-        tmp = gc.get_objects()
++        # BigWorld change
++        if muppy.Py_TRACE_REFS:
++            tmp = sys.getobjects(0)
++        else:
++            tmp = gc.get_objects()
+         ignore.append(inspect.currentframe())  # PYCHOK change ignore
+         ignore.append(self)  # PYCHOK change ignore
+         if hasattr(self, 'o0'):
+@@ -199,21 +212,29 @@
+         ignore.append(remove_ignore)  # PYCHOK change ignore
+         # this implies that referenced objects are also ignored
+         tmp = remove_ignore(tmp, ignore)
+-        res = []
+-        for o in tmp:
+-            # gc.get_objects returns only container objects, but we also want
+-            # the objects referenced by them
+-            refs = muppy.get_referents(o)
+-            for ref in refs:
+-                if not muppy._is_containerobject(ref):
+-                    # we already got the container objects, now we only add
+-                    # non-container objects
+-                    res.append(ref)
+-        res.extend(tmp)
+-        res = muppy._remove_duplicates(res)
+-        if ignore is not None:
+-            # repeat to filter out objects which may have been referenced
+-            res = remove_ignore(res, ignore)
++        
++        res = None
++        # BigWorld change
++        if not muppy.Py_TRACE_REFS:
++            res = []
++            for o in tmp:
++                # gc.get_objects returns only container objects, but we also want
++                # the objects referenced by them
++                refs = muppy.get_referents(o)
++                for ref in refs:
++                    if not muppy._is_containerobject(ref):
++                        # we already got the container objects, now we only add
++                        # non-container objects
++                        res.append(ref)
++            res.extend(tmp)
++            res = muppy._remove_duplicates(res)
++
++            if ignore is not None:
++                # repeat to filter out objects which may have been referenced
++                res = remove_ignore(res, ignore)
++        else:
++            res = tmp
++        
+         # manual cleanup, see comment above
+         del ignore[:]
+         return res

@@ -1,0 +1,2385 @@
+<base.model>
+	<nodefullVisual>	characters/avatars/base/base	</nodefullVisual>
+	<batched>	true	</batched>
+	<animation>
+		<name>	m_walk	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/m_walk	</nodes>
+	</animation>
+	<animation>
+		<name>	m_walkback	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/m_walkback	</nodes>
+	</animation>
+	<animation>
+		<name>	m_jog	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/m_jog	</nodes>
+	</animation>
+	<animation>
+		<name>	m_jog:slow	</name>
+		<frameRate>	15.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/m_jog	</nodes>
+	</animation>
+	<animation>
+		<name>	m_jogpistol	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/combat/m_jogpistol	</nodes>
+	</animation>
+	<animation>
+		<name>	m_runback	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/m_runback	</nodes>
+	</animation>
+	<animation>
+		<name>	m_runback:slow	</name>
+		<frameRate>	15.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/m_runback	</nodes>
+	</animation>
+	<animation>
+		<name>	m_dash	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/m_dash	</nodes>
+	</animation>
+	<animation>
+		<name>	turnleft_short	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/turnleft_short	</nodes>
+	</animation>
+	<animation>
+		<name>	turnright_short	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/turnright_short	</nodes>
+	</animation>
+	<animation>
+		<name>	idle_a	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/idle_a	</nodes>
+		<alpha>
+			<biped>	0.050000	</biped>
+		</alpha>
+	</animation>
+	<animation>
+		<name>	breathheavy	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/breathheavy	</nodes>
+	</animation>
+	<action>
+		<name>	WalkForward	</name>
+		<animation>	m_walk	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	true	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+		<match>
+			<trigger>
+				<minEntitySpeed>	0.100000	</minEntitySpeed>
+				<maxEntitySpeed>	3.3	</maxEntitySpeed>
+				<minEntityAux1>	-360.000000	</minEntityAux1>
+				<maxEntityAux1>	360.000000	</maxEntityAux1>
+				<minModelYaw>	-95	</minModelYaw>
+				<maxModelYaw>	95	</maxModelYaw>
+				<capsOff>	0 8 16	</capsOff>
+				<capsOn>	2	</capsOn>
+			</trigger>
+			<scalePlaybackSpeed>	true	</scalePlaybackSpeed>
+			<feetFollowDirection>	true	</feetFollowDirection>
+		</match>
+		<track>	-1	</track>
+	</action>
+	<action>
+		<name>	WalkBackward	</name>
+		<animation>	m_walkback	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	true	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+		<match>
+			<trigger>
+				<minEntitySpeed>	0.1	</minEntitySpeed>
+				<maxEntitySpeed>	2.0	</maxEntitySpeed>
+				<minEntityAux1>	-1000	</minEntityAux1>
+				<maxEntityAux1>	1000	</maxEntityAux1>
+				<minModelYaw>	94	</minModelYaw>
+				<maxModelYaw>	266	</maxModelYaw>
+				<capsOff>	0 8 16	</capsOff>
+				<capsOn>	2	</capsOn>
+			</trigger>
+			<scalePlaybackSpeed>	true	</scalePlaybackSpeed>
+			<feetFollowDirection>	true	</feetFollowDirection>
+		</match>
+	</action>
+	<action>
+		<name>	RunForward	</name>
+		<animation>	m_jog	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	true	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+		<match>
+			<trigger>
+				<minEntitySpeed>	3.2	</minEntitySpeed>
+				<maxEntitySpeed>	9.100000	</maxEntitySpeed>
+				<minEntityAux1>	-360.000000	</minEntityAux1>
+				<maxEntityAux1>	360.000000	</maxEntityAux1>
+				<minModelYaw>	-95	</minModelYaw>
+				<maxModelYaw>	95	</maxModelYaw>
+				<capsOff>	0 8 16	</capsOff>
+				<capsOn>	2	</capsOn>
+			</trigger>
+			<scalePlaybackSpeed>	true	</scalePlaybackSpeed>
+			<feetFollowDirection>	true	</feetFollowDirection>
+		</match>
+	</action>
+	<action>
+		<name>	BeginLightning	</name>
+		<animation>	staff_waving:prep	</animation>
+		<track>	-1	</track>
+	</action>
+	<action>
+		<name>	ExecuteLightning	</name>
+		<animation>	staff_waving:fire	</animation>
+		<track>	-1	</track>
+	</action>
+	<action>
+		<name>	StaffWalkForward	</name>
+		<animation>	staff_walk_fd	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<isMovement>	true	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+		<match>
+			<trigger>
+				<minEntitySpeed>	0.1	</minEntitySpeed>
+				<maxEntitySpeed>	3.3	</maxEntitySpeed>
+				<minEntityAux1>	-1000	</minEntityAux1>
+				<maxEntityAux1>	1000	</maxEntityAux1>
+				<minModelYaw>	-95	</minModelYaw>
+				<maxModelYaw>	95	</maxModelYaw>
+				<capsOn>	0 2	</capsOn>
+				<capsOff>	8 16	</capsOff>
+			</trigger>
+			<scalePlaybackSpeed>	true	</scalePlaybackSpeed>
+			<feetFollowDirection>	true	</feetFollowDirection>
+		</match>
+		<track>	0	</track>
+	</action>
+	<action>
+		<name>	StaffWalkBackward	</name>
+		<animation>	staff_walk_bk	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	true	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+		<match>
+			<trigger>
+				<minEntitySpeed>	0.1	</minEntitySpeed>
+				<maxEntitySpeed>	3.000000	</maxEntitySpeed>
+				<minEntityAux1>	-360.000000	</minEntityAux1>
+				<maxEntityAux1>	360.000000	</maxEntityAux1>
+				<minModelYaw>	94	</minModelYaw>
+				<maxModelYaw>	266	</maxModelYaw>
+				<capsOn>	0 2	</capsOn>
+				<capsOff>	8 16	</capsOff>
+			</trigger>
+			<scalePlaybackSpeed>	true	</scalePlaybackSpeed>
+			<feetFollowDirection>	true	</feetFollowDirection>
+		</match>
+	</action>
+	<action>
+		<name>	StaffRunForward	</name>
+		<animation>	m_jog_staff	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	true	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+		<match>
+			<trigger>
+				<minEntitySpeed>	2.7	</minEntitySpeed>
+				<maxEntitySpeed>	8.0	</maxEntitySpeed>
+				<minEntityAux1>	-1000	</minEntityAux1>
+				<maxEntityAux1>	1000	</maxEntityAux1>
+				<minModelYaw>	-95	</minModelYaw>
+				<maxModelYaw>	95	</maxModelYaw>
+				<capsOn>	0 2	</capsOn>
+				<capsOff>	8 16	</capsOff>
+			</trigger>
+			<scalePlaybackSpeed>	true	</scalePlaybackSpeed>
+			<feetFollowDirection>	true	</feetFollowDirection>
+		</match>
+	</action>
+	<action>
+		<name>	DashForward	</name>
+		<animation>	m_dash	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	true	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+		<match>
+			<trigger>
+				<minEntitySpeed>	9.000000	</minEntitySpeed>
+				<maxEntitySpeed>	20.0	</maxEntitySpeed>
+				<minEntityAux1>	-360.000000	</minEntityAux1>
+				<maxEntityAux1>	360.000000	</maxEntityAux1>
+				<minModelYaw>	-95	</minModelYaw>
+				<maxModelYaw>	95	</maxModelYaw>
+				<capsOff>	0 8 16	</capsOff>
+				<capsOn>	2	</capsOn>
+			</trigger>
+			<scalePlaybackSpeed>	true	</scalePlaybackSpeed>
+			<feetFollowDirection>	true	</feetFollowDirection>
+		</match>
+	</action>
+	<action>
+		<name>	RunBackward	</name>
+		<animation>	m_runback	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	true	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+		<match>
+			<trigger>
+				<minEntitySpeed>	2.0	</minEntitySpeed>
+				<maxEntitySpeed>	20.000000	</maxEntitySpeed>
+				<minEntityAux1>	-360.000000	</minEntityAux1>
+				<maxEntityAux1>	360.000000	</maxEntityAux1>
+				<minModelYaw>	94	</minModelYaw>
+				<maxModelYaw>	266	</maxModelYaw>
+				<capsOff>	0 8 16	</capsOff>
+				<capsOn>	2	</capsOn>
+			</trigger>
+			<scalePlaybackSpeed>	true	</scalePlaybackSpeed>
+			<feetFollowDirection>	true	</feetFollowDirection>
+		</match>
+	</action>
+	<action>
+		<name>	StaffRunBackward	</name>
+		<animation>	staff_run_bk	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	true	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+		<match>
+			<trigger>
+				<minEntitySpeed>	2.900000	</minEntitySpeed>
+				<maxEntitySpeed>	10.0	</maxEntitySpeed>
+				<minEntityAux1>	-360.000000	</minEntityAux1>
+				<maxEntityAux1>	360.000000	</maxEntityAux1>
+				<minModelYaw>	94	</minModelYaw>
+				<maxModelYaw>	266	</maxModelYaw>
+				<capsOn>	0 2	</capsOn>
+				<capsOff>	8 16	</capsOff>
+			</trigger>
+			<scalePlaybackSpeed>	true	</scalePlaybackSpeed>
+			<feetFollowDirection>	true	</feetFollowDirection>
+		</match>
+	</action>
+	<action>
+		<name>	StaffDashForward	</name>
+		<animation>	staff_dash_fd	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	true	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+		<match>
+			<trigger>
+				<minEntitySpeed>	7.9	</minEntitySpeed>
+				<maxEntitySpeed>	20.0	</maxEntitySpeed>
+				<minEntityAux1>	-1000	</minEntityAux1>
+				<maxEntityAux1>	1000	</maxEntityAux1>
+				<minModelYaw>	-95	</minModelYaw>
+				<maxModelYaw>	95	</maxModelYaw>
+				<capsOn>	0 2	</capsOn>
+				<capsOff>	8 16	</capsOff>
+			</trigger>
+			<scalePlaybackSpeed>	true	</scalePlaybackSpeed>
+			<feetFollowDirection>	true	</feetFollowDirection>
+		</match>
+	</action>
+	<action>
+		<name>	StaffTurnLeft	</name>
+		<animation>	staff_turn_left	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	true	</isImpacting>
+		<match>
+			<trigger>
+				<minEntitySpeed>	0	</minEntitySpeed>
+				<maxEntitySpeed>	1	</maxEntitySpeed>
+				<minEntityAux1>	-180	</minEntityAux1>
+				<maxEntityAux1>	-80	</maxEntityAux1>
+				<minModelYaw>	-1000	</minModelYaw>
+				<maxModelYaw>	1000	</maxModelYaw>
+				<capsOn>	0 2	</capsOn>
+				<capsOff>	8 16	</capsOff>
+			</trigger>
+			<cancel>
+				<minEntitySpeed>	0	</minEntitySpeed>
+				<maxEntitySpeed>	1000	</maxEntitySpeed>
+				<minEntityAux1>	40	</minEntityAux1>
+				<maxEntityAux1>	180	</maxEntityAux1>
+				<minModelYaw>	-1000	</minModelYaw>
+				<maxModelYaw>	1000	</maxModelYaw>
+			</cancel>
+			<oneShot>	true	</oneShot>
+			<promoteMotion>	true	</promoteMotion>
+		</match>
+		<track>	-1	</track>
+	</action>
+	<action>
+		<name>	StaffTurnRight	</name>
+		<animation>	staff_turn_right	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	true	</isImpacting>
+		<match>
+			<trigger>
+				<minEntitySpeed>	0	</minEntitySpeed>
+				<maxEntitySpeed>	1	</maxEntitySpeed>
+				<minEntityAux1>	80	</minEntityAux1>
+				<maxEntityAux1>	180	</maxEntityAux1>
+				<minModelYaw>	-1000	</minModelYaw>
+				<maxModelYaw>	1000	</maxModelYaw>
+				<capsOn>	0 2	</capsOn>
+				<capsOff>	8 16	</capsOff>
+			</trigger>
+			<cancel>
+				<minEntitySpeed>	0	</minEntitySpeed>
+				<maxEntitySpeed>	1000	</maxEntitySpeed>
+				<minEntityAux1>	-180	</minEntityAux1>
+				<maxEntityAux1>	-40	</maxEntityAux1>
+				<minModelYaw>	-1000	</minModelYaw>
+				<maxModelYaw>	1000	</maxModelYaw>
+			</cancel>
+			<oneShot>	true	</oneShot>
+			<promoteMotion>	true	</promoteMotion>
+		</match>
+	</action>
+	<action>
+		<name>	TurnLeft	</name>
+		<animation>	turnleft_short	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	true	</isImpacting>
+		<match>
+			<trigger>
+				<minEntitySpeed>	0	</minEntitySpeed>
+				<maxEntitySpeed>	1	</maxEntitySpeed>
+				<minEntityAux1>	-180	</minEntityAux1>
+				<maxEntityAux1>	-80	</maxEntityAux1>
+				<minModelYaw>	-1000	</minModelYaw>
+				<maxModelYaw>	1000	</maxModelYaw>
+				<capsOff>	0 8 16	</capsOff>
+				<capsOn>	2	</capsOn>
+			</trigger>
+			<cancel>
+				<minEntitySpeed>	0	</minEntitySpeed>
+				<maxEntitySpeed>	1000	</maxEntitySpeed>
+				<minEntityAux1>	40	</minEntityAux1>
+				<maxEntityAux1>	180	</maxEntityAux1>
+				<minModelYaw>	-1000	</minModelYaw>
+				<maxModelYaw>	1000	</maxModelYaw>
+			</cancel>
+			<oneShot>	true	</oneShot>
+			<promoteMotion>	true	</promoteMotion>
+		</match>
+		<track>	0	</track>
+	</action>
+	<action>
+		<name>	TurnRight	</name>
+		<animation>	turnright_short	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	true	</isImpacting>
+		<match>
+			<trigger>
+				<minEntitySpeed>	0	</minEntitySpeed>
+				<maxEntitySpeed>	1	</maxEntitySpeed>
+				<minEntityAux1>	80	</minEntityAux1>
+				<maxEntityAux1>	180	</maxEntityAux1>
+				<minModelYaw>	-1000	</minModelYaw>
+				<maxModelYaw>	1000	</maxModelYaw>
+				<capsOff>	0 8 16	</capsOff>
+				<capsOn>	2	</capsOn>
+			</trigger>
+			<cancel>
+				<minEntitySpeed>	0	</minEntitySpeed>
+				<maxEntitySpeed>	1000	</maxEntitySpeed>
+				<minEntityAux1>	-180	</minEntityAux1>
+				<maxEntityAux1>	-40	</maxEntityAux1>
+				<minModelYaw>	-1000	</minModelYaw>
+				<maxModelYaw>	1000	</maxModelYaw>
+			</cancel>
+			<oneShot>	true	</oneShot>
+			<promoteMotion>	true	</promoteMotion>
+		</match>
+	</action>
+	<action>
+		<name>	Idle	</name>
+		<animation>	idle_a	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+		<match>
+			<trigger>
+				<minEntitySpeed>	0.0	</minEntitySpeed>
+				<maxEntitySpeed>	0.100000	</maxEntitySpeed>
+				<minEntityAux1>	-360.000000	</minEntityAux1>
+				<maxEntityAux1>	360.000000	</maxEntityAux1>
+				<minModelYaw>	-360.000000	</minModelYaw>
+				<maxModelYaw>	360.000000	</maxModelYaw>
+				<capsOff>	0 8 16	</capsOff>
+				<capsOn>	2	</capsOn>
+			</trigger>
+		</match>
+	</action>
+	<action>
+		<name>	StaffIdle	</name>
+		<animation>	staff_idle	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+		<match>
+			<trigger>
+				<minEntitySpeed>	0.0	</minEntitySpeed>
+				<maxEntitySpeed>	0.1	</maxEntitySpeed>
+				<minEntityAux1>	-1000	</minEntityAux1>
+				<maxEntityAux1>	1000	</maxEntityAux1>
+				<minModelYaw>	-1000	</minModelYaw>
+				<maxModelYaw>	1000	</maxModelYaw>
+				<capsOn>	0 2	</capsOn>
+				<capsOff>	8 16	</capsOff>
+			</trigger>
+		</match>
+	</action>
+	<action>
+		<name>	IdleBreathless	</name>
+		<animation>	breathheavy	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+		<match>
+			<trigger>
+				<minEntitySpeed>	0.0	</minEntitySpeed>
+				<maxEntitySpeed>	0.6	</maxEntitySpeed>
+				<minEntityAux1>	-1000	</minEntityAux1>
+				<maxEntityAux1>	1000	</maxEntityAux1>
+				<minModelYaw>	-1000	</minModelYaw>
+				<maxModelYaw>	1000	</maxModelYaw>
+				<capsOff>	8 16	</capsOff>
+				<capsOn>	2	</capsOn>
+			</trigger>
+		</match>
+	</action>
+	<action>
+		<name>	StaffUltraBack	</name>
+		<animation>	staff_ultra_bk	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	true	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+		<match>
+			<trigger>
+				<minEntitySpeed>	19	</minEntitySpeed>
+				<maxEntitySpeed>	2000	</maxEntitySpeed>
+				<minEntityAux1>	-1000	</minEntityAux1>
+				<maxEntityAux1>	1000	</maxEntityAux1>
+				<minModelYaw>	94	</minModelYaw>
+				<maxModelYaw>	266	</maxModelYaw>
+				<capsOn>	0 2	</capsOn>
+				<capsOff>	8 16	</capsOff>
+			</trigger>
+			<feetFollowDirection>	true	</feetFollowDirection>
+		</match>
+	</action>
+	<action>
+		<name>	UltraForward	</name>
+		<animation>	m_jog:slow	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	true	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+		<match>
+			<trigger>
+				<minEntitySpeed>	19	</minEntitySpeed>
+				<maxEntitySpeed>	2000	</maxEntitySpeed>
+				<minEntityAux1>	-1000	</minEntityAux1>
+				<maxEntityAux1>	1000	</maxEntityAux1>
+				<minModelYaw>	-95	</minModelYaw>
+				<maxModelYaw>	95	</maxModelYaw>
+				<capsOff>	0 8 16	</capsOff>
+				<capsOn>	2	</capsOn>
+			</trigger>
+			<feetFollowDirection>	true	</feetFollowDirection>
+		</match>
+	</action>
+	<action>
+		<name>	StaffUltraForward	</name>
+		<animation>	staff_ultra_dash_fd	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	true	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+		<match>
+			<trigger>
+				<minEntitySpeed>	19	</minEntitySpeed>
+				<maxEntitySpeed>	2000	</maxEntitySpeed>
+				<minEntityAux1>	-1000	</minEntityAux1>
+				<maxEntityAux1>	1000	</maxEntityAux1>
+				<minModelYaw>	-95	</minModelYaw>
+				<maxModelYaw>	95	</maxModelYaw>
+				<capsOn>	0 2	</capsOn>
+				<capsOff>	8 16	</capsOff>
+			</trigger>
+			<feetFollowDirection>	true	</feetFollowDirection>
+		</match>
+	</action>
+	<action>
+		<name>	UltraBack	</name>
+		<animation>	m_runback:slow	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	true	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+		<match>
+			<trigger>
+				<minEntitySpeed>	19	</minEntitySpeed>
+				<maxEntitySpeed>	2000	</maxEntitySpeed>
+				<minEntityAux1>	-1000	</minEntityAux1>
+				<maxEntityAux1>	1000	</maxEntityAux1>
+				<minModelYaw>	94	</minModelYaw>
+				<maxModelYaw>	266	</maxModelYaw>
+				<capsOff>	0 8 16	</capsOff>
+				<capsOn>	2	</capsOn>
+			</trigger>
+			<feetFollowDirection>	true	</feetFollowDirection>
+		</match>
+	</action>
+	<action>
+		<name>	swim_forward	</name>
+		<animation>	sw_fd	</animation>
+		<isMovement>	true	</isMovement>
+		<match>
+			<trigger>
+				<minEntitySpeed>	2.200000	</minEntitySpeed>
+				<maxEntitySpeed>	50.000000	</maxEntitySpeed>
+				<minEntityAux1>	-360.000000	</minEntityAux1>
+				<maxEntityAux1>	360.000000	</maxEntityAux1>
+				<minModelYaw>	-95.000000	</minModelYaw>
+				<maxModelYaw>	95.000000	</maxModelYaw>
+				<capsOn>	16	</capsOn>
+				<capsOff>	2	</capsOff>
+			</trigger>
+			<scalePlaybackSpeed>	true	</scalePlaybackSpeed>
+			<feetFollowDirection>	true	</feetFollowDirection>
+			<cancel>
+				<capsOn />
+			</cancel>
+		</match>
+	</action>
+	<action>
+		<name>	swim_backward	</name>
+		<animation>	sw_bk	</animation>
+		<match>
+			<trigger>
+				<minEntitySpeed>	0.100000	</minEntitySpeed>
+				<maxEntitySpeed>	100.000000	</maxEntitySpeed>
+				<minEntityAux1>	-360.000000	</minEntityAux1>
+				<maxEntityAux1>	360.000000	</maxEntityAux1>
+				<minModelYaw>	94.000000	</minModelYaw>
+				<maxModelYaw>	266.000000	</maxModelYaw>
+				<capsOn>	16	</capsOn>
+				<capsOff>	2	</capsOff>
+			</trigger>
+			<feetFollowDirection>	true	</feetFollowDirection>
+			<scalePlaybackSpeed>	true	</scalePlaybackSpeed>
+			<cancel>
+				<capsOn />
+			</cancel>
+		</match>
+		<isMovement>	true	</isMovement>
+	</action>
+	<action>
+		<name>	swim_idle	</name>
+		<animation>	sw_idle	</animation>
+		<match>
+			<trigger>
+				<minEntityAux1>	-360.000000	</minEntityAux1>
+				<maxEntityAux1>	360.000000	</maxEntityAux1>
+				<minModelYaw>	-360.000000	</minModelYaw>
+				<maxModelYaw>	360.000000	</maxModelYaw>
+				<capsOn>	16	</capsOn>
+				<minEntitySpeed>	0.000000	</minEntitySpeed>
+				<maxEntitySpeed>	0.100000	</maxEntitySpeed>
+				<capsOff>	2	</capsOff>
+			</trigger>
+			<cancel>
+				<capsOn />
+			</cancel>
+			<feetFollowDirection>	true	</feetFollowDirection>
+		</match>
+	</action>
+	<action>
+		<name>	swim_slowforward	</name>
+		<animation>	sw_wait	</animation>
+		<match>
+			<trigger>
+				<minEntitySpeed>	0.100000	</minEntitySpeed>
+				<maxEntitySpeed>	2.500000	</maxEntitySpeed>
+				<minEntityAux1>	-360.000000	</minEntityAux1>
+				<maxEntityAux1>	360.000000	</maxEntityAux1>
+				<minModelYaw>	-95.000000	</minModelYaw>
+				<maxModelYaw>	95.000000	</maxModelYaw>
+				<capsOn>	16	</capsOn>
+				<capsOff>	2	</capsOff>
+			</trigger>
+			<feetFollowDirection>	true	</feetFollowDirection>
+		</match>
+		<isMovement>	true	</isMovement>
+	</action>
+	<action>
+		<name>	Unmatched	</name>
+		<animation>	idle_a	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+		<match>
+			<trigger>
+				<minEntitySpeed>	0	</minEntitySpeed>
+				<maxEntitySpeed>	1000	</maxEntitySpeed>
+				<minEntityAux1>	-1000	</minEntityAux1>
+				<maxEntityAux1>	1000	</maxEntityAux1>
+				<minModelYaw>	-1000	</minModelYaw>
+				<maxModelYaw>	1000	</maxModelYaw>
+			</trigger>
+			<feetFollowDirection>	true	</feetFollowDirection>
+		</match>
+	</action>
+	<animation>
+		<name>	hitrecoil	</name>
+		<frameRate>	60.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/combat/m_hitrecoil	</nodes>
+		<alpha>
+			<biped>	0.0	</biped>
+			<biped..Spine>	1.0	</biped..Spine>
+		</alpha>
+	</animation>
+	<animation>
+		<name>	m_waveonehand	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/Gestures/m_waveonehand	</nodes>
+		<alpha>
+			<biped>	0.0	</biped>
+			<biped..Spine>	0.2	</biped..Spine>
+			<biped..R..Clavicle>	0.9	</biped..R..Clavicle>
+		</alpha>
+	</animation>
+	<animation>
+		<name>	m_wavetwohands	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/Gestures/m_wavetwohands	</nodes>
+		<alpha>
+			<biped>	0.0	</biped>
+			<biped..Spine>	0.2	</biped..Spine>
+			<biped..R..Clavicle>	0.9	</biped..R..Clavicle>
+			<biped..L..Clavicle>	0.9	</biped..L..Clavicle>
+		</alpha>
+	</animation>
+	<animation>
+		<name>	m_cry	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/Gestures/m_cry	</nodes>
+		<alpha>
+			<biped>	0.0	</biped>
+			<biped..Spine>	1.0	</biped..Spine>
+		</alpha>
+	</animation>
+	<animation>
+		<name>	armscrossed	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/armscrossed	</nodes>
+	</animation>
+	<animation>
+		<name>	breathdown	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/breathdown	</nodes>
+	</animation>
+	<animation>
+		<name>	m_beckon_frantic	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/Gestures/m_beckon_frantic	</nodes>
+	</animation>
+	<animation>
+		<name>	m_beckon_subtle	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/Gestures/m_beckon_subtle	</nodes>
+		<alpha>
+			<biped>	0.0	</biped>
+			<biped..Spine>	0.5	</biped..Spine>
+			<biped..Neck>	0.9	</biped..Neck>
+			<biped..R..Clavicle>	0.9	</biped..R..Clavicle>
+		</alpha>
+	</animation>
+	<animation>
+		<name>	m_comegetme	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/Gestures/m_comegetme	</nodes>
+	</animation>
+	<animation>
+		<name>	m_agree	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/Gestures/m_agree	</nodes>
+		<alpha>
+			<biped>	0.0	</biped>
+			<biped..Neck>	0.9	</biped..Neck>
+			<biped..R..Clavicle>	0.0	</biped..R..Clavicle>
+			<biped..L..Clavicle>	0.0	</biped..L..Clavicle>
+		</alpha>
+	</animation>
+	<animation>
+		<name>	m_disagree	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/Gestures/m_disagree	</nodes>
+	</animation>
+	<animation>
+		<name>	m_giveup	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/Gestures/m_giveup	</nodes>
+	</animation>
+	<animation>
+		<name>	m_kissassgoodbye	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/Gestures/m_kissassgoodbye	</nodes>
+	</animation>
+	<animation>
+		<name>	m_laugh	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/Gestures/m_laugh	</nodes>
+		<alpha>
+			<biped>	0.0	</biped>
+			<biped..Spine>	0.9	</biped..Spine>
+		</alpha>
+	</animation>
+	<animation>
+		<name>	m_laughoutloud	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/Gestures/m_laughoutloud	</nodes>
+	</animation>
+	<animation>
+		<name>	m_play_loop	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/Gestures/m_play_loop	</nodes>
+	</animation>
+	<animation>
+		<name>	m_play_lose	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/Gestures/m_play_lose	</nodes>
+	</animation>
+	<animation>
+		<name>	m_play_paper	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/Gestures/m_play_paper	</nodes>
+	</animation>
+	<animation>
+		<name>	m_play_rock	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/Gestures/m_play_rock	</nodes>
+	</animation>
+	<animation>
+		<name>	m_play_scissors	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/Gestures/m_play_scissors	</nodes>
+	</animation>
+	<animation>
+		<name>	m_play_win	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/Gestures/m_play_win	</nodes>
+	</animation>
+	<animation>
+		<name>	m_point_lookout	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/Gestures/m_point_lookout	</nodes>
+	</animation>
+	<animation>
+		<name>	m_point_self	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/Gestures/m_point_self	</nodes>
+	</animation>
+	<animation>
+		<name>	m_point_there	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/Gestures/m_point_there	</nodes>
+	</animation>
+	<animation>
+		<name>	m_ponder_a	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/Gestures/m_ponder_a	</nodes>
+	</animation>
+	<animation>
+		<name>	m_rudegesture_a	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/Gestures/m_rudegesture_a	</nodes>
+	</animation>
+	<animation>
+		<name>	m_shrug	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/Gestures/m_shrug	</nodes>
+		<alpha>
+			<biped>	0.0	</biped>
+			<biped..Spine>	1.0	</biped..Spine>
+		</alpha>
+	</animation>
+	<animation>
+		<name>	m_stop	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/Gestures/m_stop	</nodes>
+		<alpha>
+			<biped>	0.0	</biped>
+			<biped..Spine>	0.2	</biped..Spine>
+			<biped..R..Clavicle>	0.9	</biped..R..Clavicle>
+		</alpha>
+	</animation>
+	<animation>
+		<name>	m_talkingtome	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/Gestures/m_talkingtome	</nodes>
+	</animation>
+	<animation>
+		<name>	m_watchit	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/Gestures/m_watchit	</nodes>
+		<alpha>
+			<biped>	0.0	</biped>
+			<biped..Spine>	0.5	</biped..Spine>
+			<biped..R..Clavicle>	0.9	</biped..R..Clavicle>
+		</alpha>
+	</animation>
+	<animation>
+		<name>	m_salute	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/Gestures/m_salute	</nodes>
+	</animation>
+	<animation>
+		<name>	m_hello	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/Gestures/m_hello	</nodes>
+	</animation>
+	<animation>
+		<name>	m_speak_a	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/Gestures/m_speak_a	</nodes>
+	</animation>
+	<animation>
+		<name>	m_speak_c	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/Gestures/m_speak_c	</nodes>
+	</animation>
+	<animation>
+		<name>	m_swordhi	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/Gestures/m_swordhi	</nodes>
+		<alpha>
+			<biped>	0.0	</biped>
+			<biped..Spine>	0.9	</biped..Spine>
+			<biped..R..Clavicle>	0.9	</biped..R..Clavicle>
+			<biped..L..Clavicle>	0.9	</biped..L..Clavicle>
+		</alpha>
+	</animation>
+	<animation>
+		<name>	swing_sword	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/itemhandling/swing_sword	</nodes>
+		<alpha>
+			<biped>	0.0	</biped>
+			<biped..Spine>	0.9	</biped..Spine>
+			<biped..R..Clavicle>	0.9	</biped..R..Clavicle>
+			<biped..L..Clavicle>	0.9	</biped..L..Clavicle>
+		</alpha>
+	</animation>
+	<animation>
+		<name>	aimgun_test	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/combat/m_aimgun_test	</nodes>
+		<alpha>
+			<biped>	0	</biped>
+			<biped..Spine>	1	</biped..Spine>
+		</alpha>
+	</animation>
+	<animation>
+		<name>	shotdown_a	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/combat/m_shotdown_a	</nodes>
+	</animation>
+	<animation>
+		<name>	shotdown_a:lastframe	</name>
+		<frameRate>	30.000000	</frameRate>
+		<firstFrame>	-1	</firstFrame>
+		<lastFrame>	-1	</lastFrame>
+		<nodes>	characters/avatars/base/animations/combat/m_shotdown_a	</nodes>
+	</animation>
+	<animation>
+		<name>	m_spawn:fall	</name>
+		<frameRate>	30.000000	</frameRate>
+		<lastFrame>	42	</lastFrame>
+		<nodes>	characters/avatars/base/animations/m_spawn	</nodes>
+	</animation>
+	<animation>
+		<name>	m_spawn:land	</name>
+		<frameRate>	30.000000	</frameRate>
+		<firstFrame>	42	</firstFrame>
+		<nodes>	characters/avatars/base/animations/m_spawn	</nodes>
+	</animation>
+	<animation>
+		<name>	handshake_a:1	</name>
+		<frameRate>	30.000000	</frameRate>
+		<lastFrame>	16	</lastFrame>
+		<nodes>	characters/avatars/base/animations/interactions/handshake_a	</nodes>
+	</animation>
+	<animation>
+		<name>	handshake_a:2	</name>
+		<frameRate>	30.000000	</frameRate>
+		<firstFrame>	16	</firstFrame>
+		<lastFrame>	50	</lastFrame>
+		<nodes>	characters/avatars/base/animations/interactions/handshake_a	</nodes>
+	</animation>
+	<animation>
+		<name>	handshake_a:3	</name>
+		<frameRate>	30.000000	</frameRate>
+		<firstFrame>	50	</firstFrame>
+		<nodes>	characters/avatars/base/animations/interactions/handshake_a	</nodes>
+	</animation>
+	<animation>
+		<name>	handshake_b:1	</name>
+		<frameRate>	30.000000	</frameRate>
+		<firstFrame>	34	</firstFrame>
+		<lastFrame>	50	</lastFrame>
+		<nodes>	characters/avatars/base/animations/interactions/handshake_b	</nodes>
+		<cognate>	idle_a	</cognate>
+	</animation>
+	<animation>
+		<name>	handshake_b:2	</name>
+		<frameRate>	30.000000	</frameRate>
+		<firstFrame>	50	</firstFrame>
+		<nodes>	characters/avatars/base/animations/interactions/handshake_b	</nodes>
+		<cognate>	idle_a	</cognate>
+	</animation>
+	<animation>
+		<name>	handshake_b:all	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/interactions/handshake_b	</nodes>
+		<cognate>	idle_a	</cognate>
+	</animation>
+	<animation>
+		<name>	pickitem_ground:down	</name>
+		<frameRate>	30.000000	</frameRate>
+		<lastFrame>	31	</lastFrame>
+		<nodes>	characters/avatars/base/animations/itemhandling/pickitem_ground	</nodes>
+	</animation>
+	<animation>
+		<name>	pickitem_ground:wait	</name>
+		<frameRate>	30.000000	</frameRate>
+		<firstFrame>	32	</firstFrame>
+		<lastFrame>	123	</lastFrame>
+		<nodes>	characters/avatars/base/animations/itemhandling/pickitem_ground	</nodes>
+	</animation>
+	<animation>
+		<name>	pickitem_ground:up	</name>
+		<frameRate>	15.000000	</frameRate>
+		<firstFrame>	123	</firstFrame>
+		<lastFrame>	131	</lastFrame>
+		<nodes>	characters/avatars/base/animations/itemhandling/pickitem_ground	</nodes>
+	</animation>
+	<animation>
+		<name>	pickitem_ground:done	</name>
+		<frameRate>	30.000000	</frameRate>
+		<firstFrame>	131	</firstFrame>
+		<nodes>	characters/avatars/base/animations/itemhandling/pickitem_ground	</nodes>
+	</animation>
+	<animation>
+		<name>	drawgun:1	</name>
+		<frameRate>	30.000000	</frameRate>
+		<lastFrame>	13	</lastFrame>
+		<nodes>	characters/avatars/base/animations/combat/m_drawgun	</nodes>
+		<alpha>
+			<biped>	0.0	</biped>
+			<biped..Spine>	0.2	</biped..Spine>
+			<biped..R..Clavicle>	0.9	</biped..R..Clavicle>
+			<biped..L..Clavicle>	0.0	</biped..L..Clavicle>
+		</alpha>
+	</animation>
+	<animation>
+		<name>	drawgun:2	</name>
+		<frameRate>	30.000000	</frameRate>
+		<firstFrame>	13	</firstFrame>
+		<nodes>	characters/avatars/base/animations/combat/m_drawgun	</nodes>
+		<alpha>
+			<biped>	0.0	</biped>
+			<biped..Spine>	0.2	</biped..Spine>
+			<biped..R..Clavicle>	0.9	</biped..R..Clavicle>
+			<biped..L..Clavicle>	0.0	</biped..L..Clavicle>
+		</alpha>
+	</animation>
+	<animation>
+		<name>	eatdrumstick	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/itemhandling/eatdrumstick	</nodes>
+		<alpha>
+			<biped>	0.0	</biped>
+			<biped..Spine>	100.0	</biped..Spine>
+		</alpha>
+	</animation>
+	<animation>
+		<name>	drink	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/itemhandling/drink	</nodes>
+		<alpha>
+			<biped>	0.0	</biped>
+			<biped..Spine1>	1.000000	</biped..Spine1>
+			<biped..L..Clavicle>	0.0	</biped..L..Clavicle>
+		</alpha>
+	</animation>
+	<animation>
+		<name>	holddrink_stand	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/itemhandling/holddrink_stand	</nodes>
+		<alpha>
+			<biped>	0.0	</biped>
+			<biped..R..Clavicle>	1.0	</biped..R..Clavicle>
+		</alpha>
+	</animation>
+	<animation>
+		<name>	driver_engineon	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/Ride/driver_engineon	</nodes>
+	</animation>
+	<animation>
+		<name>	driver_turnleft:1	</name>
+		<frameRate>	30.000000	</frameRate>
+		<lastFrame>	15	</lastFrame>
+		<nodes>	characters/avatars/base/animations/Ride/driver_turnleft	</nodes>
+	</animation>
+	<animation>
+		<name>	driver_turnright:1	</name>
+		<frameRate>	30.000000	</frameRate>
+		<lastFrame>	15	</lastFrame>
+		<nodes>	characters/avatars/base/animations/Ride/driver_turnright	</nodes>
+	</animation>
+	<animation>
+		<name>	driver_start&amp;stop:start	</name>
+		<frameRate>	30.000000	</frameRate>
+		<lastFrame>	75	</lastFrame>
+		<nodes>	characters/avatars/base/animations/Ride/driver_start&amp;stop	</nodes>
+	</animation>
+	<animation>
+		<name>	driver_turnleft:2	</name>
+		<frameRate>	30.000000	</frameRate>
+		<firstFrame>	15	</firstFrame>
+		<lastFrame>	30	</lastFrame>
+		<nodes>	characters/avatars/base/animations/Ride/driver_turnleft	</nodes>
+	</animation>
+	<animation>
+		<name>	driver_turnright:2	</name>
+		<frameRate>	30.000000	</frameRate>
+		<firstFrame>	15	</firstFrame>
+		<lastFrame>	30	</lastFrame>
+		<nodes>	characters/avatars/base/animations/Ride/driver_turnright	</nodes>
+	</animation>
+	<animation>
+		<name>	driver_start&amp;stop:surge	</name>
+		<frameRate>	30.000000	</frameRate>
+		<firstFrame>	60	</firstFrame>
+		<lastFrame>	70	</lastFrame>
+		<nodes>	characters/avatars/base/animations/Ride/driver_start&amp;stop	</nodes>
+	</animation>
+	<animation>
+		<name>	driver_geton	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/Ride/driver_geton	</nodes>
+		<cognate>	idle_a	</cognate>
+	</animation>
+	<animation>
+		<name>	driver_geton:rev	</name>
+		<frameRate>	30.000000	</frameRate>
+		<firstFrame>	-1	</firstFrame>
+		<lastFrame>	0	</lastFrame>
+		<nodes>	characters/avatars/base/animations/Ride/driver_geton	</nodes>
+		<cognate>	idle_a	</cognate>
+	</animation>
+	<animation>
+		<name>	driver_geton:firstframe	</name>
+		<frameRate>	30.000000	</frameRate>
+		<firstFrame>	0	</firstFrame>
+		<lastFrame>	0	</lastFrame>
+		<nodes>	characters/avatars/base/animations/Ride/driver_geton	</nodes>
+		<cognate>	idle_a	</cognate>
+	</animation>
+	<animation>
+		<name>	driver_geton:lastframe	</name>
+		<frameRate>	30.000000	</frameRate>
+		<firstFrame>	-1	</firstFrame>
+		<lastFrame>	-1	</lastFrame>
+		<nodes>	characters/avatars/base/animations/Ride/driver_geton	</nodes>
+		<cognate>	idle_a	</cognate>
+	</animation>
+	<animation>
+		<name>	usebinocular	</name>
+		<frameRate>	30.000000	</frameRate>
+		<firstFrame>	10	</firstFrame>
+		<lastFrame>	80	</lastFrame>
+		<nodes>	characters/avatars/base/animations/itemhandling/usebinocular	</nodes>
+		<alpha>
+			<biped>	0.0	</biped>
+			<biped..Spine>	0.2	</biped..Spine>
+			<biped..R..Clavicle>	0.9	</biped..R..Clavicle>
+			<biped..L..Clavicle>	0.0	</biped..L..Clavicle>
+		</alpha>
+	</animation>
+	<animation>
+		<name>	m_crouch:1	</name>
+		<frameRate>	30.000000	</frameRate>
+		<lastFrame>	13	</lastFrame>
+		<nodes>	characters/avatars/base/animations/combat/m_crouch	</nodes>
+	</animation>
+	<animation>
+		<name>	m_crouch:mid	</name>
+		<frameRate>	2.000000	</frameRate>
+		<firstFrame>	13	</firstFrame>
+		<lastFrame>	19	</lastFrame>
+		<nodes>	characters/avatars/base/animations/combat/m_crouch	</nodes>
+	</animation>
+	<animation>
+		<name>	m_crouch:2	</name>
+		<frameRate>	30.000000	</frameRate>
+		<firstFrame>	19	</firstFrame>
+		<nodes>	characters/avatars/base/animations/combat/m_crouch	</nodes>
+	</animation>
+	<animation>
+		<name>	sitonchair	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/itemhandling/sitonchair	</nodes>
+		<cognate>	idle_a	</cognate>
+	</animation>
+	<animation>
+		<name>	sitonchair:end	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/itemhandling/sitonchair	</nodes>
+		<firstFrame>	-1	</firstFrame>
+		<cognate>	idle_a	</cognate>
+	</animation>
+	<animation>
+		<name>	seated_idle	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/itemhandling/seated_idle	</nodes>
+	</animation>
+	<animation>
+		<name>	sitonchair:rev	</name>
+		<frameRate>	30.000000	</frameRate>
+		<firstFrame>	-1	</firstFrame>
+		<lastFrame>	0	</lastFrame>
+		<nodes>	characters/avatars/base/animations/itemhandling/sitonchair	</nodes>
+		<cognate>	idle_a	</cognate>
+	</animation>
+	<animation>
+		<name>	turnleft_short:midframe	</name>
+		<frameRate>	30.000000	</frameRate>
+		<firstFrame>	10	</firstFrame>
+		<lastFrame>	10	</lastFrame>
+		<nodes>	characters/avatars/base/animations/turnleft_short	</nodes>
+	</animation>
+	<animation>
+		<name>	turnright_short:midframe	</name>
+		<frameRate>	30.000000	</frameRate>
+		<firstFrame>	10	</firstFrame>
+		<lastFrame>	10	</lastFrame>
+		<nodes>	characters/avatars/base/animations/turnright_short	</nodes>
+	</animation>
+	<action>
+		<name>	Recoil	</name>
+		<animation>	hitrecoil	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	true	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	ChangeItemBegin	</name>
+		<animation>	drawgun:1	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.002000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	true	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	ShooAway	</name>
+		<animation>	m_getaway_long	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	OneHandedWave	</name>
+		<animation>	m_waveonehand	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	true	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	TwoHandedWave	</name>
+		<animation>	m_wavetwohands	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	true	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	Cry	</name>
+		<animation>	m_cry	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	true	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	Shrug	</name>
+		<animation>	m_shrug	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	true	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	ShonkWin	</name>
+		<animation>	m_play_win	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	ShonkLose	</name>
+		<animation>	m_play_lose	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	ShonkWait	</name>
+		<animation>	m_play_loop	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	true	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	ShonkPaper	</name>
+		<animation>	m_play_paper	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	ShonkScissors	</name>
+		<animation>	m_play_scissors	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	ShonkRock	</name>
+		<animation>	m_play_rock	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	FoldArms	</name>
+		<animation>	armscrossed	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	CatchBreath	</name>
+		<animation>	breathdown	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	HeavyBreathing	</name>
+		<animation>	breathheavy	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	WatchItWarning	</name>
+		<animation>	m_watchit	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	true	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	WhoMe	</name>
+		<animation>	m_talkingtome	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	StopWarning	</name>
+		<animation>	m_stop	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	true	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	Laugh	</name>
+		<animation>	m_laugh	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	true	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	HeavyLaugh	</name>
+		<animation>	m_laughoutloud	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	BeckonTaunt	</name>
+		<animation>	m_comegetme	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	Agree	</name>
+		<animation>	m_agree	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	true	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	Disagree	</name>
+		<animation>	m_disagree	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	SubtleBeckon	</name>
+		<animation>	m_beckon_subtle	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	true	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	FranticBeckon	</name>
+		<animation>	m_beckon_frantic	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	KissMyAssTaunt	</name>
+		<animation>	m_kissassgoodbye	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	Point	</name>
+		<animation>	m_point_there	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	PointToSelf	</name>
+		<animation>	m_point_self	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	PointWarning	</name>
+		<animation>	m_point_lookout	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	Ponder	</name>
+		<animation>	m_ponder_a	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	RudeGesture	</name>
+		<animation>	m_rudegesture_a	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	GiveUp	</name>
+		<animation>	m_giveup	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	SwingSword	</name>
+		<animation>	swing_sword	</animation>
+		<blendInTime>	0.202000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	true	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	RaiseSword	</name>
+		<animation>	m_swordhi	</animation>
+		<blendInTime>	0.202000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	true	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	TalkIdleA	</name>
+		<animation>	m_speak_a	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	true	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	TalkIdleB	</name>
+		<animation>	m_speak_c	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	true	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	BeginFire	</name>
+		<animation>	staff_fire_whole:prep	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.050000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	true	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	ExecuteFire	</name>
+		<animation>	staff_fire_whole:fire	</animation>
+		<blendInTime>	0.050000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	true	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	Die	</name>
+		<animation>	shotdown_a	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	true	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+		<match>
+			<trigger>
+				<capsOn />
+				<capsOff />
+			</trigger>
+		</match>
+	</action>
+	<action>
+		<name>	Dead	</name>
+		<animation>	shotdown_a:lastframe	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	true	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+		<match>
+			<trigger>
+				<capsOn />
+				<capsOff />
+			</trigger>
+		</match>
+	</action>
+	<action>
+		<name>	RespawnFall	</name>
+		<animation>	m_spawn:fall	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+		<match>
+			<trigger>
+				<capsOn />
+				<capsOff />
+			</trigger>
+		</match>
+	</action>
+	<action>
+		<name>	RespawnLand	</name>
+		<animation>	m_spawn:land	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+		<match>
+			<trigger>
+				<capsOn />
+				<capsOff />
+			</trigger>
+		</match>
+	</action>
+	<action>
+		<name>	Shake_A_Extend	</name>
+		<animation>	handshake_a:1	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.101000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	Shake_A_Idle	</name>
+		<animation>	handshake_a:2	</animation>
+		<blendInTime>	0.101000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	true	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	Shake_A_Accept	</name>
+		<animation>	handshake_a:3	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.101000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	Shake_B_Extend	</name>
+		<animation>	handshake_b:1	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	true	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	Shake_B_Accept	</name>
+		<animation>	handshake_b:2	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	true	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	Shake_B_Whole	</name>
+		<animation>	handshake_b:all	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	true	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	PickUpStart	</name>
+		<animation>	pickitem_ground:down	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.202000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+		<match>
+			<trigger>
+				<capsOn />
+				<capsOff />
+			</trigger>
+		</match>
+	</action>
+	<action>
+		<name>	PickUp	</name>
+		<animation>	pickitem_ground:up	</animation>
+		<blendInTime>	0.202000	</blendInTime>
+		<blendOutTime>	0.500000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+		<match>
+			<trigger>
+				<capsOn />
+				<capsOff />
+			</trigger>
+		</match>
+	</action>
+	<action>
+		<name>	PickUpComplete	</name>
+		<animation>	pickitem_ground:done	</animation>
+		<blendInTime>	0.202000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+		<match>
+			<trigger>
+				<capsOn />
+				<capsOff />
+			</trigger>
+		</match>
+	</action>
+	<action>
+		<name>	ChangeItemBegin	</name>
+		<animation>	drawgun:1	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.002000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	true	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	EatDrumstick	</name>
+		<animation>	eatdrumstick	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	true	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	DrinkFromFlask	</name>
+		<animation>	drink	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	1.000000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	true	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	HoldUpright	</name>
+		<animation>	holddrink_stand	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	true	</filler>
+		<blended>	true	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	RipperPilotIdle	</name>
+		<animation>	driver_engineon	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	true	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	RipperPilotTurnLeft	</name>
+		<animation>	driver_turnleft:1	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	RipperPilotTurnRight	</name>
+		<animation>	driver_turnright:1	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	RipperPilotStop	</name>
+		<animation>	driver_start&amp;stop:start	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	RipperPilotThrust	</name>
+		<animation>	driver_start&amp;stop:start	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	RipperPilotTurningLeft	</name>
+		<animation>	driver_turnleft:2	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	true	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	RipperPilotTurningRight	</name>
+		<animation>	driver_turnright:2	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	true	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	RipperPilotStopping	</name>
+		<animation>	driver_start&amp;stop:surge	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	true	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	RipperPilotThrusting	</name>
+		<animation>	driver_start&amp;stop:surge	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	true	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	RipperPilotBoard	</name>
+		<animation>	driver_geton	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	true	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	RipperPilotBoarded	</name>
+		<animation>	driver_geton:lastframe	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	true	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	true	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	RipperPilotAlight	</name>
+		<animation>	driver_geton:rev	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	true	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	RipperPilotAlighted	</name>
+		<animation>	driver_geton:firstframe	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	true	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	true	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	ChangeItemEnd	</name>
+		<animation>	drawgun:2	</animation>
+		<blendInTime>	0.002000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	true	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	UseEyepiece	</name>
+		<animation>	usebinocular	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	true	</filler>
+		<blended>	true	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	EnterCrouch	</name>
+		<animation>	m_crouch:1	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.002000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+		<match>
+			<trigger>
+				<capsOn />
+				<capsOff />
+			</trigger>
+		</match>
+	</action>
+	<action>
+		<name>	Crouch	</name>
+		<animation>	m_crouch:mid	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	true	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+		<match>
+			<trigger>
+				<capsOn />
+				<capsOff />
+			</trigger>
+		</match>
+	</action>
+	<action>
+		<name>	LeaveCrouch	</name>
+		<animation>	m_crouch:2	</animation>
+		<blendInTime>	0.300000	</blendInTime>
+		<blendOutTime>	0.300000	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+		<match>
+			<trigger>
+				<capsOn />
+				<capsOff />
+			</trigger>
+		</match>
+	</action>
+	<action>
+		<name>	SitOnChair	</name>
+		<animation>	sitonchair	</animation>
+		<blendInTime>	0.3	</blendInTime>
+		<blendOutTime>	0.0001	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	true	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	SitOnChairEnd	</name>
+		<animation>	sitonchair:end	</animation>
+		<blendInTime>	0.0001	</blendInTime>
+		<blendOutTime>	0.0001	</blendOutTime>
+		<filler>	true	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	true	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	IdleOnChair	</name>
+		<animation>	seated_idle	</animation>
+		<blendInTime>	0.0001	</blendInTime>
+		<blendOutTime>	0.0001	</blendOutTime>
+		<filler>	true	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	false	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<action>
+		<name>	RiseFromChair	</name>
+		<animation>	sitonchair:rev	</animation>
+		<blendInTime>	0.0001	</blendInTime>
+		<blendOutTime>	0.3	</blendOutTime>
+		<filler>	false	</filler>
+		<blended>	false	</blended>
+		<isMovement>	false	</isMovement>
+		<isCoordinated>	true	</isCoordinated>
+		<isImpacting>	false	</isImpacting>
+	</action>
+	<animation>
+		<name>	m_head_stretch	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/Gestures/m_head_stretch	</nodes>
+	</animation>
+	<extent>	400.000000	</extent>
+	<animation>
+		<name>	driver_geton_n	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/driver_geton_n	</nodes>
+		<firstFrame>	0	</firstFrame>
+		<lastFrame>	137	</lastFrame>
+	</animation>
+	<animation>
+		<name>	driver_geton_n_rev	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/driver_geton_n	</nodes>
+		<firstFrame>	137	</firstFrame>
+		<lastFrame>	0	</lastFrame>
+	</animation>
+	<materialNames />
+	<animation>
+		<name>	opendoor	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/opendoor	</nodes>
+	</animation>
+	<visibilityBox>
+		<min>	-1.026154 -0.595837 -1.245802	</min>
+		<max>	1.030707 2.430321 1.430674	</max>
+	</visibilityBox>
+	<animation>
+		<name>	staff_idle	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/combat/m_staff_idle	</nodes>
+	</animation>
+	<animation>
+		<name>	staff_fire	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/combat/staff_fire	</nodes>
+	</animation>
+	<animation>
+		<name>	m_jog_staff	</name>
+		<frameRate>	31.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/combat/m_jog_staff	</nodes>
+	</animation>
+	<animation>
+		<name>	staff_raise	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/combat/staff_raise	</nodes>
+	</animation>
+	<animation>
+		<name>	staff_run_fd	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/staff_run_fd	</nodes>
+	</animation>
+	<animation>
+		<name>	staff_dash_fd	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/staff_dash_fd	</nodes>
+	</animation>
+	<animation>
+		<name>	staff_walk_fd	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/staff_walk_fd	</nodes>
+	</animation>
+	<animation>
+		<name>	staff_fire:execute	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/combat/staff_fire	</nodes>
+		<firstFrame>	24	</firstFrame>
+		<lastFrame>	24	</lastFrame>
+	</animation>
+	<animation>
+		<name>	staff_run_bk	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/staff_run_bk	</nodes>
+	</animation>
+	<animation>
+		<name>	staff_walk_bk	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/staff_walk_bk	</nodes>
+	</animation>
+	<animation>
+		<name>	staff_turn_left	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/staff_turnleft	</nodes>
+	</animation>
+	<animation>
+		<name>	staff_turn_right	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/staff_turnright	</nodes>
+	</animation>
+	<animation>
+		<name>	staff_ultra_dash_fd	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/staff_ultra_dash_fd	</nodes>
+	</animation>
+	<animation>
+		<name>	staff_ultra_bk	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/staff_ultra_bk	</nodes>
+	</animation>
+	<animation>
+		<name>	staff_fire_whole:prep	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/staff_fire_whole	</nodes>
+		<firstFrame>	1	</firstFrame>
+		<lastFrame>	44	</lastFrame>
+		<alpha>
+			<biped..L..Thigh>	0.000000	</biped..L..Thigh>
+			<biped..R..Thigh>	0.000000	</biped..R..Thigh>
+			<biped>	0.000000	</biped>
+			<biped..Spine>	0.200000	</biped..Spine>
+			<biped..Spine1>	1.000000	</biped..Spine1>
+			<biped..L..Clavicle>	0.850000	</biped..L..Clavicle>
+			<biped..L..UpperArm>	0.650000	</biped..L..UpperArm>
+		</alpha>
+	</animation>
+	<animation>
+		<name>	staff_fire_whole:fire	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/staff_fire_whole	</nodes>
+		<firstFrame>	45	</firstFrame>
+		<alpha>
+			<biped..R..Thigh>	0.000000	</biped..R..Thigh>
+			<biped..L..Thigh>	0.000000	</biped..L..Thigh>
+			<biped>	0.000000	</biped>
+			<biped..Pelvis>	0.200000	</biped..Pelvis>
+			<biped..Spine1>	1.000000	</biped..Spine1>
+			<biped..L..Clavicle>	0.800000	</biped..L..Clavicle>
+			<biped..L..UpperArm>	0.650000	</biped..L..UpperArm>
+		</alpha>
+	</animation>
+	<animation>
+		<name>	staff_waving:prep	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/combat/staff_waving	</nodes>
+		<firstFrame>	0	</firstFrame>
+		<lastFrame>	12	</lastFrame>
+		<alpha>
+			<biped>	0.000000	</biped>
+			<biped..Spine>	0.200000	</biped..Spine>
+			<biped..L..Clavicle>	0.850000	</biped..L..Clavicle>
+			<biped..L..UpperArm>	0.650000	</biped..L..UpperArm>
+			<biped..R..Clavicle>	1.000000	</biped..R..Clavicle>
+			<biped..Spine1>	1.000000	</biped..Spine1>
+		</alpha>
+	</animation>
+	<animation>
+		<name>	staff_waving:fire	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/combat/staff_waving	</nodes>
+		<firstFrame>	13	</firstFrame>
+		<alpha>
+			<biped>	0.000000	</biped>
+			<biped..Spine>	0.200000	</biped..Spine>
+			<biped..Spine1>	1.000000	</biped..Spine1>
+			<biped..L..Clavicle>	0.850000	</biped..L..Clavicle>
+			<biped..L..UpperArm>	0.650000	</biped..L..UpperArm>
+		</alpha>
+	</animation>
+	<animation>
+		<name>	m_getaway_long	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/Gestures/m_getaway_long	</nodes>
+	</animation>
+	<animation>
+		<name>	sw_bk	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/swimming/sw_bk	</nodes>
+	</animation>
+	<animation>
+		<name>	sw_fd	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/swimming/sw_fd	</nodes>
+	</animation>
+	<animation>
+		<name>	sw_idle	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/swimming/sw_idle	</nodes>
+	</animation>
+	<animation>
+		<name>	sw_wait	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/swimming/sw_wait	</nodes>
+	</animation>
+	<animation>
+		<name>	no_op	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/avatars/base/animations/idle_a	</nodes>
+		<alpha>
+			<biped>	0.000000	</biped>
+		</alpha>
+	</animation>
+	<metaData>
+		<copyright>	Copyright BigWorld Pty Ltd.  Use freely in any BigWorld licensed game.	</copyright>
+		<modified_by>	adamm	</modified_by>
+		<modified_on>	1332306896	</modified_on>
+	</metaData>
+</base.model>

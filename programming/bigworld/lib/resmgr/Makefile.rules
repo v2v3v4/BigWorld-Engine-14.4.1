@@ -1,0 +1,43 @@
+$(call includeUnitTestDirectory)
+
+name         := resmgr
+type         := library
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =					\
+	access_monitor			\
+	auto_config				\
+	bdiff					\
+	binary_block			\
+	bin_section				\
+	bundiff					\
+	bwresource				\
+	dataresource			\
+	datasection				\
+	data_section_cache		\
+	data_section_census		\
+	dir_section				\
+	multi_file_system		\
+	packed_section			\
+	primitive_file			\
+	resource_file_path 		\
+	sanitise_helper			\
+	string_provider			\
+	unix_file_system		\
+	file_handle_streamer	\
+	resmgr_test_utils		\
+	xml_section				\
+	xml_special_chars		\
+	zip_file_system			\
+	zip_section	
+
+
+cppFlags_$(binName) += -DHAVE_ZIP
+
+exportFor := bwentity
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - libresmgr

@@ -1,0 +1,18 @@
+# BW_DBAPP_EXTENSIONS is used as the pre-requisite list for the target below.
+# It is populated by the Makefiles within each of the subdirectories.
+BW_DBAPP_EXTENSIONS =
+
+subdirs =			\
+	bwengine_mysql	\
+	bwengine_xml
+
+$(call includeMakefilesFrom,$(subdirs))
+
+.PHONY: dbapp_extensions
+dbapp_extensions: $(BW_DBAPP_EXTENSIONS)
+
+.PHONY: clean_dbapp_extensions
+clean_dbapp_extensions: $(addprefix clean_,$(BW_DBAPP_EXTENSIONS))
+
+# vi: filetype=make
+# Makefile.rules - server/dbapp_extensions

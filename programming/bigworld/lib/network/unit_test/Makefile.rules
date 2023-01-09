@@ -1,0 +1,45 @@
+name  := network
+type  := unit_test
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =							\
+	main							\
+	common_interface				\
+	packet_generator				\
+	test_auto_switch				\
+	test_baseapp_death				\
+	test_channel					\
+	test_channel_version			\
+	test_compresslength				\
+	test_config						\
+	test_exposed_message_range		\
+	test_elliptic_curve 			\
+	test_flood						\
+	test_fragment					\
+	test_interface					\
+	test_mangle						\
+	test_msgtypes					\
+	test_netmask					\
+	test_networkstats				\
+	test_overflow					\
+	test_receive_window				\
+	test_reliable					\
+	test_network_checksum_schemes	\
+	test_snprintf 					\
+	test_stream						\
+	test_tcp_channels				\
+	test_threadsafety				\
+	test_websockets 				\
+
+useOpenSSL = 1
+
+dependsOn += network math cstdmf
+
+# BWT-25539: CPPUnitLite2 fails to compile on RHEL 7
+cxxFlags_$(binName) += -Wno-float-equal
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - network/unit_test

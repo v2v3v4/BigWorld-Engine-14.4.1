@@ -1,0 +1,24 @@
+# This README file describes the steps to build the boost libraries from source
+# tar ball. These libraries are the specific ones required by MongoDB C++ driver.
+
+# TODO: Create a Makefile to automatically build these libraries to replace
+# these manual steps.
+
+# Step 1: extract tar ball
+tar zxf boost_1_54_0.tar.gz
+
+# Step 2: prepare for build
+cd boost_1_54_0/tools/build/v2
+./bootstrap.sh
+./b2 install --prefix=../../../build
+
+# Step 3: build the libraries we need
+cd ../../../
+./build/bin/b2 --stagedir=../build --build-dir=../build --layout=tagged \
+	variant=release link=static threading=multi cxxflags="-fPIC -std=c++11" \
+	--with-system  --with-filesystem --with-thread --with-regex \
+	--with-program_options
+
+# Step 4: copy header files to build directory
+mkdir -p ../build/include
+cp -fr ./boost ../build/include

@@ -1,0 +1,280 @@
+<root>
+	<node>
+		<identifier>	Scene Root	</identifier>
+		<transform>
+			<row0>	1.000000 0.000000 0.000000	</row0>
+			<row1>	0.000000 1.000000 0.000000	</row1>
+			<row2>	0.000000 0.000000 1.000000	</row2>
+			<row3>	0.000000 0.000000 0.000000	</row3>
+		</transform>
+		<node>
+			<identifier>	cone_joint	</identifier>
+			<transform>
+				<row0>	0.814561 0.103962 0.570686	</row0>
+				<row1>	0.061451 0.962808 -0.263106	</row1>
+				<row2>	-0.576814 0.249385 0.777877	</row2>
+				<row3>	-0.006740 -0.013869 -0.019236	</row3>
+			</transform>
+			<node>
+				<identifier>	cone_joint_BlendBone	</identifier>
+				<transform>
+					<row0>	0.814561 0.061451 -0.576814	</row0>
+					<row1>	0.103962 0.962808 0.249385	</row1>
+					<row2>	-0.570687 0.263106 -0.777877	</row2>
+					<row3>	0.017910 0.008707 0.014535	</row3>
+				</transform>
+			</node>
+		</node>
+		<node>
+			<identifier>	cube_joint	</identifier>
+			<transform>
+				<row0>	1.000000 0.000000 0.000000	</row0>
+				<row1>	0.000000 1.000000 0.000000	</row1>
+				<row2>	0.000000 0.000000 1.000000	</row2>
+				<row3>	0.024736 0.002519 -0.025097	</row3>
+			</transform>
+			<node>
+				<identifier>	cube_joint_BlendBone	</identifier>
+				<transform>
+					<row0>	1.000000 0.000000 0.000000	</row0>
+					<row1>	0.000000 1.000000 0.000000	</row1>
+					<row2>	0.000000 0.000000 -1.000000	</row2>
+					<row3>	-0.024736 -0.002519 0.025097	</row3>
+				</transform>
+			</node>
+		</node>
+		<node>
+			<identifier>	cylinder_joint	</identifier>
+			<transform>
+				<row0>	0.814561 0.103962 0.570686	</row0>
+				<row1>	0.061451 0.962808 -0.263106	</row1>
+				<row2>	-0.576814 0.249385 0.777877	</row2>
+				<row3>	-0.028545 0.000000 0.026424	</row3>
+			</transform>
+			<node>
+				<identifier>	cylinder_joint_BlendBone	</identifier>
+				<transform>
+					<row0>	0.814561 0.061451 -0.576814	</row0>
+					<row1>	0.103962 0.962808 0.249385	</row1>
+					<row2>	-0.570687 0.263106 -0.777877	</row2>
+					<row3>	0.008172 0.008707 -0.037020	</row3>
+				</transform>
+			</node>
+		</node>
+		<node>
+			<identifier>	ik_target_locator	</identifier>
+			<transform>
+				<row0>	1.000000 0.000000 0.000000	</row0>
+				<row1>	0.000000 1.000000 0.000000	</row1>
+				<row2>	0.000000 0.000000 1.000000	</row2>
+				<row3>	0.070357 0.017383 0.063562	</row3>
+			</transform>
+		</node>
+		<node>
+			<identifier>	sphere_joint	</identifier>
+			<transform>
+				<row0>	0.817955 0.098486 0.566789	</row0>
+				<row1>	0.066782 0.962321 -0.263589	</row1>
+				<row2>	-0.571392 0.253455 0.780558	</row2>
+				<row3>	0.023944 0.002519 0.030831	</row3>
+			</transform>
+			<node>
+				<identifier>	torus_joint	</identifier>
+				<transform>
+					<row0>	0.889487 -0.243806 -0.386487	</row0>
+					<row1>	0.186812 0.965883 -0.179362	</row1>
+					<row2>	0.417031 0.087339 0.904686	</row2>
+					<row3>	0.000876 0.017435 0.025145	</row3>
+				</transform>
+				<node>
+					<identifier>	torus_child_joint	</identifier>
+					<transform>
+						<row0>	1.000000 -0.000000 0.000000	</row0>
+						<row1>	-0.000000 1.000000 0.000000	</row1>
+						<row2>	-0.000000 0.000000 1.000000	</row2>
+						<row3>	0.032888 0.034366 0.023013	</row3>
+					</transform>
+					<node>
+						<identifier>	torus_child_joint_BlendBone	</identifier>
+						<transform>
+							<row0>	0.932114 0.319793 -0.169986	</row0>
+							<row1>	-0.244975 0.902428 0.354417	</row1>
+							<row2>	-0.266740 0.288715 -0.919507	</row2>
+							<row3>	-0.049623 -0.047888 -0.072822	</row3>
+						</transform>
+					</node>
+				</node>
+				<node>
+					<identifier>	torus_joint_BlendBone	</identifier>
+					<transform>
+						<row0>	0.932114 0.319793 -0.169986	</row0>
+						<row1>	-0.244975 0.902428 0.354417	</row1>
+						<row2>	-0.266740 0.288715 -0.919507	</row2>
+						<row3>	-0.016736 -0.013522 -0.049809	</row3>
+					</transform>
+				</node>
+			</node>
+			<node>
+				<identifier>	sphere_joint_BlendBone	</identifier>
+				<transform>
+					<row0>	0.817955 0.066782 -0.571392	</row0>
+					<row1>	0.098486 0.962321 0.253455	</row1>
+					<row2>	-0.566789 0.263589 -0.780558	</row2>
+					<row3>	-0.037308 0.004104 -0.011023	</row3>
+				</transform>
+			</node>
+		</node>
+	</node>
+	<renderSet>
+		<treatAsWorldSpaceObject>	true	</treatAsWorldSpaceObject>
+		<node>	torus_joint_BlendBone	</node>
+		<node>	torus_child_joint_BlendBone	</node>
+		<node>	sphere_joint_BlendBone	</node>
+		<geometry>
+			<vertices>	pTorusShape2.vertices	</vertices>
+			<primitive>	pTorusShape2.indices	</primitive>
+			<primitiveGroup>	0
+				<material>
+					<identifier>	lambert1_skinned	</identifier>
+					<mfm>	materials/template_mfms/lightonly.mfm	</mfm>
+				</material>
+			</primitiveGroup>
+		</geometry>
+	</renderSet>
+	<renderSet>
+		<treatAsWorldSpaceObject>	true	</treatAsWorldSpaceObject>
+		<node>	torus_joint_BlendBone	</node>
+		<geometry>
+			<vertices>	pTorusShape1.vertices	</vertices>
+			<primitive>	pTorusShape1.indices	</primitive>
+			<primitiveGroup>	0
+				<material>
+					<identifier>	lambert1_skinned	</identifier>
+					<mfm>	materials/template_mfms/lightonly.mfm	</mfm>
+				</material>
+			</primitiveGroup>
+		</geometry>
+	</renderSet>
+	<renderSet>
+		<treatAsWorldSpaceObject>	true	</treatAsWorldSpaceObject>
+		<node>	cone_joint_BlendBone	</node>
+		<geometry>
+			<vertices>	pConeShape1.vertices	</vertices>
+			<primitive>	pConeShape1.indices	</primitive>
+			<primitiveGroup>	0
+				<material>
+					<identifier>	lambert1_skinned	</identifier>
+					<mfm>	materials/template_mfms/lightonly.mfm	</mfm>
+				</material>
+			</primitiveGroup>
+		</geometry>
+	</renderSet>
+	<renderSet>
+		<treatAsWorldSpaceObject>	true	</treatAsWorldSpaceObject>
+		<node>	cylinder_joint_BlendBone	</node>
+		<geometry>
+			<vertices>	pCylinderShape1.vertices	</vertices>
+			<primitive>	pCylinderShape1.indices	</primitive>
+			<primitiveGroup>	0
+				<material>
+					<identifier>	lambert1_skinned	</identifier>
+					<mfm>	materials/template_mfms/lightonly.mfm	</mfm>
+				</material>
+			</primitiveGroup>
+		</geometry>
+	</renderSet>
+	<renderSet>
+		<treatAsWorldSpaceObject>	true	</treatAsWorldSpaceObject>
+		<node>	sphere_joint_BlendBone	</node>
+		<geometry>
+			<vertices>	pSphereShape1.vertices	</vertices>
+			<primitive>	pSphereShape1.indices	</primitive>
+			<primitiveGroup>	0
+				<material>
+					<identifier>	lambert1_skinned	</identifier>
+					<mfm>	materials/template_mfms/lightonly.mfm	</mfm>
+				</material>
+			</primitiveGroup>
+		</geometry>
+	</renderSet>
+	<renderSet>
+		<treatAsWorldSpaceObject>	true	</treatAsWorldSpaceObject>
+		<node>	cube_joint_BlendBone	</node>
+		<geometry>
+			<vertices>	pCubeShape1.vertices	</vertices>
+			<primitive>	pCubeShape1.indices	</primitive>
+			<primitiveGroup>	0
+				<material>
+					<identifier>	lambert1_skinned	</identifier>
+					<mfm>	materials/template_mfms/lightonly.mfm	</mfm>
+				</material>
+			</primitiveGroup>
+		</geometry>
+	</renderSet>
+	<constraints>
+		<orientConstraint>
+			<identifier>	orient_cylinder_from_sphere	</identifier>
+			<target>	cylinder_joint	</target>
+			<offset>	-0.000000 -0.000000 0.000000	</offset>
+			<source>
+				<identifier>	sphere_joint	</identifier>
+				<weight>	1.000000	</weight>
+			</source>
+		</orientConstraint>
+		<pointConstraint>
+			<identifier>	point_sphere_from_cube	</identifier>
+			<target>	sphere_joint	</target>
+			<offset>	-0.000792 0.000000 0.055928	</offset>
+			<source>
+				<identifier>	cube_joint	</identifier>
+				<weight>	1.000000	</weight>
+			</source>
+		</pointConstraint>
+		<pointConstraint>
+			<identifier>	sphere_tori_ik_handle_pointConstraint1	</identifier>
+			<target>	sphere_tori_ik_handle	</target>
+			<offset>	0.000000 0.000000 -0.000000	</offset>
+			<source>
+				<identifier>	ik_target_locator	</identifier>
+				<weight>	1.000000	</weight>
+			</source>
+		</pointConstraint>
+		<parentConstraint>
+			<identifier>	parent_cone_on_cylinder	</identifier>
+			<target>	cone_joint	</target>
+			<source>
+				<weight>	1.000000	</weight>
+				<identifier>	cylinder_joint	</identifier>
+				<translateOffset>	-0.009738 0.000000 -0.051555	</translateOffset>
+				<rotateOffset>	-0.000000 -0.000000 0.000000	</rotateOffset>
+			</source>
+		</parentConstraint>
+		<aimConstraint>
+			<identifier>	aim_torus_at_cone	</identifier>
+			<target>	torus_joint	</target>
+			<offset>	-0.000000 -0.000000 0.000000	</offset>
+			<aimVector>	0.000000 1.000000 -0.000000	</aimVector>
+			<upVector>	0.000000 1.000000 -0.000000	</upVector>
+			<worldUpVector>	0.000000 1.000000 -0.000000	</worldUpVector>
+			<source>
+				<identifier>	cone_joint	</identifier>
+				<weight>	1.000000	</weight>
+			</source>
+		</aimConstraint>
+		<ikHandle>
+			<identifier>	sphere_tori_ik_handle	</identifier>
+			<startJoint>	sphere_joint	</startJoint>
+			<endJoint>	torus_child_joint	</endJoint>
+			<source>
+				<node>	sphere_tori_ik_handle_pointConstraint1	</node>
+			</source>
+			<poleVector>
+				<vector>	-1.000000 0.000000 -0.000000	</vector>
+			</poleVector>
+		</ikHandle>
+	</constraints>
+	<boundingBox>
+		<min>	-0.044198 -0.017565 -0.044271	</min>
+		<max>	0.053642 0.105746 0.071245	</max>
+	</boundingBox>
+</root>

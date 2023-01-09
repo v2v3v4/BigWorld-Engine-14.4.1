@@ -1,0 +1,47 @@
+name         := chunk
+type         := library
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =							\
+	base_chunk_space				\
+	base_chunk_tree					\
+	chunk 							\
+	chunk_boundary					\
+	chunk_cache						\
+	chunk_exit_portal				\
+	chunk_grid_size					\
+	chunk_item						\
+	chunk_link						\
+	chunk_loader					\
+	chunk_model_obstacle			\
+	chunk_model_vlo					\
+	chunk_model_vlo_ref				\
+	chunk_obstacle					\
+	chunk_overlapper				\
+	chunk_space						\
+	chunk_stationnode				\
+	chunk_terrain_obstacle			\
+	chunk_user_data_object			\
+	chunk_vlo						\
+	chunk_vlo_obstacle				\
+	geometry_mapping				\
+	portal_chunk_item				\
+	server_chunk_manager			\
+	server_chunk_model				\
+	server_chunk_space				\
+	server_chunk_terrain			\
+	server_chunk_tree				\
+	server_chunk_water				\
+	server_super_model				\
+	station_graph					\
+	user_data_object				\
+	user_data_object_type			\
+	user_data_object_link_data_type	\
+
+usePython = 1
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - libchunk

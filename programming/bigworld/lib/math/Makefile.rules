@@ -1,0 +1,26 @@
+$(call includeUnitTestDirectory)
+
+name         := math
+type         := library
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =					\
+	boundbox				\
+	ema						\
+	math_extra				\
+	matrix					\
+	planeeq					\
+	portal2d				\
+	quat					\
+	vector2					\
+	vector3					\
+	vector4					\
+	stat_watcher_creator	\
+
+exportFor := bwentity
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - libmath

@@ -1,0 +1,34 @@
+name  := script
+type  := unit_test
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =							\
+	main							\
+	test_scriptobject				\
+	test_scriptmodule				\
+	test_scriptargs					\
+	test_scriptdict					\
+	test_scriptsequence				\
+	test_scripttuple				\
+	test_scriptlist					\
+	test_scriptmapping				\
+
+dependsOn +=							\
+	pyscript 							\
+	script								\
+	resmgr 								\
+	zip 								\
+	math 								\
+	cstdmf
+
+
+ldLibs_$(binName) += -ldl
+
+usePython := 1
+
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - script/unit_test

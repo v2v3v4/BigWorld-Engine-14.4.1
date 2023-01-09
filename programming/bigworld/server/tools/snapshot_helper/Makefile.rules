@@ -1,0 +1,25 @@
+ifneq ($(SYSTEM_HAS_MYSQL),0)
+
+$(warning MySQL development libraries not installed. Skipping snapshot_helper build.)
+
+else
+
+name  := snapshot_helper
+type  := binary
+bindir = $(BW_COMMAND_HELPER_BIN_DIR)
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource = snapshot_helper
+
+dependsOn = server
+
+useMySQL = 1
+
+include $(BW_COMPONENT_FOOTER)
+
+endif
+# endif MySQL development libraries installed. 
+
+# vi: filetype=make
+# Makefile.rules - snapshot_helper

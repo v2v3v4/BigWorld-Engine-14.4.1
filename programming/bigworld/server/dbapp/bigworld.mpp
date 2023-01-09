@@ -1,0 +1,4 @@
+// This is a stub to allow the inclusion of documentation into this module.
+/*~ module BigWorld
+ *  @components{ db }
+ */

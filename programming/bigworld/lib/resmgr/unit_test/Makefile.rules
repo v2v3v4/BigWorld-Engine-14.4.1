@@ -1,0 +1,21 @@
+name  := resmgr
+type  := unit_test
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =							\
+	main							\
+	test_bwresource					\
+	test_data_resource				\
+	test_file_system				\
+	test_packed_section				\
+	test_path_resource				\
+	test_xml_section				\
+	test_zip_section
+
+dependsOn += resmgr cstdmf math zip
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - resmgr/unit_test

@@ -1,0 +1,85 @@
+<root>
+	<Volatile>
+		<position/>
+		<yaw/>
+		<pitch> 20 </pitch>
+	</Volatile>
+
+	<Properties>
+		<playerName>
+			<Type>			STRING				</Type>
+			<Flags>			ALL_CLIENTS			</Flags>
+			<Persistent>	true				</Persistent>
+			<Editable>		true				</Editable>
+			<Identifier>	true				</Identifier>
+		</playerName>
+
+		<prop1>
+			<Type>			INT32				</Type>
+			<Flags>			BASE_AND_CLIENT		</Flags>
+			<Default>		1					</Default>
+		</prop1>
+
+		<prop2>
+			<Type>			INT16				</Type>
+			<Flags>			ALL_CLIENTS			</Flags>
+			<Default>		2					</Default>
+			<Persistent>	true				</Persistent>
+		</prop2>
+
+		<prop3>
+			<Type>			INT8				</Type>
+			<Flags>			OTHER_CLIENTS		</Flags>
+			<Default>		3					</Default>
+		</prop3>
+
+		<prop4>
+			<Type>			INT8				</Type>
+			<Flags>			CELL_PRIVATE		</Flags>
+			<Default>		4					</Default>
+		</prop4>
+
+		<prop5>
+			<Type>	USER_TYPE <implementedBy> TestDataType.instance </implementedBy> </Type>
+			<Flags>	ALL_CLIENTS </Flags>
+			<Persistent> true </Persistent>
+		</prop5>
+
+		<_timer1>
+			<Type>			INT32				</Type>
+			<Flags>			CELL_PRIVATE		</Flags>
+		</_timer1>
+
+		<_timer2>
+			<Type>			INT32				</Type>
+			<Flags>			CELL_PRIVATE		</Flags>
+		</_timer2>
+
+		<_timerTick>
+			<Type>			INT32				</Type>
+			<Flags>			CELL_PRIVATE		</Flags>
+		</_timerTick>
+
+	</Properties>
+
+	<ClientMethods>
+		<fromCell>
+			<Arg>	STRING	</Arg>
+		</fromCell>
+		
+		<cellTick>
+			<Arg>	INT32	</Arg>
+		</cellTick>
+		
+	</ClientMethods>
+
+	<CellMethods>
+	</CellMethods>
+
+	<BaseMethods>
+		<logOff>
+			<Exposed/>
+		</logOff>
+	</BaseMethods>
+
+</root>

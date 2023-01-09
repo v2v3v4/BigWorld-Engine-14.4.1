@@ -1,0 +1,16 @@
+<barrel.model>
+	<materialNames />
+	<extent>	10.000000	</extent>
+	<visibilityBox>
+		<min>	-0.417545 0.002069 -0.435774	</min>
+		<max>	0.403318 1.123771 0.417545	</max>
+	</visibilityBox>
+	<parent>	sets/minspec/props/barrel/models/barrel_apples	</parent>
+	<batched>	true	</batched>
+	<nodelessVisual>	sets/minspec/props/barrel/models/barrel	</nodelessVisual>
+	<metaData>
+		<copyright>	Copyright BigWorld Pty Ltd.  Use freely in any BigWorld licensed game.	</copyright>
+		<modified_by>	alexeyn	</modified_by>
+		<modified_on>	1389682958	</modified_on>
+	</metaData>
+</barrel.model>

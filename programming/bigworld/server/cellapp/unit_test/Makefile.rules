@@ -1,0 +1,22 @@
+name  := cellapp
+type  := unit_test
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =									\
+	main									\
+	../profile								\
+	test_buffered_ghost_messages			\
+	../buffered_ghost_message				\
+	../buffered_ghost_message_queue			\
+	../buffered_ghost_messages				\
+	../buffered_ghost_messages_for_entity	\
+
+dependsOn += server resmgr network math cstdmf zip
+
+usePython := 1
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - cellapp/unit_test

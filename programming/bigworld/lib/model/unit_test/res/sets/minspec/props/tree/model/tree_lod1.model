@@ -1,0 +1,15 @@
+<tree_lod1.model>
+	<materialNames>	</materialNames>
+	<visibilityBox>
+		<min>	-4.507861 0.036104 -4.921693	</min>
+		<max>	4.591185 18.183954 4.623705	</max>
+	</visibilityBox>
+	<nodelessVisual>	sets/minspec/props/tree/model/tree_lod1	</nodelessVisual>
+	<metaData>
+		<copyright>	Copyright BigWorld Pty Ltd.  Use freely in any BigWorld licensed game.	</copyright>
+		<modified_by>	adamm	</modified_by>
+		<modified_on>	1254380741	</modified_on>
+	</metaData>
+	<extent>	117.000000	</extent>
+	<parent>	sets/minspec/props/tree/model/tree_lod3	</parent>
+</tree_lod1.model>

@@ -1,0 +1,14 @@
+<barrel_apples_lod1.model>
+	<nodelessVisual>	sets/minspec/props/barrel/models/barrel_apples_lod1	</nodelessVisual>
+	<materialNames />
+	<batched>	true	</batched>
+	<visibilityBox>
+		<min>	-0.420283 0.000159 -0.422135	</min>
+		<max>	0.420283 0.799757 0.422135	</max>
+	</visibilityBox>
+	<metaData>
+		<copyright>	Copyright BigWorld Pty Ltd.  Use freely in any BigWorld licensed game.	</copyright>
+		<modified_by>	AdamM	</modified_by>
+		<modified_on>	1281489414	</modified_on>
+	</metaData>
+</barrel_apples_lod1.model>

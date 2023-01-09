@@ -1,0 +1,35 @@
+subdirs =				\
+	build				\
+	cstdmf				\
+	connection			\
+	connection_model	\
+	chunk				\
+	chunk_loading		\
+	db 					\
+	db_storage			\
+	db_storage_mysql	\
+	db_storage_xml		\
+	delegate_interface	\
+	entitydef			\
+	entitydef_script	\
+	math				\
+	memhook				\
+	moo					\
+	network				\
+	physics2			\
+	pyscript			\
+	resmgr				\
+	scene				\
+	server				\
+	script				\
+	speedtree			\
+	sqlite				\
+	terrain				\
+	unit_test_lib		\
+	urlrequest			\
+	waypoint			\
+
+$(call includeMakefilesFrom,$(subdirs))
+
+# vi: filetype=make
+# Makefile.rules - lib

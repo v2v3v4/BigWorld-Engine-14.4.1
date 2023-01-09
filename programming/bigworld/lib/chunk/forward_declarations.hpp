@@ -1,0 +1,10 @@
+#ifndef FORWARD_DECLARATIONS_HPP
+#define FORWARD_DECLARATIONS_HPP
+
+#include "cstdmf/bw_namespace.hpp"
+
+BW_BEGIN_NAMESPACE
+class Chunk;
+BW_END_NAMESPACE
+
+#endif // FORWARD_DECLARATIONS_HPP

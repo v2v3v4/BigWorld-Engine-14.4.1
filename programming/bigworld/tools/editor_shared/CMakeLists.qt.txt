@@ -1,0 +1,25 @@
+CMAKE_MINIMUM_REQUIRED( VERSION 2.8 )
+PROJECT( editor_shared )
+
+INCLUDE( BWStandardProject )
+INCLUDE( BWStandardLibrary )
+
+SET( SHARED_SOURCE_FILES_SRCS
+	gui/i_main_frame.hpp
+	pages/gui_tab_content.hpp
+)
+SOURCE_GROUP( "Shared_Source_Files" FILES ${SHARED_SOURCE_FILES_SRCS} )
+
+SET( SOURCE_FILES_SRCS
+	mfc/menu_helper.hpp
+	mfc/menu_helper.cpp
+)
+SOURCE_GROUP( "Source_Files" FILES ${SOURCE_FILES_SRCS} )
+
+
+BW_ADD_LIBRARY( editor_shared
+	${SOURCE_FILES_SRCS}
+	${SHARED_SOURCE_FILES_SRCS}
+)
+
+BW_PROJECT_CATEGORY( editor_shared "Editor Shared" )

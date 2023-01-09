@@ -1,0 +1,42 @@
+name  := build
+type  := library
+
+include $(BW_COMPONENT_HEADER)
+
+buildIntermediateDir := $(BW_INTERMEDIATE_DIR)/$(BW_PLATFORM_CONFIG)/build
+
+cxxSource =					\
+	build					\
+
+incFlags_$(binName) += -I$(buildIntermediateDir)
+
+
+#
+# These rules are used to rebuild the build.o file _only_ if the
+# revision number of the repository has changed.
+#
+intermediateHeader := $(buildIntermediateDir)/build_revision.generated.hpp
+outputHeader := $(buildIntermediateDir)/build_revision.hpp
+inputHeader := $(pathToSource)/build_revision.hpp.in
+buildDir := $(pathToSource)
+
+.PHONY: $(intermediateHeader)
+$(intermediateHeader): $(inputHeader)
+	$(buildDir)/build.py $^ $@
+
+$(outputHeader): $(intermediateHeader)
+	@cmp --quiet $@ $^;				\
+	if [ $$? != 0 ]; then			\
+		cp $^ $@;					\
+	fi
+
+$(pathToSource)/build.cpp: $(outputHeader)
+
+usePython = 1
+
+exportFor = bwentity
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - libbuild

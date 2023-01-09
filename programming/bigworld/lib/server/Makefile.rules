@@ -1,0 +1,60 @@
+$(call includeUnitTestDirectory)
+
+name         := server
+type         := library
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =								\
+	add_to_manager_helper				\
+	anonymous_channel_client			\
+	app_script_timers					\
+	auto_backup_and_archive				\
+	backup_hash							\
+	backup_hash_chain					\
+	balance_config						\
+	base_backup_switch_mailbox_visitor 	\
+	bwconfig							\
+	bwservice							\
+	child_process						\
+	config_reader						\
+	entity_app							\
+	entity_app_config					\
+	entity_profiler						\
+	entity_type_profiler				\
+	event_history_stats					\
+	external_app_config					\
+	find_lowest_interface_handler		\
+	id_client							\
+	look_up_entities					\
+	manager_app							\
+	manager_app_config					\
+	manager_app_gateway					\
+	murmur_hash 						\
+	nat_config							\
+	plugin_library						\
+	py_services_map 					\
+	python_server						\
+	reviver_subject						\
+	script_app							\
+	script_frequent_tasks				\
+	script_timers						\
+	server_app							\
+	server_app_config					\
+	server_app_option					\
+	server_info							\
+	services_map 						\
+	shared_data							\
+	signal_processor					\
+	time_keeper							\
+	updatables							\
+	watcher_forwarding					\
+	watcher_forwarding_collector		\
+	watcher_protocol
+
+usePython = 1
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - libserver

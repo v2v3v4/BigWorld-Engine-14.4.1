@@ -1,0 +1,32 @@
+$(call includeUnitTestDirectory)
+
+name         := terrain
+type         := library
+
+include $(BW_COMPONENT_HEADER)
+
+
+cxxSource =								\
+	base_terrain_block					\
+	height_map_compress					\
+	manager								\
+	terrain_block_cache					\
+	terrain_collision_callback			\
+	terrain_ray_collision_callback		\
+	terrain_prism_collision_callback	\
+	terrain_finder						\
+	terrain_height_map					\
+	terrain_settings					\
+	dominant_texture_map				\
+	terrain2/common_terrain_block2		\
+	terrain2/dominant_texture_map2		\
+	terrain2/terrain_quad_tree_cell		\
+	terrain2/terrain_hole_map2			\
+	terrain2/terrain_height_map2		\
+	terrain2/terrain_block2				\
+	terrain2/terrain_texture_layer2
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - libterrain

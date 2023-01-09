@@ -1,0 +1,18 @@
+<tree.model>
+	<materialNames>	</materialNames>
+	<visibilityBox>
+		<min>	-1.798777 0.013834 -1.931106	</min>
+		<max>	1.842619 7.267433 1.959668	</max>
+	</visibilityBox>
+	<extent>	19.000000	</extent>
+	<batched>	true	</batched>
+	<metaData>
+		<copyright>	Copyright BigWorld Pty Ltd.  Use freely in any BigWorld licensed game.	</copyright>
+		<created_by>	AdamM	</created_by>
+		<created_on>	1283306375	</created_on>
+		<modified_by>	AdamM	</modified_by>
+		<modified_on>	1287098127	</modified_on>
+	</metaData>
+	<nodelessVisual>	sets/minspec/props/tree/model/tree	</nodelessVisual>
+	<parent>	sets/minspec/props/tree/model/tree_lod1	</parent>
+</tree.model>

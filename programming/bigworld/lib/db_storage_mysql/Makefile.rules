@@ -1,0 +1,92 @@
+name         := db_storage_mysql
+type         := library
+
+ifneq ($(SYSTEM_HAS_MYSQL),0)
+
+$(warning MySQL development libraries not installed. Skipping $(name) build.)
+
+else
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =										\
+	buffered_entity_tasks						\
+	bw_meta_data								\
+	column_type									\
+	comma_sep_column_names_builder				\
+	database_exception							\
+	database_tool_app							\
+	db_config									\
+	helper_types								\
+	locked_connection							\
+	mysql_billing_system						\
+	mysql_database								\
+	mysql_database_creation						\
+	named_lock									\
+	namer										\
+	py_user_type_binder							\
+	query										\
+	query_runner								\
+	result_set									\
+	table										\
+	table_inspector								\
+	table_meta_data								\
+	table_synchroniser							\
+	thread_data									\
+	transaction									\
+	type_traits									\
+	utils										\
+	wrapper										\
+												\
+	mappings/blobbed_sequence_mapping			\
+	mappings/blob_mapping						\
+	mappings/class_mapping						\
+	mappings/composite_property_mapping			\
+	mappings/entity_mapping						\
+	mappings/entity_type_mapping				\
+	mappings/entity_type_mappings				\
+	mappings/property_mapping					\
+	mappings/property_mappings_per_type			\
+	mappings/python_mapping						\
+	mappings/sequence_mapping					\
+	mappings/stream_to_query_helper				\
+	mappings/string_like_mapping				\
+	mappings/string_mapping						\
+	mappings/timestamp_mapping					\
+	mappings/udo_ref_mapping					\
+	mappings/unicode_string_mapping				\
+	mappings/unique_id_mapping					\
+	mappings/user_type_mapping					\
+												\
+	tasks/add_secondary_db_entry_task			\
+	tasks/background_task						\
+	tasks/del_entity_task						\
+	tasks/entity_task							\
+	tasks/entity_task_with_id					\
+	tasks/execute_raw_command_task				\
+	tasks/get_base_app_mgr_init_data_task		\
+	tasks/get_dbid_task							\
+	tasks/get_entity_key_for_account_task		\
+	tasks/get_entity_task						\
+	tasks/get_ids_task							\
+	tasks/get_secondary_dbs_task				\
+	tasks/look_up_entities_task 				\
+	tasks/put_entity_task						\
+	tasks/put_ids_task							\
+	tasks/set_entity_key_for_account_task		\
+	tasks/set_game_time_task					\
+	tasks/update_secondary_dbs_task				\
+	tasks/write_space_data_task					\
+
+usePython = 1
+useMySQL = 1
+
+cppFlags_$(binName) += $(SYSTEM_MYSQL_CFLAGS)
+
+include $(BW_COMPONENT_FOOTER)
+
+endif
+# endif MySQL development libraries installed. 
+
+# vi: filetype=make
+# Makefile.rules - libdb_storage_mysql

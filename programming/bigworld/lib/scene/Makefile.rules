@@ -1,0 +1,28 @@
+$(call includeUnitTestDirectory)
+
+name         := scene
+type         := library
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =	\
+	collision_operation \
+	collision_scene_view \
+	draw_object_operation \
+	draw_operation \
+	intersection_set \
+	intersect_scene_view \
+	pch \
+	scene \
+	scene_listener \
+	scene_object \
+	scene_object_flags \
+	scene_provider \
+	scene_type_system \
+	tick_scene_view 
+
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - libscene

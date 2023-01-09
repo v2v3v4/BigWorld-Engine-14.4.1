@@ -1,0 +1,16 @@
+<barrel_lod01.model>
+	<nodelessVisual>	sets/minspec/props/barrel/models/barrel_lod01	</nodelessVisual>
+	<extent>	20.000000	</extent>
+	<materialNames />
+	<batched>	true	</batched>
+	<visibilityBox>
+		<min>	-0.420283 0.000159 -0.420283	</min>
+		<max>	0.420283 1.099014 0.420283	</max>
+	</visibilityBox>
+	<metaData>
+		<copyright>	Copyright BigWorld Pty Ltd.  Use freely in any BigWorld licensed game.	</copyright>
+		<modified_by>	AdamM	</modified_by>
+		<modified_on>	1281489523	</modified_on>
+	</metaData>
+	<parent>	sets/minspec/props/barrel/models/barrel_cabbage	</parent>
+</barrel_lod01.model>

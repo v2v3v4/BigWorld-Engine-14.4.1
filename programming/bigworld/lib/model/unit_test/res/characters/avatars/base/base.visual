@@ -1,0 +1,283 @@
+<base.visual>
+	<node>
+		<identifier>	Scene Root	</identifier>
+		<transform>
+			<row0>	1.000000 0.000000 0.000000	</row0>
+			<row1>	0.000000 1.000000 0.000000	</row1>
+			<row2>	0.000000 0.000000 1.000000	</row2>
+			<row3>	0.000000 0.000000 0.000000	</row3>
+		</transform>
+		<node>
+			<identifier>	biped	</identifier>
+			<transform>
+				<row0>	0.000001 0.000000 -1.000000	</row0>
+				<row1>	0.000000 1.000000 0.000000	</row1>
+				<row2>	1.000000 0.000000 0.000001	</row2>
+				<row3>	0.000000 1.039849 -0.021224	</row3>
+			</transform>
+			<node>
+				<identifier>	biped Footsteps	</identifier>
+				<transform>
+					<row0>	0.000001 0.000000 1.000000	</row0>
+					<row1>	0.000000 1.000000 0.000000	</row1>
+					<row2>	-1.000000 0.000000 0.000001	</row2>
+					<row3>	0.000000 -1.042024 0.000000	</row3>
+				</transform>
+			</node>
+			<node>
+				<identifier>	biped Pelvis	</identifier>
+				<transform>
+					<row0>	0.000000 1.000000 -0.000001	</row0>
+					<row1>	-0.000001 0.000001 1.000000	</row1>
+					<row2>	1.000000 0.000000 0.000001	</row2>
+					<row3>	-0.016544 0.000000 -0.000000	</row3>
+				</transform>
+				<node>
+					<identifier>	biped Spine	</identifier>
+					<transform>
+						<row0>	0.996264 0.000002 -0.086362	</row0>
+						<row1>	-0.000001 1.000000 0.000004	</row1>
+						<row2>	0.086362 -0.000004 0.996264	</row2>
+						<row3>	0.151918 0.000000 -0.000165	</row3>
+					</transform>
+					<node>
+						<identifier>	biped Spine1	</identifier>
+						<transform>
+							<row0>	0.999048 0.000000 0.043619	</row0>
+							<row1>	-0.000000 1.000000 -0.000000	</row1>
+							<row2>	-0.043619 -0.000000 0.999048	</row2>
+							<row3>	0.207508 -0.000000 -0.000202	</row3>
+						</transform>
+						<node>
+							<identifier>	biped Neck	</identifier>
+							<transform>
+								<row0>	0.983255 0.000001 0.182236	</row0>
+								<row1>	-0.000001 1.000000 -0.000000	</row1>
+								<row2>	-0.182236 -0.000000 0.983255	</row2>
+								<row3>	0.254506 -0.000000 -0.000100	</row3>
+							</transform>
+							<node>
+								<identifier>	biped Head	</identifier>
+								<transform>
+									<row0>	0.995319 -0.000000 -0.096640	</row0>
+									<row1>	0.005058 0.998630 0.052091	</row1>
+									<row2>	0.096507 -0.052336 0.993955	</row2>
+									<row3>	0.127423 0.000000 0.000000	</row3>
+								</transform>
+							</node>
+							<node>
+								<identifier>	biped L Clavicle	</identifier>
+								<transform>
+									<row0>	-0.391084 0.906066 0.161546	</row0>
+									<row1>	0.902145 0.412138 -0.127581	</row1>
+									<row2>	-0.182176 0.095843 -0.978584	</row2>
+									<row3>	-0.030240 0.082318 0.004376	</row3>
+								</transform>
+								<node>
+									<identifier>	biped L UpperArm	</identifier>
+									<transform>
+										<row0>	0.635147 -0.756698 0.154908	</row0>
+										<row1>	0.755468 0.650362 0.079362	</row1>
+										<row2>	-0.160799 0.066621 0.984736	</row2>
+										<row3>	0.165294 0.000000 -0.000000	</row3>
+									</transform>
+									<node>
+										<identifier>	biped L Forearm	</identifier>
+										<transform>
+											<row0>	0.930679 0.000000 -0.365838	</row0>
+											<row1>	-0.000000 1.000000 -0.000000	</row1>
+											<row2>	0.365838 0.000000 0.930679	</row2>
+											<row3>	0.362082 -0.000000 -0.000000	</row3>
+										</transform>
+										<node>
+											<identifier>	biped L Hand	</identifier>
+											<transform>
+												<row0>	0.998896 -0.017452 0.043613	</row0>
+												<row1>	-0.043606 0.000796 0.999049	</row1>
+												<row2>	-0.017470 -0.999847 0.000034	</row2>
+												<row3>	0.260820 0.000000 -0.000000	</row3>
+											</transform>
+											<node>
+												<identifier>	HP_left_hand	</identifier>
+												<transform>
+													<row0>	0.044304 -0.988642 -0.143613	</row0>
+													<row1>	0.977500 0.013223 0.210521	</row1>
+													<row2>	-0.206231 -0.149709 0.966983	</row2>
+													<row3>	0.077893 -0.037352 0.006403	</row3>
+												</transform>
+											</node>
+										</node>
+									</node>
+								</node>
+							</node>
+							<node>
+								<identifier>	biped R Clavicle	</identifier>
+								<transform>
+									<row0>	-0.391084 -0.906066 0.161551	</row0>
+									<row1>	-0.902145 0.412139 0.127579	</row1>
+									<row2>	-0.182176 -0.095849 -0.978583	</row2>
+									<row3>	-0.030240 -0.082318 0.004376	</row3>
+								</transform>
+								<node>
+									<identifier>	biped R UpperArm	</identifier>
+									<transform>
+										<row0>	0.635147 0.756698 0.154908	</row0>
+										<row1>	-0.755468 0.650362 -0.079362	</row1>
+										<row2>	-0.160799 -0.066621 0.984736	</row2>
+										<row3>	0.165293 -0.000000 -0.000000	</row3>
+									</transform>
+									<node>
+										<identifier>	biped R Forearm	</identifier>
+										<transform>
+											<row0>	0.930679 -0.000000 -0.365838	</row0>
+											<row1>	0.000000 1.000000 0.000000	</row1>
+											<row2>	0.365838 -0.000000 0.930679	</row2>
+											<row3>	0.362082 0.000000 -0.000000	</row3>
+										</transform>
+										<node>
+											<identifier>	biped R Hand	</identifier>
+											<transform>
+												<row0>	0.998896 0.017452 0.043613	</row0>
+												<row1>	0.043606 0.000796 -0.999049	</row1>
+												<row2>	-0.017470 0.999847 0.000034	</row2>
+												<row3>	0.260820 -0.000000 -0.000000	</row3>
+											</transform>
+											<node>
+												<identifier>	HP_right_hand	</identifier>
+												<transform>
+													<row0>	0.038905 0.992183 -0.118574	</row0>
+													<row1>	0.976645 -0.012662 0.214487	</row1>
+													<row2>	0.211309 -0.124149 -0.969503	</row2>
+													<row3>	0.077460 0.041811 0.013814	</row3>
+												</transform>
+											</node>
+										</node>
+									</node>
+								</node>
+							</node>
+						</node>
+						<node>
+							<identifier>	HP_shoulder	</identifier>
+							<transform>
+								<row0>	-0.475562 -0.878306 0.049193	</row0>
+								<row1>	-0.874666 0.466147 -0.132914	</row1>
+								<row2>	0.093808 -0.106236 -0.989906	</row2>
+								<row3>	0.187797 -0.142861 -0.149835	</row3>
+							</transform>
+						</node>
+					</node>
+				</node>
+				<node>
+					<identifier>	biped L Thigh	</identifier>
+					<transform>
+						<row0>	-0.997704 0.050014 -0.045668	</row0>
+						<row1>	-0.046305 -0.995803 -0.078944	</row1>
+						<row2>	-0.049424 -0.076648 0.995833	</row2>
+						<row3>	-0.000000 0.122083 0.000000	</row3>
+					</transform>
+					<node>
+						<identifier>	biped L Calf	</identifier>
+						<transform>
+							<row0>	0.997302 0.000000 -0.073401	</row0>
+							<row1>	0.000000 1.000000 0.000000	</row1>
+							<row2>	0.073401 0.000000 0.997302	</row2>
+							<row3>	0.489507 0.000000 -0.000000	</row3>
+						</transform>
+						<node>
+							<identifier>	biped L Foot	</identifier>
+							<transform>
+								<row0>	0.991385 0.046305 0.122524	</row0>
+								<row1>	-0.055505 0.995803 0.072768	</row1>
+								<row2>	-0.118640 -0.078942 0.989794	</row2>
+								<row3>	0.455310 0.000000 0.000000	</row3>
+							</transform>
+						</node>
+					</node>
+				</node>
+				<node>
+					<identifier>	biped R Thigh	</identifier>
+					<transform>
+						<row0>	-0.997704 -0.050016 -0.045668	</row0>
+						<row1>	0.045874 -0.995096 0.087628	</row1>
+						<row2>	-0.049827 0.085332 0.995106	</row2>
+						<row3>	0.000000 -0.122083 -0.000000	</row3>
+					</transform>
+					<node>
+						<identifier>	biped R Calf	</identifier>
+						<transform>
+							<row0>	0.997303 -0.000000 -0.073401	</row0>
+							<row1>	-0.000000 1.000000 -0.000000	</row1>
+							<row2>	0.073401 0.000000 0.997303	</row2>
+							<row3>	0.489507 -0.000000 0.000000	</row3>
+						</transform>
+						<node>
+							<identifier>	biped R Foot	</identifier>
+							<transform>
+								<row0>	0.991355 -0.045872 0.122925	</row0>
+								<row1>	0.056143 0.995096 -0.081432	</row1>
+								<row2>	-0.118586 0.087630 0.989069	</row2>
+								<row3>	0.455310 0.000000 -0.000000	</row3>
+							</transform>
+						</node>
+					</node>
+					<node>
+						<identifier>	HP_right_hip	</identifier>
+						<transform>
+							<row0>	0.373328 -0.151517 0.915243	</row0>
+							<row1>	0.927653 0.070865 -0.366658	</row1>
+							<row2>	-0.009303 0.985911 0.167011	</row2>
+							<row3>	-0.074772 0.089278 -0.065436	</row3>
+						</transform>
+					</node>
+				</node>
+			</node>
+			<node>
+				<identifier>	HP_mount	</identifier>
+				<transform>
+					<row0>	0.000001 0.000000 1.000000	</row0>
+					<row1>	1.000000 0.000000 -0.000001	</row1>
+					<row2>	-0.000000 1.000000 -0.000000	</row2>
+					<row3>	-0.000212 -0.129400 0.000000	</row3>
+				</transform>
+			</node>
+		</node>
+	</node>
+	<renderSet>
+		<treatAsWorldSpaceObject>	true	</treatAsWorldSpaceObject>
+		<node>	biped R UpperArm	</node>
+		<node>	biped R Clavicle	</node>
+		<node>	biped Spine1	</node>
+		<node>	biped R Forearm	</node>
+		<node>	biped R Thigh	</node>
+		<node>	biped Pelvis	</node>
+		<node>	biped R Calf	</node>
+		<node>	biped R Foot	</node>
+		<node>	biped Head	</node>
+		<node>	biped L Thigh	</node>
+		<node>	biped L Calf	</node>
+		<node>	biped L Foot	</node>
+		<node>	biped L UpperArm	</node>
+		<node>	biped L Clavicle	</node>
+		<node>	biped L Forearm	</node>
+		<geometry>
+			<vertices>	base.vertices	</vertices>
+			<primitive>	base.indices	</primitive>
+			<primitiveGroup>	0
+				<material>
+					<identifier>	base_grey_hardskinned	</identifier>
+					<fx>	shaders/std_effects/lightonly_skinned.fx	</fx>
+					<collisionFlags>	0	</collisionFlags>
+					<materialKind>	11	</materialKind>
+					<property>	diffuseMap
+						<Texture>	characters/avatars/base/mrdisto.bmp	</Texture>
+					</property>
+				</material>
+			</primitiveGroup>
+		</geometry>
+	</renderSet>
+	<boundingBox>
+		<min>	-0.892737 -0.028006 -0.161977	</min>
+		<max>	0.884174 1.932266 0.161977	</max>
+	</boundingBox>
+	<materialKind>	11	</materialKind>
+</base.visual>

@@ -1,0 +1,146 @@
+CMAKE_MINIMUM_REQUIRED( VERSION 2.8 )
+PROJECT( db_storage_mysql )
+
+INCLUDE( BWStandardProject )
+INCLUDE( BWStandardLibrary )
+
+SET( ALL_SRCS
+	buffered_entity_tasks.cpp 
+	buffered_entity_tasks.hpp 
+	bw_meta_data.cpp 
+	bw_meta_data.hpp 
+	column_type.cpp 
+	column_type.hpp 
+	comma_sep_column_names_builder.cpp 
+	comma_sep_column_names_builder.hpp 
+	database_exception.cpp 
+	database_exception.hpp 
+	database_tool_app.cpp 
+	database_tool_app.hpp 
+	db_config.cpp 
+	db_config.hpp 
+	helper_types.cpp 
+	helper_types.hpp 
+	locked_connection.cpp 
+	locked_connection.hpp 
+	mysql_billing_system.cpp 
+	mysql_billing_system.hpp 
+	mysql_database.cpp 
+	mysql_database.hpp 
+	mysql_database_creation.cpp 
+	mysql_database_creation.hpp 
+	named_lock.cpp 
+	named_lock.hpp 
+	namer.cpp 
+	namer.hpp 
+	py_user_type_binder.cpp 
+	py_user_type_binder.hpp 
+	query.cpp 
+	query.hpp 
+	query_runner.cpp 
+	query_runner.hpp 
+	result_set.cpp 
+	result_set.hpp 
+	table.cpp 
+	table.hpp 
+	table_inspector.cpp 
+	table_inspector.hpp 
+	table_meta_data.cpp 
+	table_meta_data.hpp 
+	table_synchroniser.cpp 
+	table_synchroniser.hpp 
+	thread_data.cpp 
+	thread_data.hpp 
+	transaction.cpp 
+	transaction.hpp 
+	type_traits.cpp 
+	type_traits.hpp 
+	utils.cpp 
+	utils.hpp 
+	wrapper.cpp 
+	wrapper.hpp 
+	mappings/blobbed_sequence_mapping.cpp 
+	mappings/blobbed_sequence_mapping.hpp 
+	mappings/blob_mapping.cpp 
+	mappings/blob_mapping.hpp 
+	mappings/class_mapping.cpp 
+	mappings/class_mapping.hpp 
+	mappings/composite_property_mapping.cpp 
+	mappings/composite_property_mapping.hpp 
+	mappings/entity_mapping.cpp 
+	mappings/entity_mapping.hpp 
+	mappings/entity_type_mapping.cpp 
+	mappings/entity_type_mapping.hpp 
+	mappings/entity_type_mappings.cpp 
+	mappings/entity_type_mappings.hpp 
+	mappings/property_mapping.cpp 
+	mappings/property_mapping.hpp 
+	mappings/property_mappings_per_type.cpp 
+	mappings/property_mappings_per_type.hpp 
+	mappings/python_mapping.cpp 
+	mappings/python_mapping.hpp 
+	mappings/sequence_mapping.cpp 
+	mappings/sequence_mapping.hpp 
+	mappings/stream_to_query_helper.cpp 
+	mappings/stream_to_query_helper.hpp 
+	mappings/string_like_mapping.cpp 
+	mappings/string_like_mapping.hpp 
+	mappings/string_mapping.cpp 
+	mappings/string_mapping.hpp 
+	mappings/timestamp_mapping.cpp 
+	mappings/timestamp_mapping.hpp 
+	mappings/udo_ref_mapping.cpp 
+	mappings/udo_ref_mapping.hpp 
+	mappings/unicode_string_mapping.cpp 
+	mappings/unicode_string_mapping.hpp 
+	mappings/unique_id_mapping.cpp 
+	mappings/unique_id_mapping.hpp 
+	mappings/user_type_mapping.cpp 
+	mappings/user_type_mapping.hpp 
+	tasks/add_secondary_db_entry_task.cpp 
+	tasks/add_secondary_db_entry_task.hpp 
+	tasks/background_task.cpp 
+	tasks/background_task.hpp 
+	tasks/del_entity_task.cpp 
+	tasks/del_entity_task.hpp 
+	tasks/entity_task.cpp 
+	tasks/entity_task.hpp 
+	tasks/entity_task_with_id.cpp 
+	tasks/entity_task_with_id.hpp 
+	tasks/execute_raw_command_task.cpp 
+	tasks/execute_raw_command_task.hpp 
+	tasks/get_base_app_mgr_init_data_task.cpp 
+	tasks/get_base_app_mgr_init_data_task.hpp 
+	tasks/get_dbid_task.cpp 
+	tasks/get_dbid_task.hpp 
+	tasks/get_entity_key_for_account_task.cpp 
+	tasks/get_entity_key_for_account_task.hpp 
+	tasks/get_entity_task.cpp 
+	tasks/get_entity_task.hpp 
+	tasks/get_ids_task.cpp 
+	tasks/get_ids_task.hpp 
+	tasks/get_secondary_dbs_task.cpp 
+	tasks/get_secondary_dbs_task.hpp 
+	tasks/look_up_entities_task.cpp 
+	tasks/look_up_entities_task.hpp 
+	tasks/put_entity_task.cpp 
+	tasks/put_entity_task.hpp 
+	tasks/put_ids_task.cpp 
+	tasks/put_ids_task.hpp 
+	tasks/set_entity_key_for_account_task.cpp 
+	tasks/set_entity_key_for_account_task.hpp 
+	tasks/set_game_time_task.cpp 
+	tasks/set_game_time_task.hpp 
+	tasks/update_secondary_dbs_task.cpp 
+	tasks/update_secondary_dbs_task.hpp 
+	tasks/write_space_data_task.cpp 
+	tasks/write_space_data_task.hpp 
+)
+
+SOURCE_GROUP( "" FILES ${ALL_SRCS} )
+
+BW_ADD_LIBRARY( db_storage_mysql
+	${ALL_SRCS}
+)
+
+BW_PROJECT_CATEGORY( db_storage_mysql "BigWorld Server" )

@@ -1,0 +1,63 @@
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+IDB_UALMAGNIFIER        BITMAP                  "res\\ual_search.bmp"
+IDB_UALSHOWFILTERS      BITMAP                  "res\\ual_showfilters.bmp"
+IDB_UALHIDEFILTERS      BITMAP                  "res\\ual_hidefilters.bmp"
+IDB_UALSHOWFILTERSA     BITMAP                  "res\\ual_showfilters_active.bmp"
+IDB_UALHIDEFILTERSA     BITMAP                  "res\\ual_hidefilters_active.bmp"
+IDB_UALSEARCHCLOSE      BITMAP                  "res\\ual_search_close.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_UALFOLDER           ICON                    "res\\ual_folder.ico"
+IDI_UALFOLDERSEL        ICON                    "res\\ual_foldersel.ico"
+IDI_UALFILE             ICON                    "res\\ual_file.ico"
+IDI_UALFILESEL          ICON                    "res\\ual_filesel.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+IDD_UAL DIALOGEX 0, 0, 200, 327
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_UALTREE,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_SHOWSELALWAYS |
+					WS_TABSTOP,10,29,175,72
+    CONTROL         "",IDC_UALLIST,"SysListView32",LVS_SORTASCENDING | 
+                    LVS_AUTOARRANGE | LVS_OWNERDATA | LVS_SHOWSELALWAYS |
+					WS_TABSTOP,12,105,174,212
+    CONTROL         "",IDC_UALSEARCHBK,"Static",SS_SUNKEN |
+					WS_VISIBLE | WS_CLIPCHILDREN,10,3,169,18
+    CONTROL         "",IDC_UALSTATUS,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_PATHELLIPSIS | WS_GROUP | SS_NOTIFY,11,311,175,8
+END
+
+IDD_UALNAME DIALOGEX 0, 0, 237, 95
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Change Asset Browser Title"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,117,74,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,180,74,50,14
+    LTEXT           "Panel title:",IDC_STATIC,7,7,220,8
+    LTEXT           "Tab title:",IDC_STATIC,7,37,220,8
+    EDITTEXT        IDC_UALNAMELONG,7,16,223,12,ES_AUTOHSCROLL | NOT 
+                    WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        IDC_UALNAMESHORT,7,47,223,12,ES_AUTOHSCROLL | NOT 
+                    WS_BORDER,WS_EX_STATICEDGE
+END
+
+
+

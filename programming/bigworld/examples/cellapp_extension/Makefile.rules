@@ -1,0 +1,26 @@
+name  := cellapp_example
+type  := shared_library
+component := cellapp
+bindir = $(BW_SERVER_COMPONENT_DIR)
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =					\
+	bounce_grenade_extra	\
+	debug_extension			\
+	dump_controllers_extra	\
+	egextra					\
+	egcontroller			\
+	speed_extra				\
+	speed_controller		\
+
+
+usePython = 1
+
+incFlags_$(binName) += -I$(BW_ABS_SRC)
+incFlags_$(binName) += -I$(BW_ABS_SRC_SERVER)
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - examples/cellapp_extension

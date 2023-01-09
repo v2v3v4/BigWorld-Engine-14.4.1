@@ -1,0 +1,130 @@
+
+<html>
+   <head>
+      <style type="text/css">
+         .sikuli-code {
+            font-size: 20px;
+            font-family: "Osaka-mono", Monospace;
+            line-height: 1.5em;
+            display:table-cell;
+            white-space: pre-wrap;       /* css-3 */
+            white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* Internet Explorer 5.5+ */
+            width: 99%;   /* remove horizontal scroll-bar when viewing in IE7 */
+         }
+         .sikuli-code img {
+            vertical-align: middle;
+            margin: 2px;
+            border: 1px solid #ccc;
+            padding: 2px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-box-shadow: 1px 1px 1px gray;
+            -webkit-box-shadow: 1px 1px 2px gray;
+         }
+         .kw {
+            color: blue;
+         }
+         .skw {
+            color: rgb(63, 127, 127);
+         }
+
+         .str {
+            color: rgb(128, 0, 0);
+         }
+
+         .dig {
+            color: rgb(128, 64, 0);
+         }
+
+         .cmt {
+            color: rgb(200, 0, 200);
+         }
+
+         h2 {
+            display: inline;
+            font-weight: normal;
+         }
+
+         .info {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            display: none;
+         }
+
+         a {
+            color: #9D2900;
+         }
+
+         body {
+            font-family: "Trebuchet MS", Arial, Sans-Serif;
+         }
+
+      </style>
+   </head>
+<body>
+<div class="info">
+<h2>addModle.sikuli\addModle.sikuli</h2> <a href="addModle.sikuli\addModle.zip">(Download this script)</a>
+</div>
+<pre class="sikuli-code">
+TIMEOUT = <span class="dig">60</span>
+modeleditor_path = <span class="str">"\\game\\bin\\tools\\modeleditor\\win64\\modeleditor.exe -noConversion"</span>
+model_path = <span class="str">"\\game\\res\\fantasydemo\\characters\\avatars\\ranger\\ranger_head.model"</span>
+FOCOUSE_ON_PROGRAM = <img src="focuseOnProgram.png" />
+
+<span class="kw">def</span> ClickAndWait(button_img, img_res):
+    <span class="cmt">#Click on button_img and wait for img_res
+</span>    <span class="skw">click</span>(button_img)
+    <span class="skw">wait</span>(img_res,TIMEOUT)
+
+<span class="kw">def</span> StartModelEditor(modeleditor_path):
+    openApp(modeleditor_path)
+    <span class="cmt">#Open model editor and wait for it to start   
+</span>    PROGRAN_OPENED = <img src="programOpened.png" />
+    <span class="skw">wait</span>(PROGRAN_OPENED,<span class="dig">2</span>*TIMEOUT)
+    <span class="skw">click</span>(FOCOUSE_ON_PROGRAM)
+
+<span class="kw">def</span> TestAddModel():
+    RANGER_BODY = <img src="rangerBody.png" />
+    RANGER_FULL_BODY = <img src="fullBody.png" />
+    HEADLESS_RANGER = <img src="headlessRanger.png" />
+    FILE_BUTTON = <img src="fileButton.png" />
+    MENU_LIST = <img src="menuList.png" />
+    ADD_MODEL_BUTTON = <img src="addModel.png" />
+    REMOVE_ADDED_MODEL_BUTTON = <img src="removeAddedModels.png" />
+    OPEN_WINDOW = Pattern(<img src="openWindow.png" />).targetOffset(-<span class="dig">31</span>,<span class="dig">15</span>)
+
+    <span class="skw">wait</span>(RANGER_BODY,TIMEOUT)
+    <span class="cmt">#add head
+</span>    ClickAndWait(FILE_BUTTON, MENU_LIST)
+    ClickAndWait(ADD_MODEL_BUTTON, OPEN_WINDOW)
+    <span class="skw">type</span>(model_path + Key.ENTER)
+    <span class="skw">click</span>(FOCOUSE_ON_PROGRAM)
+    <span class="skw">wait</span>(RANGER_FULL_BODY,TIMEOUT)
+    <span class="cmt">#remove head
+</span>    ClickAndWait(FILE_BUTTON, MENU_LIST)
+    ClickAndWait(REMOVE_ADDED_MODEL_BUTTON, HEADLESS_RANGER)
+
+
+<span class="cmt"># ============== main function ==========
+</span>console=False
+
+<span class="kw">if</span> len(sys.argv) &gt; <span class="dig">1</span>:
+    modeleditor_path = sys.argv[<span class="dig">1</span>] + modeleditor_path
+    model_path = sys.argv[<span class="dig">1</span>] + model_path
+<span class="kw">else</span>:
+    <span class="kw">print</span> <span class="str">"ERORR: missing argumants for the Model and Model editor location"</span>
+    modeleditor_path = <span class="str">"c:\\bw\\2_current"</span> + modeleditor_path
+    model_path = <span class="str">"c:\\bw\\2_current"</span> + model_path
+    <span class="cmt">#sys.exit(1)
+</span>
+StartModelEditor(modeleditor_path)
+<span class="skw">sleep</span>(<span class="dig">1</span>)
+TestAddModel()
+<span class="kw">print</span>(<span class="str">"&gt;&gt;&gt;&gt;&gt;&gt;&gt;FINISH TEST - SUCSSESS&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;"</span>)
+</pre>
+</body>
+</html>

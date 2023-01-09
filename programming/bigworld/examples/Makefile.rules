@@ -1,0 +1,8 @@
+subdirs =				\
+	cellapp_extension	\
+	client_integration 
+
+$(call includeMakefilesFrom,$(subdirs))
+
+# vi: filetype=make
+# Makefile.rules - src/examples

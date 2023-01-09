@@ -1,0 +1,276 @@
+/*~ module BWPersonality
+ *	@components{ cell }
+ *	The name of this module is actually specified by the personality option in
+ *	the configuration file. This module should be implemented by the user.
+ *	It should contain callback methods that will be called by the server at
+ *	specific events.
+ *
+ *	It is also possible to register for these events using
+ *	BigWorld.addEventListener. For example,
+ *	BigWorld.addEventListener( "onInit", myFunc ).
+ */
+
+/*~ function BWPersonality.onCellAppReady
+ *	@components{ cell }
+ *	Deprecated. See BWPersonality.onAppReady
+ */
+/*~ function BWPersonality.onAppReady
+ *	@components{ cell }
+ *	This is a callback function that can be implemented by the user.
+ *
+ *	If present, this method is called on the first CellApp when the default
+ *	space is ready. If a default space is not used, this callback is never
+ *	called.
+ *
+ *	It is often preferable to use BWPersonality.onBaseAppReady instead of this
+ *	callback.
+ *
+ *	@param isFromDB isFromDB is a boolean set to True if the space was created
+ *		from the database and False if the CellAppMgr created the default space.
+ */
+
+/*~ function BWPersonality.onCellAppShuttingDown
+ *	@components{ cell }
+ *	Deprecated. See BWPersonality.onAppShuttingDown
+ */
+/*~ function BWPersonality.onAppShuttingDown
+ *	@components{ cell }
+ *	This is a callback function that can be implemented by the user.
+ *
+ *	If present, this method is called when a controlled shutdown has been
+ *	scheduled.
+ *
+ *	@param shutdownTime shutdownTime is the game time that the server is
+ *	scheduled to shut down at.
+ */
+
+/*~ function BWPersonality.onBaseAppDeath
+ *	@components{ cell }
+ *	This is a callback function that can be implemented by the user.
+ *
+ *	If present, this method is called when a BaseApp death has been
+ *	detected.
+ *
+ *	@param addr addr is the address of BaseApp that has died.
+ */
+
+/*~ function BWPersonality.onServiceAppDeath
+ *	@components{ cell }
+ *	This is a callback function that can be implemented by the user.
+ *
+ *	If present, this method is called when a ServiceApp death has been
+ *	detected.
+ *
+ *	@param addr addr is the address of ServiceApp that has died.
+ */
+
+/*~ function BWPersonality.onSpaceData
+ *	@components{ cell }
+ *	This is a callback function that can be implemented by the user.
+ *	
+ *	If present, this method is called whenever a new space data entry is added.
+ *
+ *	Callbacks may be made for internal BigWorld space data, where the key is in
+ *	the reserved range between 0 and 255. These calls should be ignored.
+ *
+ *	@see BigWorld.setSpaceData
+ *	@see BigWorld.getSpaceData
+ *	@see BigWorld.getSpaceDataFirstForKey
+ *	@see BigWorld.delSpaceDataForKey
+ *	@see BigWorld.addSpaceData
+ *	@see BigWorld.delSpaceData
+ *	@see BigWorld.getSpaceDataForKey 
+ *
+ *	@param spaceID spaceID is the id of the space the data is being added to.
+ *	@param entryID entryID is the entry id for the newly added data.
+ *	@param key key is the key of the newly added data.
+ *	@param value is the actual data that has been added.
+ */
+
+/*~ function BWPersonality.onSpaceDataDeleted
+ *	@components{ cell }
+ *	This is a callback function that can be implemented by the user.
+ *	
+ *	If present, this method is called whenever a space data entry is deleted upon
+ *	space loading failed.
+ *
+ *	@see BigWorld.setSpaceData
+ *	@see BigWorld.getSpaceData
+ *	@see BigWorld.getSpaceDataFirstForKey
+ *	@see BigWorld.delSpaceDataForKey
+ *	@see BigWorld.addSpaceData
+ *	@see BigWorld.delSpaceData
+ *	@see BigWorld.getSpaceDataForKey 
+ *
+ *	@param spaceID spaceID is the id of the space the data is being deleted from.
+ *	@param entryID deletedEntryID is the entry id for the deleted data.
+ *	@param key key is the key of the deleted data.
+ *	@param deletedValue is the actual data that has been deleted.
+ */
+
+/*~ function BWPersonality.onSpaceGeometryLoaded
+ *	@components{ cell }
+ *	This method is deprecated and is retained for backward compatibility
+ *	purposes. Use BWPersonality.onAllSpaceGeometryLoaded instead.
+ *
+ *	This is a callback function that can be implemented by the user.
+ *
+ *	If present, this method is called whenever a space geometry is fully
+ *	loaded on a cell.
+ *
+ *	@param spaceID spaceID is the id of the space where the geometry is loaded.
+ *	@param mappingName mappingName is the name of the geometry that has been
+ *	fully loaded. The mappingName is name of the immediate directory name that
+ *	contains chunk files.
+ */
+
+/*~	function BWPersonality.onAllSpaceGeometryLoaded
+ *	@components{ cell }
+ *	This is a callback function that can be implemented by the user.
+ *
+ *	If present, this method is called when BigWorld has finished loading the
+ *	geometry mapping of a new space. If the space is made up of multiple cells,
+ *	this callback is called when all of the cells have loaded the geometry
+ *	mapping	(see BigWorld.addSpaceGeometryMapping) for the area covered by each
+ *	cell. This method is called on simultaneously on each CellApp that contains
+ *	a cell in the new space.
+ *
+ *	This callback is never called for spaces with no geometry mappings.
+ *
+ *	For spaces with a multiple geometry mappings, this callback is called when
+ *	all the geometry mappings have been loaded. If additional geometry mappings
+ *	are added to the space after this callback has been called, then this
+ *	callback will be called again when the new geometry mappings are loaded.
+ *	However, there is a race condition when multiple geometry mappings are
+ *	being added to the space: BigWorld may mistakenly call this callback
+ *	while geometry mappings are still being added to the space. In this case,
+ *	the lastPath parameter becomes useful. It is set to the path of geometry
+ *	mapping BigWorld considers to be the last geometry mapping added to the
+ *	space.
+ *
+ *	This callback is not called if the game is restored from database - even
+ *	if the space was loading geometry when it was shutdown.
+ *
+ *	@param spaceID spaceID is the id of the recently created space whose chunks
+ *	have just finished loading.
+ *	@param isBootstrap isBootstrap is a boolean value. If the space is
+ *	comprised of multiple cells, isBootstrap is set to true only for one of the
+ *	callbacks. This is usually the callback on the CellApp that contains the
+ *	first cell created for the space but this is not guaranteed.
+ *	@param lastpath lastpath is the path of the last geometry mapping added to
+ *	the space.
+ */
+
+/*~ function BWPersonality.onCellAppData
+ *	@components{ cell }
+ *	This is a callback function that can be implemented by the user.
+ *
+ *	If present, this method is called whenever a shared CellApp data value is
+ *	set. This may be when a value is initially set or when it is modified.
+ *
+ *	@see BigWorld.cellAppData
+ *	@see BWPersonality.onDelCellAppData
+ *	@see BigWorld.globalData
+ *	@see BWPersonality.onGlobalData
+ *	@see BWPersonality.onDelGlobalData
+ *
+ *	@param key The key associated with the value.
+ *	@param value The new value.
+ */
+
+/*~ function BWPersonality.onDelCellAppData
+ *	@components{ cell }
+ *	This is a callback function that can be implemented by the user.
+ *
+ *	If present, this method is called whenever a shared CellApp data value is
+ *	deleted.
+ *
+ *	@see BigWorld.cellAppData
+ *	@see BWPersonality.onCellAppData
+ *	@see BigWorld.globalData
+ *	@see BWPersonality.onGlobalData
+ *	@see BWPersonality.onDelGlobalData
+ *
+ *	@param key The key of the value deleted.
+ */
+
+/*~ function BWPersonality.onGlobalData
+ *	@components{ cell }
+ *	This is a callback function that can be implemented by the user.
+ *
+ *	If present, this method is called whenever a shared Global data value is
+ *	set. This may be when a value is initially set or when it is modified.
+ *
+ *	@see BigWorld.globalData
+ *	@see BWPersonality.onDelGlobalData
+ *	@see BigWorld.cellAppData
+ *	@see BWPersonality.onCellAppData
+ *	@see BWPersonality.onDelCellAppData
+ *
+ *	@param key The key associated with the value.
+ *	@param value The new value.
+ */
+
+/*~ function BWPersonality.onDelGlobalData
+ *	@components{ cell }
+ *	This is a callback function that can be implemented by the user.
+ *
+ *	If present, this method is called whenever a shared Global data value is
+ *	deleted.
+ *
+ *	@see BigWorld.globalData
+ *	@see BWPersonality.onGlobalData
+ *	@see BigWorld.cellAppData
+ *	@see BWPersonality.onCellAppData
+ *	@see BWPersonality.onDelCellAppData
+ *
+ *	@param key The key of the value deleted.
+ */
+
+/*~ function BWPersonality.onRecordingStarted
+ *	@components{ cell }
+ *
+ *	This callback is called when BigWorld.startRecording() is called on the
+ *	originating CellApp. This callback event is handled by the default BigWorld
+ *	recording system implemented in script.
+ *
+ *	@param spaceID		The ID of the space being recorded.
+ *	@param name 		The name of the recording, given to
+ *						BigWorld.startRecording().
+ *
+ *	@see BigWorld.startRecording
+ */
+
+/*~ function BWPersonality.onRecordingTickData
+ *	@components{ cell }
+ *
+ *	This callback is called while recording is active to pass replay data to
+ *	script for handling. This callback event is handled by the default BigWorld
+ *	recording system implemented in script.
+ *
+ *	@param spaceID		The ID of the space being recorded.
+ *	@param gameTime 	The game time of the replay data.
+ *	@param name 		The name of the recording, given to
+ *						BigWorld.startRecording().
+ *	@param numCells 	The number of cells in the space. This should
+ *						correspond to the total number of times
+ *						onRecordingTickData() is called for this game time.
+ *	@param data 		The replay data as a byte string.
+ *
+ *	@see BigWorld.startRecording
+ */
+
+/*~ function BWPersonality.onRecordingStopped
+ *	@components{ cell }
+ *
+ *	This callback is called when BigWorld.stopRecording() is called on the
+ *	originating CellApp. This callback event is handled by the default BigWorld
+ *	recording system implemented in script.
+ *
+ *	@param spaceID 		The ID of the space being recorded.
+ *	@param name 		The name of the recording, given to
+ *						BigWorld.startRecording().
+ *
+ *	@see BigWorld.stopRecording
+ */
+

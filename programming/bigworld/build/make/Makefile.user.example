@@ -1,0 +1,74 @@
+#
+# Makefile.user - User specific Makefile settings.
+#
+# Copy this example file to bigworld/src/Makefile.user
+#
+# This file can be used to avoid modifying the primary Makefile and change
+# default behaviour of make.
+#
+
+## A directory that resides on a local file system.
+## This is required when building from a Windows (SMB/CIFS) filesystem that
+## does not support symbolic links.
+# BW_LOCAL_DIR := $(HOME)/bw_tmp/$(notdir $(abspath $(BW_ROOT)))
+
+## The intermediate output directory that will contain all .o, .d, .a files.
+## To improve build speed this may be redirected to a faster filesystem such
+## as a local HDD (if building from a network mount), an SSD, or a ramdisk.
+# BW_INTERMEDIATE_DIR := /tmp/intermediate_files
+
+## The directory to place all generated binaries into.
+## This directory is distinct from the intermediate object file directory.
+# BW_INSTALL_DIR := /tmp/generated_binaries
+
+## C compiler to use when building source code.
+# CC = gcc
+
+## C++ compiler to use when building source code
+# CXX = g++
+
+## Toggle whether or not make should operate is silent mode by default.
+## This is similar to running 'make -s' however it won't apply to sub-make
+## tasks for third-party libraries.
+# user_alwaysSilent := 1
+
+## Toggle whether or not to build examples as part of the regular build.
+# user_shouldBuildExamples := 0
+
+## The SDL client example is disabled by default due to the Makefile dependency
+## being non-optimal for everyday use. Enable it by uncommenting this line.
+# user_shouldBuildExample_SDL := 1
+
+## The Javascript client example is disabled by default due to the Makefile dependency
+## being non-optimal for everyday use. Enable it by uncommenting this line.
+# user_shouldBuildExample_Javascript := 1
+#
+## Toggle whether or not to build unit tests as part of a regular build. This
+## option should ideally be left on to avoid accidentally breaking the unit
+## tests. It may be more beneficial to abitrarily disable the running of unit
+## tests.
+# user_shouldBuildUnitTests := 1
+
+## Toggle whether or not to run unit tests after they have been built. This
+## option may be desirable for continuous integration builds. By default unit
+## tests will not be run.
+# user_shouldRunUnitTests := 1
+
+## Toggle whether or not to build with code coverage flags
+#user_shouldBuildCodeCoverage := 1
+
+## This option specifies whether to limit the build configurations that will
+## attempt to run unit tests. This may be desireable for situations where
+## the Debug configuration takes an exceedingly large amount of time to run the
+## unit tests in comparison to the Hybrid config.
+# user_delayed_onlyRunUnitTestsForConfig = $(BW_CONFIG_HYBRID)
+
+## Toggle whether to build Python libraries with defined Py_TRACE_REFS
+## See the document "How To Find Memory Leaks" chapter "Python memory tracking"
+# user_enablePythonTraceRefs := 1
+
+## Toggle whether or not to install python to BW_INSTALL_DIR, by default python
+## is not installed
+# user_shouldInstallPython := 1
+
+# Makefile.user.example

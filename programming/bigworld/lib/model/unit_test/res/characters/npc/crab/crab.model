@@ -1,0 +1,132 @@
+<crab.model>
+	<action>
+		<name>	Dead	</name>
+		<animation>	crab_dead	</animation>
+		<filler>	true	</filler>
+	</action>
+	<action>
+		<name>	Die	</name>
+		<animation>	crab_death	</animation>
+	</action>
+	<action>
+		<name>	crab_idle	</name>
+		<animation>	crab_idle	</animation>
+		<filler>	false	</filler>
+		<match>
+			<trigger>
+				<minEntityAux1>	-360.000000	</minEntityAux1>
+				<maxEntityAux1>	360.000000	</maxEntityAux1>
+				<minModelYaw>	-360.000000	</minModelYaw>
+				<maxModelYaw>	360.000000	</maxModelYaw>
+				<maxEntitySpeed>	0.100000	</maxEntitySpeed>
+			</trigger>
+		</match>
+	</action>
+	<action>
+		<name>	crab_turnleft	</name>
+		<animation>	crab_turnleft	</animation>
+		<match>
+			<trigger>
+				<maxEntitySpeed>	0.500000	</maxEntitySpeed>
+				<minEntityAux1>	-180.000000	</minEntityAux1>
+				<maxEntityAux1>	-80.000000	</maxEntityAux1>
+				<minModelYaw>	-360.000000	</minModelYaw>
+				<maxModelYaw>	360.000000	</maxModelYaw>
+			</trigger>
+			<cancel>
+				<maxEntitySpeed>	100.000000	</maxEntitySpeed>
+				<minEntityAux1>	40.000000	</minEntityAux1>
+				<maxEntityAux1>	180.000000	</maxEntityAux1>
+				<minModelYaw>	-360.000000	</minModelYaw>
+				<maxModelYaw>	360.000000	</maxModelYaw>
+			</cancel>
+			<oneShot>	true	</oneShot>
+			<promoteMotion>	true	</promoteMotion>
+		</match>
+		<track>	-1	</track>
+		<isImpacting>	true	</isImpacting>
+	</action>
+	<action>
+		<name>	crab_turnright	</name>
+		<animation>	crab_turnright	</animation>
+		<match>
+			<trigger>
+				<maxEntitySpeed>	0.500000	</maxEntitySpeed>
+				<minEntityAux1>	80.000000	</minEntityAux1>
+				<maxEntityAux1>	180.000000	</maxEntityAux1>
+				<minModelYaw>	-360.000000	</minModelYaw>
+				<maxModelYaw>	360.000000	</maxModelYaw>
+			</trigger>
+			<cancel>
+				<minEntitySpeed>	0.000000	</minEntitySpeed>
+				<maxEntitySpeed>	100.000000	</maxEntitySpeed>
+				<minEntityAux1>	-180.000000	</minEntityAux1>
+				<maxEntityAux1>	-40.000000	</maxEntityAux1>
+				<minModelYaw>	-360.000000	</minModelYaw>
+				<maxModelYaw>	360.000000	</maxModelYaw>
+			</cancel>
+			<oneShot>	true	</oneShot>
+			<promoteMotion>	true	</promoteMotion>
+		</match>
+		<isImpacting>	true	</isImpacting>
+	</action>
+	<action>
+		<name>	crab_walkforward	</name>
+		<animation>	crab_walkforward	</animation>
+		<isMovement>	true	</isMovement>
+		<match>
+			<scalePlaybackSpeed>	true	</scalePlaybackSpeed>
+			<trigger>
+				<minEntitySpeed>	0.100000	</minEntitySpeed>
+				<maxEntitySpeed>	34.000000	</maxEntitySpeed>
+				<minEntityAux1>	-360.000000	</minEntityAux1>
+				<maxEntityAux1>	360.000000	</maxEntityAux1>
+				<minModelYaw>	-95.000000	</minModelYaw>
+				<maxModelYaw>	95.000000	</maxModelYaw>
+			</trigger>
+		</match>
+		<track>	-1	</track>
+	</action>
+	<materialNames>	</materialNames>
+	<animation>
+		<name>	crab_idle	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/npc/crab/crab_idle	</nodes>
+	</animation>
+	<animation>
+		<name>	crab_turnleft	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/npc/crab/crab_turnleft	</nodes>
+	</animation>
+	<animation>
+		<name>	crab_turnright	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/npc/crab/crab_turnright	</nodes>
+	</animation>
+	<animation>
+		<name>	crab_walkforward	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/npc/crab/crab_walkforward	</nodes>
+	</animation>
+	<visibilityBox>
+		<min>	-0.416953 -0.136860 -0.469147	</min>
+		<max>	0.508327 0.477411 0.421580	</max>
+	</visibilityBox>
+	<nodefullVisual>	characters/npc/crab/crab	</nodefullVisual>
+	<extent>	38.000000	</extent>
+	<animation>
+		<name>	crab_dead	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/npc/crab/crab_dead	</nodes>
+	</animation>
+	<animation>
+		<name>	crab_death	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/npc/crab/crab_death	</nodes>
+	</animation>
+	<metaData>
+		<copyright>	Copyright BigWorld Pty Ltd.  Use freely in any BigWorld licensed game.	</copyright>
+		<modified_by>	adamm	</modified_by>
+		<modified_on>	1254377076	</modified_on>
+	</metaData>
+</crab.model>

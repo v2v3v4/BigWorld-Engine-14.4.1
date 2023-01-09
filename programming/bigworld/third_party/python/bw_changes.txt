@@ -1,0 +1,36 @@
+This file lists the changes made by BigWorld to the python distribution.
+
+All changes to source code should include BIGWORLD_BEGIN/BIGWORLD_END around
+the changed areas of code.
+
+Adding BWHooks for memory allocation
+1. Makefile.pre.in was changed to include bwhooks.o and bwhooks.h
+2. Cmake/libpython/CMakeLists.txt was changed to include bwhooks.c
+3. Changed obmalloc.c to redefine malloc/realloc/free to the hook functions
+4. Changed pymem.h to redefine malloc/realloc/free to the hook functions
+
+Making python compile and link statically with CMake
+1. CMake/
+2. PC/dl_nt.c - Added an else case to add dummy versions of Py_*ActCtx
+
+Added VS2012 project files
+1. PCBuild/
+
+Fixed python linking shared modules to openSSL
+1. Modified setup.py removing references to ssl and crypto libraries
+
+Fixed build failures with pre3.5.0 versions of sqlite3
+1. Modules/_sqlite/connection.c - removed references to specific sqlite
+   versions.
+
+Fixed line endings so windows mounts can build python
+1. Parser/asdl_c.py
+
+Added an official Python patch to address issue #17547
+Issue: http://bugs.python.org/issue17547 (-Wformat is needed by gcc 4.8)
+Patch: http://hg.python.org/cpython/rev/9d50af4c482f/
+1. 
+
+Making Python compilable on VS2015
+1. Modules/timemodule.c - timezone, tzname, daylight definitions absent in VS2015 toolkit
+2. Modules/posixmodule.c - dummy _PyVerify_fd for VS2015 because of dropped support of __pioinfo

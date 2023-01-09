@@ -1,0 +1,96 @@
+<axe.visual>
+	<node>
+		<identifier>	Scene Root	</identifier>
+		<transform>
+			<row0>	1.000000 0.000000 0.000000	</row0>
+			<row1>	0.000000 1.000000 0.000000	</row1>
+			<row2>	0.000000 0.000000 1.000000	</row2>
+			<row3>	0.000000 0.000000 0.000000	</row3>
+		</transform>
+		<node>
+			<identifier>	axe_lod0	</identifier>
+			<transform>
+				<row0>	1.000000 0.000000 0.000000	</row0>
+				<row1>	0.000000 1.000000 0.000000	</row1>
+				<row2>	0.000000 0.000000 1.000000	</row2>
+				<row3>	-0.008189 0.002706 0.017340	</row3>
+			</transform>
+		</node>
+		<node>
+			<identifier>	HP_right_hand	</identifier>
+			<transform>
+				<row0>	0.171817 -0.975571 -0.136897	</row0>
+				<row1>	0.976104 0.149824 0.157399	</row1>
+				<row2>	-0.133043 -0.160669 0.978000	</row2>
+				<row3>	-0.207222 0.767813 0.128137	</row3>
+			</transform>
+		</node>
+		<node>
+			<identifier>	HP_axe_head	</identifier>
+			<transform>
+				<row0>	1.000000 0.000000 0.000000	</row0>
+				<row1>	0.000000 0.990228 0.139460	</row1>
+				<row2>	0.000000 -0.139460 0.990228	</row2>
+				<row3>	0.147664 0.065944 0.025429	</row3>
+			</transform>
+		</node>
+	</node>
+	<renderSet>
+		<treatAsWorldSpaceObject>	false	</treatAsWorldSpaceObject>
+		<node>	Scene Root	</node>
+		<geometry>
+			<vertices>	vertices	</vertices>
+			<primitive>	indices	</primitive>
+			<primitiveGroup>	0
+				<material>
+					<identifier>	axehead	</identifier>
+					<fx>	shaders/std_effects/normalmap_chrome.fx	</fx>
+					<collisionFlags>	0	</collisionFlags>
+					<materialKind>	5	</materialKind>
+					<property>	reflectionMask
+						<Texture>	sets/town/props/axe_spec.bmp	</Texture>
+					</property>
+					<property>	reflectionMap
+						<Texture>	system/maps/cloudyhillscubemap2.dds	</Texture>
+					</property>
+					<property>	normalMap
+						<Texture>	system/maps/default_norms.bmp	</Texture>
+					</property>
+					<property>	diffuseMap
+						<Texture>	sets/town/props/axe.tga	</Texture>
+					</property>
+					<property>	selfIllumination
+						<Float>	0.000000	</Float>
+					</property>
+					<property>	materialSpecular
+						<Vector4>	0.874510 0.890196 0.901961 1.000000	</Vector4>
+					</property>
+					<property>	reflectionAmount
+						<Float>	1.480000	</Float>
+					</property>
+					<property>	fresnelConstant
+						<Float>	0.000000	</Float>
+					</property>
+					<property>	fresnelExp
+						<Float>	1.000000	</Float>
+					</property>
+				</material>
+			</primitiveGroup>
+			<primitiveGroup>	1
+				<material>
+					<identifier>	axehandle	</identifier>
+					<fx>	shaders/std_effects/lightonly.fx	</fx>
+					<collisionFlags>	0	</collisionFlags>
+					<materialKind>	1	</materialKind>
+					<property>	diffuseMap
+						<Texture>	sets/town/props/axe.tga	</Texture>
+					</property>
+				</material>
+			</primitiveGroup>
+		</geometry>
+	</renderSet>
+	<boundingBox>
+		<min>	-0.229500 -0.001400 -0.001400	</min>
+		<max>	0.146500 1.038700 0.179900	</max>
+	</boundingBox>
+</axe.visual>

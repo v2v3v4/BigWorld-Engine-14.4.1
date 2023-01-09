@@ -1,0 +1,38 @@
+<root>
+	<space>
+		<mru0>	spaces/highlands	</mru0>
+		<mru1 />
+		<mru2 />
+		<mru3 />
+		<mru4 />
+		<mru5 />
+		<mru6 />
+		<mru7 />
+		<mru8 />
+		<mru9 />
+	</space>
+	<girth>	0.5
+		<always />
+		<width>	0.50	</width>
+		<height>	1.95	</height>
+		<depth>	0.25	</depth>
+	</girth>
+	<girth>	4.0
+		<width>	4.0	</width>
+		<height>	4.0	</height>
+		<depth>	2.0	</depth>
+	</girth>
+	<bwlockd>
+		<host />
+	</bwlockd>
+	<processor>	1	</processor>
+	<writeTGAs>	false	</writeTGAs>
+	<reannotation>	false	</reannotation>
+	<floodResultPath>	.	</floodResultPath>
+	<language>	helpers/languages/files_en.xml	</language>
+	<language>	helpers/languages/files_cn.xml	</language>
+	<language>	helpers/languages/navgen_rc_en.xml	</language>
+	<language>	helpers/languages/navgen_rc_cn.xml	</language>
+	<currentCountry>	au	</currentCountry>
+	<currentLanguage>	en	</currentLanguage>
+</root>

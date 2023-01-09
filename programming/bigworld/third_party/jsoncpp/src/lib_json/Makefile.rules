@@ -1,0 +1,22 @@
+name         := jsoncpp
+type         := library
+
+# Enforce that the third_party_json makefile has already been included
+ifeq ($(origin JSON_DIR),undefined)
+$(error third_party_json.mak must be included first)
+endif
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =			\
+		json_reader \
+		json_value	\
+		json_writer
+
+incFlags_$(binName) += -I$(JSON_DIR)/include
+cxxFlags_$(binName) += -Wno-float-equal
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - third_party/jsoncpp/src/lib_json

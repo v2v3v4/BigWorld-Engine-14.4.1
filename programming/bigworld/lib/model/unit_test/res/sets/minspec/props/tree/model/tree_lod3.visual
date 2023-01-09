@@ -1,0 +1,50 @@
+<tree_lod3.visual>
+	<node>
+		<identifier>	Scene Root	</identifier>
+		<transform>
+			<row0>	1.000000 0.000000 0.000000	</row0>
+			<row1>	0.000000 1.000000 0.000000	</row1>
+			<row2>	0.000000 0.000000 1.000000	</row2>
+			<row3>	0.000000 0.000000 0.000000	</row3>
+		</transform>
+	</node>
+	<materialKind>	1	</materialKind>
+	<renderSet>
+		<treatAsWorldSpaceObject>	false	</treatAsWorldSpaceObject>
+		<node>	Scene Root	</node>
+		<geometry>
+			<vertices>	vertices	</vertices>
+			<primitive>	indices	</primitive>
+			<primitiveGroup>	0
+				<material>
+					<identifier>	tree	</identifier>
+					<fx>	shaders/std_effects/lightonly.fx	</fx>
+					<collisionFlags>	0	</collisionFlags>
+					<materialKind>	0	</materialKind>
+					<property>	texAddressMode
+						<Int>	1	</Int>
+					</property>
+					<property>	alphaReference
+						<Int>	108	</Int>
+					</property>
+					<property>	alphaTestEnable
+						<Bool>	true	</Bool>
+					</property>
+					<property>	doubleSided
+						<Bool>	true	</Bool>
+					</property>
+					<property>	selfIllumination
+						<Float>	0.000000	</Float>
+					</property>
+					<property>	diffuseMap
+						<Texture>	sets/minspec/props/tree/maps/tree_full_billboard.tga	</Texture>
+					</property>
+				</material>
+			</primitiveGroup>
+		</geometry>
+	</renderSet>
+	<boundingBox>
+		<min>	-6.301216 -3.184981 -5.526746	</min>
+		<max>	6.161751 21.740955 5.371100	</max>
+	</boundingBox>
+</tree_lod3.visual>

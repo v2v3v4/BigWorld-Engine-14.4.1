@@ -1,0 +1,199 @@
+
+<html>
+   <head>
+      <style type="text/css">
+         .sikuli-code {
+            font-size: 20px;
+            font-family: "Osaka-mono", Monospace;
+            line-height: 1.5em;
+            display:table-cell;
+            white-space: pre-wrap;       /* css-3 */
+            white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* Internet Explorer 5.5+ */
+            width: 99%;   /* remove horizontal scroll-bar when viewing in IE7 */
+         }
+         .sikuli-code img {
+            vertical-align: middle;
+            margin: 2px;
+            border: 1px solid #ccc;
+            padding: 2px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-box-shadow: 1px 1px 1px gray;
+            -webkit-box-shadow: 1px 1px 2px gray;
+         }
+         .kw {
+            color: blue;
+         }
+         .skw {
+            color: rgb(63, 127, 127);
+         }
+
+         .str {
+            color: rgb(128, 0, 0);
+         }
+
+         .dig {
+            color: rgb(128, 64, 0);
+         }
+
+         .cmt {
+            color: rgb(200, 0, 200);
+         }
+
+         h2 {
+            display: inline;
+            font-weight: normal;
+         }
+
+         .info {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            display: none;
+         }
+
+         a {
+            color: #9D2900;
+         }
+
+         body {
+            font-family: "Trebuchet MS", Arial, Sans-Serif;
+         }
+
+      </style>
+   </head>
+<body>
+<div class="info">
+<h2>testFlora.sikuli\testFlora.sikuli</h2> <a href="testFlora.sikuli\testFlora.zip">(Download this script)</a>
+</div>
+<pre class="sikuli-code">
+TIMEOUT = <span class="dig">60</span>
+modeleditor_path = <span class="str">"\\game\\bin\\tools\\modeleditor\\win64\\modeleditor.exe -noConversion"</span>
+FOCOUSE_ON_PROGRAM = <img src="focuseOnProgram.png" />
+
+<span class="kw">def</span> ClickAndWait(button_img, img_res):
+    <span class="cmt">#Click on button_img and wait for img_res
+</span>    <span class="skw">click</span>(button_img)
+    <span class="skw">wait</span>(img_res,TIMEOUT)
+
+<span class="kw">def</span> StartModelEditor(modeleditor_path):
+    openApp(modeleditor_path)
+    PROGRAN_OPENED = <img src="programOpened.png" />
+    <span class="cmt">#wait for model editor to start
+</span>    <span class="skw">wait</span>(PROGRAN_OPENED,<span class="dig">2</span>*TIMEOUT)
+    <span class="skw">click</span>(FOCOUSE_ON_PROGRAM)
+
+<span class="kw">def</span> TestDisplaySettings():
+    <span class="cmt">#Click on display settings
+</span>    DISPLAY_BUTTON = <img src="displayButton.png" />
+    DISPLAY_WINDOW = <img src="displayWindow.png" />
+    <span class="kw">if</span> <span class="kw">not</span> exists(DISPLAY_WINDOW):
+        ClickAndWait(DISPLAY_BUTTON, DISPLAY_WINDOW)
+        <span class="skw">click</span>(FOCOUSE_ON_PROGRAM)
+
+    <span class="cmt">#change Background to terrain
+</span>    <span class="kw">print</span>(<span class="str">"&gt;&gt;&gt;&gt;&gt;&gt;&gt;change Background to terrain&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;"</span>)
+
+    CHANGE_BACKGROUND_FLOOR_BUTTON = Pattern(<img src="changeBackgroundFloorButton-1.png" />).similar(<span class="dig">0.93</span>)
+    CHANGE_BACKGROUND_NO_BACKGROUND_BUTTON = Pattern(<img src="changeBackgroundFloorButton.png" />).similar(<span class="dig">0.91</span>)
+    CHANGE_BACKGROUND_TO_TERRAIN = Pattern(<img src="useTerrain.png" />).similar(<span class="dig">0.97</span>)
+    TERRAIN_BUTTON = Pattern(<img src="terrainButton.png" />).similar(<span class="dig">0.80</span>)
+    <span class="kw">if</span> exists(CHANGE_BACKGROUND_FLOOR_BUTTON):
+        <span class="kw">print</span>(<span class="str">"exists CHANGE_BACKGROUND_FLOOR_BUTTON"</span>)
+        ClickAndWait(CHANGE_BACKGROUND_FLOOR_BUTTON, CHANGE_BACKGROUND_TO_TERRAIN)
+        ClickAndWait(CHANGE_BACKGROUND_TO_TERRAIN, TERRAIN_BUTTON)
+    <span class="kw">elif</span> exists(CHANGE_BACKGROUND_NO_BACKGROUND_BUTTON):
+        <span class="kw">print</span>(<span class="str">"exists CHANGE_BACKGROUND_NO_BACKGROUND_BUTTON"</span>)
+        ClickAndWait(CHANGE_BACKGROUND_NO_BACKGROUND_BUTTON, CHANGE_BACKGROUND_TO_TERRAIN)
+        ClickAndWait(CHANGE_BACKGROUND_TO_TERRAIN, TERRAIN_BUTTON)
+    <span class="skw">click</span>(FOCOUSE_ON_PROGRAM)
+
+    <span class="cmt">#disable Flora    
+</span>    <span class="kw">print</span>(<span class="str">"&gt;&gt;&gt;&gt;&gt;&gt;&gt;disable Flora&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;"</span>)
+
+    DISABLE_FLORA_BUTTON = Pattern(<img src="disableFloraButton.png" />).similar(<span class="dig">0.80</span>)
+    LOW_FLORA_BUTTON = Pattern(<img src="lowFloraButton.png" />).similar(<span class="dig">0.84</span>)
+    MEDUIM_FLORA_BUTTON = Pattern(<img src="meduimFloraButton.png" />).similar(<span class="dig">0.83</span>)
+    HIGH_FLORA_BUTTON = Pattern(<img src="veryFloraButton.png" />).similar(<span class="dig">0.83</span>)
+    VERY_HIGH_FLORA_BUTTON = Pattern(<img src="veryHighFloraList.png" />).similar(<span class="dig">0.80</span>)
+
+    DISABLE_FLORA_LIST = Pattern(<img src="disableFlora-2.png" />).similar(<span class="dig">0.98</span>)
+    LOW_FLORA_LIST = <img src="lowFloraList.png" />
+    MEDUIM_FLORA_LIST = <img src="meduimFloraList.png" />
+    HIGH_FLORA_LIST = <img src="highFloraList.png" />
+    VERY_HIGH_FLORA_LIST = <img src="veryHighFloraList-1.png" />
+
+    <span class="kw">if</span> exists(LOW_FLORA_BUTTON):
+        <span class="kw">print</span>(<span class="str">"exists LOW_FLORA_BUTTON"</span>)
+        ClickAndWait(LOW_FLORA_BUTTON, DISABLE_FLORA_LIST)
+        ClickAndWait(DISABLE_FLORA_LIST, DISABLE_FLORA_BUTTON)
+    <span class="kw">elif</span> exists(MEDUIM_FLORA_BUTTON):
+        <span class="kw">print</span>(<span class="str">"exists MEDUIM_FLORA_BUTTON"</span>)
+        ClickAndWait(MEDUIM_FLORA_BUTTON, DISABLE_FLORA_LIST)
+        ClickAndWait(DISABLE_FLORA_LIST, DISABLE_FLORA_BUTTON)
+    <span class="kw">elif</span> exists(HIGH_FLORA_BUTTON):
+        <span class="kw">print</span>(<span class="str">"exists HIGH_FLORA_BUTTON"</span>)
+        ClickAndWait(LOW_FLORA_BUTTON, DISABLE_FLORA_LIST)
+        ClickAndWait(DISABLE_FLORA_LIST, DISABLE_FLORA_BUTTON)
+    <span class="kw">elif</span> exists(VERY_HIGH_FLORA_BUTTON):
+        <span class="kw">print</span>(<span class="str">"exists VERY_HIGH_FLORA_BUTTON"</span>)
+        ClickAndWait(LOW_FLORA_BUTTON, DISABLE_FLORA_LIST)
+        ClickAndWait(DISABLE_FLORA_LIST, DISABLE_FLORA_BUTTON)
+    <span class="skw">click</span>(FOCOUSE_ON_PROGRAM)
+
+    DISABLE_FLORA = <img src="noFlora.png" />
+    LOW_FLORA = <img src="lowFlora.png" />
+    MEDUIM_FLORA = <img src="meduimFlora.png" />
+    HIGH_FLORA = <img src="highFlora.png" />
+    VERY_HIGH_FLORA = <img src="veryHighFlora.png" />
+
+    <span class="kw">print</span>(<span class="str">"&gt;&gt;&gt;&gt;&gt;&gt;&gt; test disable&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;"</span>)
+    <span class="cmt">#test Disable
+</span>    <span class="skw">wait</span>(DISABLE_FLORA,TIMEOUT)
+    <span class="skw">click</span>(FOCOUSE_ON_PROGRAM)
+
+    <span class="kw">print</span>(<span class="str">"&gt;&gt;&gt;&gt;&gt;&gt;&gt; test LOW_FLORA&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;"</span>)
+    <span class="cmt">#test LOW_FLORA
+</span>    ClickAndWait(DISABLE_FLORA_BUTTON, LOW_FLORA_LIST)
+    ClickAndWait(LOW_FLORA_LIST, LOW_FLORA)
+    <span class="skw">click</span>(FOCOUSE_ON_PROGRAM)
+
+    <span class="kw">print</span>(<span class="str">"&gt;&gt;&gt;&gt;&gt;&gt;&gt; test MEDUIM_FLORA&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;"</span>)
+    <span class="cmt">#test LOW_FLORA
+</span>    ClickAndWait(LOW_FLORA_BUTTON, MEDUIM_FLORA_LIST)
+    ClickAndWait(MEDUIM_FLORA_LIST, MEDUIM_FLORA)
+    <span class="skw">click</span>(FOCOUSE_ON_PROGRAM)
+
+    <span class="kw">print</span>(<span class="str">"&gt;&gt;&gt;&gt;&gt;&gt;&gt; test HIGH_FLORA&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;"</span>)
+    <span class="cmt">#test HIGH_FLORA
+</span>    ClickAndWait(MEDUIM_FLORA_BUTTON, HIGH_FLORA_LIST)
+    ClickAndWait(HIGH_FLORA_LIST, HIGH_FLORA)
+    <span class="skw">click</span>(FOCOUSE_ON_PROGRAM)
+
+    <span class="kw">print</span>(<span class="str">"&gt;&gt;&gt;&gt;&gt;&gt;&gt; test VERY_HIGH_FLORA&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;"</span>)
+    <span class="cmt">#test VERY_HIGH_FLORA
+</span>    ClickAndWait(HIGH_FLORA_BUTTON, VERY_HIGH_FLORA_LIST)
+    ClickAndWait(VERY_HIGH_FLORA_LIST, VERY_HIGH_FLORA)
+
+
+
+<span class="cmt"># ============== main function ==========
+</span>console=False
+
+<span class="kw">if</span> len(sys.argv) &gt; <span class="dig">1</span>:
+    modeleditor_path = sys.argv[<span class="dig">1</span>] + modeleditor_path
+<span class="kw">else</span>:
+    <span class="kw">print</span> <span class="str">"ERORR: missing argumants for the Model and Model editor location"</span>
+    modeleditor_path = <span class="str">"c:\\bw\\2_current"</span> + modeleditor_path
+    <span class="cmt">#sys.exit(1)
+</span>
+StartModelEditor(modeleditor_path)
+<span class="skw">sleep</span>(<span class="dig">1</span>)
+TestDisplaySettings()
+<span class="kw">print</span>(<span class="str">"&gt;&gt;&gt;&gt;&gt;&gt;&gt;FINISH TEST - SUCSSESS&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;"</span>)
+</pre>
+</body>
+</html>

@@ -1,0 +1,5 @@
+c:\lint\co-msc110.lnt
+c:\lint\lib-gtk.lnt c:\lint\lib-msc110-emergency.lnt c:\lint\lib-w32.lnt
+c:\lint\pc_lint_options.lnt  -si4 -sp4
+-i"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\include"
+-i"C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include"

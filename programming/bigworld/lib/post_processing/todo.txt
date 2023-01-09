@@ -1,0 +1,43 @@
+General
+-------
+(POST GDC)graphics settings stuff.
+	- python registerable graphics settings.  for example,
+	create logic to build a bloom effect, but you have 3 different
+	bloom effects (n-tap, 4-tap, NULL) and you want to register the
+	python callbacks to provide these.
+(POST GDC)prerequisites, how to load an entire pp-pipeline in the background
+
+Buddy check
+-----------
+
+Effect
+------
+
+PyMaterial
+----------
+(3)be able to expose arbitrary length float arrays through python attribute get/set
+
+PyRenderTarget
+--------------
+(3)add better control over Z-Buffer usage
+
+PyFilterQuad
+------------
+(3)build a filter quad / shader pair that performs n-tap filtering entirely on the GPU,
+	with the tap locations uploaded as shader constants instead of hardcoded into the quad.
+(3)be able to perform subtractive multi-pass filters (?)
+
+HeatShimmer
+-----------
+
+
+.fx files
+---------
+(POST GDC)Get them all running on shader 1.1
+
+Tools
+-----
+(POST GDC)Remove Bloom / Shimmer as graphics options
+
+Vector4Provider
+---------------

@@ -1,0 +1,11 @@
+<root>
+	<ClientServerEntities>
+		<Guard/>
+		<ClientAvatar/>
+		<Account/>
+		<Space/>
+	    <ClientOnly/>
+	</ClientServerEntities>
+
+	<ServerOnlyEntities/>
+</root>

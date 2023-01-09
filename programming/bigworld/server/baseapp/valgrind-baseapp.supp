@@ -1,0 +1,112 @@
+# This is a valgrind suppression file for BaseApp
+# Due to differences in C++ name mangling, this may only work for Debug builds
+# using gcc 3.4.4 on Fedora Core 4
+
+{
+   Bigworld.globalData and BigWorld.baseAppData not freed
+   Memcheck:Leak
+   fun:_Znwj
+   fun:_ZN7BaseApp10initScriptEv
+   fun:_ZN7BaseApp4initEiPPc
+}
+
+#{
+#   Bigworld.globalData and BigWorld.baseAppData not freed
+#   Memcheck:Leak
+#   fun:_Znwj
+#   fun:_ZN7BaseApp10initScriptEv
+#   fun:_ZN7BaseApp4initEiPPc
+#   fun:_Z6bwMainiPPc
+#   fun:main
+#}
+
+{
+   createBaseLocally deliberately prevents the property default value from being destroyed
+   Memcheck:Leak
+   fun:_Znwj
+   fun:*
+   fun:*createFromSection*
+   fun:_ZNK15DataDescription13pInitialValueEv
+   fun:_ZNK7BaseApp17createBaseLocallyE12SmartPointerI10EntityTypeES0_I7_objectES0_I11DataSectionES4_
+}
+
+{
+   createBaseLocally deliberately prevents the property default value from being destroyed
+   Memcheck:Leak
+   fun:_Znwj
+   fun:*
+   fun:*createFromSection*
+   fun:*createFromSection*
+   fun:_ZNK15DataDescription13pInitialValueEv
+   fun:_ZNK7BaseApp17createBaseLocallyE12SmartPointerI10EntityTypeES0_I7_objectES0_I11DataSectionES4_
+}
+
+#{
+#   <insert a suppression name here>
+#   Memcheck:Leak
+#   fun:_Znwj
+#   fun:_ZNK13ClassDataType17createFromSectionE12SmartPointerI11DataSectionE
+#   fun:_ZNK16SequenceDataType17createFromSectionE12SmartPointerI11DataSectionE
+#   fun:_ZNK15DataDescription13pInitialValueEv
+#   fun:_ZNK7BaseApp17createBaseLocallyE12SmartPointerI10EntityTypeES0_I7_objectES0_I11DataSectionES4_
+#   fun:_ZNK7BaseApp10createBaseEP7_objectS1_
+#   fun:_Z20py_createBaseLocallyP7_objectS0_
+#   fun:_Z13py_createBaseP7_objectS0_
+#   fun:_Z14_py_createBaseP7_objectS0_S0_
+#   fun:PyEval_EvalFrame
+#   fun:PyEval_EvalCodeEx
+#   fun:PyEval_EvalFrame
+#}
+
+
+#{
+#   <insert a suppression name here>
+#   Memcheck:Leak
+#   fun:_Znwj
+#   fun:_ZNK13ArrayDataType11newSequenceEi
+#   fun:_ZNK16SequenceDataType17createFromSectionE12SmartPointerI11DataSectionE
+#   fun:_ZNK15DataDescription13pInitialValueEv
+#   fun:_ZNK7BaseApp17createBaseLocallyE12SmartPointerI10EntityTypeES0_I7_objectES0_I11DataSectionES4_
+#   fun:_ZNK7BaseApp10createBaseEP7_objectS1_
+#   fun:_Z20py_createBaseLocallyP7_objectS0_
+#   fun:_Z13py_createBaseP7_objectS0_
+#   fun:_Z14_py_createBaseP7_objectS0_S0_
+#   fun:PyEval_EvalFrame
+#   fun:PyEval_EvalCodeEx
+#   fun:PyEval_EvalFrame
+#}
+
+{
+   Something strange about Base::backupData_. It is not being destroyed
+   Memcheck:Leak
+   fun:_Znwj
+   obj:/usr/lib/libstdc++.so.6.0.4
+   fun:_ZNSs4_Rep9_S_createEjjRKSaIcE
+   fun:_ZNSs9_M_mutateEjjj
+   fun:_ZNSs15_M_replace_safeEjjPKcj
+   fun:_ZNSs6assignEPKcj
+   fun:_ZN4Base16backupCellEntityER13BinaryIStream
+   fun:_ZN24BaseVarLenMessageHandler13handleMessageERKN7Mercury7AddressERNS0_21UnpackedMessageHeaderER13BinaryIStream
+   fun:_ZN7Mercury3Nub20processOrderedPacketERKNS_7AddressEPNS_6PacketEi
+   fun:_ZN7Mercury3Nub21processFilteredPacketERKNS_7AddressEPNS_6PacketE
+   fun:_ZN7Mercury3Nub13processPacketERKNS_7AddressEPNS_6PacketE
+   fun:_ZN7Mercury3Nub20processPendingEventsEb
+}
+
+#{
+#   Something strange about Base::backupData_. It is not being destroyed
+#   Memcheck:Leak
+#   fun:_Znwj
+#   obj:/usr/lib/libstdc++.so.6.0.4
+#   fun:_ZNSs4_Rep9_S_createEjjRKSaIcE
+#   fun:_ZNSs9_M_mutateEjjj
+#   fun:_ZNSs15_M_replace_safeEjjPKcj
+#   fun:_ZNSs6assignEPKcj
+#   fun:_ZN4Base16backupCellEntityER13BinaryIStream
+#   fun:_ZN24BaseVarLenMessageHandler13handleMessageERKN7Mercury7AddressERNS0_21UnpackedMessageHeaderER13BinaryIStream
+#   fun:_ZN7Mercury3Nub20processOrderedPacketERKNS_7AddressEPNS_6PacketEi
+#   fun:_ZN7Mercury3Nub21processFilteredPacketERKNS_7AddressEPNS_6PacketE
+#   fun:_ZN7Mercury3Nub13processPacketERKNS_7AddressEPNS_6PacketE
+#   fun:_ZN7Mercury3Nub20processPendingEventsEb
+#}
+

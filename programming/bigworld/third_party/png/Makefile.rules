@@ -1,0 +1,29 @@
+name         := png
+type         := library
+
+include $(BW_COMPONENT_HEADER)
+
+
+cSource =		\
+	png			\
+	pngset		\
+	pngget		\
+	pngrutil	\
+	pngtrans	\
+	pngwutil	\
+	pngread		\
+	pngrio		\
+	pngwio		\
+	pngwrite	\
+	pngrtran	\
+	pngwtran	\
+	pngmem		\
+	pngerror	\
+	pngpread	\
+
+
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - libpng

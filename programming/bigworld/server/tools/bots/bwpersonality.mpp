@@ -1,0 +1,73 @@
+/*~ module BWPersonality
+ *  @components{ bots }
+ *  The name of this module is specified by the personality option in
+ *  the configuration file. This module should be implemented by the user.
+ *  It should contain callback methods that will be called by the server at
+ *  specific events.
+ */
+/*~ function BWPersonality.onLogOnFailure
+ *  @components{ bots }
+ *	If present, this method is called when a log on attempt by the simulated
+ *	client fails.
+ *
+ *  @param playerName	The name of simulated client
+ *
+ *  @return boolean
+ */
+/*~ function BWPersonality.onLoseConnection
+ *  @components{ bots }
+ *	If present, this method is called when the simulated client loses 
+ *  connection with the server. The return value from this callback
+ *  should be boolean. If function returns true, the client will
+ *  automatically be destroyed. Otherwise, the client will be put in a
+ *  dormant state waiting for reactivation (from script). Note: This
+ *  callback is not invoked if the client is disconnected through logOff
+ *  function call.
+ *
+ *  @param playerID	the ID of simulated client (and its player entity)
+ *
+ *  @return boolean
+ */
+/*~ function BWPersonality.onClientAppDestroy
+ *  @components{ bots }
+ *	If present, this method is called when the simulated client is destroyed
+ *	and removed from the Bots application.
+ *
+ *  @param playerID	the ID of simulated client (and its player entity)
+ */
+/*~ function BWPersonality.onTick
+ *  @components{ bots }
+ *	If present, this method will be called every game tick.
+ */
+/*~ function BWPersonality.onSpaceDataCreated
+ *  @components{ bots }
+ *	If present, this method is called whenever user-defined space data is
+ *	added to a key.
+ *
+ *  @param	clientAppID	(integer)	The ID of the client app
+ *  @param	spaceID		(integer)	The space in which the data was added
+ *  @param	key			(integer)	The key to which data was added
+ *  @param	data		(string)	The data which was added to this key
+ */
+/*~ function BWPersonality.onSpaceDataDeleted
+ *	@components{ bots }
+ *	If present, this method is called whenever user-defined space data is
+ *	deleted from a key.
+ *
+ *  @param	clientAppID	(integer)	The ID of the client app
+ *  @param	spaceID		(integer)	The space in which the data was deleted
+ *  @param	key			(integer)	The key from which data was deleted
+ *  @param	data		(string)	The data which was deleted from this key
+ */
+/*~ function BWPersonality.onSpaceGeometryLoaded
+ *	@components{ bots }
+ *	This is a callback function that can be implemented by the user.
+ *
+ *	If present, this method is called whenever a space geometry is fully
+ *	loaded.
+ *
+ *	@param spaceID spaceID is the id of the space where the geometry is loaded.
+ *	@param mappingName mappingName is the name of the geometry that has been
+ *	fully loaded. The mappingName is name of the immediate directory name that
+ *	contains chunk files.
+ */

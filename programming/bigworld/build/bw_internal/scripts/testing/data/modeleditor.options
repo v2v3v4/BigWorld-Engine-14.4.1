@@ -1,0 +1,166 @@
+<root
+		personality="Personality">
+	<help
+			toolsReferenceGuide="..\..\doc\content_tools_reference_guide.pdf"
+			contentCreationManual="..\..\doc\content_creation.chm"
+			shortcutsHtml="resources/html/shortcuts.html" />
+	<space>	helpers/spaces/pe	</space>
+	<camera>
+		<speed>	Slow
+			<Slow
+					turbo="4">	0.5	</Slow>
+			<Medium
+					turbo="8">	4	</Medium>
+			<Fast
+					turbo="32">	16	</Fast>
+			<SuperFast
+					turbo="64">	32	</SuperFast>
+		</speed>
+		<invert>	0	</invert>
+		<mode>	4	</mode>
+		<rotDir>	0	</rotDir>
+		<orbitSpeed>	0.5	</orbitSpeed>
+	</camera>
+	<render>
+		<environment
+				drawFog="0"
+				drawClouds="0"
+				drawSky="1"
+				drawSunAndMoon="1"
+				drawDetailObjects="1"
+				drawWater="1"
+				drawSkyBoxes="0">	1	</environment>
+		<misc
+				drawFog="0"
+				nearPlane="0.01f"
+				farPlane="250.f" />
+		<helperDistanceThreshold>	150	</helperDistanceThreshold>
+		<scenery>	1
+			<drawWater
+					reflection="1"
+					simulation="1">	1	</drawWater>
+			<wireFrame>	0	</wireFrame>
+		</scenery>
+		<useUmbra>	0	</useUmbra>
+		<editorObjectsScreenPercentLOD>	0.800000	</editorObjectsScreenPercentLOD>
+	</render>
+	<precompileEffects>	0	</precompileEffects>
+	<settings
+			showAxes="1"
+			checkForSparkles="0"
+			showModel="1"
+			showWireframe="0"
+			showSkeleton="0"
+			showShadowing="1"
+			showBoundingBox="0"
+			showBsp="0"
+			showPortals="1"
+			centreModel="0"
+			groundModel="0"
+			useCustomLighting="0"
+			zoomOnLoad="1"
+			animateZoom="1"
+			zoomDuration="0.3"
+			useTerrain="0"
+			useFloor="1"
+			bkgColour="192.000000 192.000000 192.000000"
+			floorTexture="helpers/maps/system/default.bmp"
+			floorGrid="1.0"
+			floraDensity="2"
+			showOriginalAnim="0"
+			showLightModels="1"
+			lastNewTintFX="1"
+			showTrees="1"
+			showWater="0"
+			regenBBOnLoad="0"
+			lockLodParents="0"
+			gameTime="12:15"
+			showActions="0"
+			showBinormals="0"
+			showCustomHull="0"
+			showEditorProxy="0"
+			showHardPoints="0"
+			showNormals="0"
+			sunAngle="50.000000" />
+	<startup
+			lastLoadOK="true"
+			showSplashScreen="1"
+			loadLastModel="1"
+			loadLastLights="1">
+		<lastView
+				row0="-0.908474 0.000000 -0.417941"
+				row1="0.040933 0.995193 -0.088976"
+				row2="0.415932 -0.097940 -0.904107"
+				row3="-1.461777 1.198921 3.183971" />
+		<lastOrigin>	0.000000 0.854715 0.006521	</lastOrigin>
+	</startup>
+	<messages
+			showDate="0"
+			showTime="0"
+			showPriority="1"
+			errorMsgs="1"
+			warningMsgs="1"
+			noticeMsgs="0"
+			infoMsgs="0"
+			assetMsgs="0" />
+	<consoles
+			darkenBackground="true"
+			numMessageLines="5" />
+	<lights
+			file0="helpers/lights/yellowkey_bluebounce_whiterim.mvl"
+			file1="helpers/lights/3way_studio.mvl"
+			file2="helpers/lights/underlight.mvl"
+			file3=""
+			file4=""
+			file5=""
+			file6=""
+			file7=""
+			file8=""
+			file9="" />
+	<language>	helpers/languages/files_en.xml	</language>
+	<language>	helpers/languages/files_cn.xml	</language>
+	<language>	helpers/languages/modeleditor_gui_en.xml	</language>
+	<language>	helpers/languages/modeleditor_gui_cn.xml	</language>
+	<language>	helpers/languages/modeleditor_rc_en.xml	</language>
+	<language>	helpers/languages/modeleditor_rc_cn.xml	</language>
+	<checkFileCase>	false	</checkFileCase>
+	<app
+			mainThreadCpuAffinity="1"
+			maxTimeDelta="0.500000"
+			timeScale="1.000000" />
+	<currentCountry />
+	<currentLanguage />
+	<graphics
+			bpp="32"
+			fullScreen="false"
+			height="768"
+			shadows="false"
+			width="1024" />
+	<models
+			file0=""
+			file1=""
+			file2=""
+			file3=""
+			file4=""
+			file5=""
+			file6=""
+			file7=""
+			file8=""
+			file9="" />
+	<renderer>
+		<shadows
+				quality="2" />
+	</renderer>
+	<ualConfigPath>	resources/ual/ual_config.xml	</ualConfigPath>
+	<fx
+			file0="shaders/std_effects/normalmap_specmap_skinned.fx"
+			file1=""
+			file2=""
+			file3=""
+			file4=""
+			file5=""
+			file6=""
+			file7=""
+			file8=""
+			file9="" />
+</root>

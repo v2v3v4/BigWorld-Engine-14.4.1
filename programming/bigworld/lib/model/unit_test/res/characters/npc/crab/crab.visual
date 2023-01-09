@@ -1,0 +1,757 @@
+<crab.visual>
+	<node>
+		<identifier>	Scene Root	</identifier>
+		<transform>
+			<row0>	1.000000 0.000000 0.000000	</row0>
+			<row1>	0.000000 1.000000 0.000000	</row1>
+			<row2>	0.000000 0.000000 1.000000	</row2>
+			<row3>	0.000000 0.000000 0.000000	</row3>
+		</transform>
+		<node>
+			<identifier>	CrabHub	</identifier>
+			<transform>
+				<row0>	-0.000000 1.000000 0.000000	</row0>
+				<row1>	0.076337 0.000000 -0.997082	</row1>
+				<row2>	-0.997082 0.000000 -0.076337	</row2>
+				<row3>	0.001331 0.100967 0.000757	</row3>
+			</transform>
+			<node>
+				<identifier>	CrabLLeg11	</identifier>
+				<transform>
+					<row0>	0.067478 0.972021 0.224995	</row0>
+					<row1>	-0.333950 -0.190498 0.923140	</row1>
+					<row2>	0.940172 -0.137428 0.311752	</row2>
+					<row3>	-0.020530 0.071041 -0.032935	</row3>
+				</transform>
+				<node>
+					<identifier>	CrabLLeg12	</identifier>
+					<transform>
+						<row0>	0.958406 0.222529 -0.178715	</row0>
+						<row1>	-0.220556 0.974879 0.031092	</row1>
+						<row2>	0.181144 0.009618 0.983410	</row2>
+						<row3>	0.199161 -0.000000 -0.000000	</row3>
+					</transform>
+					<node>
+						<identifier>	CrabLLeg13	</identifier>
+						<transform>
+							<row0>	0.746235 0.464520 -0.476817	</row0>
+							<row1>	-0.184504 0.832550 0.522321	</row1>
+							<row2>	0.639602 -0.301799 0.706984	</row2>
+							<row3>	0.062531 0.000000 0.000000	</row3>
+						</transform>
+						<node>
+							<identifier>	CrabLLeg13BlendBonecrab_mesh	</identifier>
+							<transform>
+								<row0>	-0.215106 0.444556 -0.869540	</row0>
+								<row1>	-0.862274 0.331561 0.382819	</row1>
+								<row2>	0.458490 0.832129 0.312008	</row2>
+								<row3>	0.007439 0.103213 -0.321543	</row3>
+							</transform>
+						</node>
+					</node>
+					<node>
+						<identifier>	CrabLLeg12BlendBonecrab_mesh	</identifier>
+						<transform>
+							<row0>	-0.917934 0.379540 -0.115528	</row0>
+							<row1>	-0.242381 -0.305960 0.920674	</row1>
+							<row2>	0.314085 0.873120 0.372844	</row2>
+							<row3>	-0.215136 0.142451 -0.129255	</row3>
+						</transform>
+					</node>
+				</node>
+				<node>
+					<identifier>	CrabLLeg11BlendBonecrab_mesh	</identifier>
+					<transform>
+						<row0>	-0.987991 0.077570 0.133630	</row0>
+						<row1>	0.099367 -0.343300 0.933955	</row1>
+						<row2>	0.118322 0.936017 0.331469	</row2>
+						<row3>	-0.074073 0.066648 -0.064683	</row3>
+					</transform>
+				</node>
+			</node>
+			<node>
+				<identifier>	CrabRLeg11	</identifier>
+				<transform>
+					<row0>	0.117829 -0.992919 -0.015090	</row0>
+					<row1>	0.394163 0.060711 -0.917033	</row1>
+					<row2>	0.911456 0.102105 0.398526	</row2>
+					<row3>	-0.020530 -0.071041 -0.032935	</row3>
+				</transform>
+				<node>
+					<identifier>	CrabRLeg12	</identifier>
+					<transform>
+						<row0>	0.936796 -0.272702 -0.219196	</row0>
+						<row1>	0.269753 0.961929 -0.043872	</row1>
+						<row2>	0.222815 -0.018029 0.974694	</row2>
+						<row3>	0.199161 0.000000 -0.000000	</row3>
+					</transform>
+					<node>
+						<identifier>	CrabRLeg13	</identifier>
+						<transform>
+							<row0>	0.632172 -0.540663 -0.555015	</row0>
+							<row1>	0.212497 0.809821 -0.546841	</row1>
+							<row2>	0.745119 0.227758 0.626836	</row2>
+							<row3>	0.062531 -0.000000 0.000000	</row3>
+						</transform>
+						<node>
+							<identifier>	CrabRLeg13BlendBonecrab_mesh	</identifier>
+							<transform>
+								<row0>	0.215794 0.444690 0.869301	</row0>
+								<row1>	-0.862175 -0.331132 0.383414	</row1>
+								<row2>	0.458353 -0.832228 0.311944	</row2>
+								<row3>	0.006634 -0.104448 -0.323846	</row3>
+							</transform>
+						</node>
+					</node>
+					<node>
+						<identifier>	CrabRLeg12BlendBonecrab_mesh	</identifier>
+						<transform>
+							<row0>	0.917982 0.379385 0.115653	</row0>
+							<row1>	-0.242516 0.306172 0.920568	</row1>
+							<row2>	0.313839 -0.873113 0.373067	</row2>
+							<row3>	-0.217581 -0.143407 -0.129620	</row3>
+						</transform>
+					</node>
+				</node>
+				<node>
+					<identifier>	CrabRLeg11BlendBonecrab_mesh	</identifier>
+					<transform>
+						<row0>	0.987952 0.077761 -0.133808	</row0>
+						<row1>	0.099484 0.343201 0.933979	</row1>
+						<row2>	0.118551 -0.936038 0.331330	</row2>
+						<row3>	-0.076703 -0.066860 -0.064321	</row3>
+					</transform>
+				</node>
+			</node>
+			<node>
+				<identifier>	CrabLLeg21	</identifier>
+				<transform>
+					<row0>	0.158508 0.982599 0.096817	</row0>
+					<row1>	-0.345627 -0.036633 0.937657	</row1>
+					<row2>	0.924887 -0.182088 0.333807	</row2>
+					<row3>	-0.018770 0.073839 -0.069236	</row3>
+				</transform>
+				<node>
+					<identifier>	CrabLLeg22	</identifier>
+					<transform>
+						<row0>	0.888303 0.348075 -0.299600	</row0>
+						<row1>	-0.300166 0.933769 0.194872	</row1>
+						<row2>	0.347588 -0.083176 0.933951	</row2>
+						<row3>	0.168870 0.000000 0.000000	</row3>
+					</transform>
+					<node>
+						<identifier>	CrabLLeg23	</identifier>
+						<transform>
+							<row0>	0.454614 0.529786 -0.715999	</row0>
+							<row1>	0.026930 0.795327 0.605582	</row1>
+							<row2>	0.890282 -0.294587 0.347298	</row2>
+							<row3>	0.057868 -0.000000 -0.000000	</row3>
+						</transform>
+						<node>
+							<identifier>	CrabLLeg23BlendBonecrab_mesh	</identifier>
+							<transform>
+								<row0>	-0.272723 -0.005966 -0.962074	</row0>
+								<row1>	-0.879030 0.408006 0.246654	</row1>
+								<row2>	0.391060 0.912960 -0.116517	</row2>
+								<row3>	0.027610 0.023648 -0.315078	</row3>
+							</transform>
+						</node>
+					</node>
+					<node>
+						<identifier>	CrabLLeg22BlendBonecrab_mesh	</identifier>
+						<transform>
+							<row0>	-0.951282 0.199970 -0.234679	</row0>
+							<row1>	-0.273752 -0.197622 0.941279	</row1>
+							<row2>	0.141850 0.959666 0.242736	</row2>
+							<row3>	-0.188117 0.143642 -0.139479	</row3>
+						</transform>
+					</node>
+				</node>
+				<node>
+					<identifier>	CrabLLeg21BlendBonecrab_mesh	</identifier>
+					<transform>
+						<row0>	-0.994259 -0.082741 0.067847	</row0>
+						<row1>	0.093363 -0.361062 0.927856	</row1>
+						<row2>	-0.052275 0.928864 0.366714	</row2>
+						<row3>	-0.084300 0.090975 -0.055712	</row3>
+					</transform>
+				</node>
+			</node>
+			<node>
+				<identifier>	CrabRLeg21	</identifier>
+				<transform>
+					<row0>	0.197390 -0.965098 -0.172114	</row0>
+					<row1>	0.350614 0.233456 -0.906955	</row1>
+					<row2>	0.915482 0.118678 0.384459	</row2>
+					<row3>	-0.018770 -0.073839 -0.069236	</row3>
+				</transform>
+				<node>
+					<identifier>	CrabRLeg22	</identifier>
+					<transform>
+						<row0>	0.848658 -0.401039 -0.344888	</row0>
+						<row1>	0.344308 0.913821 -0.215368	</row1>
+						<row2>	0.401537 0.064025 0.913602	</row2>
+						<row3>	0.168870 -0.000000 0.000000	</row3>
+					</transform>
+					<node>
+						<identifier>	CrabRLeg23	</identifier>
+						<transform>
+							<row0>	0.309150 -0.565667 -0.764492	</row0>
+							<row1>	-0.031964 0.797236 -0.602821	</row1>
+							<row2>	0.950477 0.210797 0.228383	</row2>
+							<row3>	0.057868 0.000000 -0.000000	</row3>
+						</transform>
+						<node>
+							<identifier>	CrabRLeg23BlendBonecrab_mesh	</identifier>
+							<transform>
+								<row0>	0.272545 -0.005928 0.962125	</row0>
+								<row1>	-0.879035 -0.408091 0.246495	</row1>
+								<row2>	0.391174 -0.912922 -0.116434	</row2>
+								<row3>	0.026945 -0.023627 -0.317633	</row3>
+							</transform>
+						</node>
+					</node>
+					<node>
+						<identifier>	CrabRLeg22BlendBonecrab_mesh	</identifier>
+						<transform>
+							<row0>	0.951283 0.199941 0.234702	</row0>
+							<row1>	-0.273775 0.197668 0.941262	</row1>
+							<row2>	0.141804 -0.959662 0.242777	</row2>
+							<row3>	-0.190650 -0.144164 -0.140110	</row3>
+						</transform>
+					</node>
+				</node>
+				<node>
+					<identifier>	CrabRLeg21BlendBonecrab_mesh	</identifier>
+					<transform>
+						<row0>	0.994259 -0.082701 -0.067889	</row0>
+						<row1>	0.093386 0.361039 0.927863	</row1>
+						<row2>	-0.052225 -0.928877 0.366689	</row2>
+						<row3>	-0.086945 -0.090756 -0.055531	</row3>
+					</transform>
+				</node>
+			</node>
+			<node>
+				<identifier>	CrabLLeg31	</identifier>
+				<transform>
+					<row0>	0.047255 0.994743 -0.090843	</row0>
+					<row1>	-0.248382 0.099789 0.963508	</row1>
+					<row2>	0.967509 -0.022967 0.251791	</row2>
+					<row3>	-0.008658 0.056031 -0.101875	</row3>
+				</transform>
+				<node>
+					<identifier>	CrabLLeg32	</identifier>
+					<transform>
+						<row0>	0.921856 0.151985 -0.356487	</row0>
+						<row1>	0.000931 0.919015 0.394221	</row1>
+						<row2>	0.387532 -0.363747 0.847058	</row2>
+						<row3>	0.165770 0.000000 0.000000	</row3>
+					</transform>
+					<node>
+						<identifier>	CrabLLeg33	</identifier>
+						<transform>
+							<row0>	0.765625 0.208887 -0.608427	</row0>
+							<row1>	-0.021372 0.953548 0.300482	</row1>
+							<row2>	0.642932 -0.217053 0.734525	</row2>
+							<row3>	0.049765 0.000000 0.000000	</row3>
+						</transform>
+						<node>
+							<identifier>	CrabLLeg33BlendBonecrab_mesh	</identifier>
+							<transform>
+								<row0>	-0.221712 -0.290026 -0.930983	</row0>
+								<row1>	-0.919295 0.380555 0.100375	</row1>
+								<row2>	0.325179 0.878102 -0.350993	</row2>
+								<row3>	0.075590 0.017359 -0.301877	</row3>
+							</transform>
+						</node>
+					</node>
+					<node>
+						<identifier>	CrabLLeg32BlendBonecrab_mesh	</identifier>
+						<transform>
+							<row0>	-0.877229 -0.212334 -0.430562	</row0>
+							<row1>	-0.458440 0.104325 0.882581	</row1>
+							<row2>	-0.142483 0.971613 -0.188859	</row2>
+							<row3>	-0.155707 0.076873 -0.221397	</row3>
+						</transform>
+					</node>
+				</node>
+				<node>
+					<identifier>	CrabLLeg31BlendBonecrab_mesh	</identifier>
+					<transform>
+						<row0>	-0.970579 -0.240405 0.013513	</row0>
+						<row1>	0.081291 -0.274334 0.958192	</row1>
+						<row2>	-0.226646 0.931099 0.285806	</row2>
+						<row3>	-0.084343 0.109127 -0.068598	</row3>
+					</transform>
+				</node>
+			</node>
+			<node>
+				<identifier>	CrabRLeg31	</identifier>
+				<transform>
+					<row0>	0.119042 -0.928762 -0.351042	</row0>
+					<row1>	0.320225 0.370577 -0.871854	</row1>
+					<row2>	0.939833 -0.008625 0.341527	</row2>
+					<row3>	-0.008658 -0.056031 -0.101875	</row3>
+				</transform>
+				<node>
+					<identifier>	CrabRLeg32	</identifier>
+					<transform>
+						<row0>	0.864494 -0.193555 -0.463883	</row0>
+						<row1>	0.003463 0.925158 -0.379568	</row1>
+						<row2>	0.502632 0.326528 0.800463	</row2>
+						<row3>	0.165770 -0.000000 0.000000	</row3>
+					</transform>
+					<node>
+						<identifier>	CrabRLeg33	</identifier>
+						<transform>
+							<row0>	0.614122 -0.256272 -0.746444	</row0>
+							<row1>	0.039137 0.954536 -0.295516	</row1>
+							<row2>	0.788240 0.152269 0.596231	</row2>
+							<row3>	0.049765 -0.000000 -0.000000	</row3>
+						</transform>
+						<node>
+							<identifier>	CrabRLeg33BlendBonecrab_mesh	</identifier>
+							<transform>
+								<row0>	0.221712 -0.290026 0.930983	</row0>
+								<row1>	-0.919295 -0.380555 0.100375	</row1>
+								<row2>	0.325179 -0.878102 -0.350993	</row2>
+								<row3>	0.075000 -0.016587 -0.304355	</row3>
+							</transform>
+						</node>
+					</node>
+					<node>
+						<identifier>	CrabRLeg32BlendBonecrab_mesh	</identifier>
+						<transform>
+							<row0>	0.877229 -0.212334 0.430562	</row0>
+							<row1>	-0.458440 -0.104325 0.882581	</row1>
+							<row2>	-0.142483 -0.971613 -0.188859	</row2>
+							<row3>	-0.158041 -0.076308 -0.222543	</row3>
+						</transform>
+					</node>
+				</node>
+				<node>
+					<identifier>	CrabRLeg31BlendBonecrab_mesh	</identifier>
+					<transform>
+						<row0>	0.970579 -0.240405 -0.013513	</row0>
+						<row1>	0.081291 0.274334 0.958192	</row1>
+						<row2>	-0.226646 -0.931099 0.285806	</row2>
+						<row3>	-0.086926 -0.108487 -0.068562	</row3>
+					</transform>
+				</node>
+			</node>
+			<node>
+				<identifier>	CrabLLeg41	</identifier>
+				<transform>
+					<row0>	0.166114 0.964832 -0.203729	</row0>
+					<row1>	-0.182364 0.233094 0.955202	</row1>
+					<row2>	0.969097 -0.121519 0.214672	</row2>
+					<row3>	-0.006430 0.035246 -0.135031	</row3>
+				</transform>
+				<node>
+					<identifier>	CrabLLeg42	</identifier>
+					<transform>
+						<row0>	0.724065 -0.056507 -0.687414	</row0>
+						<row1>	0.398144 0.848067 0.349660	</row1>
+						<row2>	0.563215 -0.526867 0.636554	</row2>
+						<row3>	0.135091 0.000000 0.000000	</row3>
+					</transform>
+					<node>
+						<identifier>	CrabLLeg43	</identifier>
+						<transform>
+							<row0>	0.566720 -0.429071 -0.703368	</row0>
+							<row1>	0.414448 0.886284 -0.206723	</row1>
+							<row2>	0.712082 -0.174356 0.680102	</row2>
+							<row3>	0.053378 -0.000000 0.000000	</row3>
+						</transform>
+						<node>
+							<identifier>	CrabLLeg43BlendBonecrab_mesh	</identifier>
+							<transform>
+								<row0>	-0.000854 -0.810136 -0.586241	</row0>
+								<row1>	-0.976653 -0.125261 0.174523	</row1>
+								<row2>	-0.214821 0.572703 -0.791115	</row2>
+								<row3>	0.041936 -0.031706 -0.293727	</row3>
+							</transform>
+						</node>
+					</node>
+					<node>
+						<identifier>	CrabLLeg42BlendBonecrab_mesh	</identifier>
+						<transform>
+							<row0>	-0.712695 -0.643280 -0.279744	</row0>
+							<row1>	-0.545138 0.256934 0.798003	</row1>
+							<row2>	-0.441464 0.721232 -0.533792	</row2>
+							<row3>	-0.130108 -0.001943 -0.235305	</row3>
+						</transform>
+					</node>
+				</node>
+				<node>
+					<identifier>	CrabLLeg41BlendBonecrab_mesh	</identifier>
+					<transform>
+						<row0>	-0.931866 -0.361965 0.024653	</row0>
+						<row1>	0.093229 -0.173239 0.980457	</row1>
+						<row2>	-0.350621 0.915953 0.195181	</row2>
+						<row3>	-0.088450 0.128860 -0.075661	</row3>
+					</transform>
+				</node>
+			</node>
+			<node>
+				<identifier>	CrabRLeg41	</identifier>
+				<transform>
+					<row0>	0.191576 -0.859119 -0.474567	</row0>
+					<row1>	0.225552 0.509120 -0.830616	</row1>
+					<row2>	0.955209 0.052086 0.291312	</row2>
+					<row3>	-0.006430 -0.035246 -0.135031	</row3>
+				</transform>
+				<node>
+					<identifier>	CrabRLeg42	</identifier>
+					<transform>
+						<row0>	0.626992 0.065205 -0.776292	</row0>
+						<row1>	-0.447048 0.846198 -0.289992	</row1>
+						<row2>	0.637988 0.528863 0.559710	</row2>
+						<row3>	0.135091 0.000000 0.000000	</row3>
+					</transform>
+					<node>
+						<identifier>	CrabRLeg43	</identifier>
+						<transform>
+							<row0>	0.440900 0.467047 -0.766468	</row0>
+							<row1>	-0.447885 0.854516 0.263060	</row1>
+							<row2>	0.777821 0.227306 0.585940	</row2>
+							<row3>	0.053378 0.000000 -0.000000	</row3>
+						</transform>
+						<node>
+							<identifier>	CrabRLeg43BlendBonecrab_mesh	</identifier>
+							<transform>
+								<row0>	0.001000 -0.810136 0.586241	</row0>
+								<row1>	-0.976684 0.125062 0.174491	</row1>
+								<row2>	-0.214678 -0.572747 -0.791122	</row2>
+								<row3>	0.041937 0.033870 -0.295286	</row3>
+							</transform>
+						</node>
+					</node>
+					<node>
+						<identifier>	CrabRLeg42BlendBonecrab_mesh	</identifier>
+						<transform>
+							<row0>	0.712694 -0.643281 0.279745	</row0>
+							<row1>	-0.545139 -0.256933 0.798003	</row1>
+							<row2>	-0.441464 -0.721232 -0.533792	</row2>
+							<row3>	-0.132005 0.003655 -0.236049	</row3>
+						</transform>
+					</node>
+				</node>
+				<node>
+					<identifier>	CrabRLeg41BlendBonecrab_mesh	</identifier>
+					<transform>
+						<row0>	0.931866 -0.361965 -0.024653	</row0>
+						<row1>	0.093229 0.173239 0.980457	</row1>
+						<row2>	-0.350621 -0.915953 0.195181	</row2>
+						<row3>	-0.090930 -0.127897 -0.075595	</row3>
+					</transform>
+				</node>
+			</node>
+			<node>
+				<identifier>	CrabLArm1	</identifier>
+				<transform>
+					<row0>	-0.124022 0.982319 0.140241	</row0>
+					<row1>	0.015361 -0.139415 0.990115	</row1>
+					<row2>	0.992161 0.124950 0.002201	</row2>
+					<row3>	-0.025845 0.091022 0.020840	</row3>
+				</transform>
+				<node>
+					<identifier>	CrabLArm2	</identifier>
+					<transform>
+						<row0>	-0.054853 0.993858 -0.096115	</row0>
+						<row1>	-0.766034 0.019856 0.642493	</row1>
+						<row2>	0.640454 0.108870 0.760240	</row2>
+						<row3>	0.161085 0.000000 0.000000	</row3>
+					</transform>
+					<node>
+						<identifier>	CrabLArmPalm	</identifier>
+						<transform>
+							<row0>	0.281728 0.680914 -0.676007	</row0>
+							<row1>	-0.680117 0.638689 0.359884	</row1>
+							<row2>	0.676809 0.358375 0.643037	</row2>
+							<row3>	0.122624 0.000000 0.000000	</row3>
+						</transform>
+						<node>
+							<identifier>	CrabLArmDigit1	</identifier>
+							<transform>
+								<row0>	0.934987 0.160217 -0.316436	</row0>
+								<row1>	-0.348347 0.582696 -0.734247	</row1>
+								<row2>	0.066747 0.796741 0.600624	</row2>
+								<row3>	0.119272 -0.015283 0.023745	</row3>
+							</transform>
+							<node>
+								<identifier>	CrabLArmDigit1BlendBonecrab_mesh	</identifier>
+								<transform>
+									<row0>	0.985039 -0.067516 0.158558	</row0>
+									<row1>	-0.127987 0.329522 0.935433	</row1>
+									<row2>	-0.115405 -0.941731 0.315951	</row2>
+									<row3>	0.152770 0.183653 -0.089518	</row3>
+								</transform>
+							</node>
+						</node>
+						<node>
+							<identifier>	CrabLArmPalmBlendBonecrab_mesh	</identifier>
+							<transform>
+								<row0>	0.957140 0.242967 -0.157639	</row0>
+								<row1>	-0.177913 0.922725 0.341943	</row1>
+								<row2>	0.228537 -0.299241 0.926405	</row2>
+								<row3>	0.195444 0.040845 -0.213169	</row3>
+							</transform>
+						</node>
+					</node>
+					<node>
+						<identifier>	CrabLArm2BlendBonecrab_mesh	</identifier>
+						<transform>
+							<row0>	0.150650 0.774691 -0.614132	</row0>
+							<row1>	-0.135733 0.631547 0.763364	</row1>
+							<row2>	0.979225 -0.031644 0.200294	</row2>
+							<row3>	0.005253 0.139669 -0.228088	</row3>
+						</transform>
+					</node>
+				</node>
+				<node>
+					<identifier>	CrabLArm1BlendBonecrab_mesh	</identifier>
+					<transform>
+						<row0>	-0.989394 0.143630 0.021681	</row0>
+						<row1>	0.007964 -0.095390 0.995408	</row1>
+						<row2>	0.145038 0.985023 0.093235	</row2>
+						<row3>	-0.092552 -0.000251 -0.085014	</row3>
+					</transform>
+				</node>
+			</node>
+			<node>
+				<identifier>	CrabRArm1	</identifier>
+				<transform>
+					<row0>	-0.108366 -0.991640 -0.070051	</row0>
+					<row1>	-0.059034 0.076761 -0.995300	</row1>
+					<row2>	0.992357 -0.103722 -0.066859	</row2>
+					<row3>	-0.032961 -0.083604 0.021240	</row3>
+				</transform>
+				<node>
+					<identifier>	CrabRArm2	</identifier>
+					<transform>
+						<row0>	-0.129763 -0.989810 -0.058633	</row0>
+						<row1>	0.768320 -0.062993 -0.636959	</row1>
+						<row2>	0.626774 -0.127702 0.768665	</row2>
+						<row3>	0.122945 -0.000000 0.000000	</row3>
+					</transform>
+					<node>
+						<identifier>	CrabRArmPalm	</identifier>
+						<transform>
+							<row0>	0.184621 -0.672275 -0.716912	</row0>
+							<row1>	0.656309 0.627300 -0.419230	</row1>
+							<row2>	0.731556 -0.393117 0.557032	</row2>
+							<row3>	0.097557 0.000000 0.000000	</row3>
+						</transform>
+						<node>
+							<identifier>	CrabRArmDigit1	</identifier>
+							<transform>
+								<row0>	0.944988 -0.096329 -0.312602	</row0>
+								<row1>	0.313091 0.543105 0.779109	</row1>
+								<row2>	0.094725 -0.834121 0.543387	</row2>
+								<row3>	0.080875 0.011903 0.030100	</row3>
+							</transform>
+							<node>
+								<identifier>	CrabRArmDigit1BlendBonecrab_mesh	</identifier>
+								<transform>
+									<row0>	-0.970923 -0.102188 -0.216488	</row0>
+									<row1>	-0.181422 -0.275928 0.943901	</row1>
+									<row2>	-0.156191 0.955731 0.249366	</row2>
+									<row3>	0.149815 -0.140929 -0.072523	</row3>
+								</transform>
+							</node>
+						</node>
+						<node>
+							<identifier>	CrabRArmPalmBlendBonecrab_mesh	</identifier>
+							<transform>
+								<row0>	-0.972656 0.213309 0.091866	</row0>
+								<row1>	-0.171678 -0.926746 0.334169	</row1>
+								<row2>	0.156417 0.309260 0.938026	</row2>
+								<row3>	0.175264 -0.014596 -0.164717	</row3>
+							</transform>
+						</node>
+					</node>
+					<node>
+						<identifier>	CrabRArm2BlendBonecrab_mesh	</identifier>
+						<transform>
+							<row0>	-0.187924 0.771446 0.607911	</row0>
+							<row1>	-0.085170 -0.629406 0.772395	</row1>
+							<row2>	0.978484 0.093376 0.183985	</row2>
+							<row3>	0.010343 -0.112805 -0.194245	</row3>
+						</transform>
+					</node>
+				</node>
+				<node>
+					<identifier>	CrabRArm1BlendBonecrab_mesh	</identifier>
+					<transform>
+						<row0>	0.993256 0.113375 -0.024256	</row0>
+						<row1>	0.013780 0.092283 0.995637	</row1>
+						<row2>	0.115119 -0.989257 0.090099	</row2>
+						<row3>	-0.087972 0.004913 -0.077801	</row3>
+					</transform>
+				</node>
+			</node>
+			<node>
+				<identifier>	CrabEyeL	</identifier>
+				<transform>
+					<row0>	0.285404 0.383895 0.878163	</row0>
+					<row1>	0.028465 0.912473 -0.408145	</row1>
+					<row2>	-0.957984 0.141483 0.249496	</row2>
+					<row3>	0.005400 0.018202 0.124887	</row3>
+				</transform>
+				<node>
+					<identifier>	CrabEyeLBlendBonecrab_mesh	</identifier>
+					<transform>
+						<row0>	-0.399876 -0.906410 -0.136091	</row0>
+						<row1>	0.238332 0.040545 -0.970337	</row1>
+						<row2>	0.885041 -0.420449 0.199813	</row2>
+						<row3>	-0.145732 0.032808 0.085722	</row3>
+					</transform>
+				</node>
+			</node>
+			<node>
+				<identifier>	CrabEyeR	</identifier>
+				<transform>
+					<row0>	0.304713 -0.398305 0.865161	</row0>
+					<row1>	-0.040545 0.902111 0.429596	</row1>
+					<row2>	-0.951581 -0.165981 0.258736	</row2>
+					<row3>	0.005400 -0.018202 0.124887	</row3>
+				</transform>
+				<node>
+					<identifier>	CrabEyeRBlendBonecrab_mesh	</identifier>
+					<transform>
+						<row0>	0.399876 -0.906410 0.136091	</row0>
+						<row1>	0.238332 -0.040545 -0.970337	</row1>
+						<row2>	0.885041 0.420449 0.199813	</row2>
+						<row3>	-0.146796 -0.030396 0.085360	</row3>
+					</transform>
+				</node>
+			</node>
+			<node>
+				<identifier>	CrabHubBlendBonecrab_mesh	</identifier>
+				<transform>
+					<row0>	-0.000000 -1.000000 0.000000	</row0>
+					<row1>	1.000000 -0.000000 -0.000000	</row1>
+					<row2>	0.000000 -0.000000 1.000000	</row2>
+					<row3>	-0.111181 0.001331 -0.000757	</row3>
+				</transform>
+			</node>
+		</node>
+	</node>
+	<renderSet>
+		<treatAsWorldSpaceObject>	true	</treatAsWorldSpaceObject>
+		<node>	CrabEyeLBlendBonecrab_mesh	</node>
+		<node>	CrabHubBlendBonecrab_mesh	</node>
+		<node>	CrabEyeRBlendBonecrab_mesh	</node>
+		<node>	CrabLArm1BlendBonecrab_mesh	</node>
+		<node>	CrabLArm2BlendBonecrab_mesh	</node>
+		<node>	CrabLArmPalmBlendBonecrab_mesh	</node>
+		<node>	CrabLArmDigit1BlendBonecrab_mesh	</node>
+		<node>	CrabRLeg31BlendBonecrab_mesh	</node>
+		<node>	CrabRLeg32BlendBonecrab_mesh	</node>
+		<node>	CrabRLeg33BlendBonecrab_mesh	</node>
+		<node>	CrabRLeg41BlendBonecrab_mesh	</node>
+		<node>	CrabRLeg42BlendBonecrab_mesh	</node>
+		<node>	CrabRLeg43BlendBonecrab_mesh	</node>
+		<node>	CrabLLeg11BlendBonecrab_mesh	</node>
+		<node>	CrabLLeg12BlendBonecrab_mesh	</node>
+		<node>	CrabLLeg13BlendBonecrab_mesh	</node>
+		<node>	CrabLLeg21BlendBonecrab_mesh	</node>
+		<geometry>
+			<vertices>	crab_mesh0a.vertices	</vertices>
+			<primitive>	crab_mesh0a.indices	</primitive>
+			<primitiveGroup>	0
+				<material>
+					<identifier>	01 - Default_skinned	</identifier>
+					<fx>	shaders/std_effects/normalmap_skinned.fx	</fx>
+					<collisionFlags>	0	</collisionFlags>
+					<materialKind>	0	</materialKind>
+					<property>	materialSpecular
+						<Vector4>	0.996078 0.819608 0.462745 1.000000	</Vector4>
+					</property>
+					<property>	normalMap
+						<Texture>	characters/npc/crab/crab_norms.bmp	</Texture>
+					</property>
+					<property>	diffuseMap
+						<Texture>	characters/npc/crab/crab.bmp	</Texture>
+					</property>
+				</material>
+			</primitiveGroup>
+		</geometry>
+	</renderSet>
+	<renderSet>
+		<treatAsWorldSpaceObject>	true	</treatAsWorldSpaceObject>
+		<node>	CrabRArmPalmBlendBonecrab_mesh	</node>
+		<node>	CrabRArmDigit1BlendBonecrab_mesh	</node>
+		<node>	CrabRArm2BlendBonecrab_mesh	</node>
+		<node>	CrabRArm1BlendBonecrab_mesh	</node>
+		<node>	CrabLLeg21BlendBonecrab_mesh	</node>
+		<node>	CrabLLeg22BlendBonecrab_mesh	</node>
+		<node>	CrabLLeg23BlendBonecrab_mesh	</node>
+		<node>	CrabHubBlendBonecrab_mesh	</node>
+		<node>	CrabLLeg31BlendBonecrab_mesh	</node>
+		<node>	CrabLLeg32BlendBonecrab_mesh	</node>
+		<node>	CrabLLeg33BlendBonecrab_mesh	</node>
+		<node>	CrabLLeg41BlendBonecrab_mesh	</node>
+		<node>	CrabLLeg42BlendBonecrab_mesh	</node>
+		<node>	CrabLLeg43BlendBonecrab_mesh	</node>
+		<node>	CrabRLeg11BlendBonecrab_mesh	</node>
+		<node>	CrabRLeg12BlendBonecrab_mesh	</node>
+		<node>	CrabRLeg13BlendBonecrab_mesh	</node>
+		<geometry>
+			<vertices>	crab_mesh0b.vertices	</vertices>
+			<primitive>	crab_mesh0b.indices	</primitive>
+			<primitiveGroup>	0
+				<material>
+					<identifier>	01 - Default_skinned	</identifier>
+					<fx>	shaders/std_effects/normalmap_skinned.fx	</fx>
+					<collisionFlags>	0	</collisionFlags>
+					<materialKind>	0	</materialKind>
+					<property>	materialSpecular
+						<Vector4>	0.996078 0.819608 0.462745 1.000000	</Vector4>
+					</property>
+					<property>	normalMap
+						<Texture>	characters/npc/crab/crab_norms.bmp	</Texture>
+					</property>
+					<property>	diffuseMap
+						<Texture>	characters/npc/crab/crab.bmp	</Texture>
+					</property>
+				</material>
+			</primitiveGroup>
+		</geometry>
+	</renderSet>
+	<renderSet>
+		<treatAsWorldSpaceObject>	true	</treatAsWorldSpaceObject>
+		<node>	CrabHubBlendBonecrab_mesh	</node>
+		<node>	CrabRLeg21BlendBonecrab_mesh	</node>
+		<node>	CrabRLeg11BlendBonecrab_mesh	</node>
+		<node>	CrabRLeg22BlendBonecrab_mesh	</node>
+		<node>	CrabRLeg23BlendBonecrab_mesh	</node>
+		<geometry>
+			<vertices>	crab_mesh0c.vertices	</vertices>
+			<primitive>	crab_mesh0c.indices	</primitive>
+			<primitiveGroup>	0
+				<material>
+					<identifier>	01 - Default_skinned	</identifier>
+					<fx>	shaders/std_effects/normalmap_skinned.fx	</fx>
+					<collisionFlags>	0	</collisionFlags>
+					<materialKind>	0	</materialKind>
+					<property>	materialSpecular
+						<Vector4>	0.996078 0.819608 0.462745 1.000000	</Vector4>
+					</property>
+					<property>	normalMap
+						<Texture>	characters/npc/crab/crab_norms.bmp	</Texture>
+					</property>
+					<property>	diffuseMap
+						<Texture>	characters/npc/crab/crab.bmp	</Texture>
+					</property>
+				</material>
+			</primitiveGroup>
+		</geometry>
+	</renderSet>
+	<boundingBox>
+		<min>	-0.353145 0.001261 -0.225338	</min>
+		<max>	0.350674 0.205313 0.245459	</max>
+	</boundingBox>
+	<materialKind>	11	</materialKind>
+</crab.visual>

@@ -1,0 +1,143 @@
+<root>	?LABEL
+	*<include>
+		<resource>	RES_FILE_NAME.chunk/.prefab/.mfo		</resource>
+		<transform>
+			...
+		</tranform>
+	</include>
+
+	*<light>	?LABEL
+		<type>			Omni/etc	</type>
+		<enabled>		true		</enabled>
+		<colour>		85.00 251.00 189.00		</colour>
+		<innerRadius>	6.60		</innerRadius>
+		<outerRadius>	13.50		</outerRadius>
+		<transform>
+			...
+		</transform>
+	</light>
+
+	*<model>	?LABEL
+		+<resource>	RES_FILE_NAME.model/.mfo	</resource>
+		?<animation>
+			<name>					ANIMATION_NAME		</name>
+			<frameRateMultiplier>	.f					</frameRateMultiplier>
+		</animation>
+		<transform>
+			...
+		</transform>
+	</model>
+
+	+<terrain>
+		<resource>	RES_FILE_NAME.terrain </resource>
+	</terrain>
+
+	*<entity>
+		?<id>	ID			</id>
+		<type>	TYPE_NAME	</type>
+		<position>	.f	.f	.f	</position>
+		<instantiate>	SERVER|CLIENT|IMPLICIT	</instantiate>
+		[ other properties of this type ]
+	<entity>
+
+	*<sound>	?LABEL
+		<resource>	RES_FILE_NAME.sound			</resource>
+		<position>	.f	.f	.f	</position>
+		<period>	.f	</period>
+		<rate>		.f	</rate>
+		<amplitude>	.f	</amplitude>
+		<outerStartTime>	.f	</outerStartTime>
+		<innerStartTime>	.f	</innerStartTime>
+		<innerStopTime>		.f	</innerStopTime>
+		<outerStopTime>		.f	</outerStopTime>
+	</sound>
+
+	+4<boundary>
+		<normal>	.f	.f	.f	</normal>
+		<d>	.f	</d>
+		*<portal>	?LABEL
+			?<internal>		false	</internal>
+			?<permissive>	true	</permissive>
+			?<chunk>		SPACE_RELATIVE_FILE_NAME	</chunk>
+			<uAxis>	.f	.f	.f	</uAxis>
+			+3<point>	.f	.f	0	</point>	[0 for now]
+		</portal>
+	</boundary>
+
+	<transform>
+		...
+	</transform>
+
+	<boundingBox>
+		<min>	.f	.f	.f	</min>
+		<max>	.f	.f	.f	</max>
+	</boundingBox>
+</root>
+
+
+Syntax:
+	?  means 0 or 1
+	*  means 0 or more
+	+  means 1 or more
+	+n means n or more
+
+
+Calculated:
+	Texture resource IDs used (from models)
+	Collision scene (also from models)
+
+
+Notes:
+	The absence of a chunk reference in a portal means
+		it is unconnected and that nothing will be drawn there.
+	The special chunk identifier 'heaven' may be used if only
+		the sky (gradient, clouds, sun, moon, stars, etc.) is to
+		be drawn there. Similarly with 'earth' if the terrain
+		ought to be drawn. Thus outside chunks will have six sides,
+		and on top shall be heaven, and on bottom shall be earth.
+	If a chunk is included inside another then its boundary
+		planes are ignored - only its includes, models, lights,
+		sounds, etc. are used
+
+	Includes are transparent after loading (to client, server,
+		and scripts on these. Not so for editor of course).
+		Label clashes are handled by appending '_N' to labels,
+		where N is the number of objects with that label already.
+	Includes are expanded inline where they are encountered.
+	Includes needn't have a bounding box for the purposes of the
+		client or server, but one should be present for the
+		editor (I imagine).
+
+	Material overrides, animation declarations, etc. remain the domain
+		of model files. Their ultimate format is yet to be decided,
+		so for the moment .mfo's which reference meshes in
+		.mfx/.visual's and animations in .mfx's and material
+		overrides in .mfm's will continue to be used.
+
+	An 'internal' portal means that the specified boundary is
+		not a boundary, but rather that the space occupied by
+		the chunk it connects to (and all chunks that that
+		chunk connects to) should be logically subtracted
+		from the space owned by this chunk, as defined by its
+		non-internal boundaries. This was originally intended
+		only for 'outside' chunks to connect to 'inside' chunks,
+		but it seems that it could be readily adapted to the
+		oft-desired feature of 'interior portals', the compliment
+		to 'boundary portals'.
+	In a portal definition, the vAxis for the 2D polygon points
+		is found by the cross product of the normal with uAxis.
+	In boundary definitions the normals should point in.
+
+
+	Only entities that are implicitly instantiated need to
+		have their ID field filled in. If it is 0 or missing,
+		the the entity is assigned a unique ID from either
+		the client's pool (if it's a client instantiated entity)
+		or the creating cell's pool (if it's a server instantiated
+		entity)
+	If an entity needs a label it must include it as a property
+		in its formal type definition.
+
+	Everything in the chunk EXCEPT the bounding box is interpreted
+		in the local space of the chunk (as specified in the top-level
+		transform section)

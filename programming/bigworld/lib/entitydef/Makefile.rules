@@ -1,0 +1,74 @@
+$(call includeUnitTestDirectory)
+
+name         := entitydef
+type         := library
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =												\
+		base_user_data_object_description				\
+		data_description								\
+		data_lod_level									\
+		data_type										\
+		data_types										\
+		entity_delegate_helpers							\
+		entity_description								\
+		entity_description_debug						\
+		entity_description_map							\
+		entity_member_stats								\
+		entity_method_descriptions						\
+		mailbox_base									\
+		meta_data_type									\
+		member_description								\
+		method_args										\
+		method_description								\
+		property_change									\
+		property_change_reader							\
+		property_event_stamps							\
+		property_owner									\
+		py_deferred										\
+		py_volatile_info								\
+		remote_entity_method 							\
+		return_values_handler							\
+		script_data_sink								\
+		script_data_source								\
+		single_type_data_sinks							\
+		single_type_data_sources						\
+		user_data_object_description					\
+		user_data_object_description_map				\
+		volatile_info									\
+														\
+		data_instances/array_data_instance				\
+		data_instances/class_data_instance				\
+		data_instances/fixed_dict_data_instance			\
+		data_instances/intermediate_property_owner		\
+														\
+		data_types/array_data_type						\
+		data_types/blob_data_type						\
+		data_types/class_data_type						\
+		data_types/class_meta_data_type					\
+		data_types/dictionary_data_type					\
+		data_types/fixed_dict_data_type					\
+		data_types/fixed_dict_meta_data_type			\
+		data_types/float_data_types						\
+		data_types/integer_data_type					\
+		data_types/long_integer_data_type				\
+		data_types/mailbox_data_type					\
+		data_types/python_data_type						\
+		data_types/sequence_data_type					\
+		data_types/sequence_meta_data_type				\
+		data_types/string_data_type						\
+		data_types/tuple_data_type						\
+		data_types/unicode_string_data_type				\
+		data_types/user_data_type						\
+		data_types/user_meta_data_type					\
+		data_types/vector_data_types					\
+
+usePython = 1
+
+exportFor := bwentity
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - libentitydef

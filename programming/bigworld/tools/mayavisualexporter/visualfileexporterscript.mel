@@ -1,0 +1,256 @@
+// This mel script should be saved as 
+// "VisualFileExporterScript.mel" and placed inside your scripts
+// directory. This is usually "my documents/maya/scripts" or 
+// "~/maya/scripts" on linux. This procedure will be called 
+// 
+//
+// $parent - the parent UI layout
+// $action - "post" or "query"
+// $settings - the initial exporter settings
+// $callback - the function to call
+//
+
+global proc int VisualFileExporterScript( string $parent,
+										  string $action,
+										  string $settings,
+										  string $callback )
+
+{
+    if( $action == "post" )
+    {
+        setParent $parent;
+        
+        string $base = `formLayout -numberOfDivisions 100`;
+        
+        string $text = `text -l "BigWorld 1.6 Maya Exporter" -fn "boldLabelFont"`;
+        
+        string $allowScale = `checkBox -l "Allow Scale" -v off -enable 0 allowScale`;
+		string $bumpMapped = `checkBox -l "Bump mapped" -v off -enable 0 bumpMapped`;
+		string $keepExistingMaterials = `checkBox -l "Keep existing materials" -v on -enable 0 keepExistingMaterials`;
+		string $referenceNode = `checkBox -l "Use Reference Node" -v off -enable 0 referenceNode`;
+
+        string $separator = `separator -hr false`;
+        
+        string $visualFrame = `frameLayout -l "Visual Type" -bv true -bs "etchedIn"`;
+        string $visualForm = `formLayout -numberOfDivisions 100`;
+        
+        string $visualCollection = `radioCollection visualType`;
+        
+        string $animatedOption = `radioButton -l "Animated" visualAnimated`;
+        string $staticOption = `radioButton -l "Static" visualStatic`;
+        string $nodesOption = `radioButton -l "Static with Nodes" visualNodes`;
+        string $particlesOption = `radioButton -l "Mesh Particles" visualParticles`;
+        
+        string $boneOption = `intField -minValue 4 -maxValue 85 -value 17 -enable 0 maxBones`;
+        string $boneText = `text -l "Max Bones" boneText`;
+        
+        radioCollection -e -sl $animatedOption $visualCollection;
+        
+        setParent ..;
+        setParent ..;
+        
+        string $exportFrame = `frameLayout -l "Export Type" -bv true -bs "etchedIn"`;
+        string $exportForm = `formLayout -numberOfDivisions 100`;
+        
+        string $exportCollection = `radioCollection exportType`;
+        
+        string $animationOption = `radioButton -onc OnExportType -l "Animation" exportAnimation`;
+        string $visualOption = `radioButton -onc OnExportType -l "Visual" exportVisual`;
+        
+        radioCollection -e -sl $animationOption $exportCollection;
+        
+        setParent ..;
+        setParent ..;
+        
+        formLayout -e
+            -af $animationOption "top" 10
+            -af $animationOption "left" 10
+            -af $animationOption "right" 10
+            -ac $visualOption "top" 5 $animationOption 
+            -af $visualOption "left" 10
+            -af $visualOption "right" 10
+            $exportForm;
+
+        formLayout -e
+            -af $animatedOption "top" 10
+            -af $animatedOption "left" 10
+            -af $animatedOption "right" 10
+            -ac $staticOption "top" 5 $animatedOption
+            -af $staticOption "left" 10
+            -af $staticOption "right" 10
+            -ac $nodesOption "top" 5 $staticOption
+            -af $nodesOption "left" 10
+            -af $nodesOption "right" 10
+            -ac $particlesOption "top" 5 $nodesOption
+            -af $particlesOption "left" 10
+            -af $particlesOption "right" 10
+            -ac $boneText "top" 5 $particlesOption
+            -af $boneText "left" 10            
+            -af $boneText "bottom" 10
+            -ac $boneOption "top" 5 $particlesOption
+            -ac $boneOption "left" 5 $boneText
+            -af $boneOption "bottom" 10
+            $visualForm;
+
+        formLayout -e
+            -af $text "top" 10
+            -af $text "left" 10
+            -af $text "right" 10
+            -ac $exportFrame "top" 10 $text
+            -af $exportFrame "left" 10
+            -af $exportFrame "bottom" 10
+            -ac $separator "top" 10 $text
+            -ac $separator "left" 10 $exportFrame
+            -af $separator "bottom" 10
+            -ac $visualFrame "top" 10 $text
+            -ac $visualFrame "left" 10 $separator
+            -af $visualFrame "right" 10
+            -ac $allowScale "top" 10 $visualFrame
+            -ac $allowScale "left" 10 $separator
+            -af $allowScale "right" 10
+            -ac $bumpMapped "top" 5 $allowScale
+            -ac $bumpMapped "left" 10 $separator
+            -af $bumpMapped "right" 10
+            -ac $keepExistingMaterials "top" 5 $bumpMapped
+            -ac $keepExistingMaterials "left" 10 $separator
+            -af $keepExistingMaterials "right" 10
+            -ac $referenceNode "top" 5 $keepExistingMaterials
+            -ac $referenceNode "left" 10 $separator
+            -af $referenceNode "right" 10
+            -af $referenceNode "bottom" 10
+            $base;
+    }
+	else if ($action == "query")
+	{
+		string $options = ",";
+        
+		// Visual Export
+		string $et = `radioCollection -q -sl exportType`;
+		if ( $et == "exportVisual" )
+		{
+			$options = $options + "exportVisual=1,";
+		}
+		else
+		{
+			$options = $options + "exportVisual=0,";
+		}
+		
+		// Animation Export
+		if ( $et == "exportAnimation" )
+		{
+			$options = $options + "exportAnim=1,";
+		}
+		else
+		{
+			$options = $options + "exportAnim=0,";
+		}
+		
+		// Visual Type
+		string $vt = `radioCollection -q -sl visualType`;
+        if( $vt == "visualAnimated" )
+        {
+		    $options = $options + "visualType=1,";
+        }
+        if( $vt == "visualStatic" )
+        {
+		    $options = $options + "visualType=2,";
+        }
+        if( $vt == "visualNodes" )
+        {
+		    $options = $options + "visualType=3,";
+        }
+        if( $vt == "visualParticles" )
+        {
+		    $options = $options + "visualType=4,";
+        }
+                
+		// Max bones
+		int $bones = `intField -q -v maxBones`;
+		$options = $options + "maxBones="+ $bones + ",";        
+
+		// Allow Scale
+		if ( `checkBox -q -v allowScale` == on )
+		{
+			$options = $options + "allowScale=1,";
+		}
+		else
+		{
+			$options = $options + "allowScale=0,";
+		}
+		
+		// Bump Mapped
+		if ( `checkBox -q -v bumpMapped` == on )
+		{
+			$options = $options + "bumpMapped=1,";
+		}
+		else
+		{
+			$options = $options + "bumpMapped=0,";
+		}
+		
+		// Keep existing materials
+		if ( `checkBox -q -v keepExistingMaterials` == on )
+		{
+			$options = $options + "keepExistingMaterials=1,";
+		}
+		else
+		{
+			$options = $options + "keepExistingMaterials=0,";
+		}
+		
+		// referenceNode
+		if ( `checkBox -q -v referenceNode` == on )
+		{
+			$options = $options + "referenceNode=1,";
+		}
+		else
+		{
+			$options = $options + "referenceNode=0,";
+		}
+		
+		eval( $callback + "\"" + $options + "\"" ); 
+	}
+
+    return 1;
+}
+
+
+global proc OnExportType()
+{
+    string $selected = `radioCollection -q -sl exportType`;
+		
+	text -e -enable false boneText;
+	
+	intField -e -enable false maxBones;
+	
+    checkBox -e -enable false allowScale;
+    checkBox -e -enable false bumpMapped;
+    checkBox -e -enable false keepExistingMaterials;
+    checkBox -e -enable false referenceNode;
+    radioButton -e -enable false visualAnimated;
+    radioButton -e -enable false visualStatic;
+    radioButton -e -enable false visualNodes;
+    radioButton -e -enable false visualParticles;
+
+    // disable all controls
+	if ( $selected == "exportAnimation" )
+	{
+		// enable animation controls
+	}
+	else if ( $selected == "exportVisual" )
+	{
+		// enable visual controls	
+		
+		text -e -enable true boneText;
+		intField -e -enable true maxBones;
+		
+		checkBox -e -enable true allowScale;
+		checkBox -e -enable true bumpMapped;
+		checkBox -e -enable true keepExistingMaterials;
+		checkBox -e -enable true referenceNode;
+        radioButton -e -enable true visualAnimated;
+        radioButton -e -enable true visualStatic;
+        radioButton -e -enable true visualNodes;
+        radioButton -e -enable true visualParticles;
+	}	
+}

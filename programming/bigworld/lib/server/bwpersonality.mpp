@@ -1,0 +1,27 @@
+/*~ function BWPersonality.onInit
+ *	@components{ base, cell, db }
+ *	This is a callback function that can be implemented by the user.
+ *
+ *	If present, this method is called whenever the Python scripts have completed
+ *	loading.
+ *
+ *	@param isReload True if the loading was caused by a call to
+ *	BigWorld.reloadScript, otherwise, False
+ *
+ *	@return If this method returns a twisted.internet.defer.Deferred instance,
+ *		this process will not be started until the Deferred instance has
+ *		completed (i.e. had its "callback" method called).
+ */
+
+/*~ function BWPersonality.onFini
+ *	@components{ base, cell, db }
+ *	This is a callback function that can be implemented by the user.
+ *
+ *	If present, this method is called whenever the Python script system is
+ *	about to be completely shut down. This function is called after all stages
+ *	of onBaseAppShutDown have executed.
+ *
+ *	@return If this method returns a twisted.internet.defer.Deferred instance,
+ *		this process will not finish until the Deferred instance has completed
+ *		(i.e. had its "callback" method called).
+ */

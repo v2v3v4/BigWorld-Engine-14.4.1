@@ -1,0 +1,21 @@
+# This README file describes the steps to build the MongoDB C++ library from
+# source tar ball, which was downloaded from https://github.com/mongodb/mongo-cxx-driver
+# You should build the boost library before building this library.
+
+# TODO: Create a Makefile to automatically build this library to replace
+# these manual steps.
+
+# Step 1: extract the tar ball
+tar zxf mongo-cxx-driver-legacy-0.0-26compat-2.6.7.tar.gz
+
+# Step 2: rename the directory and apply the patch. The patch is required to
+# work around an error triggered by -Wextra flag. If the driver is updated in
+# future, the patch would be not necessary anymore.
+mv mongo-cxx-driver-legacy-0.0-26compat-2.6.7 mongo_cxx_driver
+patch mongo_cxx_driver/src/mongo/client/connpool.h < ./mongo_cxx_driver.patch
+
+# Step 3: build the library. cpppath points to boost source directory for header
+# including, and libpath is path to built boost library files.
+cd mongo_cxx_driver/
+scons --c++11=C++11 --full --use-system-boost --prefix=$PWD/../build --libpath=../../boost/build/lib --cpppath=../../boost/boost_1_54_0
+

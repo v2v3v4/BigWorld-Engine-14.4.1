@@ -1,0 +1,23 @@
+name  := math
+type  := unit_test
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =							\
+	main							\
+	test_boundingbox				\
+	test_ema						\
+	test_matrix						\
+	test_quaternion					\
+	test_vector3					\
+	test_math_extra
+
+# Currently Windows only
+#	test_blend_transform			\
+
+dependsOn += math cstdmf
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - math/unit_test

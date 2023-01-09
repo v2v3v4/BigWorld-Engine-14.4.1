@@ -1,0 +1,18 @@
+# This Makefile is a meta makefile for the message_logger directory. It
+# calls two other Makefiles to do the actual work:
+#
+# Makefile.message_logger - builds the message_logger binary for handling
+#                           BigWorld server process logs.
+# Makefile.message_reader - builds the bwlog.so Python module
+
+.PHONY: message_logger_and_bwlog
+message_logger_and_bwlog: message_logger _bwlog
+
+.PHONY: clean_message_logger_and_bwlog
+clean_message_logger_and_bwlog: clean_message_logger clean__bwlog
+
+include $(BW_SRC)/server/tools/message_logger/Makefile.message_logger
+include $(BW_SRC)/server/tools/message_logger/Makefile.message_reader
+
+# vi: filetype=make
+# Makefile.rules - server/tools/message_logger

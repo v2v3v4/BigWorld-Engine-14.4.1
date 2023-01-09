@@ -1,0 +1,15 @@
+name  := unit_test_lib
+type  := unit_test
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =							\
+	main							\
+	test_multi_proc_test_case		\
+
+dependsOn += cstdmf
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - unit_test_lib/unit_test

@@ -1,0 +1,42 @@
+name         := connection_model
+type         := library
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =											\
+	active_entities									\
+	bw_connection									\
+	bw_connection_helper							\
+	bw_entities										\
+	bw_entity										\
+	bw_entity_factory								\
+	bw_null_connection								\
+	bw_replay_connection							\
+	bw_server_connection							\
+	bw_server_message_handler						\
+	deferred_passengers								\
+	entity_entry_blocker							\
+	entity_entry_blocking_condition_handler			\
+	entity_entry_blocking_condition_impl			\
+	entity_extension								\
+	entity_extensions								\
+	entity_extension_factory_base					\
+	entity_extension_factory_manager				\
+	nested_property_change							\
+	pending_entities								\
+	pending_entities_blocking_condition_handler		\
+	server_entity_mail_box							\
+	simple_space_data_storage						\
+
+
+useOpenSSL = 1
+
+exportFor := bwentity
+
+# Top level 'src' directory used here to allow 'common' to be included.
+incFlags_$(binName) += -I$(BW_ABS_SRC)
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - libconnection_model

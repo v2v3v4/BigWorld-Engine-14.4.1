@@ -1,0 +1,18 @@
+name         := CppUnitLite2
+type         := library
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =					\
+		ExceptionHandler	\
+		Failure				\
+		Test				\
+		TestException		\
+		TestRegistry		\
+		TestResult			\
+		TestResultStdErr	\
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - third_party/CppUnitLite2/src/

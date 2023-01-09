@@ -1,0 +1,19 @@
+name  := db
+type  := unit_test
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =							\
+	main							\
+	test_dbapps_gateway 			\
+	test_db_hash_schemes			
+
+dependsOn += 	db 			\
+				network 	\
+				server 		\
+				cstdmf
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - db/unit_test

@@ -1,0 +1,18 @@
+name         := db_storage
+type         := library
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =							\
+			billing_system			\
+			billing_system_creator	\
+			db_engine_creator		\
+			db_entitydefs			\
+			db_status				\
+
+usePython = 1
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - libdb_storage

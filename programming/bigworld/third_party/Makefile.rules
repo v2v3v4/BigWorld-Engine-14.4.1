@@ -1,0 +1,11 @@
+subdirs =					\
+	CppUnitLite2/src		\
+	jsoncpp/src/lib_json	\
+	png						\
+	zip						\
+
+
+$(call includeMakefilesFrom,$(subdirs))
+
+# vi: filetype=make
+# Makefile.rules - third_party

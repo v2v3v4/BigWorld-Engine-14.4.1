@@ -1,0 +1,188 @@
+<ranger_head.visual>
+	<node>
+		<identifier>	Scene Root	</identifier>
+		<transform>
+			<row0>	1.000000 0.000000 0.000000	</row0>
+			<row1>	0.000000 1.000000 0.000000	</row1>
+			<row2>	0.000000 0.000000 1.000000	</row2>
+			<row3>	0.000000 0.000000 0.000000	</row3>
+		</transform>
+		<node>
+			<identifier>	biped	</identifier>
+			<transform>
+				<row0>	0.000001 0.000000 -1.000000	</row0>
+				<row1>	0.000000 1.000000 0.000000	</row1>
+				<row2>	1.000000 0.000000 0.000001	</row2>
+				<row3>	-0.000000 1.039849 -0.004678	</row3>
+			</transform>
+			<node>
+				<identifier>	biped Pelvis	</identifier>
+				<transform>
+					<row0>	0.000000 1.000000 -0.000001	</row0>
+					<row1>	-0.000001 0.000001 1.000000	</row1>
+					<row2>	1.000000 0.000000 0.000001	</row2>
+					<row3>	0.000001 0.000000 -0.000000	</row3>
+				</transform>
+				<node>
+					<identifier>	biped Spine	</identifier>
+					<transform>
+						<row0>	0.996264 0.000002 -0.086362	</row0>
+						<row1>	-0.000001 1.000000 0.000004	</row1>
+						<row2>	0.086362 -0.000004 0.996264	</row2>
+						<row3>	0.151918 0.000000 -0.000165	</row3>
+					</transform>
+					<node>
+						<identifier>	biped Spine1	</identifier>
+						<transform>
+							<row0>	0.999048 0.000000 0.043619	</row0>
+							<row1>	-0.000000 1.000000 -0.000000	</row1>
+							<row2>	-0.043619 -0.000000 0.999048	</row2>
+							<row3>	0.207508 -0.000000 -0.000202	</row3>
+						</transform>
+						<node>
+							<identifier>	biped Neck	</identifier>
+							<transform>
+								<row0>	0.983255 0.000001 0.182236	</row0>
+								<row1>	-0.000001 1.000000 -0.000000	</row1>
+								<row2>	-0.182236 -0.000000 0.983255	</row2>
+								<row3>	0.254506 -0.000000 -0.000100	</row3>
+							</transform>
+							<node>
+								<identifier>	biped Head	</identifier>
+								<transform>
+									<row0>	0.995320 -0.000000 -0.096640	</row0>
+									<row1>	0.005058 0.998630 0.052091	</row1>
+									<row2>	0.096507 -0.052336 0.993955	</row2>
+									<row3>	0.127423 0.000000 0.000000	</row3>
+								</transform>
+								<node>
+									<identifier>	biped HeadBlendBoneface	</identifier>
+									<transform>
+										<row0>	0.000000 0.998629 -0.052337	</row0>
+										<row1>	0.999048 -0.002283 -0.043558	</row1>
+										<row2>	-0.043618 -0.052287 -0.997679	</row2>
+										<row3>	-1.776930 0.004415 0.084243	</row3>
+									</transform>
+								</node>
+							</node>
+							<node>
+								<identifier>	biped NeckBlendBoneface	</identifier>
+								<transform>
+									<row0>	0.000000 1.000000 -0.000001	</row0>
+									<row1>	0.990157 -0.000000 -0.139962	</row1>
+									<row2>	-0.139962 -0.000001 -0.990157	</row2>
+									<row3>	-1.633038 0.000001 0.255686	</row3>
+								</transform>
+							</node>
+						</node>
+						<node>
+							<identifier>	biped Spine1BlendBoneface	</identifier>
+							<transform>
+								<row0>	-0.000000 1.000000 -0.000001	</row0>
+								<row1>	0.999083 0.000000 0.042824	</row1>
+								<row2>	0.042824 -0.000001 -0.999083	</row2>
+								<row3>	-1.397781 -0.000000 -0.046294	</row3>
+							</transform>
+						</node>
+					</node>
+				</node>
+			</node>
+		</node>
+	</node>
+	<materialKind>	11	</materialKind>
+	<renderSet>
+		<treatAsWorldSpaceObject>	true	</treatAsWorldSpaceObject>
+		<node>	biped HeadBlendBoneface	</node>
+		<node>	biped NeckBlendBoneface	</node>
+		<node>	biped Spine1BlendBoneface	</node>
+		<geometry>
+			<vertices>	face.mvertices	</vertices>
+			<primitive>	face.indices	</primitive>
+			<primitiveGroup>	0
+				<material>
+					<identifier>	Head_skinned	</identifier>
+					<fx>	shaders/std_effects/subsurface_skinned.fx	</fx>
+					<collisionFlags>	0	</collisionFlags>
+					<materialKind>	0	</materialKind>
+					<property>	rimStrength
+						<Float>	0.140000	</Float>
+					</property>
+					<property>	rimWidth
+						<Float>	0.140000	</Float>
+					</property>
+					<property>	subSurfaceBlendPower
+						<Float>	0.800000	</Float>
+					</property>
+					<property>	subSurfaceMap
+						<Texture>	characters/avatars/ranger/ranger_face_subsurface.tga	</Texture>
+					</property>
+					<property>	specularMap
+						<Texture>	characters/avatars/ranger/ranger_face_spec.bmp	</Texture>
+					</property>
+					<property>	normalMap
+						<Texture>	characters/avatars/ranger/ranger_face_norms.bmp	</Texture>
+					</property>
+					<property>	diffuseMap
+						<Texture>	characters/avatars/ranger/ranger_face.tga	</Texture>
+					</property>
+				</material>
+			</primitiveGroup>
+			<primitiveGroup>	1
+				<material>
+					<identifier>	Hair_skinned	</identifier>
+					<fx>	shaders/std_effects/lightonly_skinned.fx	</fx>
+					<collisionFlags>	0	</collisionFlags>
+					<materialKind>	0	</materialKind>
+					<property>	alphaReference
+						<Int>	77	</Int>
+					</property>
+					<property>	alphaTestEnable
+						<Bool>	true	</Bool>
+					</property>
+					<property>	doubleSided
+						<Bool>	true	</Bool>
+					</property>
+					<property>	diffuseMap
+						<Texture>	characters/avatars/ranger/ranger_hairstyle.tga	</Texture>
+					</property>
+				</material>
+			</primitiveGroup>
+			<primitiveGroup>	2
+				<material>
+					<identifier>	chrome_eyes_skinned	</identifier>
+					<fx>	shaders/std_effects/normalmap_chrome_skinned.fx	</fx>
+					<collisionFlags>	0	</collisionFlags>
+					<materialKind>	11	</materialKind>
+					<property>	reflectionMask
+						<Texture>	characters/avatars/ranger/eye_specular.bmp	</Texture>
+					</property>
+					<property>	reflectionMap
+						<Texture>	system/maps/cloudyhillscubemap2.dds	</Texture>
+					</property>
+					<property>	normalMap
+						<Texture>	characters/avatars/ranger/ranger_face_norms.bmp	</Texture>
+					</property>
+					<property>	diffuseMap
+						<Texture>	characters/avatars/ranger/ranger_face.tga	</Texture>
+					</property>
+					<property>	materialSpecular
+						<Vector4>	1.000000 0.996078 0.984314 1.000000	</Vector4>
+					</property>
+					<property>	reflectionAmount
+						<Float>	1.510000	</Float>
+					</property>
+					<property>	fresnelConstant
+						<Float>	0.130000	</Float>
+					</property>
+					<property>	fresnelExp
+						<Float>	1.220000	</Float>
+					</property>
+				</material>
+			</primitiveGroup>
+		</geometry>
+	</renderSet>
+	<boundingBox>
+		<min>	-0.094698 1.592796 -0.139969	</min>
+		<max>	0.100198 1.958542 0.145915	</max>
+	</boundingBox>
+</ranger_head.visual>

@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		064CEE19198A308400A40699 /* pyscript_lib.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 064CEE18198A308400A40699 /* pyscript_lib.hpp */; };
+		06F0E130181692FF0069931F /* py_debug_message_file_logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06F0E12C181692FF0069931F /* py_debug_message_file_logger.cpp */; };
+		06F0E131181692FF0069931F /* py_debug_message_file_logger.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 06F0E12D181692FF0069931F /* py_debug_message_file_logger.hpp */; };
+		06F0E132181692FF0069931F /* python_input_substituter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06F0E12E181692FF0069931F /* python_input_substituter.cpp */; };
+		06F0E133181692FF0069931F /* python_input_substituter.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 06F0E12F181692FF0069931F /* python_input_substituter.hpp */; };
+		06F0E138181693150069931F /* automation.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 06F0E135181693150069931F /* automation.hpp */; };
+		06F0E139181693150069931F /* keyword_parser.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 06F0E136181693150069931F /* keyword_parser.hpp */; };
+		06F1CCD8174B655400DA464F /* py_logging.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06F1CCD7174B655400DA464F /* py_logging.cpp */; };
+		F20F835E1483502C00C9F762 /* personality.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2A75E9B14831E46006E1569 /* personality.cpp */; };
+		F20F83601483502C00C9F762 /* py_callback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2A75E9F14831E46006E1569 /* py_callback.cpp */; };
+		F20F83611483502C00C9F762 /* py_data_section.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2A75EA114831E46006E1569 /* py_data_section.cpp */; };
+		F20F83621483502C00C9F762 /* py_factory_method_link.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2A75EA414831E47006E1569 /* py_factory_method_link.cpp */; };
+		F20F83631483502C00C9F762 /* py_import_paths.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2A75EA614831E47006E1569 /* py_import_paths.cpp */; };
+		F20F83661483502C00C9F762 /* py_to_stl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2A75EAC14831E47006E1569 /* py_to_stl.cpp */; };
+		F20F83671483502C00C9F762 /* py_traceback.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2A75EAF14831E47006E1569 /* py_traceback.cpp */; };
+		F20F83681483502C00C9F762 /* pyobject_plus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2A75EB214831E47006E1569 /* pyobject_plus.cpp */; };
+		F20F83691483502C00C9F762 /* pywatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2A75EB514831E47006E1569 /* pywatcher.cpp */; };
+		F20F836A1483502C00C9F762 /* res_mgr_script.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2A75EB714831E47006E1569 /* res_mgr_script.cpp */; };
+		F20F836B1483502C00C9F762 /* resource_table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2A75EBA14831E47006E1569 /* resource_table.cpp */; };
+		F20F836C1483502C00C9F762 /* script_events.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2A75EBC14831E47006E1569 /* script_events.cpp */; };
+		F20F836D1483502C00C9F762 /* script_math.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2A75EBE14831E47006E1569 /* script_math.cpp */; };
+		F20F836E1483502C00C9F762 /* script.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2A75EC014831E47006E1569 /* script.cpp */; };
+		F20F836F1483502C00C9F762 /* stl_to_py.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2A75EC314831E47006E1569 /* stl_to_py.cpp */; };
+		F20F83731483502C00C9F762 /* compatibility.hpp in Headers */ = {isa = PBXBuildFile; fileRef = F2A75E9A14831E46006E1569 /* compatibility.hpp */; };
+		F20F83741483502C00C9F762 /* personality.hpp in Headers */ = {isa = PBXBuildFile; fileRef = F2A75E9C14831E46006E1569 /* personality.hpp */; };
+		F20F83751483502C00C9F762 /* pickler.hpp in Headers */ = {isa = PBXBuildFile; fileRef = F2A75E9E14831E46006E1569 /* pickler.hpp */; };
+		F20F83761483502C00C9F762 /* py_callback.hpp in Headers */ = {isa = PBXBuildFile; fileRef = F2A75EA014831E46006E1569 /* py_callback.hpp */; };
+		F20F83771483502C00C9F762 /* py_data_section.hpp in Headers */ = {isa = PBXBuildFile; fileRef = F2A75EA214831E46006E1569 /* py_data_section.hpp */; };
+		F20F83781483502C00C9F762 /* py_factory_method_link.hpp in Headers */ = {isa = PBXBuildFile; fileRef = F2A75EA514831E47006E1569 /* py_factory_method_link.hpp */; };
+		F20F83791483502C00C9F762 /* py_import_paths.hpp in Headers */ = {isa = PBXBuildFile; fileRef = F2A75EA714831E47006E1569 /* py_import_paths.hpp */; };
+		F20F837B1483502C00C9F762 /* py_to_stl.hpp in Headers */ = {isa = PBXBuildFile; fileRef = F2A75EAD14831E47006E1569 /* py_to_stl.hpp */; };
+		F20F837C1483502C00C9F762 /* py_traceback.hpp in Headers */ = {isa = PBXBuildFile; fileRef = F2A75EB014831E47006E1569 /* py_traceback.hpp */; };
+		F20F837D1483502C00C9F762 /* pyobject_base.hpp in Headers */ = {isa = PBXBuildFile; fileRef = F2A75EB114831E47006E1569 /* pyobject_base.hpp */; };
+		F20F837E1483502C00C9F762 /* pyobject_plus.hpp in Headers */ = {isa = PBXBuildFile; fileRef = F2A75EB314831E47006E1569 /* pyobject_plus.hpp */; };
+		F20F837F1483502C00C9F762 /* pyobject_pointer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = F2A75EB414831E47006E1569 /* pyobject_pointer.hpp */; };
+		F20F83801483502C00C9F762 /* pywatcher.hpp in Headers */ = {isa = PBXBuildFile; fileRef = F2A75EB614831E47006E1569 /* pywatcher.hpp */; };
+		F20F83811483502C00C9F762 /* res_mgr_script.hpp in Headers */ = {isa = PBXBuildFile; fileRef = F2A75EB814831E47006E1569 /* res_mgr_script.hpp */; };
+		F20F83821483502C00C9F762 /* resource_table.hpp in Headers */ = {isa = PBXBuildFile; fileRef = F2A75EBB14831E47006E1569 /* resource_table.hpp */; };
+		F20F83831483502C00C9F762 /* script_events.hpp in Headers */ = {isa = PBXBuildFile; fileRef = F2A75EBD14831E47006E1569 /* script_events.hpp */; };
+		F20F83841483502C00C9F762 /* script_math.hpp in Headers */ = {isa = PBXBuildFile; fileRef = F2A75EBF14831E47006E1569 /* script_math.hpp */; };
+		F20F83851483502C00C9F762 /* script.hpp in Headers */ = {isa = PBXBuildFile; fileRef = F2A75EC114831E47006E1569 /* script.hpp */; };
+		F20F83861483502C00C9F762 /* stl_to_py.hpp in Headers */ = {isa = PBXBuildFile; fileRef = F2A75EC414831E47006E1569 /* stl_to_py.hpp */; };
+		F20F83871483502C00C9F762 /* pch.hpp in Headers */ = {isa = PBXBuildFile; fileRef = F2A75F4D14833567006E1569 /* pch.hpp */; };
+		F20F86B31483D8B100C9F762 /* pickler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2A75E9D14831E46006E1569 /* pickler.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		06FB304A174B4C0700C0682A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 06FB3046174B4C0600C0682A /* python.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F20F884914847FD600C9F762;
+			remoteInfo = python2.7;
+		};
+		06FB304C174B4C5D00C0682A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 06FB3046174B4C0600C0682A /* python.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F20F8835148479BF00C9F762;
+			remoteInfo = python2.7;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		064CEE18198A308400A40699 /* pyscript_lib.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = pyscript_lib.hpp; sourceTree = "<group>"; };
+		06F0E12C181692FF0069931F /* py_debug_message_file_logger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = py_debug_message_file_logger.cpp; sourceTree = "<group>"; };
+		06F0E12D181692FF0069931F /* py_debug_message_file_logger.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = py_debug_message_file_logger.hpp; sourceTree = "<group>"; };
+		06F0E12E181692FF0069931F /* python_input_substituter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = python_input_substituter.cpp; sourceTree = "<group>"; };
+		06F0E12F181692FF0069931F /* python_input_substituter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = python_input_substituter.hpp; sourceTree = "<group>"; };
+		06F0E134181693150069931F /* automation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = automation.cpp; sourceTree = "<group>"; };
+		06F0E135181693150069931F /* automation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = automation.hpp; sourceTree = "<group>"; };
+		06F0E136181693150069931F /* keyword_parser.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = keyword_parser.hpp; sourceTree = "<group>"; };
+		06F1CCD7174B655400DA464F /* py_logging.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = py_logging.cpp; sourceTree = "<group>"; };
+		06FB3046174B4C0600C0682A /* python.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = python.xcodeproj; path = ../../build/xcode/python.xcodeproj; sourceTree = "<group>"; };
+		F20F838B1483502C00C9F762 /* libpyscript_macosx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libpyscript_macosx.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2A75E9A14831E46006E1569 /* compatibility.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = compatibility.hpp; sourceTree = "<group>"; };
+		F2A75E9B14831E46006E1569 /* personality.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = personality.cpp; sourceTree = "<group>"; };
+		F2A75E9C14831E46006E1569 /* personality.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = personality.hpp; sourceTree = "<group>"; };
+		F2A75E9D14831E46006E1569 /* pickler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pickler.cpp; sourceTree = "<group>"; };
+		F2A75E9E14831E46006E1569 /* pickler.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = pickler.hpp; sourceTree = "<group>"; };
+		F2A75E9F14831E46006E1569 /* py_callback.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = py_callback.cpp; sourceTree = "<group>"; };
+		F2A75EA014831E46006E1569 /* py_callback.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = py_callback.hpp; sourceTree = "<group>"; };
+		F2A75EA114831E46006E1569 /* py_data_section.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = py_data_section.cpp; sourceTree = "<group>"; };
+		F2A75EA214831E46006E1569 /* py_data_section.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = py_data_section.hpp; sourceTree = "<group>"; };
+		F2A75EA314831E47006E1569 /* py_data_section.ipp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = py_data_section.ipp; sourceTree = "<group>"; };
+		F2A75EA414831E47006E1569 /* py_factory_method_link.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = py_factory_method_link.cpp; sourceTree = "<group>"; };
+		F2A75EA514831E47006E1569 /* py_factory_method_link.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = py_factory_method_link.hpp; sourceTree = "<group>"; };
+		F2A75EA614831E47006E1569 /* py_import_paths.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = py_import_paths.cpp; sourceTree = "<group>"; };
+		F2A75EA714831E47006E1569 /* py_import_paths.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = py_import_paths.hpp; sourceTree = "<group>"; };
+		F2A75EA814831E47006E1569 /* py_memory_log.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = py_memory_log.cpp; sourceTree = "<group>"; };
+		F2A75EAC14831E47006E1569 /* py_to_stl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = py_to_stl.cpp; sourceTree = "<group>"; };
+		F2A75EAD14831E47006E1569 /* py_to_stl.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = py_to_stl.hpp; sourceTree = "<group>"; };
+		F2A75EAE14831E47006E1569 /* py_to_stl.ipp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = py_to_stl.ipp; sourceTree = "<group>"; };
+		F2A75EAF14831E47006E1569 /* py_traceback.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = py_traceback.cpp; sourceTree = "<group>"; };
+		F2A75EB014831E47006E1569 /* py_traceback.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = py_traceback.hpp; sourceTree = "<group>"; };
+		F2A75EB114831E47006E1569 /* pyobject_base.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = pyobject_base.hpp; sourceTree = "<group>"; };
+		F2A75EB214831E47006E1569 /* pyobject_plus.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pyobject_plus.cpp; sourceTree = "<group>"; };
+		F2A75EB314831E47006E1569 /* pyobject_plus.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = pyobject_plus.hpp; sourceTree = "<group>"; };
+		F2A75EB414831E47006E1569 /* pyobject_pointer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = pyobject_pointer.hpp; sourceTree = "<group>"; };
+		F2A75EB514831E47006E1569 /* pywatcher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pywatcher.cpp; sourceTree = "<group>"; };
+		F2A75EB614831E47006E1569 /* pywatcher.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = pywatcher.hpp; sourceTree = "<group>"; };
+		F2A75EB714831E47006E1569 /* res_mgr_script.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = res_mgr_script.cpp; sourceTree = "<group>"; };
+		F2A75EB814831E47006E1569 /* res_mgr_script.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = res_mgr_script.hpp; sourceTree = "<group>"; };
+		F2A75EB914831E47006E1569 /* res_mgr_script.ipp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = res_mgr_script.ipp; sourceTree = "<group>"; };
+		F2A75EBA14831E47006E1569 /* resource_table.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = resource_table.cpp; sourceTree = "<group>"; };
+		F2A75EBB14831E47006E1569 /* resource_table.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = resource_table.hpp; sourceTree = "<group>"; };
+		F2A75EBC14831E47006E1569 /* script_events.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = script_events.cpp; sourceTree = "<group>"; };
+		F2A75EBD14831E47006E1569 /* script_events.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = script_events.hpp; sourceTree = "<group>"; };
+		F2A75EBE14831E47006E1569 /* script_math.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = script_math.cpp; sourceTree = "<group>"; };
+		F2A75EBF14831E47006E1569 /* script_math.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = script_math.hpp; sourceTree = "<group>"; };
+		F2A75EC014831E47006E1569 /* script.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = script.cpp; sourceTree = "<group>"; };
+		F2A75EC114831E47006E1569 /* script.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = script.hpp; sourceTree = "<group>"; };
+		F2A75EC214831E47006E1569 /* script.ipp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = script.ipp; sourceTree = "<group>"; };
+		F2A75EC314831E47006E1569 /* stl_to_py.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stl_to_py.cpp; sourceTree = "<group>"; };
+		F2A75EC414831E47006E1569 /* stl_to_py.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = stl_to_py.hpp; sourceTree = "<group>"; };
+		F2A75EC514831E47006E1569 /* stl_to_py.ipp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stl_to_py.ipp; sourceTree = "<group>"; };
+		F2A75F4C14833567006E1569 /* pch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pch.cpp; sourceTree = "<group>"; };
+		F2A75F4D14833567006E1569 /* pch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = pch.hpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F20F83711483502C00C9F762 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06FB3047174B4C0600C0682A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				06FB304B174B4C0700C0682A /* libpython2.7.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F2A75E8014831DDB006E1569 = {
+			isa = PBXGroup;
+			children = (
+				06FB3046174B4C0600C0682A /* python.xcodeproj */,
+				F2A75E9814831E1B006E1569 /* Sources */,
+				F2A75E8C14831DDB006E1569 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F2A75E8C14831DDB006E1569 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F20F838B1483502C00C9F762 /* libpyscript_macosx.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F2A75E9814831E1B006E1569 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				06F0E134181693150069931F /* automation.cpp */,
+				06F0E135181693150069931F /* automation.hpp */,
+				F2A75E9A14831E46006E1569 /* compatibility.hpp */,
+				06F0E136181693150069931F /* keyword_parser.hpp */,
+				F2A75F4C14833567006E1569 /* pch.cpp */,
+				F2A75F4D14833567006E1569 /* pch.hpp */,
+				F2A75E9B14831E46006E1569 /* personality.cpp */,
+				F2A75E9C14831E46006E1569 /* personality.hpp */,
+				F2A75E9D14831E46006E1569 /* pickler.cpp */,
+				F2A75E9E14831E46006E1569 /* pickler.hpp */,
+				F2A75E9F14831E46006E1569 /* py_callback.cpp */,
+				F2A75EA014831E46006E1569 /* py_callback.hpp */,
+				F2A75EA114831E46006E1569 /* py_data_section.cpp */,
+				F2A75EA214831E46006E1569 /* py_data_section.hpp */,
+				F2A75EA314831E47006E1569 /* py_data_section.ipp */,
+				06F0E12C181692FF0069931F /* py_debug_message_file_logger.cpp */,
+				06F0E12D181692FF0069931F /* py_debug_message_file_logger.hpp */,
+				F2A75EA414831E47006E1569 /* py_factory_method_link.cpp */,
+				F2A75EA514831E47006E1569 /* py_factory_method_link.hpp */,
+				F2A75EA614831E47006E1569 /* py_import_paths.cpp */,
+				F2A75EA714831E47006E1569 /* py_import_paths.hpp */,
+				06F1CCD7174B655400DA464F /* py_logging.cpp */,
+				F2A75EA814831E47006E1569 /* py_memory_log.cpp */,
+				F2A75EAC14831E47006E1569 /* py_to_stl.cpp */,
+				F2A75EAD14831E47006E1569 /* py_to_stl.hpp */,
+				F2A75EAE14831E47006E1569 /* py_to_stl.ipp */,
+				F2A75EAF14831E47006E1569 /* py_traceback.cpp */,
+				F2A75EB014831E47006E1569 /* py_traceback.hpp */,
+				F2A75EB114831E47006E1569 /* pyobject_base.hpp */,
+				F2A75EB214831E47006E1569 /* pyobject_plus.cpp */,
+				F2A75EB314831E47006E1569 /* pyobject_plus.hpp */,
+				F2A75EB414831E47006E1569 /* pyobject_pointer.hpp */,
+				064CEE18198A308400A40699 /* pyscript_lib.hpp */,
+				06F0E12E181692FF0069931F /* python_input_substituter.cpp */,
+				06F0E12F181692FF0069931F /* python_input_substituter.hpp */,
+				F2A75EB514831E47006E1569 /* pywatcher.cpp */,
+				F2A75EB614831E47006E1569 /* pywatcher.hpp */,
+				F2A75EB714831E47006E1569 /* res_mgr_script.cpp */,
+				F2A75EB814831E47006E1569 /* res_mgr_script.hpp */,
+				F2A75EB914831E47006E1569 /* res_mgr_script.ipp */,
+				F2A75EBA14831E47006E1569 /* resource_table.cpp */,
+				F2A75EBB14831E47006E1569 /* resource_table.hpp */,
+				F2A75EC014831E47006E1569 /* script.cpp */,
+				F2A75EC114831E47006E1569 /* script.hpp */,
+				F2A75EC214831E47006E1569 /* script.ipp */,
+				F2A75EBC14831E47006E1569 /* script_events.cpp */,
+				F2A75EBD14831E47006E1569 /* script_events.hpp */,
+				F2A75EBE14831E47006E1569 /* script_math.cpp */,
+				F2A75EBF14831E47006E1569 /* script_math.hpp */,
+				F2A75EC314831E47006E1569 /* stl_to_py.cpp */,
+				F2A75EC414831E47006E1569 /* stl_to_py.hpp */,
+				F2A75EC514831E47006E1569 /* stl_to_py.ipp */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F20F83721483502C00C9F762 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F20F83731483502C00C9F762 /* compatibility.hpp in Headers */,
+				F20F83741483502C00C9F762 /* personality.hpp in Headers */,
+				F20F83751483502C00C9F762 /* pickler.hpp in Headers */,
+				F20F83761483502C00C9F762 /* py_callback.hpp in Headers */,
+				06F0E131181692FF0069931F /* py_debug_message_file_logger.hpp in Headers */,
+				F20F83771483502C00C9F762 /* py_data_section.hpp in Headers */,
+				F20F83781483502C00C9F762 /* py_factory_method_link.hpp in Headers */,
+				F20F83791483502C00C9F762 /* py_import_paths.hpp in Headers */,
+				F20F837B1483502C00C9F762 /* py_to_stl.hpp in Headers */,
+				F20F837C1483502C00C9F762 /* py_traceback.hpp in Headers */,
+				06F0E133181692FF0069931F /* python_input_substituter.hpp in Headers */,
+				F20F837D1483502C00C9F762 /* pyobject_base.hpp in Headers */,
+				F20F837E1483502C00C9F762 /* pyobject_plus.hpp in Headers */,
+				F20F837F1483502C00C9F762 /* pyobject_pointer.hpp in Headers */,
+				F20F83801483502C00C9F762 /* pywatcher.hpp in Headers */,
+				F20F83811483502C00C9F762 /* res_mgr_script.hpp in Headers */,
+				F20F83821483502C00C9F762 /* resource_table.hpp in Headers */,
+				06F0E139181693150069931F /* keyword_parser.hpp in Headers */,
+				F20F83831483502C00C9F762 /* script_events.hpp in Headers */,
+				06F0E138181693150069931F /* automation.hpp in Headers */,
+				F20F83841483502C00C9F762 /* script_math.hpp in Headers */,
+				064CEE19198A308400A40699 /* pyscript_lib.hpp in Headers */,
+				F20F83851483502C00C9F762 /* script.hpp in Headers */,
+				F20F83861483502C00C9F762 /* stl_to_py.hpp in Headers */,
+				F20F83871483502C00C9F762 /* pch.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		F20F835C1483502C00C9F762 /* pyscript_macosx */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F20F83881483502C00C9F762 /* Build configuration list for PBXNativeTarget "pyscript_macosx" */;
+			buildPhases = (
+				F20F835D1483502C00C9F762 /* Sources */,
+				F20F83711483502C00C9F762 /* Frameworks */,
+				F20F83721483502C00C9F762 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				06FB304D174B4C5D00C0682A /* PBXTargetDependency */,
+			);
+			name = pyscript_macosx;
+			productName = pyscript;
+			productReference = F20F838B1483502C00C9F762 /* libpyscript_macosx.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F2A75E8214831DDB006E1569 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = BigWorld;
+			};
+			buildConfigurationList = F2A75E8514831DDB006E1569 /* Build configuration list for PBXProject "pyscript" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F2A75E8014831DDB006E1569;
+			productRefGroup = F2A75E8C14831DDB006E1569 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 06FB3047174B4C0600C0682A /* Products */;
+					ProjectRef = 06FB3046174B4C0600C0682A /* python.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				F20F835C1483502C00C9F762 /* pyscript_macosx */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		06FB304B174B4C0700C0682A /* libpython2.7.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libpython2.7.a;
+			remoteRef = 06FB304A174B4C0700C0682A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F20F835D1483502C00C9F762 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F20F835E1483502C00C9F762 /* personality.cpp in Sources */,
+				F20F86B31483D8B100C9F762 /* pickler.cpp in Sources */,
+				F20F83601483502C00C9F762 /* py_callback.cpp in Sources */,
+				F20F83611483502C00C9F762 /* py_data_section.cpp in Sources */,
+				F20F83621483502C00C9F762 /* py_factory_method_link.cpp in Sources */,
+				F20F83631483502C00C9F762 /* py_import_paths.cpp in Sources */,
+				06F0E130181692FF0069931F /* py_debug_message_file_logger.cpp in Sources */,
+				F20F83661483502C00C9F762 /* py_to_stl.cpp in Sources */,
+				F20F83671483502C00C9F762 /* py_traceback.cpp in Sources */,
+				F20F83681483502C00C9F762 /* pyobject_plus.cpp in Sources */,
+				06F0E132181692FF0069931F /* python_input_substituter.cpp in Sources */,
+				F20F83691483502C00C9F762 /* pywatcher.cpp in Sources */,
+				F20F836A1483502C00C9F762 /* res_mgr_script.cpp in Sources */,
+				F20F836B1483502C00C9F762 /* resource_table.cpp in Sources */,
+				F20F836C1483502C00C9F762 /* script_events.cpp in Sources */,
+				F20F836D1483502C00C9F762 /* script_math.cpp in Sources */,
+				F20F836E1483502C00C9F762 /* script.cpp in Sources */,
+				F20F836F1483502C00C9F762 /* stl_to_py.cpp in Sources */,
+				06F1CCD8174B655400DA464F /* py_logging.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		06FB304D174B4C5D00C0682A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = python2.7;
+			targetProxy = 06FB304C174B4C5D00C0682A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F20F83891483502C00C9F762 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_PREFIX = lib;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = pyscript_macosx;
+				USER_HEADER_SEARCH_PATHS = ".. ../../build/xcode/pythonbuild-macosx ../../third_party/python/Include ../../third_party";
+			};
+			name = Debug;
+		};
+		F20F838A1483502C00C9F762 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = pyscript_macosx;
+				USER_HEADER_SEARCH_PATHS = ".. ../../build/xcode/pythonbuild-macosx ../../third_party/python/Include ../../third_party";
+			};
+			name = Release;
+		};
+		F2A75E8D14831DDB006E1569 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					DEBUG,
+					_DEBUG,
+					SCRIPT_PYTHON,
+					"BW_BUILD_PLATFORM=\\\"macosx\\\"",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F2A75E8E14831DDB006E1569 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_HYBRID,
+					SCRIPT_PYTHON,
+					"BW_BUILD_PLATFORM=\\\"macosx\\\"",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F20F83881483502C00C9F762 /* Build configuration list for PBXNativeTarget "pyscript_macosx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F20F83891483502C00C9F762 /* Debug */,
+				F20F838A1483502C00C9F762 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2A75E8514831DDB006E1569 /* Build configuration list for PBXProject "pyscript" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2A75E8D14831DDB006E1569 /* Debug */,
+				F2A75E8E14831DDB006E1569 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F2A75E8214831DDB006E1569 /* Project object */;
+}

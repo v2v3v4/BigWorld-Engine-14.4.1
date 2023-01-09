@@ -1,0 +1,156 @@
+/*~ module BWPersonality
+ *	@components{ base }
+ *	The name of this module is actually specified by the personality option in
+ *	the configuration file. This module should be implemented by the user.
+ *	It should contain callback methods that will be called by the server at
+ *	specific events.
+ *
+ *	It is also possible to register for these events using
+ *	BigWorld.addEventListener. For example,
+ *	BigWorld.addEventListener( "onInit", myFunc ).
+ */
+
+/*~ function BWPersonality.onBaseAppReady
+ *	@components{ base }
+ *	Deprecated. See BWPersonality.onAppReady
+ */
+/*~ function BWPersonality.onAppReady
+ *	@components{ base }
+ *	This is a callback function that can be implemented by the user.
+ *
+ *	If present, this method is called when the BaseApp (or ServiceApp) is ready.
+ *	The isBootstrap parameter indicates whether this BaseApp is the first
+ *	BaseApp (called the bootstrap BaseApp). 
+ *
+ *	This method is also called with a parameter indicating whether the database
+ *	has automatically loaded any entities from the database. This is useful in
+ *	the case where singleton entities need to be created from script if they
+ *	did not already exist in the database.
+ *
+ *	Note that entity auto-load from database is only supported when the MySQL
+ *	database is used.
+ *
+ *	See Also: Base.writeToDB.
+ *
+ *	@param isBootstrap 	True if this BaseApp is the bootstrap BaseApp, False
+ *						otherwise.
+ *	@param didAutoLoad 	True if entities were automatically loaded by the
+ *						database, False otherwise. 
+ */
+
+/*~ function BWPersonality.onBaseAppShuttingDown
+ *	@components{ base }
+ *	Deprecated. See BWPersonality.onAppShuttingDown
+ */
+/*~ function BWPersonality.onAppShuttingDown
+ *	@components{ base }
+ *	This is a callback function that can be implemented by the user.
+ *
+ *	If present, this method is called when a controlled shutdown has been
+ *	scheduled.
+ *
+ *	@param shutdownTime shutdownTime is the game time that the server is
+ *	scheduled to shut down at.
+ */
+
+/*~ function BWPersonality.onBaseAppShutDown
+ *	@components{ base }
+ *	Deprecated. See BWPersonality.onAppShutDown
+ */
+/*~ function BWPersonality.onAppShutDown
+ *	@components{ base }
+ *	This is a callback function that can be implemented by the user.
+ *
+ *	If present, this method is called when a controlled shutdown has been
+ *	scheduled.
+ *
+ *	@param stage stage is the stage of shutdown that the server is in. These are
+ *	as follows:
+ *		0 - Before disconnecting clients
+ *		1 - Before writing entities to the database
+ *		2 - After writing entities to the database
+ */
+
+/*~ function BWPersonality.onBaseAppDeath
+ *	@components{ base }
+ *	This is a callback function that can be implemented by the user.
+ *
+ *	If present, this method is called when a BaseApp death has been
+ *	detected.
+ *
+ *	@param addr addr is the address of BaseApp that has died.
+ */
+
+/*~ function BWPersonality.onCellAppDeath
+ *	@components{ base }
+ *	This is a callback function that can be implemented by the user.
+ *
+ *	If present, this method is called when a CellApp death has been
+ *	detected.
+ *
+ *	@param addr addr is the address of CellApp that has died.
+ */
+
+/*~ function BWPersonality.onServiceAppDeath
+ *	@components{ base }
+ *	This is a callback function that can be implemented by the user.
+ *
+ *	If present, this method is called when a ServiceApp death has been
+ *	detected.
+ *
+ *	@param addr addr is the address of ServiceApp that has died.
+ */
+
+/*~ function BWPersonality.onBaseAppData
+ *	@components{ base }
+ *	This is a callback function that can be implemented by the user.
+ *
+ *	If present, this method is called whenever a shared BaseApp data value is
+ *	set. This may be when a value is initially set or when it is modified.
+ *
+ *	See Also: BigWorld.baseAppData, BWPersonality.onDelBaseAppData,
+ *	BigWorld.globalData, BWPersonality.onGlobalData, BWPersonality.onDelGlobalData
+ *
+ *	@param key The key associated with the value.
+ *	@param value The new value.
+ */
+
+/*~ function BWPersonality.onDelBaseAppData
+ *	@components{ base }
+ *	This is a callback function that can be implemented by the user.
+ *
+ *	If present, this method is called whenever a shared BaseApp data value is
+ *	deleted.
+ *
+ *	See Also: BigWorld.baseAppData, BWPersonality.onBaseAppData,
+ *	BigWorld.globalData, BWPersonality.onGlobalData, BWPersonality.onDelGlobalData
+ *
+ *	@param key The key of the value deleted.
+ */
+
+/*~ function BWPersonality.onGlobalData
+ *	@components{ base }
+ *	This is a callback function that can be implemented by the user.
+ *
+ *	If present, this method is called whenever a shared Global data value is
+ *	set. This may be when a value is initially set or when it is modified.
+ *
+ *	See Also: BigWorld.globalData, BWPersonality.onDelGlobalData,
+ *	BigWorld.baseAppData, BWPersonality.onBaseAppData, BWPersonality.onDelBaseAppData
+ *
+ *	@param key The key associated with the value.
+ *	@param value The new value.
+ */
+
+/*~ function BWPersonality.onDelGlobalData
+ *	@components{ base }
+ *	This is a callback function that can be implemented by the user.
+ *
+ *	If present, this method is called whenever a shared Global data value is
+ *	deleted.
+ *
+ *	See Also: BigWorld.globalData, BWPersonality.onGlobalData,
+ *	BigWorld.baseAppData, BWPersonality.onBaseAppData, BWPersonality.onDelBaseAppData
+ *
+ *	@param key The key of the value deleted.
+ */

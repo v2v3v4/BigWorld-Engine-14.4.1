@@ -1,0 +1,16 @@
+subdirs =				\
+	bwmachined			\
+	bots				\
+	clear_auto_load		\
+	consolidate_dbs		\
+	message_logger		\
+	bw_profile			\
+	remove_db			\
+	snapshot_helper		\
+	sync_db				\
+	transfer_db
+
+$(call includeMakefilesFrom,$(subdirs))
+
+# vi: filetype=make
+# Makefile.rules - server/tools

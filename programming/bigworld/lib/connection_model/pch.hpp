@@ -1,0 +1,10 @@
+#ifndef LIBCONNECTION_MODEL_PCH_HPP
+#define LIBCONNECTION_MODEL_PCH_HPP
+
+#if PCH_SUPPORT
+
+#include "cstdmf/cstdmf_lib.hpp"
+
+#endif // PCH_SUPPORT
+
+#endif // LIBCONNECTION_MODEL_PCH_HPP

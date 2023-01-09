@@ -1,0 +1,48 @@
+$(call includeUnitTestDirectory)
+
+name  := cellappmgr
+type  := binary
+bindir = $(BW_SERVER_BIN_DIR)
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =								\
+	main 								\
+	bsp_node							\
+	cellapp								\
+	cell_app_death_handler				\
+	cell_app_group						\
+	cell_app_groups						\
+	cell_app_load_config				\
+	cellappmgr							\
+	cellapp_comparer					\
+	cellappmgr_config					\
+	cellappmgr_viewer_server			\
+	cellapps							\
+	cell_data							\
+	cells								\
+	entity_bound_levels					\
+	internal_node						\
+	login_conditions_config				\
+	message_handlers					\
+	shutdown_handler					\
+	space								\
+	watcher_forwarding_cellapp			\
+	../cellapp/cellapp_interface		\
+	../baseappmgr/baseappmgr_interface	\
+	../../lib/db/dbapp_interface		\
+
+
+buildTimeFile := main
+
+dependsOn  = 	\
+	server		\
+	db
+
+incFlags_$(binName) += -I$(BW_ABS_SRC)
+incFlags_$(binName) += -I$(BW_ABS_SRC_SERVER)
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - cellappmgr

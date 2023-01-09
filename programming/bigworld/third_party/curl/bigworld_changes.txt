@@ -1,0 +1,7 @@
+This file describes the changes made to CURL by BigWorld. The source was
+originally downloaded from http://curl.haxx.se/
+
+18th Feb 2013
+Merged patch https://github.com/bagder/curl/commit/da3fc1ee91de656a30f3a12de394bcba55119872
+into lib/multi.c in order to fix issue with calling curl_multi_cleanup
+without adding handles.

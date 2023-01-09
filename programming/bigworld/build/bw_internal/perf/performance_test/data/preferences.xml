@@ -1,0 +1,88 @@
+<root>
+	<graphicsPreferences>
+		<entry>
+			<label>	DEVICE_EX	</label>
+			<activeOption>	0	</activeOption>
+		</entry>
+		<entry>
+			<label>	FXAA_PROCESSING	</label>
+			<activeOption>	0	</activeOption>
+		</entry>
+		<entry>
+			<label>	RENDER_PIPELINE	</label>
+			<activeOption>	0	</activeOption>
+		</entry>
+		<entry>
+			<label>	SHADOWS_QUALITY	</label>
+			<activeOption>	2	</activeOption>
+		</entry>
+		<entry>
+			<label>	DECALS_QUALITY	</label>
+			<activeOption>	2	</activeOption>
+		</entry>
+		<entry>
+			<label>	LIGHTING_QUALITY	</label>
+			<activeOption>	2	</activeOption>
+		</entry>
+		<entry>
+			<label>	SHADER_VERSION_CAP	</label>
+			<activeOption>	0	</activeOption>
+		</entry>
+		<entry>
+			<label>	TEXTURE_QUALITY	</label>
+			<activeOption>	2	</activeOption>
+		</entry>
+		<entry>
+			<label>	TEXTURE_COMPRESSION	</label>
+			<activeOption>	0	</activeOption>
+		</entry>
+		<entry>
+			<label>	TEXTURE_FILTERING	</label>
+			<activeOption>	0	</activeOption>
+		</entry>
+		<entry>
+			<label>	MORPH_VERTICES	</label>
+			<activeOption>	0	</activeOption>
+		</entry>
+		<entry>
+			<label>	TERRAIN_QUALITY	</label>
+			<activeOption>	2	</activeOption>
+		</entry>
+		<entry>
+			<label>	SPEEDTREE_QUALITY	</label>
+			<activeOption>	2	</activeOption>
+		</entry>
+		<entry>
+			<label>	WATER_QUALITY	</label>
+			<activeOption>	2	</activeOption>
+		</entry>
+		<entry>
+			<label>	FOOT_PRINTS	</label>
+			<activeOption>	0	</activeOption>
+		</entry>
+		<entry>
+			<label>	FAR_PLANE	</label>
+			<activeOption>	2	</activeOption>
+		</entry>
+		<entry>
+			<label>	FLORA_QUALITY	</label>
+			<activeOption>	2	</activeOption>
+		</entry>
+		<entry>
+			<label>	OBJECT_LOD	</label>
+			<activeOption>	2	</activeOption>
+		</entry>
+		<entry>
+			<label>	POST_PROCESSING	</label>
+			<activeOption>	0	</activeOption>
+		</entry>
+	</graphicsPreferences>
+	<devicePreferences>
+		<windowed>	false	</windowed>
+		<waitVSync>	false	</waitVSync>
+	</devicePreferences>
+	<scriptsPreferences>
+		<automaticAspectRatio>	true	</automaticAspectRatio>
+	</scriptsPreferences>
+	<consoleHistory />
+</root>

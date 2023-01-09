@@ -1,0 +1,83 @@
+<root>
+	<Dock>
+		<visible>	true	</visible>
+		<Panel>
+			<lastX>	300	</lastX>
+			<lastY>	200	</lastY>
+			<lastWidth>	303	</lastWidth>
+			<lastHeight>	1063	</lastHeight>
+			<expanded>	true	</expanded>
+			<expandedSize>	100	</expandedSize>
+			<floating>	false	</floating>
+			<Tab>
+				<visible>	true	</visible>
+				<contentID>	UAL	</contentID>
+				<ContentData>
+					<lastLanguage>	en_	</lastLanguage>
+					<shortCaption>	Assets	</shortCaption>
+					<longCaption>	Asset Browser	</longCaption>
+					<initialTreeSize>	164	</initialTreeSize>
+					<layoutVertical>	true	</layoutVertical>
+					<filtersVisible>	false	</filtersVisible>
+					<vfolderOrder>	Favourites;History;All;Models;Shells;Textures;Effects;MFMs;Lights;Animations	</vfolderOrder>
+					<lastVFolder>	Textures	</lastVFolder>
+				</ContentData>
+			</Tab>
+			<Tab>
+				<visible>	true	</visible>
+				<contentID>	PageObjectID	</contentID>
+				<ContentData />
+			</Tab>
+			<Tab>
+				<visible>	true	</visible>
+				<contentID>	PageDisplayID	</contentID>
+				<ContentData />
+			</Tab>
+			<Tab>
+				<visible>	true	</visible>
+				<contentID>	PageAnimationsID	</contentID>
+				<ContentData />
+			</Tab>
+			<Tab>
+				<visible>	true	</visible>
+				<contentID>	PageActionsID	</contentID>
+				<ContentData />
+			</Tab>
+			<Tab>
+				<visible>	true	</visible>
+				<contentID>	PageLodID	</contentID>
+				<ContentData />
+			</Tab>
+			<Tab>
+				<visible>	true	</visible>
+				<contentID>	PageLightsID	</contentID>
+				<ContentData />
+			</Tab>
+			<Tab>
+				<visible>	true	</visible>
+				<contentID>	PageMaterialsID	</contentID>
+				<ContentData />
+			</Tab>
+			<Tab>
+				<visible>	true	</visible>
+				<contentID>	PageMessagesID	</contentID>
+				<ContentData />
+			</Tab>
+		</Panel>
+		<Tree>
+			<Splitter>
+				<layoutVertical>	false	</layoutVertical>
+				<Left>
+					<size>	1606	</size>
+					<MainView>	Main Application View Window	</MainView>
+				</Left>
+				<Right>
+					<size>	303	</size>
+					<DockedPanel>
+						<index>	0	</index>
+					</DockedPanel>
+				</Right>
+			</Splitter>
+		</Tree>
+	</Dock>
+</root>

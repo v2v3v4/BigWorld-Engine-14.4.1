@@ -1,0 +1,97 @@
+CMAKE_MINIMUM_REQUIRED( VERSION 2.8 )
+PROJECT( _bwlog )
+
+INCLUDE( BWStandardProject )
+
+SET( ALL_SRCS
+	mldb/log_common.cpp
+	mldb/log_common.hpp
+	mldb/log_reader.cpp
+	mldb/log_reader.hpp
+	categories.cpp
+	categories.hpp
+	mldb/categories.cpp
+	mldb/categories.hpp
+	mlutil.cpp
+	mlutil.hpp
+	file_handler.cpp
+	file_handler.hpp
+	text_file_handler.cpp
+	text_file_handler.hpp
+	binary_file_handler.cpp
+	binary_file_handler.hpp
+	unary_integer_file.cpp
+	unary_integer_file.hpp
+	hostnames.cpp
+	hostnames.hpp
+	mldb/hostnames.cpp
+	mldb/hostnames.hpp
+	format_strings.cpp
+	format_strings.hpp
+	mldb/format_strings.cpp
+	mldb/format_strings.hpp
+	log_component_names.cpp
+	log_component_names.hpp
+	mldb/log_component_names.cpp
+	mldb/log_component_names.hpp
+	log_string_interpolator.cpp
+	log_string_interpolator.hpp
+	log_string_writer.cpp
+	log_string_writer.hpp
+	log_string_printer.cpp
+	log_string_printer.hpp
+	user_log.cpp
+	user_log.hpp
+	user_log_reader.cpp
+	user_log_reader.hpp
+	user_segment.cpp
+	user_segment.hpp
+	user_segment_reader.cpp
+	user_segment_reader.hpp
+	user_components.cpp
+	user_components.hpp
+	logging_component.cpp
+	logging_component.hpp
+	log_time.cpp
+	log_time.hpp
+	log_entry_address.cpp
+	log_entry_address.hpp
+	log_entry_address_reader.cpp
+	log_entry_address_reader.hpp
+	mldb/metadata.cpp
+	mldb/metadata.hpp
+	query_params.cpp
+	query_params.hpp
+	query_range.cpp
+	query_range.hpp
+	query_range_iterator.cpp
+	query_range_iterator.hpp
+	query_result.cpp
+	query_result.hpp
+	bwlog_module.cpp
+	py_bwlog.cpp
+	py_bwlog.hpp
+	py_query.cpp
+	py_query.hpp
+	py_user_log.cpp
+	py_user_log.hpp
+	py_query_result.cpp
+	py_query_result.hpp
+)
+SOURCE_GROUP( "" FILES ${ALL_SRCS} )
+
+BW_ADD_LIBRARY( _bwlog MODULE ${ALL_SRCS} )
+
+
+BW_TARGET_LINK_LIBRARIES( _bwlog
+	network
+	pyscript
+	script
+	resmgr
+	server
+	math
+	zip
+	cstdmf
+)
+
+BW_PROJECT_CATEGORY( _bwlog "Tools" )

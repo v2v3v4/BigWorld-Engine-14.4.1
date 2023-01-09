@@ -1,0 +1,7 @@
+
+subdirs =				\
+	bigworld			\
+
+$(call includeMakefilesFrom,$(subdirs))
+
+# vi: filetype=make

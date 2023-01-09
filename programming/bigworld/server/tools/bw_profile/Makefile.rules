@@ -1,0 +1,19 @@
+name  := _bw_profile
+type  := shared_library
+bindir = $(BW_SERVER_TOOLS_BIN_DIR)
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =						\
+	bw_profile					\
+
+
+dependsOn = cstdmf
+
+usePython := 1
+useSystemPython := 1
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.message_reader - bw_profile

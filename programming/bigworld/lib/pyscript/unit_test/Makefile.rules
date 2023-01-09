@@ -1,0 +1,31 @@
+name  := pyscript
+type  := unit_test
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =							\
+	main							\
+	integer_range_checker			\
+	test_conversion					\
+	test_extensions					\
+	test_pyobject_base				\
+	test_python_and_stl				\
+	test_python_integration			\
+	test_py_output_writer			\
+
+dependsOn += \
+	pyscript 		\
+	script			\
+	resmgr 			\
+	zip 			\
+	math 			\
+	cstdmf
+
+usePython := 1
+
+ldLibs_$(binName) += -ldl
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - pyscript/unit_test

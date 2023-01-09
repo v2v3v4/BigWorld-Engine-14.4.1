@@ -1,0 +1,67 @@
+#include "cstdmf/bwversion.hpp" 
+
+#define APSTUDIO_READONLY_SYMBOLS
+#include <Windows.h>
+#undef APSTUDIO_READONLY_SYMBOLS
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENA)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_AUS
+
+#ifdef APSTUDIO_INVOKED
+
+1 TEXTINCLUDE 
+BEGIN
+	"cstdmf/bwversion.hpp\0" 
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include <Windows.h>\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION BW_VERSION_MSVC_RC 
+ PRODUCTVERSION BW_VERSION_MSVC_RC
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "Comments", "Part of the BigWorld Technology Suite"
+            VALUE "CompanyName", "BigWorld Pty. Ltd."
+            VALUE "FileDescription", "BigWorld Batch Compiler"
+            VALUE "FileVersion", BW_VERSION_MSVC_RC_STRING 
+            VALUE "InternalName", "batch_compiler.exe"
+            VALUE "LegalCopyright", BW_COPYRIGHT_NOTICE
+            VALUE "OriginalFilename", "batch_compiler.exe"
+            VALUE "ProductName", "Batch Compiler"
+            VALUE "ProductVersion", BW_VERSION_MSVC_RC_STRING
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+#endif
+
+#ifndef APSTUDIO_INVOKED
+#endif

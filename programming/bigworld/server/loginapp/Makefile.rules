@@ -1,0 +1,32 @@
+$(call includeUnitTestDirectory)
+
+name  := loginapp
+type  := binary
+bindir = $(BW_SERVER_BIN_DIR)
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =								\
+	main								\
+	bw_config_login_challenge_config	\
+	client_login_request				\
+	database_reply_handler				\
+	loginapp							\
+	loginapp_config						\
+	message_handlers					\
+	status_check_watcher				\
+	../../lib/db/dbapp_interface		\
+	../../lib/db/dbappmgr_interface		\
+
+buildTimeFile := main
+
+dependsOn  = connection server db
+
+useOpenSSL = 1
+
+incFlags_$(binName) += -I$(BW_ABS_SRC_SERVER)
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - loginapp

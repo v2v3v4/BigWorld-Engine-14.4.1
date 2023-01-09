@@ -1,0 +1,15 @@
+<axe.model>
+	<materialNames>	</materialNames>
+	<extent>	5.000000	</extent>
+	<parent>	sets/town/props/lods/axe_lod01	</parent>
+	<visibilityBox>
+		<min>	-0.274900 -0.005100 -0.023300	</min>
+		<max>	0.192100 1.286600 0.201900	</max>
+	</visibilityBox>
+	<nodefullVisual>	sets/town/props/axe	</nodefullVisual>
+	<metaData>
+		<copyright>	Copyright BigWorld Pty Ltd.  Use freely in any BigWorld licensed game.	</copyright>
+		<modified_by>	AdamM	</modified_by>
+		<modified_on>	1281660853	</modified_on>
+	</metaData>
+</axe.model>

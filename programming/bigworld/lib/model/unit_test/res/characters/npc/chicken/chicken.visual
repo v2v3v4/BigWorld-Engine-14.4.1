@@ -1,0 +1,499 @@
+<chicken.visual>
+	<node>
+		<identifier>	Scene Root	</identifier>
+		<transform>
+			<row0>	1.000000 0.000000 0.000000	</row0>
+			<row1>	0.000000 1.000000 0.000000	</row1>
+			<row2>	0.000000 0.000000 1.000000	</row2>
+			<row3>	0.000000 0.000000 0.000000	</row3>
+		</transform>
+		<node>
+			<identifier>	biped	</identifier>
+			<transform>
+				<row0>	0.000000 -0.999962 0.008727	</row0>
+				<row1>	0.000001 -0.008727 -0.999962	</row1>
+				<row2>	1.000000 0.000000 0.000001	</row2>
+				<row3>	0.000000 0.219107 0.014745	</row3>
+			</transform>
+			<node>
+				<identifier>	biped Pelvis	</identifier>
+				<transform>
+					<row0>	-0.000000 1.000000 -0.000001	</row0>
+					<row1>	-0.000001 0.000001 1.000000	</row1>
+					<row2>	1.000000 0.000000 0.000001	</row2>
+					<row3>	0.000004 -0.000498 -0.000000	</row3>
+				</transform>
+				<node>
+					<identifier>	biped Spine	</identifier>
+					<transform>
+						<row0>	0.560348 0.000002 -0.828257	</row0>
+						<row1>	0.000001 1.000000 0.000003	</row1>
+						<row2>	0.828257 -0.000002 0.560349	</row2>
+						<row3>	0.023132 0.000000 -0.000040	</row3>
+					</transform>
+					<node>
+						<identifier>	biped Neck	</identifier>
+						<transform>
+							<row0>	0.973820 -0.000001 -0.227319	</row0>
+							<row1>	0.000001 1.000000 -0.000000	</row1>
+							<row2>	0.227319 -0.000000 0.973820	</row2>
+							<row3>	0.088827 -0.000000 -0.000028	</row3>
+						</transform>
+						<node>
+							<identifier>	biped Neck1	</identifier>
+							<transform>
+								<row0>	0.999640 -0.000000 -0.026848	</row0>
+								<row1>	0.000000 1.000000 -0.000000	</row1>
+								<row2>	0.026848 -0.000000 0.999640	</row2>
+								<row3>	0.035692 -0.000000 -0.000030	</row3>
+							</transform>
+							<node>
+								<identifier>	biped Neck2	</identifier>
+								<transform>
+									<row0>	0.999998 0.000000 0.002124	</row0>
+									<row1>	-0.000000 1.000000 -0.000000	</row1>
+									<row2>	-0.002124 -0.000000 0.999998	</row2>
+									<row3>	0.037253 -0.000000 -0.000021	</row3>
+								</transform>
+								<node>
+									<identifier>	biped Neck3	</identifier>
+									<transform>
+										<row0>	0.999604 0.000000 0.028152	</row0>
+										<row1>	-0.000000 1.000000 -0.000000	</row1>
+										<row2>	-0.028152 -0.000000 0.999604	</row2>
+										<row3>	0.026192 -0.000000 -0.000026	</row3>
+									</transform>
+									<node>
+										<identifier>	biped Head	</identifier>
+										<transform>
+											<row0>	0.987771 -0.000000 -0.155913	</row0>
+											<row1>	0.000000 1.000000 -0.000000	</row1>
+											<row2>	0.155913 -0.000000 0.987771	</row2>
+											<row3>	0.032274 0.000000 0.000000	</row3>
+										</transform>
+										<node>
+											<identifier>	biped HeadBlendBonechicken	</identifier>
+											<transform>
+												<row0>	0.000000 1.000000 -0.000001	</row0>
+												<row1>	0.975660 -0.000001 -0.219289	</row1>
+												<row2>	-0.219289 -0.000001 -0.975660	</row2>
+												<row3>	-0.285178 -0.000000 -0.002309	</row3>
+											</transform>
+										</node>
+									</node>
+									<node>
+										<identifier>	biped Neck3BlendBonechicken	</identifier>
+										<transform>
+											<row0>	0.000000 1.000000 -0.000001	</row0>
+											<row1>	0.929538 -0.000001 -0.368725	</row1>
+											<row2>	-0.368726 -0.000001 -0.929538	</row2>
+											<row3>	-0.260535 0.000000 0.042182	</row3>
+										</transform>
+									</node>
+								</node>
+								<node>
+									<identifier>	biped Neck2BlendBonechicken	</identifier>
+									<transform>
+										<row0>	0.000000 1.000000 -0.000001	</row0>
+										<row1>	0.939550 -0.000001 -0.342411	</row1>
+										<row2>	-0.342411 -0.000001 -0.939550	</row2>
+										<row3>	-0.244158 0.000000 0.034813	</row3>
+									</transform>
+								</node>
+							</node>
+							<node>
+								<identifier>	biped Neck1BlendBonechicken	</identifier>
+								<transform>
+									<row0>	0.000000 1.000000 -0.000001	</row0>
+									<row1>	0.940275 -0.000001 -0.340414	</row1>
+									<row2>	-0.340414 -0.000001 -0.940275	</row2>
+									<row3>	-0.219396 0.000000 0.034281	</row3>
+								</transform>
+							</node>
+						</node>
+						<node>
+							<identifier>	biped L Clavicle	</identifier>
+							<transform>
+								<row0>	-0.574192 0.817993 -0.034515	</row0>
+								<row1>	0.787201 0.563180 0.251281	</row1>
+								<row2>	0.224985 0.117113 -0.967298	</row2>
+								<row3>	0.000000 0.009530 0.000028	</row3>
+							</transform>
+							<node>
+								<identifier>	biped L UpperArm	</identifier>
+								<transform>
+									<row0>	0.457076 -0.684049 0.568471	</row0>
+									<row1>	0.606113 0.707314 0.363778	</row1>
+									<row2>	-0.650929 0.178283 0.737907	</row2>
+									<row3>	0.062134 0.000000 0.000000	</row3>
+								</transform>
+								<node>
+									<identifier>	biped L Forearm	</identifier>
+									<transform>
+										<row0>	-0.515614 -0.000000 -0.856821	</row0>
+										<row1>	-0.000000 1.000000 -0.000000	</row1>
+										<row2>	0.856821 -0.000000 -0.515614	</row2>
+										<row3>	0.054787 0.000000 0.000000	</row3>
+									</transform>
+									<node>
+										<identifier>	biped L Hand	</identifier>
+										<transform>
+											<row0>	-0.679851 -0.087294 0.728136	</row0>
+											<row1>	-0.011629 0.994049 0.108315	</row1>
+											<row2>	-0.733258 0.065171 -0.676820	</row2>
+											<row3>	0.057476 -0.000000 0.000000	</row3>
+										</transform>
+										<node>
+											<identifier>	biped L HandBlendBonechicken	</identifier>
+											<transform>
+												<row0>	-0.099536 0.952485 -0.287863	</row0>
+												<row1>	-0.197546 0.264625 0.943901	</row1>
+												<row2>	0.975227 0.150818 0.161820	</row2>
+												<row3>	0.052051 -0.083997 -0.113516	</row3>
+											</transform>
+										</node>
+									</node>
+								</node>
+							</node>
+						</node>
+						<node>
+							<identifier>	biped R Clavicle	</identifier>
+							<transform>
+								<row0>	-0.574192 -0.817993 -0.034511	</row0>
+								<row1>	-0.787201 0.563179 -0.251285	</row1>
+								<row2>	0.224985 -0.117119 -0.967298	</row2>
+								<row3>	0.000000 -0.009530 0.000028	</row3>
+							</transform>
+							<node>
+								<identifier>	biped R UpperArm	</identifier>
+								<transform>
+									<row0>	0.457076 0.684049 0.568471	</row0>
+									<row1>	-0.606113 0.707314 -0.363778	</row1>
+									<row2>	-0.650929 -0.178283 0.737907	</row2>
+									<row3>	0.062134 -0.000000 -0.000000	</row3>
+								</transform>
+								<node>
+									<identifier>	biped R Forearm	</identifier>
+									<transform>
+										<row0>	-0.515614 0.000000 -0.856821	</row0>
+										<row1>	-0.000000 1.000000 0.000000	</row1>
+										<row2>	0.856821 0.000000 -0.515614	</row2>
+										<row3>	0.054787 -0.000000 0.000000	</row3>
+									</transform>
+									<node>
+										<identifier>	biped R Hand	</identifier>
+										<transform>
+											<row0>	-0.679851 0.087294 0.728136	</row0>
+											<row1>	0.011629 0.994049 -0.108315	</row1>
+											<row2>	-0.733258 -0.065171 -0.676820	</row2>
+											<row3>	0.057476 -0.000000 0.000000	</row3>
+										</transform>
+										<node>
+											<identifier>	biped R HandBlendBonechicken	</identifier>
+											<transform>
+												<row0>	0.099533 0.952486 0.287862	</row0>
+												<row1>	-0.197545 -0.264624 0.943901	</row1>
+												<row2>	0.975228 -0.150815 0.161820	</row2>
+												<row3>	0.052051 0.083997 -0.113516	</row3>
+											</transform>
+										</node>
+									</node>
+								</node>
+							</node>
+						</node>
+						<node>
+							<identifier>	biped NeckBlendBonechicken	</identifier>
+							<transform>
+								<row0>	0.000000 1.000000 -0.000001	</row0>
+								<row1>	0.930797 -0.000001 -0.365537	</row1>
+								<row2>	-0.365537 -0.000001 -0.930797	</row2>
+								<row3>	-0.194601 0.000000 0.040139	</row3>
+							</transform>
+						</node>
+					</node>
+					<node>
+						<identifier>	biped SpineBlendBonechicken	</identifier>
+						<transform>
+							<row0>	0.000001 1.000000 -0.000002	</row0>
+							<row1>	0.823336 -0.000002 -0.567555	</row1>
+							<row2>	-0.567555 -0.000001 -0.823335	</row2>
+							<row3>	-0.121164 0.000000 0.083306	</row3>
+						</transform>
+					</node>
+				</node>
+				<node>
+					<identifier>	biped L Thigh	</identifier>
+					<transform>
+						<row0>	0.346409 0.093836 0.933379	</row0>
+						<row1>	0.431043 -0.899648 -0.069530	</row1>
+						<row2>	0.833188 0.426412 -0.352093	</row2>
+						<row3>	-0.000000 0.053534 0.000000	</row3>
+					</transform>
+					<node>
+						<identifier>	biped L Calf	</identifier>
+						<transform>
+							<row0>	0.501777 0.000000 -0.864997	</row0>
+							<row1>	-0.000000 1.000000 -0.000000	</row1>
+							<row2>	0.864997 -0.000000 0.501777	</row2>
+							<row3>	0.098812 0.000000 0.000000	</row3>
+						</transform>
+						<node>
+							<identifier>	biped L HorseLink	</identifier>
+							<transform>
+								<row0>	0.802373 0.000000 0.596823	</row0>
+								<row1>	-0.000000 1.000000 -0.000000	</row1>
+								<row2>	-0.596823 0.000000 0.802373	</row2>
+								<row3>	0.068511 -0.000000 0.000000	</row3>
+							</transform>
+							<node>
+								<identifier>	biped L Foot	</identifier>
+								<transform>
+									<row0>	0.996575 -0.069529 0.044765	</row0>
+									<row1>	0.082029 0.899649 -0.428839	</row1>
+									<row2>	-0.010456 0.431042 0.902271	</row2>
+									<row3>	0.052846 0.000000 0.000000	</row3>
+								</transform>
+								<node>
+									<identifier>	biped L FootBlendBonechicken	</identifier>
+									<transform>
+										<row0>	0.000000 -1.000000 0.000001	</row0>
+										<row1>	-0.999962 -0.000000 -0.008727	</row1>
+										<row2>	0.008727 -0.000001 -0.999962	</row2>
+										<row3>	0.015111 0.024285 0.019054	</row3>
+									</transform>
+								</node>
+							</node>
+							<node>
+								<identifier>	biped L HorseLinkBlendBonechicken	</identifier>
+								<transform>
+									<row0>	-0.082029 -0.899648 0.428840	</row0>
+									<row1>	-0.996446 0.065765 -0.052637	</row1>
+									<row2>	0.019152 -0.431634 -0.901846	</row2>
+									<row3>	0.052083 0.029010 0.007454	</row3>
+								</transform>
+							</node>
+						</node>
+						<node>
+							<identifier>	biped L CalfBlendBonechicken	</identifier>
+							<transform>
+								<row0>	-0.321760 -0.899648 0.295132	</row0>
+								<row1>	-0.768106 0.065765 -0.636936	</row1>
+								<row2>	0.553610 -0.431634 -0.712186	</row2>
+								<row3>	0.083016 0.029010 0.037065	</row3>
+							</transform>
+						</node>
+					</node>
+					<node>
+						<identifier>	biped L ThighBlendBonechicken	</identifier>
+						<transform>
+							<row0>	0.093837 -0.899648 0.426412	</row0>
+							<row1>	-0.936366 0.065765 0.344810	</row1>
+							<row2>	-0.338250 -0.431634 -0.836229	</row2>
+							<row3>	0.139591 0.029010 -0.053210	</row3>
+						</transform>
+					</node>
+				</node>
+				<node>
+					<identifier>	biped R Thigh	</identifier>
+					<transform>
+						<row0>	0.346409 -0.093837 0.933378	</row0>
+						<row1>	-0.431041 -0.899650 0.069528	</row1>
+						<row2>	0.833189 -0.426409 -0.352095	</row2>
+						<row3>	0.000000 -0.053534 -0.000000	</row3>
+					</transform>
+					<node>
+						<identifier>	biped R Calf	</identifier>
+						<transform>
+							<row0>	0.501777 0.000000 -0.864997	</row0>
+							<row1>	-0.000000 1.000000 -0.000000	</row1>
+							<row2>	0.864997 0.000000 0.501777	</row2>
+							<row3>	0.098812 0.000000 0.000000	</row3>
+						</transform>
+						<node>
+							<identifier>	biped R HorseLink	</identifier>
+							<transform>
+								<row0>	0.802373 0.000000 0.596823	</row0>
+								<row1>	0.000000 1.000000 -0.000000	</row1>
+								<row2>	-0.596823 -0.000000 0.802373	</row2>
+								<row3>	0.068511 0.000000 0.000000	</row3>
+							</transform>
+							<node>
+								<identifier>	biped R Foot	</identifier>
+								<transform>
+									<row0>	0.996575 0.069529 0.044765	</row0>
+									<row1>	-0.082030 0.899649 0.428839	</row1>
+									<row2>	-0.010456 -0.431042 0.902271	</row2>
+									<row3>	0.052846 -0.000000 0.000000	</row3>
+								</transform>
+								<node>
+									<identifier>	biped R FootBlendBonechicken	</identifier>
+									<transform>
+										<row0>	0.000000 -1.000000 0.000001	</row0>
+										<row1>	-0.999962 -0.000000 -0.008727	</row1>
+										<row2>	0.008727 -0.000001 -0.999962	</row2>
+										<row3>	0.015111 -0.024285 0.019054	</row3>
+									</transform>
+								</node>
+							</node>
+							<node>
+								<identifier>	biped R HorseLinkBlendBonechicken	</identifier>
+								<transform>
+									<row0>	0.082030 -0.899650 -0.428838	</row0>
+									<row1>	-0.996446 -0.065765 -0.052637	</row1>
+									<row2>	0.019152 0.431631 -0.901847	</row2>
+									<row3>	0.052083 -0.029010 0.007454	</row3>
+								</transform>
+							</node>
+						</node>
+						<node>
+							<identifier>	biped R CalfBlendBonechicken	</identifier>
+							<transform>
+								<row0>	0.321759 -0.899650 -0.295130	</row0>
+								<row1>	-0.768106 -0.065765 -0.636937	</row1>
+								<row2>	0.553611 0.431631 -0.712187	</row2>
+								<row3>	0.083015 -0.029010 0.037065	</row3>
+							</transform>
+						</node>
+					</node>
+					<node>
+						<identifier>	biped R ThighBlendBonechicken	</identifier>
+						<transform>
+							<row0>	-0.093836 -0.899650 -0.426410	</row0>
+							<row1>	-0.936366 -0.065765 0.344810	</row1>
+							<row2>	-0.338251 0.431631 -0.836230	</row2>
+							<row3>	0.139591 -0.029010 -0.053210	</row3>
+						</transform>
+					</node>
+				</node>
+				<node>
+					<identifier>	biped Tail	</identifier>
+					<transform>
+						<row0>	-0.864712 -0.000001 -0.502267	</row0>
+						<row1>	0.000000 1.000000 -0.000001	</row1>
+						<row2>	0.502267 -0.000001 -0.864712	</row2>
+						<row3>	-0.021306 -0.000000 0.000512	</row3>
+					</transform>
+					<node>
+						<identifier>	biped Tail1	</identifier>
+						<transform>
+							<row0>	0.853232 0.000001 0.521532	</row0>
+							<row1>	-0.000001 1.000000 -0.000000	</row1>
+							<row2>	-0.521532 -0.000000 0.853232	</row2>
+							<row3>	0.063191 -0.000000 -0.000047	</row3>
+						</transform>
+						<node>
+							<identifier>	biped Tail2	</identifier>
+							<transform>
+								<row0>	0.988343 0.000000 0.152247	</row0>
+								<row1>	-0.000000 1.000000 -0.000000	</row1>
+								<row2>	-0.152247 -0.000000 0.988343	</row2>
+								<row3>	0.068477 -0.000000 -0.000059	</row3>
+							</transform>
+						</node>
+					</node>
+				</node>
+				<node>
+					<identifier>	biped PelvisBlendBonechicken	</identifier>
+					<transform>
+						<row0>	-0.000000 1.000000 0.000001	</row0>
+						<row1>	-0.008727 0.000001 -0.999962	</row1>
+						<row2>	-0.999962 -0.000000 0.008727	</row2>
+						<row3>	0.016527 -0.000000 0.147009	</row3>
+					</transform>
+				</node>
+			</node>
+		</node>
+		<node>
+			<identifier>	Particle View 01	</identifier>
+			<transform>
+				<row0>	-0.000000 0.000000 1.000000	</row0>
+				<row1>	1.000000 -0.000000 0.000000	</row1>
+				<row2>	0.000000 1.000000 0.000000	</row2>
+				<row3>	0.000000 0.000000 0.000000	</row3>
+			</transform>
+		</node>
+	</node>
+	<renderSet>
+		<treatAsWorldSpaceObject>	true	</treatAsWorldSpaceObject>
+		<node>	biped L Clavicle	</node>
+		<node>	biped L Hand	</node>
+		<node>	biped Tail	</node>
+		<node>	biped Tail1	</node>
+		<node>	biped Tail2	</node>
+		<node>	biped R Clavicle	</node>
+		<node>	biped R Hand	</node>
+		<geometry>
+			<vertices>	tail01.vertices	</vertices>
+			<primitive>	tail01.indices	</primitive>
+			<primitiveGroup>	0
+				<material>
+					<identifier>	chicken_hardskinned	</identifier>
+					<fx>	shaders/std_effects/lightonly_skinned.fx	</fx>
+					<collisionFlags>	16	</collisionFlags>
+					<materialKind>	11	</materialKind>
+					<property>	alphaReference
+						<Int>	128	</Int>
+					</property>
+					<property>	alphaTestEnable
+						<Bool>	true	</Bool>
+					</property>
+					<property>	doubleSided
+						<Bool>	true	</Bool>
+					</property>
+					<property>	diffuseMap
+						<Texture>	characters/npc/chicken/chicken.tga	</Texture>
+					</property>
+				</material>
+			</primitiveGroup>
+		</geometry>
+	</renderSet>
+	<renderSet>
+		<treatAsWorldSpaceObject>	true	</treatAsWorldSpaceObject>
+		<node>	biped SpineBlendBonechicken	</node>
+		<node>	biped PelvisBlendBonechicken	</node>
+		<node>	biped L ThighBlendBonechicken	</node>
+		<node>	biped R ThighBlendBonechicken	</node>
+		<node>	biped NeckBlendBonechicken	</node>
+		<node>	biped Neck1BlendBonechicken	</node>
+		<node>	biped Neck2BlendBonechicken	</node>
+		<node>	biped Neck3BlendBonechicken	</node>
+		<node>	biped HeadBlendBonechicken	</node>
+		<node>	biped R FootBlendBonechicken	</node>
+		<node>	biped R HorseLinkBlendBonechicken	</node>
+		<node>	biped R CalfBlendBonechicken	</node>
+		<node>	biped R HandBlendBonechicken	</node>
+		<node>	biped L FootBlendBonechicken	</node>
+		<node>	biped L HorseLinkBlendBonechicken	</node>
+		<node>	biped L CalfBlendBonechicken	</node>
+		<node>	biped L HandBlendBonechicken	</node>
+		<geometry>
+			<vertices>	chicken.vertices	</vertices>
+			<primitive>	chicken.indices	</primitive>
+			<primitiveGroup>	0
+				<material>
+					<identifier>	chicken_skinned	</identifier>
+					<fx>	shaders/std_effects/lightonly_skinned.fx	</fx>
+					<collisionFlags>	16	</collisionFlags>
+					<materialKind>	0	</materialKind>
+					<property>	alphaReference
+						<Int>	0	</Int>
+					</property>
+					<property>	alphaTestEnable
+						<Bool>	true	</Bool>
+					</property>
+					<property>	doubleSided
+						<Bool>	true	</Bool>
+					</property>
+					<property>	diffuseMap
+						<Texture>	characters/npc/chicken/chicken.tga	</Texture>
+					</property>
+				</material>
+			</primitiveGroup>
+		</geometry>
+	</renderSet>
+	<boundingBox>
+		<min>	-0.083609 -0.004721 -0.192714	</min>
+		<max>	0.083609 0.492886 0.178017	</max>
+	</boundingBox>
+	<materialKind>	11	</materialKind>
+</chicken.visual>

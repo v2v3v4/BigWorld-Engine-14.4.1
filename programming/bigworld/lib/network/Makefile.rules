@@ -1,0 +1,97 @@
+$(call includeUnitTestDirectory)
+
+name         := network
+type         := library
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =							\
+	address_resolver				\
+	basictypes						\
+	blocking_reply_handler			\
+	bsd_snprintf					\
+	buffered_tcp_endpoint			\
+	bundle							\
+	bundle_sending_map				\
+	bw_message_forwarder			\
+	channel							\
+	channel_map						\
+	channel_owner					\
+	compression_stream				\
+	condemned_channels				\
+	deferred_bundle 				\
+	delayed_channels				\
+	elliptic_curve_checksum_scheme 	\
+	encryption_filter				\
+	encryption_stream_filter 		\
+	endpoint						\
+	error_reporter					\
+	event_dispatcher				\
+	event_poller					\
+	exposed_message_range			\
+	file_stream						\
+	forwarding_reply_handler		\
+	forwarding_string_handler		\
+	fragmented_bundle				\
+	frequent_tasks					\
+	http_messages 					\
+	interface_element				\
+	interface_minder				\
+	interface_table					\
+	irregular_channels				\
+	keepalive_channels				\
+	logger_endpoint					\
+	logger_message_forwarder		\
+	machine_guard					\
+	machine_guard_response_checker	\
+	machined_utils					\
+	monitored_channels				\
+	network_interface				\
+	network_stats					\
+	network_utils					\
+	netmask							\
+	once_off_packet					\
+	packet							\
+	packet_filter					\
+	packet_receiver					\
+	packet_receiver_stats			\
+	packet_sender					\
+	packet_loss_parameters			\
+	process_socket_stats_helper		\
+	public_key_cipher				\
+	recently_dead_channels			\
+	request							\
+	request_manager					\
+	rescheduled_sender				\
+	sending_stats					\
+	sha_checksum_scheme 			\
+	signed_checksum_scheme 			\
+	symmetric_block_cipher 			\
+	space_data_mapping				\
+	space_data_mappings				\
+	tcp_bundle						\
+	tcp_bundle_processor			\
+	tcp_connection_opener			\
+	tcp_channel						\
+	tcp_server						\
+	udp_bundle						\
+	udp_bundle_processor			\
+	udp_channel						\
+	unacked_packet					\
+	unpacked_message_header			\
+	watcher_connection				\
+	watcher_nub						\
+	watcher_packet_handler			\
+	websocket_stream_filter 		\
+	zip_stream						\
+
+useOpenSSL = 1
+
+cxxFlags_$(binName) += -Wno-float-equal
+
+exportFor := bwentity
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - libnetwork

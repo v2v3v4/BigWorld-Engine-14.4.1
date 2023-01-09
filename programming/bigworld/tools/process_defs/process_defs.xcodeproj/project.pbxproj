@@ -1,0 +1,746 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		060EB050160B069F00C3D65D /* libpython2.7.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0692D9B315F44E410048DE0D /* libpython2.7.a */; };
+		062D6DA014D792020016784C /* libscript_macosx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2A75F841483474E006E1569 /* libscript_macosx.a */; };
+		06E25E1118B194520053DB24 /* help_msg_handler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06E25E0F18B194520053DB24 /* help_msg_handler.cpp */; };
+		06F0E145181697D30069931F /* libcrypto-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F0E143181697D30069931F /* libcrypto-ios.a */; };
+		06F0E146181697D30069931F /* libssl-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F0E144181697D30069931F /* libssl-ios.a */; };
+		F20F86281483614100C9F762 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F20F86271483614100C9F762 /* libiconv.dylib */; };
+		F20F86501483AA4A00C9F762 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F20F864F1483AA4A00C9F762 /* libz.dylib */; };
+		F2A75E7F14831C47006E1569 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2A75E7E14831C47006E1569 /* main.cpp */; };
+		F51DDA8B17828C0100EC3B19 /* libchunk_macosx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F20F88261484669100C9F762 /* libchunk_macosx.a */; };
+		F51DDA8C17828C0800EC3B19 /* libcstdmf_macosx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F20F84361483515000C9F762 /* libcstdmf_macosx.a */; };
+		F51DDA8D17828C1000EC3B19 /* libentitydef_macosx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06BBFF06160AF5C000586751 /* libentitydef_macosx.a */; };
+		F51DDA8E17828C1A00EC3B19 /* libmath_macosx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F20F8622148360F800C9F762 /* libmath_macosx.a */; };
+		F51DDA8F17828C2100EC3B19 /* libnetwork_macosx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F20F86601483AB0000C9F762 /* libnetwork_macosx.a */; };
+		F51DDA9017828C2700EC3B19 /* libpyscript_macosx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F20F843B1483515000C9F762 /* libpyscript_macosx.a */; };
+		F51DDA9317828C3B00EC3B19 /* libresmgr_macosx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F20F86491483A95A00C9F762 /* libresmgr_macosx.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		060A962A14FCF9D90049054A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F20F86581483AAFF00C9F762 /* network.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06F8D41814F5C9240080A6C6;
+			remoteInfo = network_ios;
+		};
+		0692D9B215F44E410048DE0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F20F885214848A9300C9F762 /* python.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F20F884914847FD600C9F762;
+			remoteInfo = python2.6;
+		};
+		06BBFF05160AF5C000586751 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F20F830A14834F8600C9F762 /* entitydef.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F20F831714834FB000C9F762;
+			remoteInfo = entitydef_macosx;
+		};
+		06F0E14B181697F50069931F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 06F0E147181697F50069931F /* openssl.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9069D28C0FCE659A0042E34C;
+			remoteInfo = crypto_ios;
+		};
+		06F0E14D181698110069931F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 06F0E147181697F50069931F /* openssl.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9069D28B0FCE659A0042E34C;
+			remoteInfo = crypto_ios;
+		};
+		F20F84351483515000C9F762 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2A75F9114834DA3006E1569 /* cstdmf.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F20F8411148350D300C9F762;
+			remoteInfo = cstdmf_macosx;
+		};
+		F20F843A1483515000C9F762 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2A75F5E14834574006E1569 /* pyscript.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F20F838B1483502C00C9F762;
+			remoteInfo = pyscript_macosx;
+		};
+		F20F861F148360F800C9F762 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F20F8617148360F700C9F762 /* math.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC046055464E500DB518D;
+			remoteInfo = math_ios;
+		};
+		F20F8621148360F800C9F762 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F20F8617148360F700C9F762 /* math.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F20F860F1483604800C9F762;
+			remoteInfo = math_macosx;
+		};
+		F20F86481483A95A00C9F762 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F20F86411483A95900C9F762 /* resmgr.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1AA37BB613B0691C003B28D4;
+			remoteInfo = resmgr_macosx;
+		};
+		F20F865F1483AB0000C9F762 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F20F86581483AAFF00C9F762 /* network.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC046055464E500DB518D;
+			remoteInfo = network_macosx;
+		};
+		F20F88251484669100C9F762 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F20F881E1484669000C9F762 /* chunk.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F20F87D3148465FA00C9F762;
+			remoteInfo = chunk_macosx;
+		};
+		F2A75F831483474E006E1569 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2A75F7C1483474D006E1569 /* script.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1A901CB213B06E2000638FA9;
+			remoteInfo = script;
+		};
+		F2A75F9514834DA3006E1569 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2A75F9114834DA3006E1569 /* cstdmf.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC046055464E500DB518D;
+			remoteInfo = cstdmf;
+		};
+		F5800F6A1782AE3A00009E8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F20F830A14834F8600C9F762 /* entitydef.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F20F831614834FB000C9F762;
+			remoteInfo = entitydef_macosx;
+		};
+		F5800F6C1782AE3A00009E8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F20F8617148360F700C9F762 /* math.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F20F85D21483604700C9F762;
+			remoteInfo = math_macosx;
+		};
+		F5800F6E1782AE3A00009E8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2A75F7C1483474D006E1569 /* script.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A901CB113B06E2000638FA9;
+			remoteInfo = script_macosx;
+		};
+		F5800F701782AE3A00009E8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F20F881E1484669000C9F762 /* chunk.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F20F86BE1484521700C9F762;
+			remoteInfo = chunk_macosx;
+		};
+		F5800F721782AE3A00009E8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F20F86411483A95900C9F762 /* resmgr.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 1AA37BB513B0691C003B28D4;
+			remoteInfo = resmgr_macosx;
+		};
+		F5800F741782AE3A00009E8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2A75F5E14834574006E1569 /* pyscript.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F20F835C1483502C00C9F762;
+			remoteInfo = pyscript_macosx;
+		};
+		F5800F761782AE3A00009E8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F20F885214848A9300C9F762 /* python.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F20F8835148479BF00C9F762;
+			remoteInfo = python2.7;
+		};
+		F5800F781782AE3A00009E8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F20F86581483AAFF00C9F762 /* network.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC045055464E500DB518D;
+			remoteInfo = network_macosx;
+		};
+		F5800F7A1782AE3A00009E8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2A75F9114834DA3006E1569 /* cstdmf.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F20F83A9148350D300C9F762;
+			remoteInfo = cstdmf_macosx;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F2A75E6614831C0D006E1569 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		06E25E0F18B194520053DB24 /* help_msg_handler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = help_msg_handler.cpp; sourceTree = "<group>"; };
+		06E25E1018B194520053DB24 /* help_msg_handler.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = help_msg_handler.hpp; sourceTree = "<group>"; };
+		06F0E143181697D30069931F /* libcrypto-ios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcrypto-ios.a"; path = "../../build/xcode/openssl/lib/libcrypto-ios.a"; sourceTree = "<group>"; };
+		06F0E144181697D30069931F /* libssl-ios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libssl-ios.a"; path = "../../build/xcode/openssl/lib/libssl-ios.a"; sourceTree = "<group>"; };
+		06F0E147181697F50069931F /* openssl.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openssl.xcodeproj; path = ../../build/xcode/openssl.xcodeproj; sourceTree = "<group>"; };
+		F20F830A14834F8600C9F762 /* entitydef.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = entitydef.xcodeproj; path = ../../lib/entitydef/entitydef.xcodeproj; sourceTree = "<group>"; };
+		F20F8617148360F700C9F762 /* math.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = math.xcodeproj; path = ../../lib/math/math.xcodeproj; sourceTree = "<group>"; };
+		F20F86271483614100C9F762 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		F20F86291483614500C9F762 /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.dylib; path = usr/lib/libssl.dylib; sourceTree = SDKROOT; };
+		F20F862B1483614C00C9F762 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = usr/lib/libcrypto.dylib; sourceTree = SDKROOT; };
+		F20F86411483A95900C9F762 /* resmgr.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = resmgr.xcodeproj; path = ../../lib/resmgr/resmgr.xcodeproj; sourceTree = "<group>"; };
+		F20F864F1483AA4A00C9F762 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		F20F86581483AAFF00C9F762 /* network.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = network.xcodeproj; path = ../../lib/network/network.xcodeproj; sourceTree = "<group>"; };
+		F20F881E1484669000C9F762 /* chunk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = chunk.xcodeproj; path = ../../lib/chunk/chunk.xcodeproj; sourceTree = "<group>"; };
+		F20F885214848A9300C9F762 /* python.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = python.xcodeproj; path = ../../build/xcode/python.xcodeproj; sourceTree = "<group>"; };
+		F2A75E6814831C0D006E1569 /* process_defs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = process_defs; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2A75E7E14831C47006E1569 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F2A75F5E14834574006E1569 /* pyscript.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = pyscript.xcodeproj; path = ../../lib/pyscript/pyscript.xcodeproj; sourceTree = "<group>"; };
+		F2A75F7C1483474D006E1569 /* script.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = script.xcodeproj; path = ../../lib/script/script.xcodeproj; sourceTree = "<group>"; };
+		F2A75F9114834DA3006E1569 /* cstdmf.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cstdmf.xcodeproj; path = ../../lib/cstdmf/cstdmf.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F2A75E6514831C0D006E1569 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06F0E145181697D30069931F /* libcrypto-ios.a in Frameworks */,
+				06F0E146181697D30069931F /* libssl-ios.a in Frameworks */,
+				060EB050160B069F00C3D65D /* libpython2.7.a in Frameworks */,
+				F51DDA9017828C2700EC3B19 /* libpyscript_macosx.a in Frameworks */,
+				F51DDA8F17828C2100EC3B19 /* libnetwork_macosx.a in Frameworks */,
+				F51DDA8E17828C1A00EC3B19 /* libmath_macosx.a in Frameworks */,
+				F51DDA8B17828C0100EC3B19 /* libchunk_macosx.a in Frameworks */,
+				062D6DA014D792020016784C /* libscript_macosx.a in Frameworks */,
+				F51DDA9317828C3B00EC3B19 /* libresmgr_macosx.a in Frameworks */,
+				F51DDA8D17828C1000EC3B19 /* libentitydef_macosx.a in Frameworks */,
+				F51DDA8C17828C0800EC3B19 /* libcstdmf_macosx.a in Frameworks */,
+				F20F86281483614100C9F762 /* libiconv.dylib in Frameworks */,
+				F20F86501483AA4A00C9F762 /* libz.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0692D9AF15F44E410048DE0D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0692D9B315F44E410048DE0D /* libpython2.7.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		06BBFEDB160AF5B600586751 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				06BBFF06160AF5C000586751 /* libentitydef_macosx.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		06F0E148181697F50069931F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				06F0E14C181697F50069931F /* libcrypto-ios.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F20F8618148360F700C9F762 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F20F8620148360F800C9F762 /* libmath_ios.a */,
+				F20F8622148360F800C9F762 /* libmath_macosx.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F20F86421483A95900C9F762 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F20F86491483A95A00C9F762 /* libresmgr_macosx.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F20F86591483AAFF00C9F762 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				060A962B14FCF9D90049054A /* libnetwork_ios.a */,
+				F20F86601483AB0000C9F762 /* libnetwork_macosx.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F20F881F1484669000C9F762 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F20F88261484669100C9F762 /* libchunk_macosx.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F2A75E5D14831C0D006E1569 = {
+			isa = PBXGroup;
+			children = (
+				F20F881E1484669000C9F762 /* chunk.xcodeproj */,
+				F2A75F9114834DA3006E1569 /* cstdmf.xcodeproj */,
+				F20F830A14834F8600C9F762 /* entitydef.xcodeproj */,
+				F20F8617148360F700C9F762 /* math.xcodeproj */,
+				F20F86581483AAFF00C9F762 /* network.xcodeproj */,
+				06F0E147181697F50069931F /* openssl.xcodeproj */,
+				F2A75F5E14834574006E1569 /* pyscript.xcodeproj */,
+				F20F885214848A9300C9F762 /* python.xcodeproj */,
+				F20F86411483A95900C9F762 /* resmgr.xcodeproj */,
+				F2A75F7C1483474D006E1569 /* script.xcodeproj */,
+				F2A75E7D14831C42006E1569 /* Sources */,
+				F2A75E6914831C0D006E1569 /* Products */,
+				F2A75F7B148345B2006E1569 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F2A75E6914831C0D006E1569 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F2A75E6814831C0D006E1569 /* process_defs */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F2A75E7D14831C42006E1569 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				06E25E0F18B194520053DB24 /* help_msg_handler.cpp */,
+				06E25E1018B194520053DB24 /* help_msg_handler.hpp */,
+				F2A75E7E14831C47006E1569 /* main.cpp */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		F2A75F5F14834574006E1569 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F20F843B1483515000C9F762 /* libpyscript_macosx.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F2A75F7B148345B2006E1569 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06F0E143181697D30069931F /* libcrypto-ios.a */,
+				06F0E144181697D30069931F /* libssl-ios.a */,
+				F20F862B1483614C00C9F762 /* libcrypto.dylib */,
+				F20F86291483614500C9F762 /* libssl.dylib */,
+				F20F86271483614100C9F762 /* libiconv.dylib */,
+				F20F864F1483AA4A00C9F762 /* libz.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F2A75F7D1483474D006E1569 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F2A75F841483474E006E1569 /* libscript_macosx.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F2A75F9214834DA3006E1569 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F2A75F9614834DA3006E1569 /* libcstdmf_ios.a */,
+				F20F84361483515000C9F762 /* libcstdmf_macosx.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F2A75E6714831C0D006E1569 /* process_defs.macosx */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2A75E7114831C0D006E1569 /* Build configuration list for PBXNativeTarget "process_defs.macosx" */;
+			buildPhases = (
+				F2A75E6414831C0D006E1569 /* Sources */,
+				F2A75E6514831C0D006E1569 /* Frameworks */,
+				F2A75E6614831C0D006E1569 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				06F0E14E181698110069931F /* PBXTargetDependency */,
+				F5800F771782AE3A00009E8C /* PBXTargetDependency */,
+				F5800F6B1782AE3A00009E8C /* PBXTargetDependency */,
+				F5800F6D1782AE3A00009E8C /* PBXTargetDependency */,
+				F5800F6F1782AE3A00009E8C /* PBXTargetDependency */,
+				F5800F711782AE3A00009E8C /* PBXTargetDependency */,
+				F5800F731782AE3A00009E8C /* PBXTargetDependency */,
+				F5800F751782AE3A00009E8C /* PBXTargetDependency */,
+				F5800F791782AE3A00009E8C /* PBXTargetDependency */,
+				F5800F7B1782AE3A00009E8C /* PBXTargetDependency */,
+			);
+			name = process_defs.macosx;
+			productName = process_defs;
+			productReference = F2A75E6814831C0D006E1569 /* process_defs */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F2A75E5F14831C0D006E1569 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = BigWorld;
+			};
+			buildConfigurationList = F2A75E6214831C0D006E1569 /* Build configuration list for PBXProject "process_defs" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F2A75E5D14831C0D006E1569;
+			productRefGroup = F2A75E6914831C0D006E1569 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F20F881F1484669000C9F762 /* Products */;
+					ProjectRef = F20F881E1484669000C9F762 /* chunk.xcodeproj */;
+				},
+				{
+					ProductGroup = F2A75F9214834DA3006E1569 /* Products */;
+					ProjectRef = F2A75F9114834DA3006E1569 /* cstdmf.xcodeproj */;
+				},
+				{
+					ProductGroup = 06BBFEDB160AF5B600586751 /* Products */;
+					ProjectRef = F20F830A14834F8600C9F762 /* entitydef.xcodeproj */;
+				},
+				{
+					ProductGroup = F20F8618148360F700C9F762 /* Products */;
+					ProjectRef = F20F8617148360F700C9F762 /* math.xcodeproj */;
+				},
+				{
+					ProductGroup = F20F86591483AAFF00C9F762 /* Products */;
+					ProjectRef = F20F86581483AAFF00C9F762 /* network.xcodeproj */;
+				},
+				{
+					ProductGroup = 06F0E148181697F50069931F /* Products */;
+					ProjectRef = 06F0E147181697F50069931F /* openssl.xcodeproj */;
+				},
+				{
+					ProductGroup = F2A75F5F14834574006E1569 /* Products */;
+					ProjectRef = F2A75F5E14834574006E1569 /* pyscript.xcodeproj */;
+				},
+				{
+					ProductGroup = 0692D9AF15F44E410048DE0D /* Products */;
+					ProjectRef = F20F885214848A9300C9F762 /* python.xcodeproj */;
+				},
+				{
+					ProductGroup = F20F86421483A95900C9F762 /* Products */;
+					ProjectRef = F20F86411483A95900C9F762 /* resmgr.xcodeproj */;
+				},
+				{
+					ProductGroup = F2A75F7D1483474D006E1569 /* Products */;
+					ProjectRef = F2A75F7C1483474D006E1569 /* script.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				F2A75E6714831C0D006E1569 /* process_defs.macosx */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		060A962B14FCF9D90049054A /* libnetwork_ios.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libnetwork_ios.a;
+			remoteRef = 060A962A14FCF9D90049054A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0692D9B315F44E410048DE0D /* libpython2.7.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libpython2.7.a;
+			remoteRef = 0692D9B215F44E410048DE0D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		06BBFF06160AF5C000586751 /* libentitydef_macosx.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libentitydef_macosx.a;
+			remoteRef = 06BBFF05160AF5C000586751 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		06F0E14C181697F50069931F /* libcrypto-ios.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libcrypto-ios.a";
+			remoteRef = 06F0E14B181697F50069931F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F20F84361483515000C9F762 /* libcstdmf_macosx.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcstdmf_macosx.a;
+			remoteRef = F20F84351483515000C9F762 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F20F843B1483515000C9F762 /* libpyscript_macosx.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libpyscript_macosx.a;
+			remoteRef = F20F843A1483515000C9F762 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F20F8620148360F800C9F762 /* libmath_ios.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libmath_ios.a;
+			remoteRef = F20F861F148360F800C9F762 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F20F8622148360F800C9F762 /* libmath_macosx.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libmath_macosx.a;
+			remoteRef = F20F8621148360F800C9F762 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F20F86491483A95A00C9F762 /* libresmgr_macosx.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libresmgr_macosx.a;
+			remoteRef = F20F86481483A95A00C9F762 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F20F86601483AB0000C9F762 /* libnetwork_macosx.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libnetwork_macosx.a;
+			remoteRef = F20F865F1483AB0000C9F762 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F20F88261484669100C9F762 /* libchunk_macosx.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libchunk_macosx.a;
+			remoteRef = F20F88251484669100C9F762 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F2A75F841483474E006E1569 /* libscript_macosx.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libscript_macosx.a;
+			remoteRef = F2A75F831483474E006E1569 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F2A75F9614834DA3006E1569 /* libcstdmf_ios.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcstdmf_ios.a;
+			remoteRef = F2A75F9514834DA3006E1569 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F2A75E6414831C0D006E1569 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2A75E7F14831C47006E1569 /* main.cpp in Sources */,
+				06E25E1118B194520053DB24 /* help_msg_handler.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		06F0E14E181698110069931F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = crypto_ios;
+			targetProxy = 06F0E14D181698110069931F /* PBXContainerItemProxy */;
+		};
+		F5800F6B1782AE3A00009E8C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = entitydef_macosx;
+			targetProxy = F5800F6A1782AE3A00009E8C /* PBXContainerItemProxy */;
+		};
+		F5800F6D1782AE3A00009E8C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = math_macosx;
+			targetProxy = F5800F6C1782AE3A00009E8C /* PBXContainerItemProxy */;
+		};
+		F5800F6F1782AE3A00009E8C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = script_macosx;
+			targetProxy = F5800F6E1782AE3A00009E8C /* PBXContainerItemProxy */;
+		};
+		F5800F711782AE3A00009E8C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = chunk_macosx;
+			targetProxy = F5800F701782AE3A00009E8C /* PBXContainerItemProxy */;
+		};
+		F5800F731782AE3A00009E8C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = resmgr_macosx;
+			targetProxy = F5800F721782AE3A00009E8C /* PBXContainerItemProxy */;
+		};
+		F5800F751782AE3A00009E8C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = pyscript_macosx;
+			targetProxy = F5800F741782AE3A00009E8C /* PBXContainerItemProxy */;
+		};
+		F5800F771782AE3A00009E8C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = python2.7;
+			targetProxy = F5800F761782AE3A00009E8C /* PBXContainerItemProxy */;
+		};
+		F5800F791782AE3A00009E8C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = network_macosx;
+			targetProxy = F5800F781782AE3A00009E8C /* PBXContainerItemProxy */;
+		};
+		F5800F7B1782AE3A00009E8C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = cstdmf_macosx;
+			targetProxy = F5800F7A1782AE3A00009E8C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F2A75E6F14831C0D006E1569 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_DEBUG,
+					DEBUG,
+					SCRIPT_PYTHON,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		F2A75E7014831C0D006E1569 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_HYBRID,
+					SCRIPT_PYTHON,
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+			};
+			name = Release;
+		};
+		F2A75E7214831C0D006E1569 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = /;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				INSTALL_PATH = "$(PROJECT_DIR)/../../../../game/bin/server/macosx64/tools";
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/../../third_party/python",
+					"$(SRCROOT)/../../build/xcode/openssl/lib",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = process_defs;
+				SDKROOT = macosx;
+				SYMROOT = Build;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../build/xcode/pythonbuild-macosx $(SRCROOT)/../../third_party/python/Include $(SRCROOT)/../../lib";
+				VALID_ARCHS = x86_64;
+			};
+			name = Debug;
+		};
+		F2A75E7314831C0D006E1569 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = /;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				INSTALL_PATH = "$(PROJECT_DIR)/../../../../game/bin/server/macosx64/tools";
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/../../third_party/python",
+					"$(SRCROOT)/../../build/xcode/openssl/lib",
+				);
+				PRODUCT_NAME = process_defs;
+				SDKROOT = macosx;
+				SYMROOT = Build;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../build/xcode/pythonbuild-macosx $(SRCROOT)/../../third_party/python/Include $(SRCROOT)/../../lib";
+				VALID_ARCHS = x86_64;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F2A75E6214831C0D006E1569 /* Build configuration list for PBXProject "process_defs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2A75E6F14831C0D006E1569 /* Debug */,
+				F2A75E7014831C0D006E1569 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2A75E7114831C0D006E1569 /* Build configuration list for PBXNativeTarget "process_defs.macosx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2A75E7214831C0D006E1569 /* Debug */,
+				F2A75E7314831C0D006E1569 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F2A75E5F14831C0D006E1569 /* Project object */;
+}

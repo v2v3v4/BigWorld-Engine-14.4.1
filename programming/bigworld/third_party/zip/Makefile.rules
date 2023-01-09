@@ -1,0 +1,29 @@
+name         := zip
+type         := library
+
+include $(BW_COMPONENT_HEADER)
+
+cSource =		\
+	adler32		\
+	compress	\
+	crc32		\
+	deflate		\
+	gzread		\
+	gzwrite		\
+	infback		\
+	inffast		\
+	inflate		\
+	inftrees	\
+	trees		\
+	uncompr		\
+	zutil
+
+cxxSource =					\
+	bw_zlib_mem			\
+
+cppFlags_$(binName) += -DMY_ZCALLOC
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - libzip

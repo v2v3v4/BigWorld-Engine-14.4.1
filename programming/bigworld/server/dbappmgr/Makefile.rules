@@ -1,0 +1,29 @@
+$(call includeUnitTestDirectory)
+
+name  := dbappmgr
+type  := binary
+bindir = $(BW_SERVER_BIN_DIR)
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =							\
+	main							\
+	dbapp							\
+	dbappmgr						\
+	dbappmgr_config					\
+	external_interfaces 			\
+	message_handlers				\
+	../../lib/db/dbapp_interface	\
+
+
+buildTimeFile := main
+
+dependsOn += 	db \
+				server
+
+incFlags_$(binName) += -I$(BW_ABS_SRC_SERVER)
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - dbappmgr

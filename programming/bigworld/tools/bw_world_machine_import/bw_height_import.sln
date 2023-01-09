@@ -1,0 +1,51 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bw_height_import", "bw_height_import.vcproj", "{147291AF-E644-40C4-956E-BE3DFAF02DD4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4642B64B-ABF7-4FAB-903E-EB1E7CBF8A81} = {4642B64B-ABF7-4FAB-903E-EB1E7CBF8A81}
+		{1ABB1158-909C-4AD4-9F81-CB38BBA5D950} = {1ABB1158-909C-4AD4-9F81-CB38BBA5D950}
+		{5DC4CC9A-3052-4076-A8D4-FE229C1AC141} = {5DC4CC9A-3052-4076-A8D4-FE229C1AC141}
+		{204D85B9-F793-4F21-99FF-40AC92A08E5D} = {204D85B9-F793-4F21-99FF-40AC92A08E5D}
+		{DB0DFFD4-284A-4EA7-8178-8BE7030C1B61} = {DB0DFFD4-284A-4EA7-8178-8BE7030C1B61}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cstdmf", "..\..\lib\cstdmf\cstdmf2008.vcproj", "{4642B64B-ABF7-4FAB-903E-EB1E7CBF8A81}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "math", "..\..\lib\math\math3d2008.vcproj", "{5DC4CC9A-3052-4076-A8D4-FE229C1AC141}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zip", "..\..\lib\zip\zip2008.vcproj", "{1ABB1158-909C-4AD4-9F81-CB38BBA5D950}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "resmgr", "..\..\lib\resmgr\resmgr2008.vcproj", "{204D85B9-F793-4F21-99FF-40AC92A08E5D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libpng", "..\..\lib\png\projects\visualc71\libpng2008.vcproj", "{DB0DFFD4-284A-4EA7-8178-8BE7030C1B61}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{147291AF-E644-40C4-956E-BE3DFAF02DD4}.Release|Win32.ActiveCfg = Release|Win32
+		{147291AF-E644-40C4-956E-BE3DFAF02DD4}.Release|Win32.Build.0 = Release|Win32
+		{147291AF-E644-40C4-956E-BE3DFAF02DD4}.Release|x64.ActiveCfg = Release|x64
+		{147291AF-E644-40C4-956E-BE3DFAF02DD4}.Release|x64.Build.0 = Release|x64
+		{4642B64B-ABF7-4FAB-903E-EB1E7CBF8A81}.Release|Win32.ActiveCfg = Single_Threaded_Static_Release|Win32
+		{4642B64B-ABF7-4FAB-903E-EB1E7CBF8A81}.Release|Win32.Build.0 = Single_Threaded_Static_Release|Win32
+		{4642B64B-ABF7-4FAB-903E-EB1E7CBF8A81}.Release|x64.ActiveCfg = Release|Win32
+		{5DC4CC9A-3052-4076-A8D4-FE229C1AC141}.Release|Win32.ActiveCfg = Static_Release|Win32
+		{5DC4CC9A-3052-4076-A8D4-FE229C1AC141}.Release|Win32.Build.0 = Static_Release|Win32
+		{5DC4CC9A-3052-4076-A8D4-FE229C1AC141}.Release|x64.ActiveCfg = Release|Win32
+		{1ABB1158-909C-4AD4-9F81-CB38BBA5D950}.Release|Win32.ActiveCfg = Single_Threaded_Static_Release|Win32
+		{1ABB1158-909C-4AD4-9F81-CB38BBA5D950}.Release|Win32.Build.0 = Single_Threaded_Static_Release|Win32
+		{1ABB1158-909C-4AD4-9F81-CB38BBA5D950}.Release|x64.ActiveCfg = Release|Win32
+		{204D85B9-F793-4F21-99FF-40AC92A08E5D}.Release|Win32.ActiveCfg = Single_Threaded_Static_Release|Win32
+		{204D85B9-F793-4F21-99FF-40AC92A08E5D}.Release|Win32.Build.0 = Single_Threaded_Static_Release|Win32
+		{204D85B9-F793-4F21-99FF-40AC92A08E5D}.Release|x64.ActiveCfg = Release|Win32
+		{DB0DFFD4-284A-4EA7-8178-8BE7030C1B61}.Release|Win32.ActiveCfg = Static_Release|Win32
+		{DB0DFFD4-284A-4EA7-8178-8BE7030C1B61}.Release|Win32.Build.0 = Static_Release|Win32
+		{DB0DFFD4-284A-4EA7-8178-8BE7030C1B61}.Release|x64.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,53 @@
+ifneq ($(SYSTEM_HAS_MYSQL),0)
+
+$(warning MySQL development libraries not installed. Skipping consolidate_dbs build.)
+
+else
+
+name  := consolidate_dbs
+type  := binary
+bindir = $(BW_COMMAND_BIN_DIR)
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =								\
+	command_line_parser					\
+	consolidate_dbs_app					\
+	consolidate_entity_task				\
+	consolidation_progress_reporter		\
+	dbapp								\
+	db_file_transfer_error_monitor		\
+	file_receiver						\
+	file_receiver_mgr					\
+	file_transfer_progress_reporter		\
+	msg_receiver						\
+	main								\
+	primary_database_update_queue		\
+	secondary_database					\
+	secondary_database_table			\
+	transfer_db_process					\
+
+buildTimeFile := main
+
+dependsOn =				\
+	chunk				\
+	db_storage_mysql	\
+	db_storage			\
+	db 					\
+	entitydef			\
+	pyscript			\
+	script				\
+	sqlite				\
+	server
+
+usePython = 1
+useOpenSSL = 1
+useMySQL = 1
+
+include $(BW_COMPONENT_FOOTER)
+
+endif
+# endif MySQL development libraries installed. 
+
+# vi: filetype=make
+# Makefile.rules - consolidate_dbs

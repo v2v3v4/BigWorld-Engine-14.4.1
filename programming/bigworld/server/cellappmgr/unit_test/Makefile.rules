@@ -1,0 +1,14 @@
+name  := cellappmgr
+type  := unit_test
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =									\
+	main									\
+
+dependsOn += cstdmf
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - cellappmgr/unit_test

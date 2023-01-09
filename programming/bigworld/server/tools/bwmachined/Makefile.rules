@@ -1,0 +1,31 @@
+name  := bwmachined2
+type  := binary
+bindir = $(BW_SERVER_TOOLS_BIN_DIR)
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =					\
+	main					\
+	bwmachined				\
+	cluster					\
+	incoming_packet			\
+	linux_machine_guard		\
+	server_platform			\
+	server_platform_linux	\
+	listeners				\
+	usermap
+
+# RHEL/CentOS 7 requires us to use prlimit over setrlimit
+SYSTEM_HAS_PRLIMIT := $(shell $(BW_BLDDIR)/test_prlimit.sh && echo $$?)
+
+ifeq ($(SYSTEM_HAS_PRLIMIT),0)
+cppFlags_$(binName) += -DBW_USE_PRLIMIT
+endif
+
+noDefaultDependencies = 1
+dependsOn = server network cstdmf 
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - bwmachined2

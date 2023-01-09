@@ -1,0 +1,42 @@
+#!/usr/bin/env python
+
+# This script is called by DBApp to remove any obsolete secondary databases 
+# left behind by crashed BaseApps.
+#
+# This script is invoked via bwmachined.
+
+import os
+import sys
+
+def main():
+    # Remove --res argument
+	args = sys.argv
+	if ('--res' in args):
+		resIdx = args.index( '--res' )
+		del args[ resIdx:resIdx+2 ]
+		
+	filePath = args[1]
+	
+	# Check that file exists
+	stat = os.stat( filePath )
+
+	# Check that we have sqlite3 library
+	try:
+		import sqlite3
+	except Exception, e:
+		# Hack for pre-Python 2.5 
+		from pysqlite2 import dbapi2 as sqlite3
+	
+	# Open and close the database to get rid of any journal files.
+	connection = sqlite3.connect( filePath )
+	cursor = connection.cursor()
+	cursor.execute( "SELECT * FROM tbl_checksum" )
+	connection.close()
+
+	# Remove the file
+	os.remove( filePath )
+
+if __name__ == "__main__":
+	sys.exit( main() )
+
+# remove_db.py

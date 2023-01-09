@@ -1,0 +1,151 @@
+# This is a valgrind suppression file common to all BigWorld server components.
+# Due to differences in C++ name mangling, this may only work for Debug builds
+# using gcc 3.4.4 on Fedora Core 4
+
+{
+   if_nameindex calls socketcall.sendto with uninitialised memory
+   Memcheck:Param
+   socketcall.sendto(msg)
+   fun:sendto
+   fun:if_nameindex
+}
+
+#{
+#   if_nameindex calls socketcall.sendto with uninitialised memory
+#   Memcheck:Param
+#   socketcall.sendto(msg)
+#   fun:sendto
+#   fun:if_nameindex
+#   fun:_ZN8Endpoint20findDefaultInterfaceEPc
+#   fun:_ZN7Mercury3Nub23recreateListeningSocketEtPKc
+#   fun:_ZN7Mercury3NubC1EtPKc
+#   fun:_ZN8DatabaseC1Ev
+#   fun:_Z6bwMainiPPc
+#   fun:main
+#}
+
+{
+   watcherControlMessage has uninitialised memory
+   Memcheck:Param
+   socketcall.sendto(msg)
+   fun:sendto
+   fun:_ZN8Endpoint6sendtoEPvitj
+   fun:_ZN10WatcherNub21watcherControlMessageEib
+}
+
+#{
+#   watcherControlMessage has uninitialised memory
+#   Memcheck:Param
+#   socketcall.sendto(msg)
+#   fun:sendto
+#   fun:_ZN8Endpoint6sendtoEPvitj
+#   fun:_ZN10WatcherNub21watcherControlMessageEib
+#   fun:_ZN10WatcherNub15registerWatcherEiPcS0_PKct
+#   fun:_ZN8Database4initEbb12DefsSyncMode
+#   fun:_Z6bwMainiPPc
+#   fun:main
+#}
+
+{
+   Watcher notifyMachineGuard message has uninitialised memory
+   Memcheck:Param
+   socketcall.sendto(msg)
+   fun:sendto
+   fun:_ZN8Endpoint6sendtoEPvitj
+   fun:_ZN10WatcherNub18notifyMachineGuardEv
+}
+
+#{
+#   Watcher notifyMachineGuard message has uninitialised memory
+#   Memcheck:Param
+#   socketcall.sendto(msg)
+#   fun:sendto
+#   fun:_ZN8Endpoint6sendtoEPvitj
+#   fun:_ZN10WatcherNub18notifyMachineGuardEv
+#   fun:_ZN10WatcherNub15registerWatcherEiPcS0_PKct
+#   fun:_ZN8Database4initEbb12DefsSyncMode
+#   fun:_Z6bwMainiPPc
+#   fun:main
+#}
+
+{
+   MachineGuardMessage has uninitialised memory
+   Memcheck:Param
+   socketcall.sendto(msg)
+   fun:sendto
+   fun:_ZN8Endpoint6sendtoEPvitj
+   fun:_ZN7Mercury3Nub17sendAndReceiveMGMER19MachineGuardMessageRj
+}
+
+#{
+#   MachineGuardMessage has uninitialised memory
+#   Memcheck:Param
+#   socketcall.sendto(msg)
+#   fun:sendto
+#   fun:_ZN8Endpoint6sendtoEPvitj
+#   fun:_ZN7Mercury3Nub17sendAndReceiveMGMER19MachineGuardMessageRj
+#   fun:_ZN7Mercury3Nub16registerListenerERNS_6BundleEiPKcb
+#   fun:_ZN7Mercury3Nub21registerBirthListenerERNS_6BundleEiPKc
+#   fun:_ZN7Mercury3Nub21registerBirthListenerERKNS_16InterfaceElementEPKc
+#   fun:_ZN8Database4initEbb12DefsSyncMode
+#   fun:_Z6bwMainiPPc
+#   fun:main
+#}
+
+{
+   Timer queue is not freed
+   Memcheck:Leak
+   fun:_Znwj
+   fun:_ZN7Mercury3Nub8newTimerEiPNS_18TimerExpiryHandlerEPvb
+   fun:_ZN7Mercury3Nub13registerTimerEiPNS_18TimerExpiryHandlerEPv
+}
+
+#{
+#   Timer queue is not freed
+#   Memcheck:Leak
+#   fun:_Znwj
+#   fun:_ZN7Mercury3Nub8newTimerEiPNS_18TimerExpiryHandlerEPvb
+#   fun:_ZN7Mercury3Nub13registerTimerEiPNS_18TimerExpiryHandlerEPv
+#   fun:_ZN15WorkerThreadMgrC1ERN7Mercury3NubE
+#   fun:_ZN8DatabaseC1Ev
+#   fun:_Z6bwMainiPPc
+#   fun:main
+#}
+
+{
+   pthread init uses some uninitialised memory
+   Memcheck:Cond
+   fun:strstr
+   fun:__pthread_initialize_minimal
+   obj:/lib/libpthread-2.3.5.so
+   obj:/lib/libpthread-2.3.5.so
+   fun:call_init
+   fun:_dl_init
+   obj:/lib/ld-2.3.5.so
+}
+
+{
+   pthread does not free all memory on shutdown
+   Memcheck:Leak
+   fun:calloc
+   fun:_dl_allocate_tls
+   fun:pthread_create@@GLIBC_2.1
+}
+
+#{
+#   pthread probably does not free all memory
+#   Memcheck:Leak
+#   fun:calloc
+#   fun:_dl_allocate_tls
+#   fun:pthread_create@@GLIBC_2.1
+#   fun:_ZN12SimpleThreadC1EPFvPvES0_
+#   fun:_ZN12WorkerThreadC1ER15WorkerThreadMgr
+#   fun:_ZN16WorkerThreadPool8PoolItemC1ER15WorkerThreadMgrRS_
+#   fun:_ZN16WorkerThreadPoolC1ER15WorkerThreadMgri
+#   fun:_ZN18MySqlThreadResPoolC1ER15WorkerThreadMgrRN7Mercury3NubEiiRK14ConnectionInfoRK10EntityDefs
+#   fun:_ZN13MySqlDatabase7startupERK10EntityDefsbb
+#   fun:_ZN8Database4initEbb12DefsSyncMode
+#   fun:_Z6bwMainiPPc
+#   fun:main
+#}
+

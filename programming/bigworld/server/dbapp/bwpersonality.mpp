@@ -1,0 +1,49 @@
+/*~ module BWPersonality
+ *	@components{ db }
+ *	The name of this module is actually specified by the personality option in
+ *	the configuration file. This module should be implemented by the user.
+ *	It should contain callback methods that will be called by the server at
+ *	specific events.
+ *
+ *	It is also possible to register for these events using
+ *	BigWorld.addEventListener. For example,
+ *	BigWorld.addEventListener( "onInit", myFunc ).
+ */
+
+/*~	function BWPersonality.onDBAppReady
+ *	@components{ db }
+ *	Deprecated. See BWPersonality.onAppReady
+ */
+/*~	function BWPersonality.onAppReady
+ *	@components{ db }
+ *	This is a callback function that can be implemented by the user.
+ *
+ *	If present, this method is called when the entire server is ready to start.
+ */
+
+/*~ function BWPersonality.connectToBillingSystem
+ *	@components{ db }
+ *
+ *	This is a callback function that can be implemented by the user.
+ *
+ *	If present, this method is called during DBApp startup. To connect to
+ *	a billing system via script, this method should return an object that
+ *	implements <code>getEntityKeyForAccount</code> and optionally
+ *	<code>setEntityKeyForAccount</code> methods.
+ *
+ *	For example:
+ *	<pre>
+ *	class BillingSystem( object ):
+ *	    def getEntityKeyForAccount( username, password, clientAddr, response ):
+ *	        ...
+ *	    def setEntityKeyForAccount( username, password, entityType, entityID ):
+ *	        ...
+ *
+ *	def connectToBillingSystem():
+ *	    return BillingSystem()</pre>
+ *
+ *	Refer to the Server Programming Guide for more information.
+ *
+ *	@return A custom billing system object or None if the default billing
+ *		system should be used.
+ */

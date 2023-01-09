@@ -1,0 +1,26 @@
+CMAKE_MINIMUM_REQUIRED( VERSION 2.8 )
+PROJECT( editor_shared )
+
+INCLUDE( BWStandardProject )
+INCLUDE( BWStandardMFCProject )
+INCLUDE( BWStandardLibrary )
+
+SET( SOURCE_FILES_SRCS
+	mfc/app/i_editor_app.cpp
+	mfc/menu_helper.hpp
+	mfc/menu_helper.cpp
+	mfc/cursor/wait_cursor.cpp
+	mfc/cursor/cursor.cpp
+	mfc/dialogs/file_dialog.cpp
+	mfc/dialogs/message_box.cpp
+)
+SOURCE_GROUP( "Source_Files" FILES ${SOURCE_FILES_SRCS} )
+
+
+BW_BLOB_SOURCES( BLOB_SRCS
+	${SOURCE_FILES_SRCS}
+	${SHARED_SOURCE_FILES_SRCS}
+)
+BW_ADD_LIBRARY( editor_shared ${BLOB_SRCS} )
+
+BW_PROJECT_CATEGORY( editor_shared "Editor Shared" )

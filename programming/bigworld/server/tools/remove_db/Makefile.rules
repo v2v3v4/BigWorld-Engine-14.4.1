@@ -1,0 +1,46 @@
+#
+# RemoveDB
+#
+# Note: this is a once off Makefile, it's style should not be copied.
+#       RemoveDB will be changed to a binary in the future and this is a quick
+#       work around for the interim
+#
+
+name := remove_db
+
+# Must set $(delayed_BW_CONFIG) due to $(BW_COMMAND_BIN_DIR) chain
+delayed_BW_CONFIG := $(BW_CONFIG)
+
+destDir  := $(BW_INSTALL_DIR)/$(BW_BIN_PREFIX)/$(BW_COMMAND_BIN_DIR)
+destFile := $(destDir)/$(name)
+
+srcFile := $(BW_ABS_ROOT)/$(BW_THIS_DIR)/$(name)
+
+.PHONY: $(name)
+$(name): $(destFile)
+
+# Make sure that we build everytime that binaries are built
+BW_BINS += $(name)
+
+$(destFile): bwConfig := $(BW_CONFIG)
+$(destFile): $(srcFile) | $(destDir)
+	$(bwCommand_createCopy)
+
+
+BW_INTERMEDIATE_DIRS += $(destDir)
+
+
+.PHONY: clean_$(name)
+clean_$(name): filesToRemove := $(destFile)
+clean_$(name):
+	-@rm -rf $(filesToRemove)
+
+
+delayed_BW_CONFIG :=
+name :=
+destDir :=
+destFile :=
+srcFile :=
+
+# vi: filetype=make
+# Makefile.rules - remove_db

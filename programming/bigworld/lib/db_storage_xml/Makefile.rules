@@ -1,0 +1,15 @@
+name         := db_storage_xml
+type         := library
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =					\
+	xml_billing_system		\
+	xml_database
+
+usePython = 1
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - libdb_storage_xml

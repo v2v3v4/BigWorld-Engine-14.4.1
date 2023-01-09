@@ -1,0 +1,13 @@
+
+subdirs =
+
+$(call includeMakefilesFrom,$(subdirs))
+
+.PHONY: baseapp_extensions
+baseapp_extensions: $(BW_BASEAPP_EXTENSIONS)
+
+.PHONY: clean_baseapp_extensions
+clean_baseapp_extensions: $(addprefix clean_,$(BW_BASEAPP_EXTENSIONS))
+
+# vi: filetype=make
+# Makefile.rules - server/baseapp_extensions

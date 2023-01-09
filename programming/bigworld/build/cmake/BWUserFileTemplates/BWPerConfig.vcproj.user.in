@@ -1,0 +1,8 @@
+<Configuration
+Name="@BW_USERFILE_CONFIGNAME@|@BW_USERFILE_PLATFORM@"
+>
+<DebugSettings
+WorkingDirectory="@BW_USERFILE_WORKING_DIRECTORY@"
+/>
+</Configuration>
+

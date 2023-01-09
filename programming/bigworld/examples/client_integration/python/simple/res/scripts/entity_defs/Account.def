@@ -1,0 +1,30 @@
+<root>
+	<Properties>
+		<playerName>
+			<Type>			STRING				</Type>
+			<Flags>			BASE_AND_CLIENT		</Flags>
+			<Persistent>	true				</Persistent>
+			<Editable>		true				</Editable>
+		</playerName>
+
+		<character>
+			<Type>			STRING				</Type>
+			<Flags>			BASE				</Flags>
+			<Persistent>	true				</Persistent>
+			<Editable>		true				</Editable>
+		</character>
+	</Properties>
+
+	<ClientMethods>
+		<chatMessage>
+			<Arg>	STRING	</Arg>
+		</chatMessage>
+	</ClientMethods>
+
+	<CellMethods>
+	</CellMethods>
+
+	<BaseMethods>
+	</BaseMethods>
+
+</root>

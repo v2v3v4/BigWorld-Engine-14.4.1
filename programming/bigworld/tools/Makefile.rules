@@ -1,0 +1,9 @@
+subdirs =					\
+	process_defs			\
+	res_packer				\
+
+
+$(call includeMakefilesFrom,$(subdirs))
+
+# vi: filetype=make
+# Makefile.rules - src/tools

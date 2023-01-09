@@ -1,0 +1,57 @@
+<space.settings>
+	<timeOfDay>	system/data/sky.xml	</timeOfDay>
+	<skyGradientDome>	system/data/sky.xml	</skyGradientDome>
+	<bounds>
+		<minX>	-48	</minX>
+		<maxX>	47	</maxX>
+		<minY>	-48	</minY>
+		<maxY>	47	</maxY>
+	</bounds>
+	<terrain>
+		<version>	200	</version>
+		<heightMapSize>	128	</heightMapSize>
+		<normalMapSize>	128	</normalMapSize>
+		<holeMapSize>	64	</holeMapSize>
+		<shadowMapSize>	64	</shadowMapSize>
+		<blendMapSize>	256	</blendMapSize>
+		<lodInfo>
+			<startBias>	0.800000	</startBias>
+			<endBias>	0.990000	</endBias>
+			<lodTextureStart>	200.000000	</lodTextureStart>
+			<lodTextureDistance>	100.000000	</lodTextureDistance>
+			<blendPreloadDistance>	100.000000	</blendPreloadDistance>
+			<lodNormalStart>	300.000000	</lodNormalStart>
+			<lodNormalDistance>	100.000000	</lodNormalDistance>
+			<normalPreloadDistance>	100.000000	</normalPreloadDistance>
+			<defaultHeightMapLod>	2	</defaultHeightMapLod>
+			<detailHeightMapDistance>	500.000000	</detailHeightMapDistance>
+			<lodDistances>
+				<distance0>	50.000000	</distance0>
+				<distance1>	120.000000	</distance1>
+				<distance2>	250.000000	</distance2>
+				<distance3>	700.000000	</distance3>
+				<distance4>	1100.000000	</distance4>
+				<distance5>	1700.000000	</distance5>
+			</lodDistances>
+			<server>
+				<heightMapLod>	2	</heightMapLod>
+			</server>
+		</lodInfo>
+		<soundOcclusion>
+			<directOcclusion>	0.000000	</directOcclusion>
+			<reverbOcclusion>	0.000000	</reverbOcclusion>
+		</soundOcclusion>
+	</terrain>
+	<farPlane>	1500.000000	</farPlane>
+	<startPosition>	607.810730 211.184265 -206.891937	</startPosition>
+	<startDirection>	0.000000 0.010000 0.009964	</startDirection>
+	<minimap>
+		<mapName>	spaces/highlands/space.outdoors.dds	</mapName>
+		<worldMapWidth>	3200.0	</worldMapWidth>
+		<worldMapHeight>	-3200.0	</worldMapHeight>
+		<worldMapAnchor>	00.0 00.0	</worldMapAnchor>
+	</minimap>
+	<skyDomePartition>	0	</skyDomePartition>
+	<navmeshGenerator>	navgen	</navmeshGenerator>
+	<name> highlands </name>
+</space.settings>

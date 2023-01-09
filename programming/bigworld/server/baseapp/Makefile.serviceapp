@@ -1,0 +1,17 @@
+name  := serviceapp
+type  := copy_of_binary
+bindir = $(BW_SERVER_BIN_DIR)
+
+include $(BW_COMPONENT_HEADER)
+
+# Minimal setup required for copying a binary file
+sourceBinaryName   := baseapp
+sourceBinaryBinDir  = $(BW_SERVER_BIN_DIR)
+
+include $(BW_COMPONENT_FOOTER)
+
+sourceBinaryName :=
+sourceBinaryBinDir :=
+
+# vi: filetype=make
+# Makefile.rules - serviceapp

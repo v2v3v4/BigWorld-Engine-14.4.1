@@ -1,0 +1,44 @@
+<tree_mid_lod1.visual>
+	<node>
+		<identifier>	Scene Root	</identifier>
+		<transform>
+			<row0>	1.000000 0.000000 0.000000	</row0>
+			<row1>	0.000000 1.000000 0.000000	</row1>
+			<row2>	0.000000 0.000000 1.000000	</row2>
+			<row3>	0.000000 0.000000 0.000000	</row3>
+		</transform>
+	</node>
+	<renderSet>
+		<treatAsWorldSpaceObject>	false	</treatAsWorldSpaceObject>
+		<node>	Scene Root	</node>
+		<geometry>
+			<vertices>	vertices	</vertices>
+			<primitive>	indices	</primitive>
+			<primitiveGroup>	0
+				<material>
+					<identifier>	18 - Default	</identifier>
+					<fx>	shaders/std_effects/lightonly.fx	</fx>
+					<collisionFlags>	0	</collisionFlags>
+					<materialKind>	0	</materialKind>
+					<property>	alphaReference
+						<Int>	62	</Int>
+					</property>
+					<property>	alphaTestEnable
+						<Bool>	true	</Bool>
+					</property>
+					<property>	doubleSided
+						<Bool>	true	</Bool>
+					</property>
+					<property>	diffuseMap
+						<Texture>	sets/minspec/props/tree/maps/tree.tga	</Texture>
+					</property>
+				</material>
+			</primitiveGroup>
+		</geometry>
+	</renderSet>
+	<boundingBox>
+		<min>	-3.570332 -2.459456 -3.383529	</min>
+		<max>	2.974813 18.183954 3.512827	</max>
+	</boundingBox>
+	<materialKind>	1	</materialKind>
+</tree_mid_lod1.visual>

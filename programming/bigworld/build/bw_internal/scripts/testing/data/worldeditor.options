@@ -1,0 +1,278 @@
+<root>
+	<personality>	Personality	</personality>
+	<help>
+		<toolsReferenceGuide>	..\..\doc\content_tools_reference_guide.pdf	</toolsReferenceGuide>
+		<contentCreationManual>	..\..\doc\content_creation.chm	</contentCreationManual>
+		<shortcutsHtml>	resources/html/shortcuts.html	</shortcutsHtml>
+	</help>
+	<undoredo>
+		<limit>	50	</limit>
+	</undoredo>
+	<snaps>
+		<movement>	0.100000 0.100000 0.100000	</movement>
+		<angle>	1.000000	</angle>
+		<xyzEnabled>	0	</xyzEnabled>
+		<itemSnapMode>	1	</itemSnapMode>
+	</snaps>
+	<shellSnaps>
+		<movement>	0.01 0.01 0.01	</movement>
+		<angle>	0.1	</angle>
+	</shellSnaps>
+	<space>
+		<folder>	spaces	</folder>
+		<folder>	sets	</folder>
+		<mru0>	spaces/highlands	</mru0>
+		<mru1>	</mru1>
+		<mru2>	</mru2>
+		<mru3>	</mru3>
+		<mru4>	</mru4>
+		<mru5>	</mru5>
+		<mru6>	</mru6>
+		<mru7>	</mru7>
+		<mru8>	</mru8>
+		<mru9>	</mru9>
+	</space>
+	<bwlockd>
+		<use>	false	</use>
+		<host>	</host>
+	</bwlockd>
+	<graphics>
+		<graphicsPreferencesXML>	resources/graphics_preferences.xml	</graphicsPreferencesXML>
+		<shadows>	true	</shadows>
+		<cameraHeight>	2	</cameraHeight>
+		<farclip>	700	</farclip>
+		<timeofday>	134	</timeofday>
+	</graphics>
+	<input>
+		<exclusive>	false	</exclusive>
+		<legacyMouseWheel>	0	</legacyMouseWheel>
+	</input>
+	<consoles>
+		<darkenBackground>	true	</darkenBackground>
+		<numMessageLines>	5	</numMessageLines>
+	</consoles>
+	<precompileEffects>	0	</precompileEffects>
+	<app>
+		<maxTimeDelta>	0.5	</maxTimeDelta>
+		<mainThreadCpuAffinity>	0	</mainThreadCpuAffinity>
+	</app>
+	<itemEditor>
+		<browsePath>	sets/temperate/props/fd_rock_sharp_high.model	</browsePath>
+		<lastY>	-2.771484	</lastY>
+	</itemEditor>
+	<tools>
+		<alphaTool>	resources/maps/gizmo/disc.bmp	</alphaTool>
+		<alphaToolSize>	30	</alphaToolSize>
+		<alphaToolStrength>	500	</alphaToolStrength>
+		<alphaToolGUISize>	0.25	</alphaToolGUISize>
+		<chunkVisualisation>	resources/maps/gizmo/square.bmp	</chunkVisualisation>
+		<showChunkVisualisation>	true	</showChunkVisualisation>
+		<selectFilter>	All Except Terrain and Shells	</selectFilter>
+		<coordFilter>	World	</coordFilter>
+		<optionsPage>	resources/data/options_page.xml	</optionsPage>
+	</tools>
+	<camera>
+		<speed>	Medium
+			<Slow>	2
+				<turbo>	40	</turbo>
+			</Slow>
+			<Medium>	30
+				<turbo>	120	</turbo>
+			</Medium>
+			<Fast>	100
+				<turbo>	200	</turbo>
+			</Fast>
+			<SuperFast>	200
+				<turbo>	400	</turbo>
+			</SuperFast>
+		</speed>
+		<rotateSpeedMultiplier>	1.0	</rotateSpeedMultiplier>
+		<ortho>	0	</ortho>
+	</camera>
+	<object>
+		<Model>
+			<directory>	sets/temperate/props/	</directory>
+			<selectFilter>	Models	</selectFilter>
+		</Model>
+		<Shell>
+			<directory>	</directory>
+			<selectFilter>	Shells + Contents	</selectFilter>
+		</Shell>
+		<Prefabs>
+			<directory>	</directory>
+			<selectFilter>	All	</selectFilter>
+		</Prefabs>
+		<Entity>
+			<directory>	entities/editor/	</directory>
+			<selectFilter>	Entities	</selectFilter>
+		</Entity>
+		<Lights>
+			<directory>	</directory>
+			<selectFilter>	All Lights	</selectFilter>
+		</Lights>
+		<Particles>
+			<directory>	particles/	</directory>
+			<selectFilter>	Particles	</selectFilter>
+		</Particles>
+		<Misc>
+			<directory>	</directory>
+			<selectFilter>	All Except Terrain and Shells	</selectFilter>
+		</Misc>
+		<SpeedTree>
+			<directory>	speedtree/	</directory>
+		</SpeedTree>
+	</object>
+	<dragOnSelect>	1	</dragOnSelect>
+	<drawBSP>	0	</drawBSP>
+	<objects>
+		<readOnlyMode>	0	</readOnlyMode>
+		<materialOverrideMode>	0	</materialOverrideMode>
+	</objects>
+	<render>
+		<gameObjects>	1
+			<drawEntities>	1	</drawEntities>
+			<drawUserDataObjects>	1	</drawUserDataObjects>
+		</gameObjects>
+		<hideOutsideObjects>	0	</hideOutsideObjects>
+		<lighting>	0	</lighting>
+		<environment>	1
+			<drawFog>	0	</drawFog>
+			<drawClouds>	1	</drawClouds>
+			<drawSky>	1	</drawSky>
+			<drawSunAndMoon>	1	</drawSunAndMoon>
+			<drawSkyBoxes>	1	</drawSkyBoxes>
+		</environment>
+		<scenery>	1
+			<wireFrame>	0	</wireFrame>
+			<particle>	1	</particle>
+			<drawWater>	1
+				<reflection>	1	</reflection>
+				<simulation>	1	</simulation>
+			</drawWater>
+			<shells>	1
+				<gameVisibility>	1	</gameVisibility>
+			</shells>	
+		</scenery>
+		<terrain>	1
+			<wireFrame>	0	</wireFrame>
+			<LOD>	1	</LOD>
+		</terrain>
+		<lights>	1
+			<drawStatic>	1	</drawStatic>
+			<drawDynamic>	1	</drawDynamic>
+			<drawSpecular>	1	</drawSpecular>
+		</lights>
+		<misc>	1
+			<shadeReadOnlyAreas>	1	</shadeReadOnlyAreas>
+			<drawHeavenAndEarth>	0	</drawHeavenAndEarth>
+			<drawPatrolGraphs>	0	</drawPatrolGraphs>
+		</misc>
+		<project>
+			<spaceMapAlpha>	1.000000	</spaceMapAlpha>
+		</project>
+		<chunk>
+			<vizMode>	0	</vizMode>
+		</chunk>
+		<useUmbra>	0	</useUmbra>
+	</render>
+	<terrain>
+		<texture>
+			<maxsizelimit>	4000	</maxsizelimit>
+			<maxsize>	800.000000	</maxsize>
+			<minsizelimit>	0.3	</minsizelimit>
+			<minsize>	1.000000	</minsize>
+			<size>	100.000000	</size>
+			<maxstrengthlimit>	100	</maxstrengthlimit>
+			<maxstrength>	100.000000	</maxstrength>
+			<minstrengthlimit>	1	</minstrengthlimit>
+			<minstrength>	1.000000	</minstrength>
+			<strength>	100.000000	</strength>
+			<lodregentime>	1.000000	</lodregentime>
+		</texture>
+		<height>
+			<maxsizelimit>	4000	</maxsizelimit>
+			<maxsize>	800.000000	</maxsize>
+			<minsizelimit>	1	</minsizelimit>
+			<minsize>	1.000000	</minsize>
+			<size>	100.000000	</size>
+			<maxstrengthlimit>	10000	</maxstrengthlimit>
+			<maxstrength>	1000.000000	</maxstrength>
+			<minstrengthlimit>	-2000	</minstrengthlimit>
+			<minstrength>	1.000000	</minstrength>
+			<strength>	100.000000	</strength>
+			<maxheightlimit>	1000	</maxheightlimit>
+			<maxheight>	400.000000	</maxheight>
+			<minheightlimit>	-1000	</minheightlimit>
+			<minheight>	-400.000000	</minheight>
+			<height>	100.000000	</height>
+			<brushFalloff>	1	</brushFalloff>
+			<explicitHeightMode>	0	</explicitHeightMode>
+		</height>
+		<filter>
+			<maxsizelimit>	4000	</maxsizelimit>
+			<maxsize>	800.000000	</maxsize>
+			<minsizelimit>	1	</minsizelimit>
+			<minsize>	1.000000	</minsize>
+			<size>	100.000000	</size>
+			<index>	4	</index>
+		</filter>
+		<cutRepair>
+			<maxsizelimit>	4000	</maxsizelimit>
+			<maxsize>	800	</maxsize>
+			<minsizelimit>	1	</minsizelimit>
+			<minsize>	1	</minsize>
+			<size>	100.000000	</size>
+			<brushMode>	0	</brushMode>
+		</cutRepair>
+	</terrain>
+	<terrain2>
+		<defaults>
+			<heightMapSize>	128	</heightMapSize>
+			<normalMapSize>	128	</normalMapSize>
+			<holeMapSize>	25	</holeMapSize>
+			<shadowMapSize>	32	</shadowMapSize>
+			<blendMapSize>	128	</blendMapSize>
+		</defaults>
+	</terrain2>
+	<import>
+		<lowerBounds>	0.f	</lowerBounds>
+		<upperBounds>	185.f	</upperBounds>
+		<scaleFactor>	500.f	</scaleFactor>
+		<rawWidth>	503	</rawWidth>
+		<rawHeight>	503	</rawHeight>
+	</import>
+	<messages>
+		<showDate>	0	</showDate>
+		<showTime>	0	</showTime>
+		<showPriority>	1	</showPriority>
+		<errorMsgs>	1	</errorMsgs>
+		<warningMsgs>	1	</warningMsgs>
+		<noticeMsgs>	0	</noticeMsgs>
+		<infoMsgs>	0	</infoMsgs>
+		<assetMsgs>	1	</assetMsgs>
+	</messages>
+	<sendCrashDump>	1	</sendCrashDump>
+	<project>
+		<normalFont>	verdana_small.font	</normalFont>
+		<boldFont>	verdana_small.font	</boldFont>
+	</project>
+	<userTag> </userTag>
+	<placementPreset>	normalPlacement	</placementPreset>
+	<versionControl>
+		<batchLimit>	128	</batchLimit>
+		<enable>	true	</enable>
+		<path>	resources/scripts/svn_stub.exe	</path>
+	</versionControl>
+	<language>	helpers/languages/files_en.xml	</language>
+	<language>	helpers/languages/files_cn.xml	</language>
+	<language>	helpers/languages/worldeditor_gui_en.xml	</language>
+	<language>	helpers/languages/worldeditor_gui_cn.xml	</language>
+	<language>	helpers/languages/worldeditor_rc_en.xml	</language>
+	<language>	helpers/languages/worldeditor_rc_cn.xml	</language>
+	<checkFileCase>	false	</checkFileCase>
+	<logging>
+		<file> 
+			<enabled> true </enabled>
+		</file>
+	</logging>	
+</root>

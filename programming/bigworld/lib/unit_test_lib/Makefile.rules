@@ -1,0 +1,19 @@
+$(call includeUnitTestDirectory)
+
+name         := unit_test_lib
+type         := library
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =							\
+	unit_test						\
+	multi_proc_test_case			\
+	TestResultBWOut					\
+	base_resmgr_unit_test_harness
+
+incFlags_$(binName) += -I$(BW_ABS_SRC_LIB)/third_party/CppUnitLite2/src
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - libunit_test_lib

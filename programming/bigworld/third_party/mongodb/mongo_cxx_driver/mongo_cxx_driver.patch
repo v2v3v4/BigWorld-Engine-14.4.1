@@ -1,0 +1,11 @@
+--- mongo-cxx-driver-legacy-0.0-26compat-2.6.7/src/mongo/client/connpool.h	2015-01-16 11:18:01.000000000 -0500
++++ mongo_cxx_driver/src/mongo/client/connpool.h	2015-01-20 21:34:29.567224907 -0500
+@@ -323,7 +323,7 @@
+             return _conn;
+         }
+ 
+-        bool ok() const { return _conn > 0; }
++        bool ok() const { return _conn != 0; }
+ 
+         string getHost() const { return _host; }
+ 

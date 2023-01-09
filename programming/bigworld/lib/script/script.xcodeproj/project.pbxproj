@@ -1,0 +1,336 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		064CEE23198A379100A40699 /* pch.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 064CEE21198A379100A40699 /* pch.hpp */; };
+		064CEE24198A379100A40699 /* script_lib.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 064CEE22198A379100A40699 /* script_lib.hpp */; };
+		06896C78178FC93D009B4B0E /* py_script_object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06896C67178FC6B1009B4B0E /* py_script_object.cpp */; };
+		06896C79178FC942009B4B0E /* py_script_output_writer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06896C69178FC6B1009B4B0E /* py_script_output_writer.cpp */; };
+		06896C7A178FC958009B4B0E /* script_output_hook.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06896C6D178FC6B1009B4B0E /* script_output_hook.cpp */; };
+		1A901CB613B06E2000638FA9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A901CB513B06E2000638FA9 /* Foundation.framework */; };
+		1A909F6B13B0700400942415 /* init_time_job.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A909F6113B0700400942415 /* init_time_job.cpp */; };
+		1A909F6C13B0700400942415 /* init_time_job.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 1A909F6213B0700400942415 /* init_time_job.hpp */; };
+		1A909F6F13B0700400942415 /* pickler.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 1A909F6513B0700400942415 /* pickler.hpp */; };
+		1A909F7113B0700400942415 /* script_object.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 1A909F6A13B0700400942415 /* script_object.hpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		061B0D2B17938535003DAA08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 061B0D2717938534003DAA08 /* python.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F20F884914847FD600C9F762;
+			remoteInfo = python2.7;
+		};
+		061B0D2D1793853E003DAA08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 061B0D2717938534003DAA08 /* python.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F20F8835148479BF00C9F762;
+			remoteInfo = python2.7;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		061B0D2717938534003DAA08 /* python.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = python.xcodeproj; path = ../../build/xcode/python.xcodeproj; sourceTree = "<group>"; };
+		064CEE21198A379100A40699 /* pch.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = pch.hpp; sourceTree = "<group>"; };
+		064CEE22198A379100A40699 /* script_lib.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = script_lib.hpp; sourceTree = "<group>"; };
+		06896C62178FC6B1009B4B0E /* first_include.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = first_include.hpp; sourceTree = "<group>"; };
+		06896C63178FC6B1009B4B0E /* py_script_args.ipp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = py_script_args.ipp; sourceTree = "<group>"; };
+		06896C64178FC6B1009B4B0E /* py_script_dict.ipp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = py_script_dict.ipp; sourceTree = "<group>"; };
+		06896C65178FC6B1009B4B0E /* py_script_list.ipp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = py_script_list.ipp; sourceTree = "<group>"; };
+		06896C66178FC6B1009B4B0E /* py_script_module.ipp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = py_script_module.ipp; sourceTree = "<group>"; };
+		06896C67178FC6B1009B4B0E /* py_script_object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = py_script_object.cpp; sourceTree = "<group>"; };
+		06896C68178FC6B1009B4B0E /* py_script_object.ipp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = py_script_object.ipp; sourceTree = "<group>"; };
+		06896C69178FC6B1009B4B0E /* py_script_output_writer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = py_script_output_writer.cpp; sourceTree = "<group>"; };
+		06896C6A178FC6B1009B4B0E /* py_script_output_writer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = py_script_output_writer.hpp; sourceTree = "<group>"; };
+		06896C6B178FC6B1009B4B0E /* py_script_sequence.ipp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = py_script_sequence.ipp; sourceTree = "<group>"; };
+		06896C6C178FC6B1009B4B0E /* py_script_tuple.ipp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = py_script_tuple.ipp; sourceTree = "<group>"; };
+		06896C6D178FC6B1009B4B0E /* script_output_hook.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = script_output_hook.cpp; sourceTree = "<group>"; };
+		06896C6E178FC6B1009B4B0E /* script_output_hook.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = script_output_hook.hpp; sourceTree = "<group>"; };
+		06896C6F178FC6B1009B4B0E /* script_output_writer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = script_output_writer.hpp; sourceTree = "<group>"; };
+		06929C18159B1B0D00DB0676 /* py_script_object.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = py_script_object.hpp; sourceTree = "<group>"; };
+		1A901CB213B06E2000638FA9 /* libscript_macosx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libscript_macosx.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A901CB513B06E2000638FA9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1A909F6113B0700400942415 /* init_time_job.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = init_time_job.cpp; sourceTree = "<group>"; };
+		1A909F6213B0700400942415 /* init_time_job.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = init_time_job.hpp; sourceTree = "<group>"; };
+		1A909F6513B0700400942415 /* pickler.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = pickler.hpp; sourceTree = "<group>"; };
+		1A909F6A13B0700400942415 /* script_object.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = script_object.hpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1A901CAF13B06E2000638FA9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A901CB613B06E2000638FA9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		061B0D2817938534003DAA08 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				061B0D2C17938535003DAA08 /* libpython2.7.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		06896C77178FC6D7009B4B0E /* Python */ = {
+			isa = PBXGroup;
+			children = (
+				06896C63178FC6B1009B4B0E /* py_script_args.ipp */,
+				06896C64178FC6B1009B4B0E /* py_script_dict.ipp */,
+				06896C65178FC6B1009B4B0E /* py_script_list.ipp */,
+				06896C66178FC6B1009B4B0E /* py_script_module.ipp */,
+				06896C67178FC6B1009B4B0E /* py_script_object.cpp */,
+				06896C68178FC6B1009B4B0E /* py_script_object.ipp */,
+				06896C69178FC6B1009B4B0E /* py_script_output_writer.cpp */,
+				06896C6A178FC6B1009B4B0E /* py_script_output_writer.hpp */,
+				06896C6B178FC6B1009B4B0E /* py_script_sequence.ipp */,
+				06896C6C178FC6B1009B4B0E /* py_script_tuple.ipp */,
+			);
+			name = Python;
+			sourceTree = "<group>";
+		};
+		1A901CA713B06E2000638FA9 = {
+			isa = PBXGroup;
+			children = (
+				061B0D2717938534003DAA08 /* python.xcodeproj */,
+				1A909F6013B0700400942415 /* Source */,
+				1A901CB413B06E2000638FA9 /* Frameworks */,
+				1A901CB313B06E2000638FA9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1A901CB313B06E2000638FA9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1A901CB213B06E2000638FA9 /* libscript_macosx.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1A901CB413B06E2000638FA9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A901CB513B06E2000638FA9 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1A909F6013B0700400942415 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				06896C62178FC6B1009B4B0E /* first_include.hpp */,
+				1A909F6113B0700400942415 /* init_time_job.cpp */,
+				1A909F6213B0700400942415 /* init_time_job.hpp */,
+				064CEE21198A379100A40699 /* pch.hpp */,
+				1A909F6513B0700400942415 /* pickler.hpp */,
+				06929C18159B1B0D00DB0676 /* py_script_object.hpp */,
+				06896C77178FC6D7009B4B0E /* Python */,
+				064CEE22198A379100A40699 /* script_lib.hpp */,
+				1A909F6A13B0700400942415 /* script_object.hpp */,
+				06896C6D178FC6B1009B4B0E /* script_output_hook.cpp */,
+				06896C6E178FC6B1009B4B0E /* script_output_hook.hpp */,
+				06896C6F178FC6B1009B4B0E /* script_output_writer.hpp */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1A901CB013B06E2000638FA9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				064CEE23198A379100A40699 /* pch.hpp in Headers */,
+				1A909F6C13B0700400942415 /* init_time_job.hpp in Headers */,
+				1A909F6F13B0700400942415 /* pickler.hpp in Headers */,
+				064CEE24198A379100A40699 /* script_lib.hpp in Headers */,
+				1A909F7113B0700400942415 /* script_object.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1A901CB113B06E2000638FA9 /* script_macosx */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A901CBC13B06E2000638FA9 /* Build configuration list for PBXNativeTarget "script_macosx" */;
+			buildPhases = (
+				1A901CAE13B06E2000638FA9 /* Sources */,
+				1A901CAF13B06E2000638FA9 /* Frameworks */,
+				1A901CB013B06E2000638FA9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				061B0D2E1793853E003DAA08 /* PBXTargetDependency */,
+			);
+			name = script_macosx;
+			productName = script;
+			productReference = 1A901CB213B06E2000638FA9 /* libscript_macosx.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1A901CA913B06E2000638FA9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+			};
+			buildConfigurationList = 1A901CAC13B06E2000638FA9 /* Build configuration list for PBXProject "script" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1A901CA713B06E2000638FA9;
+			productRefGroup = 1A901CB313B06E2000638FA9 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 061B0D2817938534003DAA08 /* Products */;
+					ProjectRef = 061B0D2717938534003DAA08 /* python.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				1A901CB113B06E2000638FA9 /* script_macosx */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		061B0D2C17938535003DAA08 /* libpython2.7.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libpython2.7.a;
+			remoteRef = 061B0D2B17938535003DAA08 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1A901CAE13B06E2000638FA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A909F6B13B0700400942415 /* init_time_job.cpp in Sources */,
+				06896C78178FC93D009B4B0E /* py_script_object.cpp in Sources */,
+				06896C79178FC942009B4B0E /* py_script_output_writer.cpp in Sources */,
+				06896C7A178FC958009B4B0E /* script_output_hook.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		061B0D2E1793853E003DAA08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = python2.7;
+			targetProxy = 061B0D2D1793853E003DAA08 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1A901CBA13B06E2000638FA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					SCRIPT_PYTHON,
+					DEBUG,
+					_DEBUG,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1A901CBB13B06E2000638FA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++98";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					SCRIPT_PYTHON,
+					_HYBRID,
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1A901CBD13B06E2000638FA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DSTROOT = /tmp/script.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = ".. ../../build/xcode/pythonbuild-macosx/Include ../../build/xcode/pythonbuild-macosx ../../third_party/python/Include";
+			};
+			name = Debug;
+		};
+		1A901CBE13B06E2000638FA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DSTROOT = /tmp/script.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = ".. ../../build/xcode/pythonbuild-macosx/Include ../../build/xcode/pythonbuild-macosx ../../third_party/python/Include";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1A901CAC13B06E2000638FA9 /* Build configuration list for PBXProject "script" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A901CBA13B06E2000638FA9 /* Debug */,
+				1A901CBB13B06E2000638FA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A901CBC13B06E2000638FA9 /* Build configuration list for PBXNativeTarget "script_macosx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A901CBD13B06E2000638FA9 /* Debug */,
+				1A901CBE13B06E2000638FA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1A901CA913B06E2000638FA9 /* Project object */;
+}

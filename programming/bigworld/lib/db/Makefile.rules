@@ -1,0 +1,21 @@
+$(call includeUnitTestDirectory)
+
+name         := db
+type         := library
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =	 	db_config 						\
+				db_hash_schemes					\
+				dbapp_gateway 					\
+				dbapp_interface 				\
+				dbapp_interface_utils			\
+				dbappmgr_interface 				\
+				dbapps_gateway
+				
+usePython = 1
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - libdb

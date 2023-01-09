@@ -1,0 +1,185 @@
+/*~ module BWPersonality
+ *	@components{ client }
+ *	The name of this module is actually specified by the personality option in
+ *	the configuration file. This module should be implemented by the user.
+ *	It should contain callback methods that will be called when specific events
+ *	occur.
+ */                                                                             
+
+/*~ function BWPersonality.init
+ *	@components{ client }
+ *	This is a callback function that can be implemented by the user.
+ *
+ *	If present, this method is called when the engine initialises. Usually,
+ *	this function initialises script objects from the configuration data.
+ *
+ *	@param scriptConfig	Is a PyDataSection object refering to the root section
+ *  of script_config.xml.
+ *
+ *	@param engineConfig	Is a PyDataSection object refering to the root section
+ *  of engine_config.xml.
+ *
+ *	@param preferences	Is a PyDataSection object refering to the scriptsPreference 
+ *	section of the preferences fils (defined in engine_config.xml).
+ *
+ *	@param loadingScreenGUI	(optional) a GUI.SimpleGUIComponent refering to loading
+ *	screen GUI component shown during the startup procees, if one was defined in 
+ *	resources.xml.
+ */
+ 
+/*~ function BWPersonality.start
+ *	@components{ client }
+ *	This is a callback function that can be implemented by the user.
+ *
+ *	If present, this method is called when the engine has initialised. Usually,
+ *	this function starts the game e.g. by bringing up a menu or log-in 
+ *	screen.
+ */
+
+/*~ function BWPersonality.fini
+ *	@components{ client }
+ *	This is a callback function that can be implemented by the user.
+ *
+ *	If present, this method is called when the client engine shuts down. Usually,
+ *	this function does any cleanup required before the client exits e.g. 
+ *	log out of the server.
+ */
+
+/*~ function BWPersonality.handleKeyEvent
+ *	@components{ client }
+ *	This is a callback function that can be implemented by the user.
+ *
+ *	If present, this method is called whenever a key is pressed, released,
+ *	or repeated due to operating system auto-repeat settings.
+ *
+ *	@param	event	A PyKeyEvent object.
+ *
+ *	@return	This function should return False if the key event was not handled
+ *	and True if the key event was handled.
+ */
+ 
+/*~ function BWPersonality.handleLangChangeEvent
+ *	@components{ client }
+ *	This is a callback function that can be implemented by the user.
+ *
+ *	If present, this method is called whenever the user changes the input
+ *	language for the client (e.g. via the language bar).
+ *
+ *	@return	This function should return False if the event was not handled
+ *	and True if the event was handled.
+ */
+ 
+/*~ function BWPersonality.handleIMEEvent
+ *	@components{ client }
+ *	This is a callback function that can be implemented by the user.
+ *
+ *	If present, this method is called whenever the IME system changes
+ *	state internally. The event object can be inspected to determine what
+ *	part actually changed so that the scripts can update the IME interface
+ *	that is currently being shown to the user.
+ *
+ *	@param	event	A PyIMEEvent object.
+ *
+ *	@return	This function should return False if the event was not handled and
+ *	True if the key event was handled.
+ */
+
+/*~ function BWPersonality.handleMouseEvent
+ *	@components{ client }
+ *	This is a callback function that can be implemented by the user.
+ *
+ *	If present, this method is called whenever the mouse moves. 
+ *
+ *	@param	event A PyMouseEvent object.
+ *
+ *	@return	This function should return False if the mouse event was not
+ *	handled and True if the mouse event was handled.
+ */
+ 
+ /*~ function GUI.handleAxisEvent
+  *	@components{ client }
+  * This is a callback function that can be implemented by the user.
+  *
+  *	If present, this method is called whenever a joystick axis event occurs. 
+  *
+  *	This needs to be called from the personality script, otherwise the GUI will
+  *	not process axis events.
+  *
+  *	@param	event A PyAxisEvent object.
+  *
+  *	@return	This function should return False if the axis event was not handled
+  *	and True if the axis event was handled.
+  */
+
+/*~ function BWPersonality.onChangeEnvironments
+ *	@components{ client }
+ *	This is a callback function that can be implemented by the user.
+ *
+ *	If present, this method is called when the type of environment that the 
+ *	player is in changes. Currently there are only two types of environments: 
+ *	inside and outside.
+ *
+ *	@param	isInside	This boolean indicates whether the player is in an 
+ *	inside environment.
+ */
+
+/*~ function BWPersonality.onTimeOfDayLocalChange
+ *	@components{ client }
+ *	This is a callback function that can be implemented by the user.
+ *
+ *	If present, this method is called when:
+ *		a) the game time is changed manually i.e. not due to the natural 
+ *	progression of time; or
+ *		b) The ratio of game time to real time is changed.
+ *
+ *	@param	gameTime	The new game time.
+ *
+ *	@param	secondsPerGameHour	The new number of real time seconds per game 
+ *	time hour.
+ */
+
+/*~ function BWPersonality.onStreamComplete
+ *	@components{ client }
+ *	This is a callback function that can be implemented by the user.
+ *
+ *	If present, this method is called when a download from the proxy triggered
+ *  with either streamStringToClient() or streamFileToClient() has completed.
+ * 
+ *	See Proxy.streamStringToClient in BaseApp Python API documentation
+ *	See Proxy.streamFileToClient in BaseApp Python API documentation
+ *
+ *	@param	id		A unique ID associated with the download.
+ *  @param  desc	A short string description of the download.
+ *	@param	data	The downloaded data, as a string.
+ */
+ 
+/*~ function BWPersonality.onRecreateDevice
+ *	@components{ client }
+ *	This is a callback function that can be implemented by the user.
+ *
+ *	If present, this method is called when the Direct3D device is recreated e.g.
+ *	when the screen resolution changes. Usually, this function re-layouts the 
+ *	GUI components and recreates any static PyModelRenderer textures.
+ */
+
+/*~ function BWPersonality.expandMacros
+ *  @components{ client }
+ *
+ *  If present, this method is used to process input on the Python console
+ *  before it is fed to the Python interpreter.  It should accept a string and
+ *  return a string formed by processing macros in whatever manner you desire.
+ *  In FantasyDemo, this function is used to expand single character $
+ *  expressions like '$p' into 'BigWorld.player()'.
+ *
+ *  See the implementation of expandMacros() in
+ *  fantasydemo/res/scripts/client/FantasyDemo.py for a sample implementation.
+ */
+ /*~ function BWPersonality.onGeometryMapped
+ *  @components{ client }
+ *	If present, this callback method is called when the geometry in the current
+ *	space changes. It is called when geometry is mapped into the player's
+ *	current space.  The name of the spaces geometry is passed in as a parameter.
+ *
+ *	@param spaceID		id of the space the geometry is being mapped in to
+ *	@param spaceName	name describing the space's geometry
+ */

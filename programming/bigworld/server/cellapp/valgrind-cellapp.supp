@@ -1,0 +1,183 @@
+# This is a valgrind suppression file for CellApp.
+# Due to differences in C++ name mangling, this may only work for Debug builds
+# using gcc 3.4.4 on Fedora Core 4
+
+{
+   EntityExtraInfo not destroyed
+   Memcheck:Leak
+   fun:_Znwj
+   fun:_ZN6Entity19registerEntityExtraEPFP11EntityExtraRS_EP9PyDirInfo
+   fun:_ZN11EntityExtra8InstanceI14PassengerExtraEC1EP9PyDirInfoPFPS_R6EntityE
+}
+
+#{
+#   EntityExtraInfo not destroyed
+#   Memcheck:Leak
+#   fun:_Znwj
+#   fun:_ZN6Entity19registerEntityExtraEPFP11EntityExtraRS_EP9PyDirInfo
+#   fun:_ZN11EntityExtra8InstanceI14PassengerExtraEC1EP9PyDirInfoPFPS_R6EntityE
+#   fun:_Z41__static_initialization_and_destruction_0ii
+#   fun:_GLOBAL__I__ZN14PassengerExtra7s_type_E
+#   obj:/scratch/kongl/mf.17/bigworld/bin/Debug/cellapp
+#   obj:/scratch/kongl/mf.17/bigworld/bin/Debug/cellapp
+#   fun:__libc_csu_init
+#   fun:__libc_start_main
+#   obj:/scratch/kongl/mf.17/bigworld/bin/Debug/cellapp
+#}
+
+{
+   shutDownTime_ in controlledShutDown message is not initialised
+   Memcheck:Value8
+   fun:do_mkvalue
+   fun:do_mktuple
+   fun:do_mkvalue
+   fun:Py_BuildValue
+   fun:_ZN7CellApp18controlledShutDownERKN16CellAppInterface22controlledShutDownArgsE
+}
+
+#{
+#   shutDownTime_ in controlledShutdown message is not initialised
+#   Memcheck:Value8
+#   fun:do_mkvalue
+#   fun:do_mktuple
+#   fun:do_mkvalue
+#   fun:Py_BuildValue
+#   fun:_ZN7CellApp18controlledShutDownERKN16CellAppInterface22controlledShutDownArgsE
+#   fun:_ZN14MessageHandlerI7CellAppN16CellAppInterface22controlledShutDownArgsEE13handleMessageERKN7Mercury7AddressERNS4_21UnpackedMessageHeaderER13BinaryIStream
+#   fun:_ZN7Mercury3Nub20processOrderedPacketERKNS_7AddressEPNS_6PacketEi
+#   fun:_ZN7Mercury3Nub21processFilteredPacketERKNS_7AddressEPNS_6PacketE
+#   fun:_ZN7Mercury3Nub13processPacketERKNS_7AddressEPNS_6PacketE
+#   fun:_ZN7Mercury3Nub20processPendingEventsEb
+#   fun:_ZN7Mercury3Nub19processContinuouslyEv
+#   fun:_ZN7CellApp3runEiPPc
+#}
+
+{
+   Directory watchers not freed
+   Memcheck:Leak
+   fun:_Znwj
+   fun:_ZN6Entity7watcherEv
+}
+
+#{
+#   Directory watchers not freed
+#   Memcheck:Leak
+#   fun:_Znwj
+#   fun:_ZN6Entity7watcherEv
+#   fun:_ZN7CellApp11addWatchersEv
+#   fun:_ZN7CellApp4initEiPPc
+#   fun:_ZN7CellApp3runEiPPc
+#   fun:_Z6bwMainiPPc
+#   fun:main
+#}
+
+{
+   ServerModel's s_bspCache isn't freed
+   Memcheck:Leak
+   fun:_Znaj
+   fun:_ZN7BSPTree4loadE12SmartPointerI11BinaryBlockE
+   fun:_ZN11ServerModelC2ERKSs12SmartPointerI11DataSectionE
+}
+
+#{
+#   ServerModel's s_bspCache isn't freed
+#   Memcheck:Leak
+#   fun:_Znaj
+#   fun:_ZN7BSPTree4loadE12SmartPointerI11BinaryBlockE
+#   fun:_ZN11ServerModelC2ERKSs12SmartPointerI11DataSectionE
+#   fun:_ZN13NodelessModelC1ERKSs12SmartPointerI11DataSectionES1_
+#   fun:_ZN5Model4loadERKSs12SmartPointerI11DataSectionE
+#   fun:_ZN5Model3getERKSs
+#   fun:_ZN10SuperModelC1ERKSt6vectorISsSaISsEE
+#   fun:_ZN16ServerChunkModel4loadE12SmartPointerI11DataSectionE
+#   fun:_ZN16ServerChunkModel6createEP5Chunk12SmartPointerI11DataSectionE
+#   fun:_ZNK16ChunkItemFactory6createEP5Chunk12SmartPointerI11DataSectionE
+#   fun:_ZN5Chunk8loadItemE12SmartPointerI11DataSectionE
+#   fun:_ZN5Chunk11loadIncludeE12SmartPointerI11DataSectionERK6Matrix
+#}
+
+{
+   ServerModel's s_bspCache isn't freed
+   Memcheck:Leak
+   fun:_Znwj
+   fun:*
+   fun:*
+   fun:*
+   fun:*
+   fun:*
+   fun:*
+   fun:*
+   fun:_ZN3BSP4loadERK7BSPTreeR7BSPFileR12BSPAllocator
+}
+
+#{
+#   ServerModel's s_bspCache isn't freed
+#   Memcheck:Leak
+#   fun:_Znwj
+#   fun:_ZN9__gnu_cxx13new_allocatorIPK13WorldTriangleE8allocateEjPKv
+#   fun:_ZNSt12_Vector_baseIPK13WorldTriangleSaIS2_EE11_M_allocateEj
+#   fun:_ZNSt6vectorIPK13WorldTriangleSaIS2_EE14_M_fill_insertEN9__gnu_cxx17__normal_iteratorIPS2_S4_EEjRKS2_
+#   fun:_ZNSt6vectorIPK13WorldTriangleSaIS2_EE6insertEN9__gnu_cxx17__normal_iteratorIPS2_S4_EEjRKS2_
+#   fun:_ZNSt6vectorIPK13WorldTriangleSaIS2_EE6resizeEjRKS2_
+#   fun:_ZNSt6vectorIPK13WorldTriangleSaIS2_EE6resizeEj
+#   fun:_ZNK7BSPTree20loadTrianglesForNodeER7BSPFileR3BSPi
+#   fun:_ZN3BSP4loadERK7BSPTreeR7BSPFileR12BSPAllocator
+#   fun:_ZN3BSP4loadERK7BSPTreeR7BSPFileR12BSPAllocator
+#   fun:_ZN3BSP4loadERK7BSPTreeR7BSPFileR12BSPAllocator
+#   fun:_ZN3BSP4loadERK7BSPTreeR7BSPFileR12BSPAllocator
+#}
+
+{
+   ServerModel's s_bspCache isn't freed
+   Memcheck:Leak
+   fun:_Znwj
+   fun:_ZN11ServerModelC2ERKSs12SmartPointerI11DataSectionE
+}
+
+#{
+#   ServerModel's s_bspCache isn't freed
+#   Memcheck:Leak
+#   fun:_Znwj
+#   fun:_ZN11ServerModelC2ERKSs12SmartPointerI11DataSectionE
+#   fun:_ZN13NodelessModelC1ERKSs12SmartPointerI11DataSectionES1_
+#   fun:_ZN5Model4loadERKSs12SmartPointerI11DataSectionE
+#   fun:_ZN5Model3getERKSs
+#   fun:_ZN10SuperModelC1ERKSt6vectorISsSaISsEE
+#   fun:_ZN16ServerChunkModel4loadE12SmartPointerI11DataSectionE
+#   fun:_ZN16ServerChunkModel6createEP5Chunk12SmartPointerI11DataSectionE
+#   fun:_ZNK16ChunkItemFactory6createEP5Chunk12SmartPointerI11DataSectionE
+#   fun:_ZN5Chunk8loadItemE12SmartPointerI11DataSectionE
+#   fun:_ZN5Chunk11loadIncludeE12SmartPointerI11DataSectionERK6Matrix
+#   fun:_ZN5Chunk4loadE12SmartPointerI11DataSectionE
+#}
+
+{
+   ServerModel's s_bspCache isn't freed
+   Memcheck:Leak
+   fun:_Znwj
+   fun:*
+   fun:*
+   fun:*
+   fun:*
+   fun:*
+   fun:*
+   fun:_ZN7BSPTree4loadE12SmartPointerI11BinaryBlockE
+   fun:_ZN11ServerModelC2ERKSs12SmartPointerI11DataSectionE
+}
+
+#{
+#   ServerModel's s_bspCache isn't freed
+#   Memcheck:Leak
+#   fun:_Znwj
+#   fun:_ZN9__gnu_cxx13new_allocatorI13WorldTriangleE8allocateEjPKv
+#   fun:_ZNSt12_Vector_baseI13WorldTriangleSaIS0_EE11_M_allocateEj
+#   fun:_ZNSt6vectorI13WorldTriangleSaIS0_EE14_M_fill_insertEN9__gnu_cxx17__normal_iteratorIPS0_S2_EEjRKS0_
+#   fun:_ZNSt6vectorI13WorldTriangleSaIS0_EE6insertEN9__gnu_cxx17__normal_iteratorIPS0_S2_EEjRKS0_
+#   fun:_ZNSt6vectorI13WorldTriangleSaIS0_EE6resizeEjRKS0_
+#   fun:_ZNSt6vectorI13WorldTriangleSaIS0_EE6resizeEj
+#   fun:_ZN7BSPTree4loadE12SmartPointerI11BinaryBlockE
+#   fun:_ZN11ServerModelC2ERKSs12SmartPointerI11DataSectionE
+#   fun:_ZN13NodelessModelC1ERKSs12SmartPointerI11DataSectionES1_
+#   fun:_ZN5Model4loadERKSs12SmartPointerI11DataSectionE
+#   fun:_ZN5Model3getERKSs
+#}

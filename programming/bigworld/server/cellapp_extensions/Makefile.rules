@@ -1,0 +1,13 @@
+
+subdirs =			\
+
+$(call includeMakefilesFrom,$(subdirs))
+
+.PHONY: cellapp_extensions
+cellapp_extensions: $(BW_CELLAPP_EXTENSIONS)
+
+.PHONY: clean_cellapp_extensions
+clean_cellapp_extensions: $(addprefix clean_,$(BW_CELLAPP_EXTENSIONS))
+
+# vi: filetype=make
+# Makefile.rules - server/cellapp_extensions

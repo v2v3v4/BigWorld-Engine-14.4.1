@@ -1,0 +1,155 @@
+<rat.model>
+	<action>
+		<name>	Die	</name>
+		<animation>	rat_die2	</animation>
+	</action>
+	<action>
+		<name>	Dead	</name>
+		<animation>	rat_die2 2	</animation>
+		<filler>	true	</filler>
+	</action>
+	<action>
+		<name>	rat_turnright	</name>
+		<animation>	rat_turnright	</animation>
+		<match>
+			<trigger>
+				<minEntitySpeed>	0.000000	</minEntitySpeed>
+				<maxEntitySpeed>	1.000000	</maxEntitySpeed>
+				<minEntityAux1>	80.000000	</minEntityAux1>
+				<maxEntityAux1>	180.000000	</maxEntityAux1>
+				<minModelYaw>	-360.000000	</minModelYaw>
+				<maxModelYaw>	360.000000	</maxModelYaw>
+			</trigger>
+			<cancel>
+				<minEntityAux1>	-180.000000	</minEntityAux1>
+				<maxEntityAux1>	-40.000000	</maxEntityAux1>
+				<minModelYaw>	-360.000000	</minModelYaw>
+				<maxModelYaw>	360.000000	</maxModelYaw>
+				<minEntitySpeed>	0.000000	</minEntitySpeed>
+				<maxEntitySpeed>	100.000000	</maxEntitySpeed>
+			</cancel>
+			<oneShot>	true	</oneShot>
+			<promoteMotion>	true	</promoteMotion>
+		</match>
+		<isImpacting>	true	</isImpacting>
+		<blendInTime>	0.050000	</blendInTime>
+		<blendOutTime>	0.060000	</blendOutTime>
+	</action>
+	<action>
+		<name>	rat_turnleft	</name>
+		<animation>	rat_turnleft	</animation>
+		<match>
+			<trigger>
+				<minEntitySpeed>	0.000000	</minEntitySpeed>
+				<maxEntitySpeed>	1.000000	</maxEntitySpeed>
+				<minEntityAux1>	-180.000000	</minEntityAux1>
+				<maxEntityAux1>	-80.000000	</maxEntityAux1>
+				<minModelYaw>	-360.000000	</minModelYaw>
+				<maxModelYaw>	360.000000	</maxModelYaw>
+			</trigger>
+			<cancel>
+				<minEntitySpeed>	0.000000	</minEntitySpeed>
+				<maxEntitySpeed>	100.000000	</maxEntitySpeed>
+				<minEntityAux1>	40.000000	</minEntityAux1>
+				<maxEntityAux1>	180.000000	</maxEntityAux1>
+				<minModelYaw>	-360.000000	</minModelYaw>
+				<maxModelYaw>	360.000000	</maxModelYaw>
+			</cancel>
+			<oneShot>	true	</oneShot>
+			<promoteMotion>	true	</promoteMotion>
+		</match>
+		<isImpacting>	true	</isImpacting>
+		<blendInTime>	0.040000	</blendInTime>
+		<blendOutTime>	0.060000	</blendOutTime>
+	</action>
+	<action>
+		<name>	rat_idle	</name>
+		<animation>	rat_idle	</animation>
+		<match>
+			<trigger>
+				<minEntitySpeed>	0.000000	</minEntitySpeed>
+				<maxEntitySpeed>	0.100000	</maxEntitySpeed>
+				<minEntityAux1>	-360.000000	</minEntityAux1>
+				<maxEntityAux1>	360.000000	</maxEntityAux1>
+				<minModelYaw>	-360.000000	</minModelYaw>
+				<maxModelYaw>	360.000000	</maxModelYaw>
+			</trigger>
+		</match>
+		<blendInTime>	0.070000	</blendInTime>
+		<blendOutTime>	0.070000	</blendOutTime>
+	</action>
+	<action>
+		<name>	rat_run	</name>
+		<animation>	rat_run	</animation>
+		<isMovement>	true	</isMovement>
+		<match>
+			<trigger>
+				<minEntitySpeed>	0.000000	</minEntitySpeed>
+				<maxEntitySpeed>	17.000000	</maxEntitySpeed>
+				<minEntityAux1>	-360.000000	</minEntityAux1>
+				<maxEntityAux1>	360.000000	</maxEntityAux1>
+				<minModelYaw>	-95.000000	</minModelYaw>
+				<maxModelYaw>	95.000000	</maxModelYaw>
+			</trigger>
+			<scalePlaybackSpeed>	true	</scalePlaybackSpeed>
+			<feetFollowDirection>	true	</feetFollowDirection>
+		</match>
+	</action>
+	<metaData>
+		<created_by>	adamm	</created_by>
+		<created_on>	1255062016	</created_on>
+		<modified_by>	AdamM	</modified_by>
+		<modified_on>	1290404979	</modified_on>
+	</metaData>
+	<nodefullVisual>	characters/npc/rat/models/rat	</nodefullVisual>
+	<materialNames>	</materialNames>
+	<animation>
+		<name>	rat_run	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/npc/rat/animations/rat_run	</nodes>
+	</animation>
+	<visibilityBox>
+		<min>	-0.698643 -0.113098 -0.877479	</min>
+		<max>	0.640051 0.448581 0.259924	</max>
+	</visibilityBox>
+	<animation>
+		<name>	rat_idle	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/npc/rat/animations/rat_idle	</nodes>
+	</animation>
+	<animation>
+		<name>	rat_turnleft	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/npc/rat/animations/rat_turnleft	</nodes>
+	</animation>
+	<animation>
+		<name>	rat_turnright	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/npc/rat/animations/rat_turnright	</nodes>
+	</animation>
+	<animation>
+		<name>	rat_die	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/npc/rat/animations/rat_die	</nodes>
+	</animation>
+	<animation>
+		<name>	rat_dead	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/npc/rat/animations/rat_die	</nodes>
+		<firstFrame>	10	</firstFrame>
+		<lastFrame>	10	</lastFrame>
+	</animation>
+	<animation>
+		<name>	rat_die2	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/npc/rat/animations/rat_die2	</nodes>
+	</animation>
+	<animation>
+		<name>	rat_die2 2	</name>
+		<frameRate>	30.000000	</frameRate>
+		<nodes>	characters/npc/rat/animations/rat_die2	</nodes>
+		<firstFrame>	13	</firstFrame>
+		<lastFrame>	13	</lastFrame>
+	</animation>
+	<extent>	80.000000	</extent>
+</rat.model>

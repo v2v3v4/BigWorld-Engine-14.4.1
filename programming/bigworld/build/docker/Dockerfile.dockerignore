@@ -1,0 +1,8 @@
+# This is more of a "dockerinclude"; we ignore everything except what we want
+*
+# We're going to build an RPM rather than manually copy the Dependencies into the Dockerfile
+!game/tools/bigworld/server/pycommon/
+!game/tools/bigworld/server/rpm/
+game/tools/bigworld/server/rpm/binary_rpms/*.rpm
+!programming/bigworld/build/make
+!programming/bigworld/lib/cstdmf/bwversion.hpp

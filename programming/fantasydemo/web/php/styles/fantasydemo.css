@@ -1,0 +1,615 @@
+/* general styles */
+body
+{
+	background-color:	#DAF1F2;
+	padding:			0;
+	margin:				0;
+	font-size:			large;
+	font-family: 		Tahoma, Verdana, Helvetica, sans-serif;
+}
+
+p
+{
+	margin-left:		10%;
+}
+
+a:link, a:visited
+{
+	color:				#096288;
+	text-decoration:	none;
+}
+
+
+form 
+{
+	margin:		0;
+}
+
+h1
+{
+	font-family:		Arial, Verdana, Tahoma, sans-serif;
+	font-size:			xx-large;
+	color:				#FFFFFF;
+	background-color: 	#095288;
+	border-bottom:		2px solid #FF6600;
+	padding:			0.2em;
+	margin:				0;
+	letter-spacing:		5px;
+	text-align:			center;
+}
+
+h2 
+{
+	font-family:		Verdana, Tahoma, sans-serif;
+	font-size:			x-large;
+	font-weight:		bold;
+	padding:			0.25em;
+	margin:				0;
+	color:				#095288;
+}
+
+
+h3
+{
+	font-family:	Verdana, Tahoma, sans-serif;
+	font-size:		large;
+	font-weight:	bold;
+	font-style:		italic;
+	color:			#666666;
+	padding:		0;
+	margin:			0.25em 0 0.5em 0.5em;
+}
+
+h4, h5, h6 
+{
+	margin-bottom:	0.5em;
+}
+
+/* error and status boxes */
+.error
+{
+    border: 			1px solid red;
+    background-color: 	#FFDDDD;
+	margin:				0.5em;
+	padding:			0.5em;
+}
+
+.error li
+{
+	list-style-type:	square;
+	margin:				0 0 0 1.5em;
+	padding:			0;
+}
+
+.status
+{
+    border: 			1px solid #569FDC;
+    background-color: 	#FFFFFF;
+	margin:				7px;
+	padding:			0.35em;
+	padding-left:		2em;
+}
+
+/* form input text box */
+.textfield {
+	border: 			1px solid #65D3D5;
+	background-color: 	#DAF1F2;
+	font-size:			large;
+	padding: 			2px;
+	margin: 			1px;
+	color:				#000000;
+}
+
+input {
+	font-size: 			large;
+}
+
+.sellButton
+{
+	text-align:			center;
+	margin-bottom: 1em;
+}
+
+/* special heading for login */
+#login h1
+{
+	border-bottom:		4px solid #FF6600;
+	padding:			1em;
+	letter-spacing:		5px;
+	text-align:			center;
+}
+
+/* headings on top of all pages */
+#middle h2
+{
+	padding:		1em 0 0.25em 0.25em;
+}
+/* menu bar styles */
+.menubar 
+{
+	background-color:	#ffffff;
+	padding-top:		0.25em;
+	padding-bottom:		0.25em;
+	border-bottom:		4px solid #DAF1F2;
+	font-size:			x-large;
+	font-weight:		bold;
+	color:				#569FDC;
+	text-align:			center;
+	margin:				0;
+}
+
+.menubar a 
+{
+	text-decoration:	none;
+	padding:			0em 0.25em;
+}
+
+.menubar a:link, .menubar a:visited 
+{
+	color: #B4453C;
+}
+
+.menubar a:active, .menubar a:hover 
+{
+	color:	#FF6600;
+}
+
+
+/* welcome page style */
+.loginbox 
+{
+	border: 			1px solid #63D3D5;
+	background-color: 	#FFFFFF;
+	margin:				7px;
+	padding:			3px;
+}
+
+
+/*
+.loginbox table tr th
+{
+	text-align:			left;
+	padding: 			0;
+	margin: 			0;
+	width:				20%;
+}
+*/
+
+.user-agent-info
+{
+	font-size:		xx-small;
+	padding:		0.5em;
+	text-align:		center;
+}
+
+.footer {
+	padding:			0;
+	margin:				0;
+	background-color:	#FFFFFF;
+	text-align: 		center;
+}
+
+.goldRow
+{
+	font-weight:		bold;
+	color:				#ff6600;
+	padding:			0.35em;
+}
+
+table.inventory
+{
+	border:				1px solid #64D3D5;
+	width:				95%;
+	margin-left:		7px;
+	margin-right:		7px;
+	font-weight:		bold;
+	font-size:			large;
+	margin-bottom:		1em;
+}
+
+table.inventory a:link, table.inventory a:visited 
+{
+	color:				#096288;
+	text-decoration:	none;
+}
+
+table.inventory a:active, table.inventory a:hover
+{
+	color:				#ff6600;
+	text-decoration:	none;
+}
+
+table.inventory tr th
+{
+	background-color:	#569FDC;
+	color:				#FFFFFF;
+	border-top:			none;
+	border-bottom:		none;
+	text-align:			left;
+	padding:			0.25em;
+}
+
+table.inventory tr td
+{
+	padding:			0.25em 0.25em 0.25em 0.5em;
+	border-top:			1px dashed #64D3D5;
+}
+
+
+table.inventory tr
+{
+	background-color:		#ebebeb;
+}
+
+table.inventory tr.alt2
+{
+	background-color:		#ffffff;
+}
+
+table.inventory tr.alt1-first td
+{
+	border-top:			none;
+}
+
+.item-detail
+{
+	border:				1px solid #64D3D5;
+	background-color:	#095288;
+	margin:				7px;
+	padding:			0.5em;
+}
+
+.item-detail-image
+{
+	border:				1px solid #FF6600;
+	padding:			0.5em;
+	margin-bottom:		7px;
+	text-align:			center;
+	background-color:	#0F2443;
+	color:				#FFFFFF;
+}
+
+.item-detail-title 
+{
+	text-align:			center;
+	font-weight:		bold;
+	font-size:			large;
+	color:				#FFFFFF;
+	background-color:	#569FDC;
+	padding:			0.25em;
+}
+
+
+.item-detail-description
+{
+	color:				#FFFFFF;
+	padding:			0.25em;
+	
+}
+
+.item-detail-stat
+{
+	border:					1px solid #64D3D5;
+	border-top-style:		none;
+	background:				#FFFFFF;
+	text-align:				center;
+}
+
+table.item-detail-statistics
+{
+	width:				85%;
+	font-weight:		bold;
+	font-size:			large;
+	color:				#FF6600;
+	background-color:	#FFFFFF;
+}
+
+table.item-detail-statistics tr th, table.item-detail-statistics tr td
+{
+	border-top:			1px dashed #64D3D5;
+}
+
+table.item-detail-statistics tr th
+{
+	padding:			0.15em 0.15em 0.15em 0;
+	text-align:			right;
+}
+
+table.item-detail-statistics tr td
+{
+	padding:			0.15em 1em 0.15em 1em;
+	text-align:			left;
+}
+
+table.item-detail-statistics tr.alt1-first th, table.item-detail-statistics tr.alt1-first td
+{
+	border-top-style:	none;
+}
+
+.item-detail-backtotop
+{
+	text-align:		right;
+	
+}
+
+.item-detail-backtotop a
+{
+	color:				#ffdd00;
+}
+
+/* tradeTable */
+table.tradeTable 
+{
+	width:			95%;
+	border:			1px solid #64D3D5;
+	font-weight:	bold;
+	font-size:		large;
+	margin-left: 	7px;
+	margin-right:	7px;
+	margin-bottom:	0;
+}
+
+table.tradeTable tr th
+{
+	background-color:		#569FDC;
+	color:					#FFFFFF;
+	border-top:				none;
+	border-bottom:			none;
+	text-align:				left;
+	padding:				0.25em;
+}
+
+table.tradeTable tr td
+{
+	background-color:	#EBEBEB;
+	border-top:			1px dashed #64D3D5;
+	padding-top:		0.25em;
+	padding-bottom:		0.25em;
+	padding-right:		0.25em;
+	padding-left:		0.5em;
+	vertical-align:		top;
+}
+
+table.tradeTable a:link, table.tradeTable a:visited 
+{
+	color:				#095288;
+	text-decoration:	none;
+}
+
+table.tradeTable a:active, table.tradeTable a:hover
+{
+	color:				#FF6600;
+	text-decoration:	none;
+}
+
+table.tradeTable tr.alt2 td
+{
+	background-color:	#FFFFFF;
+	margin:				0 0 0 14px;
+}
+
+table.tradeTable tr th
+{
+	background-color:	#569FDC;
+	color:				#FFFFFF;
+	border-top:			none;
+	border-bottom:		none;
+	text-align:			left;
+	padding:			0.25em;
+}
+
+table.tradeTable tr.alt1-first td
+{
+	border-top:			none;
+}
+
+.sale-player
+{
+	font-weight:		normal;
+}
+
+table.bidTable
+{
+	border:				1px solid #BE5414;
+	font-weight:		bold;
+	font-size:			large;
+	width:				95%;
+	margin-left:		7px;
+	margin-right:		7px;
+	margin-bottom:		7px;
+}
+
+
+table.bidTable a:link, table.bidTable a:visited 
+{
+	color: #853A0E;
+	text-decoration:none;
+}
+
+table.bidTable a:active, table.bidTable a:hover 
+{
+	color: #FF6600;
+	text-decoration:none;
+}
+
+table.bidTable tr th
+{
+	background-color:		#E66851;
+	color:					#FFFFFF;
+	border-top:				none;
+	border-bottom:			none;
+	text-align:				left;
+	padding:				0.25em;
+	padding-left:			0.5em;
+}
+
+table.bidTable tr td
+{
+	border-top:				1px dashed #FF6600;
+	padding-top:			0.25em;
+	padding-bottom:			0.25em;
+	padding-right:			0.25em;
+	padding-left:			0.5em;
+	vertical-align:			top;
+	background-color:		#FFF0E6;
+
+}
+
+table.bidTable tr.alt2 td
+{
+	background-color:		#FFFFFF;
+}
+
+table.bidTable tr.alt1-first td
+{
+	border-top:				none;
+}
+
+table.inventoryActions
+{
+	margin-left:	10%;
+}
+
+table.inventoryActions tr td
+{
+	font-size:		large;
+	text-align:		left;
+	vertical-align:	top;
+}
+
+.auctionGood
+{
+	color:			green;
+}
+
+.auctionBad
+{
+	color:			red;
+}
+
+table.auctionActions
+{
+	text-indent:	10%;
+}
+
+table.auctionActions tr td
+{
+	font-size:		large;
+	text-align:		right;
+}
+table.auctionActions tr th
+{
+	font-size:		large;
+	font-weight:	bold;
+	text-align:		right;
+}
+
+
+/* sell items styles */
+table.saleTable
+{
+	width:			95%;
+	margin-left:	7px;
+	margin-right:	7px;
+	margin-bottom:	7px;
+	border:			1px solid #BE5414;
+	font-weight:	bold;
+	font-size:		large;
+}
+
+
+table.saleTable a:link, table.saleTable a:visited 
+{
+	color: #853A0E;
+	text-decoration:none;
+}
+
+table.saleTable a:active, table.saleTable a:hover 
+{
+	color: #FF6600;
+	text-decoration:none;
+}
+
+table.saleTable tr th
+{
+	background-color:		#E66851;
+	color:					#FFFFFF;
+	border-top:				none;
+	border-bottom:			none;
+	text-align:				left;
+	padding:				0.25em;
+}
+
+table.saleTable tr td
+{
+	padding:				0.25em 0.25em 0.25em 0.5em;
+	border-top:				1px dashed #ff6600;
+}
+
+
+table.saleTable tr 
+{
+	background-color:		#FFF0E6;
+	text-align:				left;
+}
+
+table.saleTable tr.alt2
+{
+	background-color:		#FFFFFF;
+}
+
+table.saleTable tr.alt1-first td
+{
+	border-top:				none;
+}
+
+table tr.action td
+{
+	border-top:			1px solid black;
+	background-color:	transparent;
+	text-align:			right;
+}
+
+.login-body
+{
+	padding-top:		2em;
+	background-color:	#daf1f2;
+}
+
+
+table.character_list 
+{
+	margin-left:	auto;
+	margin-right:	auto;
+	width:			60%;
+	border:			1px solid #64D3D5;
+	margin-bottom:	0.5em;
+}
+
+table.character_list td.portrait
+{
+	padding:		0.5em;
+	width:			1px;
+}
+
+table.character_list td.name
+{
+	padding-left:	2em;
+	padding-right:	2em;
+}
+table.character_list td.portrait img
+{
+	border:			0;
+	margin:			0;
+	padding:		0;
+}
+
+table.character_list tr
+{
+	background-color:	#EBEBEB;
+}
+
+table.character_list tr.alt2
+{
+	background-color:	#FFFFFF;
+}

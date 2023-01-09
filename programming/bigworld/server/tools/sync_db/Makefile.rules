@@ -1,0 +1,46 @@
+ifneq ($(SYSTEM_HAS_MYSQL),0)
+
+$(warning MySQL development libraries not installed. Skipping sync_db build.)
+
+else
+
+name  := sync_db
+type  := binary
+bindir = $(BW_COMMAND_BIN_DIR)
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =			        	\
+	main 			        	\
+	mysql_dry_run_connection	\
+	mysql_dry_run_wrapper		\
+	mysql_synchronise	    	\
+	mysql_table_initialiser		\
+	mysql_upgrade_database		\
+
+buildTimeFile := main
+
+dependsOn =				\
+	chunk				\
+	scene				\
+	db_storage_mysql	\
+	db_storage			\
+	db 					\
+	entitydef			\
+	pyscript			\
+	script				\
+	server
+
+usePython = 1
+useOpenSSL = 1
+useMySQL = 1
+
+incFlags_$(binName) += -I$(BW_ABS_SRC_SERVER)
+
+include $(BW_COMPONENT_FOOTER)
+
+endif
+# endif MySQL development libraries installed. 
+
+# vi: filetype=make
+# Makefile.rules - sync_db

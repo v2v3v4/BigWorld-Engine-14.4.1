@@ -1,0 +1,10 @@
+/* Note the heading and index link for NoModule is handled as a special case. */
+
+/*~	module NoModule
+ *	@components{ all }
+ *	
+ *	The classes listed below are created through factory function or attribute accessors, and can not be
+ *	instantiated directly (and so are not bound to any module).
+ *	
+ *	See the class documentation for information on accessing these classes.
+ */

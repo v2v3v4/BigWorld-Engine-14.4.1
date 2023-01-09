@@ -1,0 +1,4 @@
+/*~ module BigWorld
+ *	@components{ bots }
+ *	The BigWorld module provides python script access to parts of the Bots.
+ */

@@ -1,0 +1,59 @@
+name  := bots
+type  := binary
+bindir = $(BW_SERVER_BIN_DIR)
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =									\
+	add_bots_callable_watcher				\
+	bot_entity								\
+	bots_config								\
+	beeline_controller						\
+	client_app								\
+	del_bots_callable_watcher				\
+	del_tagged_bots_callable_watcher		\
+	entity									\
+	entity_type								\
+	main									\
+	main_app								\
+	movement_controller						\
+	patrol_graph							\
+	py_bots									\
+	py_entities								\
+	py_entity								\
+	py_server								\
+	script_bot_entity						\
+	update_movement_callable_watcher		\
+	zigzag_patrol_graph						\
+	../../../common/simple_client_entity	\
+	../../../common/py_server_lib			\
+	../../../common/py_timer				\
+	../../../common/py_terrain				\
+	../../../common/py_physics2				\
+
+
+dependsOn = 			\
+	entitydef 			\
+	pyscript 			\
+	script				\
+	server 				\
+	chunk_loading		\
+	chunk 				\
+	entitydef 			\
+	terrain				\
+	physics2			\
+	scene				\
+	connection_model	\
+	connection			\
+	moo					\
+	png
+
+usePython = 1
+useOpenSSL = 1
+
+incFlags_$(binName) += -I$(BW_ABS_SRC)
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - bots

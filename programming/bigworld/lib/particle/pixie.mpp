@@ -1,0 +1,11 @@
+// Pixie Factory - documented as a module (used via import Pixie)
+
+/*~ module Pixie
+ *	Pixie provides an interface to the BigWorld client's particle
+ *	systems. It exposes factory functions that provide instances
+ *	of the client's base particle system and instances of modifier classes that
+ *	affect the manner in which the particle system evolves over time.
+ *
+ *	The modifiers that affect the ParticleSystem are all derived from
+ *	the ParticleSystemAction abstract base class.
+ */

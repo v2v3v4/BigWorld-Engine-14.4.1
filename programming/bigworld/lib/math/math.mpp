@@ -1,0 +1,6 @@
+/*~ module Math
+ *	@components{ client, cell, base }
+ *
+ *	This module contains factory methods for the various maths related
+ *	BigWorld objects.
+ */

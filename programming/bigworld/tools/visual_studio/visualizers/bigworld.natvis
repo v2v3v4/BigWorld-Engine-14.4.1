@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+    <Type Name="BW::SceneObject">
+        <DisplayString>Object: {handle_} of type: {type_,u} ({BW::SceneTypeSystem::s_typeNameLookup.table_._Myfirst[BW::SceneTypeSystem::s_objectTypeContext.externalMapping_._Myfirst[type_ - 1]],s})</DisplayString>
+		<Expand>
+			<Item Name="Type">type_,u</Item>
+			<Item Name="TypeName">BW::SceneTypeSystem::s_typeNameLookup.table_._Myfirst[BW::SceneTypeSystem::s_objectTypeContext.externalMapping_._Myfirst[type_ - 1]],s</Item>
+			<Item Name="Handle">handle_,x</Item>
+		</Expand>
+    </Type>
+	
+</AutoVisualizer>

@@ -1,0 +1,720 @@
+<rat.visual>
+	<node>
+		<identifier>	Scene Root	</identifier>
+		<transform>
+			<row0>	1.000000 0.000000 0.000000	</row0>
+			<row1>	0.000000 1.000000 0.000000	</row1>
+			<row2>	0.000000 0.000000 1.000000	</row2>
+			<row3>	0.000000 0.000000 0.000000	</row3>
+		</transform>
+		<node>
+			<identifier>	RatBrownPelvis	</identifier>
+			<transform>
+				<row0>	-0.166299 0.287848 0.943127	</row0>
+				<row1>	-0.984808 0.000000 -0.173648	</row1>
+				<row2>	-0.049984 -0.957676 0.283475	</row2>
+				<row3>	-0.003469 0.183541 -0.193473	</row3>
+			</transform>
+			<node>
+				<identifier>	RatBrownLBackLeg1	</identifier>
+				<transform>
+					<row0>	-0.870750 0.307348 0.383839	</row0>
+					<row1>	-0.064993 -0.845682 0.529716	</row1>
+					<row2>	0.487412 0.436303 0.756353	</row2>
+					<row3>	-0.006847 0.029248 0.006219	</row3>
+				</transform>
+				<node>
+					<identifier>	RatBrownLBackLeg2	</identifier>
+					<transform>
+						<row0>	1.000000 -0.000000 -0.000000	</row0>
+						<row1>	0.000000 0.999983 0.005792	</row1>
+						<row2>	0.000000 -0.005792 0.999983	</row2>
+						<row3>	0.101673 0.000000 0.000000	</row3>
+					</transform>
+					<node>
+						<identifier>	RatBrownLBackLegPalm	</identifier>
+						<transform>
+							<row0>	0.920855 0.126411 0.368845	</row0>
+							<row1>	-0.188026 0.972694 0.136063	</row1>
+							<row2>	-0.341573 -0.194647 0.919478	</row2>
+							<row3>	0.102204 -0.000000 -0.000000	</row3>
+						</transform>
+						<node>
+							<identifier>	RatBrownLBackLegDigit01	</identifier>
+							<transform>
+								<row0>	0.890160 0.410627 -0.197486	</row0>
+								<row1>	-0.446545 0.872381 -0.198868	</row1>
+								<row2>	0.090623 0.265211 0.959922	</row2>
+								<row3>	0.018736 0.000000 -0.000000	</row3>
+							</transform>
+							<node>
+								<identifier>	RatBrownLBackLegDigit01BlendBonemesh09	</identifier>
+								<transform>
+									<row0>	-0.450636 0.892697 -0.004356	</row0>
+									<row1>	0.003500 0.006646 0.999972	</row1>
+									<row2>	0.892701 0.450608 -0.006120	</row2>
+									<row3>	0.143064 0.160403 -0.010232	</row3>
+								</transform>
+							</node>
+						</node>
+						<node>
+							<identifier>	RatBrownLBackLegPalmBlendBonemesh09	</identifier>
+							<transform>
+								<row0>	-0.338930 0.917216 -0.209384	</row0>
+								<row1>	-0.798951 -0.163085 0.578861	</row1>
+								<row2>	0.496793 0.363480 0.788085	</row2>
+								<row3>	0.098349 0.146375 0.136153	</row3>
+							</transform>
+						</node>
+					</node>
+					<node>
+						<identifier>	RatBrownLBackLeg2BlendBonemesh09	</identifier>
+						<transform>
+							<row0>	0.239980 0.923738 -0.298525	</row0>
+							<row1>	-0.683440 -0.057629 -0.727729	</row1>
+							<row2>	-0.689435 0.378664 0.617490	</row2>
+							<row3>	-0.008608 0.147534 0.124861	</row3>
+						</transform>
+					</node>
+				</node>
+				<node>
+					<identifier>	RatBrownLBackLeg1BlendBonemesh09	</identifier>
+					<transform>
+						<row0>	-0.631686 0.758189 0.161622	</row0>
+						<row1>	-0.510249 -0.563593 0.649622	</row1>
+						<row2>	0.583626 0.327890 0.742879	</row2>
+						<row3>	0.169202 0.171732 0.058125	</row3>
+					</transform>
+				</node>
+			</node>
+			<node>
+				<identifier>	RatBrownRBackLeg1	</identifier>
+				<transform>
+					<row0>	0.468207 -0.509868 0.721676	</row0>
+					<row1>	-0.304738 -0.859794 -0.409742	</row1>
+					<row2>	0.829408 -0.028078 -0.557938	</row2>
+					<row3>	-0.006847 -0.029248 0.006219	</row3>
+				</transform>
+				<node>
+					<identifier>	RatBrownRBackLeg2	</identifier>
+					<transform>
+						<row0>	0.549636 -0.284985 -0.785293	</row0>
+						<row1>	0.264833 0.950970 -0.159750	</row1>
+						<row2>	0.792316 -0.120167 0.598160	</row2>
+						<row3>	0.101673 0.000000 -0.000000	</row3>
+					</transform>
+					<node>
+						<identifier>	RatBrownRBackLegPalm	</identifier>
+						<transform>
+							<row0>	0.397186 0.099771 0.912299	</row0>
+							<row1>	-0.080688 0.994020 -0.073579	</row1>
+							<row2>	-0.914184 -0.044387 0.402861	</row2>
+							<row3>	0.102204 0.000000 0.000000	</row3>
+						</transform>
+						<node>
+							<identifier>	RatBrownRBackLegDigit01	</identifier>
+							<transform>
+								<row0>	0.892758 0.243052 0.379353	</row0>
+								<row1>	-0.179568 0.964191 -0.195169	</row1>
+								<row2>	-0.413205 0.106119 0.904434	</row2>
+								<row3>	0.018736 -0.000000 0.000000	</row3>
+							</transform>
+							<node>
+								<identifier>	RatBrownRBackLegDigit01BlendBonemesh09	</identifier>
+								<transform>
+									<row0>	0.450636 0.892697 0.004356	</row0>
+									<row1>	0.003500 -0.006646 0.999972	</row1>
+									<row2>	0.892701 -0.450608 -0.006120	</row2>
+									<row3>	0.146210 -0.154210 -0.010188	</row3>
+								</transform>
+							</node>
+						</node>
+						<node>
+							<identifier>	RatBrownRBackLegPalmBlendBonemesh09	</identifier>
+							<transform>
+								<row0>	0.338454 0.917295 0.209807	</row0>
+								<row1>	-0.799718 0.162903 0.577853	</row1>
+								<row2>	0.495883 -0.363363 0.788712	</row2>
+								<row3>	0.100559 -0.139988 0.137732	</row3>
+							</transform>
+						</node>
+					</node>
+					<node>
+						<identifier>	RatBrownRBackLeg2BlendBonemesh09	</identifier>
+						<transform>
+							<row0>	-0.239979 0.923738 0.298525	</row0>
+							<row1>	-0.683440 0.057629 -0.727728	</row1>
+							<row2>	-0.689434 -0.378664 0.617490	</row2>
+							<row3>	-0.010272 -0.141125 0.126932	</row3>
+						</transform>
+					</node>
+				</node>
+				<node>
+					<identifier>	RatBrownRBackLeg1BlendBonemesh09	</identifier>
+					<transform>
+						<row0>	0.631686 0.758189 -0.161622	</row0>
+						<row1>	-0.510248 0.563593 0.649622	</row1>
+						<row2>	0.583626 -0.327890 0.742879	</row2>
+						<row3>	0.173584 -0.166472 0.057003	</row3>
+					</transform>
+				</node>
+			</node>
+			<node>
+				<identifier>	RatBrownSpine1	</identifier>
+				<transform>
+					<row0>	0.919104 -0.032177 0.392699	</row0>
+					<row1>	0.056988 0.997036 -0.051684	</row1>
+					<row2>	-0.389873 0.069882 0.918213	</row2>
+					<row3>	0.000000 0.000000 0.000000	</row3>
+				</transform>
+				<node>
+					<identifier>	RatBrownSpine2	</identifier>
+					<transform>
+						<row0>	0.994156 -0.107242 0.012364	</row0>
+						<row1>	0.107361 0.994176 -0.009372	</row1>
+						<row2>	-0.011286 0.010644 0.999880	</row2>
+						<row3>	0.055640 0.000000 0.000000	</row3>
+					</transform>
+					<node>
+						<identifier>	RatBrownSpine3	</identifier>
+						<transform>
+							<row0>	0.970679 -0.078184 -0.227309	</row0>
+							<row1>	0.090330 0.994961 0.043515	</row1>
+							<row2>	0.222762 -0.062771 0.972850	</row2>
+							<row3>	0.061319 0.000000 0.000000	</row3>
+						</transform>
+						<node>
+							<identifier>	RatBrownSpine4	</identifier>
+							<transform>
+								<row0>	0.816857 -0.077267 0.571642	</row0>
+								<row1>	0.064333 0.997009 0.042833	</row1>
+								<row2>	-0.573242 0.001786 0.819384	</row2>
+								<row3>	0.061936 -0.000000 0.000000	</row3>
+							</transform>
+							<node>
+								<identifier>	RatBrownSpine5	</identifier>
+								<transform>
+									<row0>	0.992274 -0.030945 0.120148	</row0>
+									<row1>	0.034684 0.998973 -0.029157	</row1>
+									<row2>	-0.119122 0.033099 0.992328	</row2>
+									<row3>	0.054395 0.000000 -0.000000	</row3>
+								</transform>
+								<node>
+									<identifier>	RatBrownRibcage	</identifier>
+									<transform>
+										<row0>	0.887827 -0.001127 -0.460175	</row0>
+										<row1>	-0.008710 0.999777 -0.019254	</row1>
+										<row2>	0.460094 0.021102 0.887619	</row2>
+										<row3>	0.059077 -0.000000 -0.000000	</row3>
+									</transform>
+									<node>
+										<identifier>	RatBrownLFrontLegCollarbone	</identifier>
+										<transform>
+											<row0>	-0.346870 0.935976 0.060243	</row0>
+											<row1>	-0.936656 -0.342367 -0.073889	</row1>
+											<row2>	-0.048533 -0.082057 0.995445	</row2>
+											<row3>	0.015228 0.010240 0.019154	</row3>
+										</transform>
+										<node>
+											<identifier>	RatBrownLFrontLeg1	</identifier>
+											<transform>
+												<row0>	0.432096 0.830589 0.351304	</row0>
+												<row1>	-0.876177 0.294397 0.381634	</row1>
+												<row2>	0.213558 -0.472707 0.854951	</row2>
+												<row3>	0.028904 0.000000 0.000000	</row3>
+											</transform>
+											<node>
+												<identifier>	RatBrownLFrontLeg2	</identifier>
+												<transform>
+													<row0>	-0.372396 0.142106 0.917130	</row0>
+													<row1>	-0.042066 0.984608 -0.169642	</row1>
+													<row2>	-0.927120 -0.101754 -0.360686	</row2>
+													<row3>	0.083304 -0.000000 -0.000000	</row3>
+												</transform>
+												<node>
+													<identifier>	RatBrownLFrontLegPalm	</identifier>
+													<transform>
+														<row0>	0.932469 -0.360906 -0.015774	</row0>
+														<row1>	0.361136 0.930187 0.065829	</row1>
+														<row2>	-0.009086 -0.067080 0.997706	</row2>
+														<row3>	0.070418 0.000000 0.000000	</row3>
+													</transform>
+													<node>
+														<identifier>	RatBrownLFrontLegDigit01	</identifier>
+														<transform>
+															<row0>	0.428261 0.106342 0.897376	</row0>
+															<row1>	-0.427838 0.898560 0.097698	</row1>
+															<row2>	-0.795957 -0.425772 0.430315	</row2>
+															<row3>	0.013662 0.000000 -0.000000	</row3>
+														</transform>
+														<node>
+															<identifier>	RatBrownLFrontLegDigit01BlendBonemesh09	</identifier>
+															<transform>
+																<row0>	0.099290 0.994594 -0.030407	</row0>
+																<row1>	0.119318 0.018438 0.992685	</row1>
+																<row2>	0.987879 -0.102192 -0.116842	</row2>
+																<row3>	-0.055475 0.063463 -0.000297	</row3>
+															</transform>
+														</node>
+													</node>
+													<node>
+														<identifier>	RatBrownLFrontLegPalmBlendBonemesh09	</identifier>
+														<transform>
+															<row0>	-0.041782 0.986189 0.160269	</row0>
+															<row1>	-0.764908 -0.134771 0.629883	</row1>
+															<row2>	0.642783 -0.096273 0.759974	</row2>
+															<row3>	-0.023725 0.063496 -0.040934	</row3>
+														</transform>
+													</node>
+												</node>
+												<node>
+													<identifier>	RatBrownLFrontLeg2BlendBonemesh09	</identifier>
+													<transform>
+														<row0>	0.051506 0.986329 0.156532	</row0>
+														<row1>	-0.819026 -0.047968 0.571747	</row1>
+														<row2>	0.571439 -0.157652 0.805359	</row2>
+														<row3>	0.056635 0.065319 -0.042588	</row3>
+													</transform>
+												</node>
+											</node>
+											<node>
+												<identifier>	RatBrownLFrontLeg1BlendBonemesh09	</identifier>
+												<transform>
+													<row0>	-0.232014 0.969288 -0.081548	</row0>
+													<row1>	-0.397130 -0.170921 -0.901706	</row1>
+													<row2>	-0.887951 -0.176824 0.424589	</row2>
+													<row3>	0.109424 0.073602 0.056466	</row3>
+												</transform>
+											</node>
+										</node>
+									</node>
+									<node>
+										<identifier>	RatBrownRFrontLegCollarbone	</identifier>
+										<transform>
+											<row0>	-0.236055 -0.971265 -0.030355	</row0>
+											<row1>	0.955324 -0.237672 0.175696	</row1>
+											<row2>	-0.177862 0.012475 0.983976	</row2>
+											<row3>	0.015228 -0.010240 0.019154	</row3>
+										</transform>
+										<node>
+											<identifier>	RatBrownRFrontLeg1	</identifier>
+											<transform>
+												<row0>	0.594091 -0.553165 0.584007	</row0>
+												<row1>	0.798228 0.495156 -0.343005	</row1>
+												<row2>	-0.099436 0.669947 0.735720	</row2>
+												<row3>	0.028904 0.000000 0.000000	</row3>
+											</transform>
+											<node>
+												<identifier>	RatBrownRFrontLeg2	</identifier>
+												<transform>
+													<row0>	-0.745352 -0.135724 0.652709	</row0>
+													<row1>	-0.011647 0.981559 0.190806	</row1>
+													<row2>	-0.666569 0.134615 -0.733188	</row2>
+													<row3>	0.083304 0.000000 0.000000	</row3>
+												</transform>
+												<node>
+													<identifier>	RatBrownRFrontLegPalm	</identifier>
+													<transform>
+														<row0>	0.546203 0.554332 -0.627996	</row0>
+														<row1>	-0.482439 0.821060 0.305146	</row1>
+														<row2>	0.684774 0.136298 0.715896	</row2>
+														<row3>	0.070418 0.000000 0.000000	</row3>
+													</transform>
+													<node>
+														<identifier>	RatBrownRFrontLegDigit01	</identifier>
+														<transform>
+															<row0>	0.721732 -0.564951 -0.399917	</row0>
+															<row1>	0.568088 0.813563 -0.124063	</row1>
+															<row2>	0.395447 -0.137648 0.908116	</row2>
+															<row3>	0.013662 0.000000 0.000000	</row3>
+														</transform>
+														<node>
+															<identifier>	RatBrownRFrontLegDigit01BlendBonemesh09	</identifier>
+															<transform>
+																<row0>	-0.099290 0.994594 0.030408	</row0>
+																<row1>	0.119318 -0.018438 0.992685	</row1>
+																<row2>	0.987879 0.102192 -0.116842	</row2>
+																<row3>	-0.056164 -0.056563 -0.000086	</row3>
+															</transform>
+														</node>
+													</node>
+													<node>
+														<identifier>	RatBrownRFrontLegPalmBlendBonemesh09	</identifier>
+														<transform>
+															<row0>	0.041782 0.986189 -0.160269	</row0>
+															<row1>	-0.764908 0.134771 0.629883	</row1>
+															<row2>	0.642784 0.096273 0.759974	</row2>
+															<row3>	-0.023435 -0.056654 -0.042046	</row3>
+														</transform>
+													</node>
+												</node>
+												<node>
+													<identifier>	RatBrownRFrontLeg2BlendBonemesh09	</identifier>
+													<transform>
+														<row0>	-0.051506 0.986329 -0.156532	</row0>
+														<row1>	-0.819026 0.047967 0.571747	</row1>
+														<row2>	0.571439 0.157652 0.805359	</row2>
+														<row3>	0.056278 -0.058476 -0.043674	</row3>
+													</transform>
+												</node>
+											</node>
+											<node>
+												<identifier>	RatBrownRFrontLeg1BlendBonemesh09	</identifier>
+												<transform>
+													<row0>	0.232014 0.969288 0.081548	</row0>
+													<row1>	-0.397130 0.170921 -0.901706	</row1>
+													<row2>	-0.887951 0.176824 0.424589	</row2>
+													<row3>	0.111033 -0.066878 0.057031	</row3>
+												</transform>
+											</node>
+										</node>
+									</node>
+									<node>
+										<identifier>	RatBrownNeck	</identifier>
+										<transform>
+											<row0>	0.985640 0.096528 -0.138549	</row0>
+											<row1>	-0.091622 0.994934 0.041373	</row1>
+											<row2>	0.141841 -0.028085 0.989491	</row2>
+											<row3>	0.000000 0.000000 0.000000	</row3>
+										</transform>
+										<node>
+											<identifier>	RatBrownHead	</identifier>
+											<transform>
+												<row0>	0.942726 0.143397 0.301174	</row0>
+												<row1>	-0.142874 0.989453 -0.023886	</row1>
+												<row2>	-0.301422 -0.020512 0.953270	</row2>
+												<row3>	0.067962 0.000000 0.000000	</row3>
+											</transform>
+											<node>
+												<identifier>	RatBrownHeadBlendBonemesh09	</identifier>
+												<transform>
+													<row0>	-0.000000 -1.000000 0.000000	</row0>
+													<row1>	-0.320788 0.000000 -0.947151	</row1>
+													<row2>	0.947151 -0.000000 -0.320788	</row2>
+													<row3>	-0.100090 -0.003469 0.173208	</row3>
+												</transform>
+											</node>
+										</node>
+										<node>
+											<identifier>	RatBrownNeckBlendBonemesh09	</identifier>
+											<transform>
+												<row0>	-0.000000 -1.000000 0.000000	</row0>
+												<row1>	0.067572 -0.000000 -0.997714	</row1>
+												<row2>	0.997714 -0.000000 0.067572	</row2>
+												<row3>	-0.090974 -0.003469 0.121484	</row3>
+											</transform>
+										</node>
+									</node>
+									<node>
+										<identifier>	RatBrownRibcageBlendBonemesh09	</identifier>
+										<transform>
+											<row0>	-0.000000 -1.000000 -0.000000	</row0>
+											<row1>	-0.156016 0.000000 -0.987755	</row1>
+											<row2>	0.987755 -0.000000 -0.156016	</row2>
+											<row3>	-0.061677 -0.003469 0.138674	</row3>
+										</transform>
+									</node>
+								</node>
+								<node>
+									<identifier>	RatBrownSpine5BlendBonemesh09	</identifier>
+									<transform>
+										<row0>	-0.000000 -1.000000 -0.000000	</row0>
+										<row1>	-0.545799 0.000000 -0.837916	</row1>
+										<row2>	0.837916 -0.000000 -0.545799	</row2>
+										<row3>	0.059411 -0.003469 0.151771	</row3>
+									</transform>
+								</node>
+							</node>
+							<node>
+								<identifier>	RatBrownSpine4BlendBonemesh09	</identifier>
+								<transform>
+									<row0>	0.000000 -1.000000 0.000000	</row0>
+									<row1>	-0.355039 -0.000000 -0.934851	</row1>
+									<row2>	0.934851 0.000000 -0.355039	</row2>
+									<row3>	0.080157 -0.003469 0.160936	</row3>
+								</transform>
+							</node>
+						</node>
+						<node>
+							<identifier>	RatBrownSpine3BlendBonemesh09	</identifier>
+							<transform>
+								<row0>	0.000000 -1.000000 0.000000	</row0>
+								<row1>	0.304006 -0.000000 -0.952670	</row1>
+								<row2>	0.952670 0.000000 0.304006	</row2>
+								<row3>	0.024500 -0.003469 0.175853	</row3>
+							</transform>
+						</node>
+					</node>
+					<node>
+						<identifier>	RatBrownSpine2BlendBonemesh09	</identifier>
+						<transform>
+							<row0>	0.000000 -1.000000 -0.000000	</row0>
+							<row1>	0.095234 -0.000000 -0.995455	</row1>
+							<row2>	0.995455 0.000000 0.095234	</row2>
+							<row3>	0.122526 -0.003469 0.166668	</row3>
+						</transform>
+					</node>
+				</node>
+			</node>
+			<node>
+				<identifier>	RatBrownTail1	</identifier>
+				<transform>
+					<row0>	-0.953239 -0.002503 0.302207	</row0>
+					<row1>	-0.000862 0.999984 0.005565	</row1>
+					<row2>	-0.302216 0.005045 -0.953226	</row2>
+					<row3>	0.000000 0.000000 0.000000	</row3>
+				</transform>
+				<node>
+					<identifier>	RatBrownTail2	</identifier>
+					<transform>
+						<row0>	0.937837 -0.039217 0.344854	</row0>
+						<row1>	0.040965 0.999158 0.002220	</row1>
+						<row2>	-0.344651 0.012045 0.938654	</row2>
+						<row3>	0.080926 0.000000 0.000000	</row3>
+					</transform>
+					<node>
+						<identifier>	RatBrownTail3	</identifier>
+						<transform>
+							<row0>	0.975504 -0.089656 0.200881	</row0>
+							<row1>	0.087397 0.995971 0.020105	</row1>
+							<row2>	-0.201874 -0.002056 0.979409	</row2>
+							<row3>	0.070875 0.000000 -0.000000	</row3>
+						</transform>
+						<node>
+							<identifier>	RatBrownTail4	</identifier>
+							<transform>
+								<row0>	0.991061 -0.117638 0.062923	</row0>
+								<row1>	0.117049 0.993041 0.012992	</row1>
+								<row2>	-0.064013 -0.005511 0.997934	</row2>
+								<row3>	0.077374 0.000000 0.000000	</row3>
+							</transform>
+							<node>
+								<identifier>	RatBrownTail5	</identifier>
+								<transform>
+									<row0>	0.994085 -0.108069 0.010728	</row0>
+									<row1>	0.108039 0.994141 0.003389	</row1>
+									<row2>	-0.011031 -0.002210 0.999937	</row2>
+									<row3>	0.074361 -0.000000 0.000000	</row3>
+								</transform>
+								<node>
+									<identifier>	RatBrownTail6	</identifier>
+									<transform>
+										<row0>	0.998604 -0.052294 0.007434	</row0>
+										<row1>	0.052242 0.998609 0.007157	</row1>
+										<row2>	-0.007798 -0.006759 0.999947	</row2>
+										<row3>	0.081367 -0.000000 -0.000000	</row3>
+									</transform>
+									<node>
+										<identifier>	RatBrownTail7	</identifier>
+										<transform>
+											<row0>	0.999342 0.036269 -0.000137	</row0>
+											<row1>	-0.036267 0.999316 0.007205	</row1>
+											<row2>	0.000398 -0.007195 0.999974	</row2>
+											<row3>	0.079006 -0.000000 0.000000	</row3>
+										</transform>
+										<node>
+											<identifier>	RatBrownTail8	</identifier>
+											<transform>
+												<row0>	0.990153 0.139885 0.005430	</row0>
+												<row1>	-0.139942 0.990084 0.012232	</row1>
+												<row2>	-0.003665 -0.012871 0.999910	</row2>
+												<row3>	0.086406 0.000000 -0.000000	</row3>
+											</transform>
+											<node>
+												<identifier>	RatBrownTail8BlendBonemesh09	</identifier>
+												<transform>
+													<row0>	-0.000000 -1.000000 0.000000	</row0>
+													<row1>	-0.009971 0.000000 0.999950	</row1>
+													<row2>	-0.999950 0.000000 -0.009971	</row2>
+													<row3>	-0.726259 -0.003469 -0.089573	</row3>
+												</transform>
+											</node>
+										</node>
+										<node>
+											<identifier>	RatBrownTail7BlendBonemesh09	</identifier>
+											<transform>
+												<row0>	-0.000000 -1.000000 -0.000000	</row0>
+												<row1>	-0.010788 -0.000000 0.999942	</row1>
+												<row2>	-0.999942 0.000000 -0.010788	</row2>
+												<row3>	-0.639780 -0.003469 -0.090167	</row3>
+											</transform>
+										</node>
+									</node>
+									<node>
+										<identifier>	RatBrownTail6BlendBonemesh09	</identifier>
+										<transform>
+											<row0>	-0.000000 -1.000000 -0.000000	</row0>
+											<row1>	-0.004965 -0.000000 0.999988	</row1>
+											<row2>	-0.999988 0.000000 -0.004965	</row2>
+											<row3>	-0.561288 -0.003469 -0.086440	</row3>
+										</transform>
+									</node>
+								</node>
+								<node>
+									<identifier>	RatBrownTail5BlendBonemesh09	</identifier>
+									<transform>
+										<row0>	-0.000000 -1.000000 -0.000000	</row0>
+										<row1>	-0.005679 -0.000000 0.999984	</row1>
+										<row2>	-0.999984 0.000000 -0.005679	</row2>
+										<row3>	-0.479860 -0.003469 -0.086840	</row3>
+									</transform>
+								</node>
+							</node>
+							<node>
+								<identifier>	RatBrownTail4BlendBonemesh09	</identifier>
+								<transform>
+									<row0>	-0.000000 -1.000000 -0.000000	</row0>
+									<row1>	-0.007599 -0.000000 0.999971	</row1>
+									<row2>	-0.999971 0.000000 -0.007599	</row2>
+									<row3>	-0.405331 -0.003469 -0.087761	</row3>
+								</transform>
+							</node>
+						</node>
+						<node>
+							<identifier>	RatBrownTail3BlendBonemesh09	</identifier>
+							<transform>
+								<row0>	-0.000000 -1.000000 -0.000000	</row0>
+								<row1>	-0.062512 -0.000000 0.998044	</row1>
+								<row2>	-0.998044 0.000000 -0.062512	</row2>
+								<row3>	-0.322525 -0.003469 -0.109892	</row3>
+							</transform>
+						</node>
+					</node>
+					<node>
+						<identifier>	RatBrownTail2BlendBonemesh09	</identifier>
+						<transform>
+							<row0>	-0.000000 -1.000000 -0.000000	</row0>
+							<row1>	-0.254055 -0.000000 0.967190	</row1>
+							<row2>	-0.967190 0.000000 -0.254055	</row2>
+							<row3>	-0.224360 -0.003469 -0.170102	</row3>
+						</transform>
+					</node>
+				</node>
+				<node>
+					<identifier>	RatBrownTail1BlendBonemesh09	</identifier>
+					<transform>
+						<row0>	-0.000000 -1.000000 -0.000000	</row0>
+						<row1>	-0.565557 -0.000000 0.824709	</row1>
+						<row2>	-0.824709 0.000000 -0.565557	</row2>
+						<row3>	-0.072865 -0.003469 -0.235840	</row3>
+					</transform>
+				</node>
+			</node>
+			<node>
+				<identifier>	RatBrownPelvisBlendBonemesh09	</identifier>
+				<transform>
+					<row0>	-0.000000 -1.000000 -0.000000	</row0>
+					<row1>	0.287849 0.000000 -0.957676	</row1>
+					<row2>	0.957676 -0.000000 0.287849	</row2>
+					<row3>	0.141160 -0.003469 0.202493	</row3>
+				</transform>
+			</node>
+		</node>
+	</node>
+	<renderSet>
+		<treatAsWorldSpaceObject>	true	</treatAsWorldSpaceObject>
+		<node>	RatBrownPelvisBlendBonemesh09	</node>
+		<node>	RatBrownTail1BlendBonemesh09	</node>
+		<node>	RatBrownLBackLeg1BlendBonemesh09	</node>
+		<node>	RatBrownSpine2BlendBonemesh09	</node>
+		<node>	RatBrownRBackLeg1BlendBonemesh09	</node>
+		<node>	RatBrownRBackLeg2BlendBonemesh09	</node>
+		<node>	RatBrownRBackLegPalmBlendBonemesh09	</node>
+		<node>	RatBrownTail2BlendBonemesh09	</node>
+		<node>	RatBrownRBackLegDigit01BlendBonemesh09	</node>
+		<node>	RatBrownTail3BlendBonemesh09	</node>
+		<node>	RatBrownSpine3BlendBonemesh09	</node>
+		<node>	RatBrownSpine4BlendBonemesh09	</node>
+		<node>	RatBrownRFrontLeg1BlendBonemesh09	</node>
+		<node>	RatBrownRFrontLeg2BlendBonemesh09	</node>
+		<node>	RatBrownSpine5BlendBonemesh09	</node>
+		<node>	RatBrownHeadBlendBonemesh09	</node>
+		<node>	RatBrownRibcageBlendBonemesh09	</node>
+		<geometry>
+			<vertices>	mesh090a.vertices	</vertices>
+			<primitive>	mesh090a.indices	</primitive>
+			<primitiveGroup>	0
+				<material>
+					<identifier>	rat_skinned	</identifier>
+					<fx>	shaders/std_effects/lightonly_skinned.fx	</fx>
+					<collisionFlags>	0	</collisionFlags>
+					<materialKind>	0	</materialKind>
+					<property>	diffuseMap
+						<Texture>	characters/npc/rat/maps/rat.bmp	</Texture>
+					</property>
+				</material>
+			</primitiveGroup>
+		</geometry>
+	</renderSet>
+	<renderSet>
+		<treatAsWorldSpaceObject>	true	</treatAsWorldSpaceObject>
+		<node>	RatBrownLFrontLeg2BlendBonemesh09	</node>
+		<node>	RatBrownLFrontLeg1BlendBonemesh09	</node>
+		<node>	RatBrownSpine5BlendBonemesh09	</node>
+		<node>	RatBrownSpine4BlendBonemesh09	</node>
+		<node>	RatBrownHeadBlendBonemesh09	</node>
+		<node>	RatBrownNeckBlendBonemesh09	</node>
+		<node>	RatBrownRibcageBlendBonemesh09	</node>
+		<node>	RatBrownTail7BlendBonemesh09	</node>
+		<node>	RatBrownTail6BlendBonemesh09	</node>
+		<node>	RatBrownTail8BlendBonemesh09	</node>
+		<node>	RatBrownTail5BlendBonemesh09	</node>
+		<node>	RatBrownTail4BlendBonemesh09	</node>
+		<node>	RatBrownTail3BlendBonemesh09	</node>
+		<node>	RatBrownSpine3BlendBonemesh09	</node>
+		<node>	RatBrownLBackLeg2BlendBonemesh09	</node>
+		<node>	RatBrownLBackLeg1BlendBonemesh09	</node>
+		<node>	RatBrownSpine2BlendBonemesh09	</node>
+		<geometry>
+			<vertices>	mesh090b.vertices	</vertices>
+			<primitive>	mesh090b.indices	</primitive>
+			<primitiveGroup>	0
+				<material>
+					<identifier>	rat_skinned	</identifier>
+					<fx>	shaders/std_effects/lightonly_skinned.fx	</fx>
+					<collisionFlags>	0	</collisionFlags>
+					<materialKind>	0	</materialKind>
+					<property>	diffuseMap
+						<Texture>	characters/npc/rat/maps/rat.bmp	</Texture>
+					</property>
+				</material>
+			</primitiveGroup>
+		</geometry>
+	</renderSet>
+	<renderSet>
+		<treatAsWorldSpaceObject>	true	</treatAsWorldSpaceObject>
+		<node>	RatBrownSpine3BlendBonemesh09	</node>
+		<node>	RatBrownSpine2BlendBonemesh09	</node>
+		<node>	RatBrownLBackLeg2BlendBonemesh09	</node>
+		<node>	RatBrownLBackLegDigit01BlendBonemesh09	</node>
+		<node>	RatBrownTail2BlendBonemesh09	</node>
+		<node>	RatBrownLBackLeg1BlendBonemesh09	</node>
+		<node>	RatBrownTail1BlendBonemesh09	</node>
+		<node>	RatBrownLBackLegPalmBlendBonemesh09	</node>
+		<node>	RatBrownRFrontLeg2BlendBonemesh09	</node>
+		<node>	RatBrownRFrontLegPalmBlendBonemesh09	</node>
+		<node>	RatBrownRFrontLegDigit01BlendBonemesh09	</node>
+		<node>	RatBrownLFrontLegPalmBlendBonemesh09	</node>
+		<node>	RatBrownLFrontLegDigit01BlendBonemesh09	</node>
+		<node>	RatBrownLFrontLeg2BlendBonemesh09	</node>
+		<geometry>
+			<vertices>	mesh090c.vertices	</vertices>
+			<primitive>	mesh090c.indices	</primitive>
+			<primitiveGroup>	0
+				<material>
+					<identifier>	rat_skinned	</identifier>
+					<fx>	shaders/std_effects/lightonly_skinned.fx	</fx>
+					<collisionFlags>	0	</collisionFlags>
+					<materialKind>	0	</materialKind>
+					<property>	diffuseMap
+						<Texture>	characters/npc/rat/maps/rat.bmp	</Texture>
+					</property>
+				</material>
+			</primitiveGroup>
+		</geometry>
+	</renderSet>
+	<boundingBox>
+		<min>	-0.132386 -0.001952 -0.871616	</min>
+		<max>	0.132386 0.239499 0.251860	</max>
+	</boundingBox>
+</rat.visual>

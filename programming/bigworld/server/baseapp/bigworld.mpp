@@ -1,0 +1,6 @@
+/*~ module BigWorld
+ *	@components{ base }
+ *	The BigWorld module provides python script access to parts of the Base.
+ *	Specifically it provides timer callback function registration and removal,
+ *	and Base creation.
+ */

@@ -1,0 +1,72 @@
+name  := message_logger
+type  := binary
+bindir = $(BW_SERVER_TOOLS_BIN_DIR)
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =						\
+	categories					\
+	mldb/categories				\
+	user_log					\
+	user_log_writer				\
+	user_segment				\
+	user_segment_writer			\
+	user_components				\
+	logging_component			\
+	log_entry_address			\
+	log_time					\
+	query_result				\
+	hostnames					\
+	mldb/hostnames				\
+	hostnames_validator			\
+	mldb/hostnames_validator	\
+	file_handler				\
+	binary_file_handler			\
+	text_file_handler			\
+	active_files				\
+	unary_integer_file			\
+	log_component_names			\
+	mldb/log_component_names	\
+	format_strings				\
+	mldb/format_strings			\
+	log_string_interpolator		\
+	log_string_writer			\
+	log_string_printer			\
+	logger						\
+	mldb/metadata				\
+	mldb/log_common 			\
+	mldb/log_storage 			\
+	log_storage					\
+	main						\
+	mlutil						\
+	metadata
+
+ifeq ($(SYSTEM_HAS_MONGODB),1)
+
+cxxSource +=								\
+	mongodb/categories						\
+	mongodb/connection_thread_data			\
+	mongodb/format_strings					\
+	mongodb/hostnames			 			\
+	mongodb/log_component_names 			\
+	mongodb/log_storage			 			\
+	mongodb/metadata						\
+	mongodb/user_log_writer					\
+	mongodb/tasks/add_server_start_task		\
+	mongodb/tasks/flush_task				\
+	mongodb/tasks/mongodb_background_task	\
+	mongodb/tasks/roll_task
+
+cxxFlags_$(binName) += -DHAS_MONGODB_SUPPORT
+useMongoDB := 1
+
+endif
+
+dependsOn = server
+
+useJSON := 1
+
+include $(BW_COMPONENT_FOOTER)
+
+# # vi: filetype=make
+# Makefile.rules - message_logger

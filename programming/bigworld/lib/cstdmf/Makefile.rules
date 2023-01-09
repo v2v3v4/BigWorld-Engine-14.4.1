@@ -1,0 +1,72 @@
+$(call includeUnitTestDirectory)
+
+name         := cstdmf
+type         := library
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =					\
+	allocator				\
+	ansi_allocator			\
+	protected_allocator		\
+	bw_safe_allocatable		\
+	arg_parser				\
+	background_file_writer	\
+	base64					\
+	bgtask_manager			\
+	binaryfile				\
+	bit_reader				\
+	bit_writer				\
+	blob_or_null			\
+	binary_stream			\
+	bwrandom				\
+	bwversion				\
+	bw_hash					\
+	bw_memory				\
+	bw_platform_info		\
+	bw_string_ref			\
+	bw_util					\
+	bw_util_linux			\
+	callstack				\
+	callstack_linux			\
+	checksum_stream 		\
+	concurrency				\
+	cpuinfo					\
+	critical_error_handler	\
+	cstdmf_init				\
+	debug					\
+	debug_filter			\
+	debug_message_file_logger\
+	debug_message_source	\
+	dogwatch				\
+	dprintf					\
+	grow_only_pod_allocator	\
+	fini_job				\
+	fixed_sized_allocator	\
+	intrusive_object		\
+	locale					\
+	log_meta_data			\
+	log_msg					\
+	md5						\
+	memory_debug			\
+	memory_stream			\
+	polymorphic_watcher		\
+	profile					\
+	profiler				\
+	slot_tracker			\
+	stack_tracker			\
+	string_utils			\
+	string_builder			\
+	task_watcher			\
+	time_queue				\
+	timestamp				\
+	unique_id				\
+	watcher					\
+	watcher_path_request	\
+
+exportFor = cstdmf
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - libcstdmf

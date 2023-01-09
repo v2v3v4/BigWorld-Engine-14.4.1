@@ -1,0 +1,148 @@
+
+<html>
+   <head>
+      <style type="text/css">
+         .sikuli-code {
+            font-size: 20px;
+            font-family: "Osaka-mono", Monospace;
+            line-height: 1.5em;
+            display:table-cell;
+            white-space: pre-wrap;       /* css-3 */
+            white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* Internet Explorer 5.5+ */
+            width: 99%;   /* remove horizontal scroll-bar when viewing in IE7 */
+         }
+         .sikuli-code img {
+            vertical-align: middle;
+            margin: 2px;
+            border: 1px solid #ccc;
+            padding: 2px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-box-shadow: 1px 1px 1px gray;
+            -webkit-box-shadow: 1px 1px 2px gray;
+         }
+         .kw {
+            color: blue;
+         }
+         .skw {
+            color: rgb(63, 127, 127);
+         }
+
+         .str {
+            color: rgb(128, 0, 0);
+         }
+
+         .dig {
+            color: rgb(128, 64, 0);
+         }
+
+         .cmt {
+            color: rgb(200, 0, 200);
+         }
+
+         h2 {
+            display: inline;
+            font-weight: normal;
+         }
+
+         .info {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            display: none;
+         }
+
+         a {
+            color: #9D2900;
+         }
+
+         body {
+            font-family: "Trebuchet MS", Arial, Sans-Serif;
+         }
+
+      </style>
+   </head>
+<body>
+<div class="info">
+<h2>reloadAllTextures.sikuli\reloadAllTextures.sikuli</h2> <a href="reloadAllTextures.sikuli\reloadAllTextures.zip">(Download this script)</a>
+</div>
+<pre class="sikuli-code">
+<span class="kw">import</span> shutil
+TIMEOUT = <span class="dig">60</span>
+modeleditor_path = <span class="str">"\\game\\bin\\tools\\modeleditor\\win64\\modeleditor.exe -noConversion"</span>
+dir_path = <span class="str">"\\game\\res\\fantasydemo\\characters\\avatars\\ranger"</span>
+FOCOUSE_ON_PROGRAM = <img src="focuseOnProgram.png" />
+
+<span class="kw">def</span> moveTexture(source_org, destination):
+    source = os.listdir(source_org)
+    <span class="kw">for</span> files <span class="kw">in</span> source:
+        <span class="kw">if</span> files.endswith(<span class="str">".bmp"</span>) <span class="kw">or</span> files.endswith(<span class="str">".dds"</span>) <span class="kw">or</span> files.endswith(<span class="str">".tga"</span>):
+            shutil.move(source_org + <span class="str">"\\"</span> + files,destination)
+
+<span class="kw">def</span> StartModelEditor(modeleditor_path):
+    openApp(modeleditor_path)
+    PROGRAN_OPENED = <img src="programOpened.png" />
+    <span class="cmt">#wait for model editor to start
+</span>    <span class="skw">wait</span>(PROGRAN_OPENED,<span class="dig">2</span>*TIMEOUT)
+    <span class="skw">click</span>(FOCOUSE_ON_PROGRAM)
+
+<span class="kw">def</span> waitForTextureRanger():
+    RANGER_HAND = <img src="rangerHand.png" />
+    RANGER_BACK = <img src="rangerBack.png" />
+    RANGER_BODY = <img src="rangerBody.png" />
+    <span class="skw">wait</span>(RANGER_BODY,TIMEOUT)
+    <span class="skw">wait</span>(RANGER_BACK,TIMEOUT)
+    <span class="skw">wait</span>(RANGER_HAND,TIMEOUT)
+
+<span class="kw">def</span> waitForNOTTextureRanger():
+    NO_TEXTURE_RANGER_HAND = <img src="notTextureRangerHand.png" />
+    NO_TEXTURE_RANGER_BELT = <img src="notTextureRangerBelt.png" />
+    NO_TEXTURE_RANGER_BODY = <img src="notTextureRangerBody.png" />
+    <span class="skw">wait</span>(NO_TEXTURE_RANGER_BODY,TIMEOUT)
+    <span class="skw">wait</span>(NO_TEXTURE_RANGER_BELT,TIMEOUT)
+    <span class="skw">wait</span>(NO_TEXTURE_RANGER_HAND,TIMEOUT)
+
+<span class="kw">def</span> TestReloadAllTextures():
+    waitForTextureRanger()
+    <span class="kw">print</span> <span class="str">"Move Textures"</span>
+    moveTexture(dir_path, dir_path + <span class="str">"\\animations"</span>)
+    <span class="kw">print</span> <span class="str">"Refrush model"</span>
+    <span class="skw">click</span>(FOCOUSE_ON_PROGRAM)
+    <span class="skw">type</span>(<span class="str">"t"</span>, KEY_CTRL)
+    <span class="skw">click</span>(FOCOUSE_ON_PROGRAM)
+    waitForNOTTextureRanger()
+    <span class="kw">print</span> <span class="str">"Return Textures"</span>
+    moveTexture(dir_path + <span class="str">"\\animations"</span>, dir_path)
+    <span class="skw">sleep</span>(<span class="dig">1</span>)
+    <span class="kw">print</span> <span class="str">"Refrush model"</span>
+    <span class="skw">click</span>(FOCOUSE_ON_PROGRAM)
+    <span class="skw">type</span>(<span class="str">"t"</span>, KEY_CTRL)
+    <span class="skw">sleep</span>(<span class="dig">1</span>)
+    <span class="skw">click</span>(FOCOUSE_ON_PROGRAM)
+    <span class="skw">type</span>(<span class="str">"t"</span>, KEY_CTRL)
+    <span class="skw">click</span>(FOCOUSE_ON_PROGRAM)
+    waitForTextureRanger()
+
+<span class="cmt"># ============== main function ==========
+</span>console=False
+
+
+<span class="kw">if</span> len(sys.argv) &gt; <span class="dig">1</span>:
+    modeleditor_path = sys.argv[<span class="dig">1</span>] + modeleditor_path
+    dir_path = sys.argv[<span class="dig">1</span>] + dir_path
+<span class="kw">else</span>:
+    <span class="kw">print</span> <span class="str">"ERORR: missing argumants for the Model and Model editor location"</span>
+    modeleditor_path = <span class="str">"c:\\bw\\2_current"</span> + modeleditor_path
+    dir_path = <span class="str">"c:\\bw\\2_current"</span> + dir_path
+    <span class="cmt">#sys.exit(1)
+</span>
+StartModelEditor(modeleditor_path)
+<span class="skw">sleep</span>(<span class="dig">1</span>)
+TestReloadAllTextures()
+<span class="kw">print</span>(<span class="str">"&gt;&gt;&gt;&gt;&gt;&gt;&gt;FINISH TEST&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;"</span>)
+</pre>
+</body>
+</html>

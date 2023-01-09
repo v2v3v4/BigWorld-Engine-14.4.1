@@ -1,0 +1,20 @@
+name  := dbappmgr
+type  := unit_test
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =		main
+
+
+dependsOn += 	db 		\
+				server 	\
+				resmgr 	\
+				network \
+				math 	\
+				cstdmf 	\
+				zip
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - dbappmgr/unit_test

@@ -1,0 +1,13 @@
+<dungeon_tunnel_basic.model>
+	<materialNames>	</materialNames>
+	<visibilityBox>
+		<min>	-0.000038 -0.000003 -4.980285	</min>
+		<max>	14.999999 5.074686 -0.005099	</max>
+	</visibilityBox>
+	<nodelessVisual>	sets/minspec/shells/dungeon/dungeon_tunnel/model/dungeon_tunnel_basic	</nodelessVisual>
+	<metaData>
+		<copyright>	Copyright BigWorld Pty Ltd.  Use freely in any BigWorld licensed game.	</copyright>
+		<modified_by>	adamm	</modified_by>
+		<modified_on>	1254381734	</modified_on>
+	</metaData>
+</dungeon_tunnel_basic.model>

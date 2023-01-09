@@ -1,0 +1,246 @@
+<ranger_body.model>
+	<parent>	characters/avatars/base/base	</parent>
+	<extent>	73.000000	</extent>
+	<dye>
+		<matter>	Legs_skinned	</matter>
+		<replaces>	Legs_skinned	</replaces>
+		<tint>
+			<name>	CustomLegs	</name>
+			<material>
+				<identifier>	Legs_skinned	</identifier>
+				<fx>	shaders/std_effects/colourise_normalmap_specmap_skinned.fx	</fx>
+				<collisionFlags>	0	</collisionFlags>
+				<materialKind>	0	</materialKind>
+				<property>	specularMap
+					<Texture>	characters/avatars/ranger/combined_spec.bmp	</Texture>
+				</property>
+				<property>	normalMap
+					<Texture>	characters/avatars/ranger/combined_norms.bmp	</Texture>
+				</property>
+				<property>	diffuseMap
+					<Texture>	characters/avatars/ranger/combined_desat.bmp	</Texture>
+				</property>
+			</material>
+			<property>
+				<name>	clothesColour1	</name>
+				<default>	0.988235 0.152941 0.694118 1.000000	</default>
+			</property>
+			<property>
+				<name>	clothesColour2	</name>
+				<default>	0.243137 0.023529 0.807843 1.000000	</default>
+			</property>
+			<property>
+				<name>	clothesColour3	</name>
+				<default>	1.000000 0.023529 0.023529 1.000000	</default>
+			</property>
+			<property>
+				<name>	clothesColour4	</name>
+				<default>	0.752941 0.160784 0.266667 1.000000	</default>
+			</property>
+		</tint>
+		<tint>
+			<name>	Merchant	</name>
+			<material>
+				<identifier>	Legs_skinned	</identifier>
+				<fx>	shaders/std_effects/colourise_normalmap_specmap_skinned.fx	</fx>
+				<collisionFlags>	0	</collisionFlags>
+				<materialKind>	0	</materialKind>
+				<property>	specularMap
+					<Texture>	characters/avatars/ranger/combined_spec.bmp	</Texture>
+				</property>
+				<property>	normalMap
+					<Texture>	characters/avatars/ranger/combined_norms.bmp	</Texture>
+				</property>
+				<property>	diffuseMap
+					<Texture>	characters/avatars/ranger/combined.bmp	</Texture>
+				</property>
+			</material>
+			<property>
+				<name>	clothesColour1	</name>
+				<default>	0.917647 0.937255 0.113725 1.000000	</default>
+			</property>
+			<property>
+				<name>	clothesColour2	</name>
+				<default>	0.980392 0.980392 0.647059 1.000000	</default>
+			</property>
+			<property>
+				<name>	clothesColour3	</name>
+				<default>	0.980392 0.980392 0.647059 1.000000	</default>
+			</property>
+			<property>
+				<name>	clothesColour4	</name>
+				<default>	0.274510 0.180392 0.109804 1.000000	</default>
+			</property>
+		</tint>
+	</dye>
+	<dye>
+		<matter>	Single_material_skinned	</matter>
+		<replaces>	Single material_skinned	</replaces>
+		<tint>
+			<name>	CustomTorso	</name>
+			<material>
+				<identifier>	Single material_skinned	</identifier>
+				<fx>	shaders/std_effects/colourise_normalmap_specmap_skinned.fx	</fx>
+				<collisionFlags>	0	</collisionFlags>
+				<materialKind>	0	</materialKind>
+				<property>	specularMap
+					<Texture>	characters/avatars/ranger/combined_spec.bmp	</Texture>
+				</property>
+				<property>	normalMap
+					<Texture>	characters/avatars/ranger/combined_norms.bmp	</Texture>
+				</property>
+				<property>	diffuseMap
+					<Texture>	characters/avatars/ranger/combined_desat.bmp	</Texture>
+				</property>
+			</material>
+			<property>
+				<name>	clothesColour1	</name>
+				<default>	0.741176 0.294118 0.980392 1.000000	</default>
+			</property>
+			<property>
+				<name>	clothesColour2	</name>
+				<default>	0.333333 0.305882 0.611765 1.000000	</default>
+			</property>
+			<property>
+				<name>	clothesColour3	</name>
+				<default>	0.752941 0.160784 0.266667 1.000000	</default>
+			</property>
+			<property>
+				<name>	clothesColour4	</name>
+				<default>	0.501961 0.501961 0.250980 1.000000	</default>
+			</property>
+		</tint>
+		<tint>
+			<name>	Merchant	</name>
+			<material>
+				<identifier>	Single material_skinned	</identifier>
+				<fx>	shaders/std_effects/colourise_normalmap_specmap_skinned.fx	</fx>
+				<collisionFlags>	0	</collisionFlags>
+				<materialKind>	0	</materialKind>
+				<property>	specularMap
+					<Texture>	characters/avatars/ranger/combined_spec.bmp	</Texture>
+				</property>
+				<property>	normalMap
+					<Texture>	characters/avatars/ranger/combined_norms.bmp	</Texture>
+				</property>
+				<property>	diffuseMap
+					<Texture>	characters/avatars/ranger/combined.bmp	</Texture>
+				</property>
+			</material>
+			<property>
+				<name>	clothesColour2	</name>
+				<default>	0.980392 0.980392 0.647059 1.000000	</default>
+			</property>
+			<property>
+				<name>	clothesColour3	</name>
+				<default>	0.980392 0.980392 0.647059 1.000000	</default>
+			</property>
+			<property>
+				<name>	clothesColour4	</name>
+				<default>	0.274510 0.180392 0.109804 1.000000	</default>
+			</property>
+			<property>
+				<name>	clothesColour1	</name>
+				<default>	0.917647 0.937255 0.113725 1.000000	</default>
+			</property>
+		</tint>
+	</dye>
+	<materialNames>
+		<material>
+			<original>	Single material_skinned	</original>
+			<display>	Body	</display>
+		</material>
+		<material>
+			<original>	ArmSkin_skinned	</original>
+			<display>	Arm Skin	</display>
+		</material>
+		<material>
+			<original>	GloveMetal_skinned	</original>
+			<display>	Gloves Metal	</display>
+		</material>
+		<material>
+			<original>	chrome_legs_skinned	</original>
+			<display>	Legs Metal	</display>
+		</material>
+		<material>
+			<original>	Legs_skinned	</original>
+			<display>	Legs	</display>
+		</material>
+	</materialNames>
+	<visibilityBox>
+		<min>	-0.455564 -0.039996 -0.193539	</min>
+		<max>	0.455562 1.749425 0.202900	</max>
+	</visibilityBox>
+	<dye>
+		<matter>	GloveMetal_skinned	</matter>
+		<replaces>	GloveMetal_skinned	</replaces>
+		<tint>
+			<name>	Merchant	</name>
+			<material>
+				<identifier>	GloveMetal_skinned	</identifier>
+				<fx>	shaders/std_effects/normalmap_chrome_glow_skinned.fx	</fx>
+				<collisionFlags>	0	</collisionFlags>
+				<materialKind>	4	</materialKind>
+				<property>	materialSpecular
+					<Vector4>	1.000000 0.972549 0.792157 1.000000	</Vector4>
+				</property>
+				<property>	normalMap
+					<Texture>	characters/avatars/ranger/combined_norms.bmp	</Texture>
+				</property>
+				<property>	diffuseMap
+					<Texture>	characters/avatars/ranger/combined.bmp	</Texture>
+				</property>
+			</material>
+		</tint>
+	</dye>
+	<dye>
+		<matter>	chrome_legs_skinned	</matter>
+		<replaces>	chrome_legs_skinned	</replaces>
+		<tint>
+			<name>	Merchant	</name>
+			<material>
+				<identifier>	chrome_legs_skinned	</identifier>
+				<fx>	shaders/std_effects/normalmap_chrome_glow_skinned.fx	</fx>
+				<collisionFlags>	0	</collisionFlags>
+				<materialKind>	4	</materialKind>
+				<property>	materialSpecular
+					<Vector4>	1.000000 1.000000 1.000000 1.000000	</Vector4>
+				</property>
+				<property>	normalMap
+					<Texture>	characters/avatars/ranger/combined_norms.bmp	</Texture>
+				</property>
+				<property>	diffuseMap
+					<Texture>	characters/avatars/ranger/combined.bmp	</Texture>
+				</property>
+			</material>
+		</tint>
+	</dye>
+	<dye>
+		<matter>	ArmSkin_skinned	</matter>
+		<replaces>	ArmSkin_skinned	</replaces>
+		<tint>
+			<name>	Merchant	</name>
+			<material>
+				<identifier>	ArmSkin_skinned	</identifier>
+				<fx>	shaders/std_effects/subsurface_skinned.fx	</fx>
+				<collisionFlags>	0	</collisionFlags>
+				<materialKind>	0	</materialKind>
+				<property>	specularMap
+					<Texture>	characters/avatars/ranger/combined_spec.bmp	</Texture>
+				</property>
+				<property>	normalMap
+					<Texture>	characters/avatars/ranger/combined_norms.bmp	</Texture>
+				</property>
+				<property>	diffuseMap
+					<Texture>	characters/avatars/ranger/combined.bmp	</Texture>
+				</property>
+			</material>
+		</tint>
+	</dye>
+	<nodefullVisual>	characters/avatars/ranger/ranger_body	</nodefullVisual>
+	<metaData>
+		<copyright>	Copyright BigWorld Pty Ltd.  Use freely in any BigWorld licensed game.	</copyright>
+		<modified_by>	adamm	</modified_by>
+		<modified_on>	1405307148	</modified_on>
+	</metaData>
+</ranger_body.model>

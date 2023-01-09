@@ -1,0 +1,34 @@
+$(call includeUnitTestDirectory)
+
+name  := dbapp
+type  := binary
+bindir = $(BW_SERVER_BIN_DIR)
+
+include $(BW_COMPONENT_HEADER)
+
+useCustomBillingSystem = 0
+
+usePyURLRequest = 1
+
+dbAppBillingSystemSrc = 		\
+	standard_billing_system		\
+	py_billing_system
+
+ifeq ($(useCustomBillingSystem), 1)
+dbAppBillingSystemSrc += custom_billing_system
+endif
+
+
+cxxSource = main
+
+include $(pathToSource)/Makefile.common
+
+buildTimeFile := main
+
+include $(BW_COMPONENT_FOOTER)
+
+# TODO: re-implement. need to make dbapp_indie rely on dbapp's files
+#-include $(pathToSource)/Makefile.indie.rules
+
+# vi: filetype=make
+# Makefile.rules - dbapp

@@ -1,0 +1,57 @@
+<space.settings>
+	<timeOfDay>	system/data/sky.xml	</timeOfDay>
+	<skyGradientDome>	system/data/sky.xml	</skyGradientDome>
+	<projectViewMapResolution>
+		<width>	1048	</width>
+		<height>	1048	</height>
+	</projectViewMapResolution>
+	<bounds>
+		<minX>	-12	</minX>
+		<maxX>	12	</maxX>
+		<minY>	-12	</minY>
+		<maxY>	12	</maxY>
+	</bounds>
+	<farPlane>	700.000000	</farPlane>
+	<startPosition>	-208.649521 199.830002 148.657806	</startPosition>
+	<startDirection>	0.000000 0.019999 -2.993186	</startDirection>
+	<minimap>
+		<mapName>	spaces/minspec/space.outdoors.dds	</mapName>
+		<worldMapAnchor>	50.0 50.0	</worldMapAnchor>
+	</minimap>
+	<skyDomePartition>	0	</skyDomePartition>
+	<navmeshGenerator>	navgen	</navmeshGenerator>
+	<name> minspec </name>
+	<terrain>
+		<version>	200	</version>
+		<heightMapSize>	32	</heightMapSize>
+		<normalMapSize>	32	</normalMapSize>
+		<holeMapSize>	25	</holeMapSize>
+		<shadowMapSize>	32	</shadowMapSize>
+		<blendMapSize>	25	</blendMapSize>
+		<lodInfo>
+			<startBias>	0.800000	</startBias>
+			<endBias>	0.990000	</endBias>
+			<lodTextureStart>	200.000000	</lodTextureStart>
+			<lodTextureDistance>	100.000000	</lodTextureDistance>
+			<blendPreloadDistance>	100.000000	</blendPreloadDistance>
+			<lodNormalStart>	300.000000	</lodNormalStart>
+			<lodNormalDistance>	100.000000	</lodNormalDistance>
+			<normalPreloadDistance>	100.000000	</normalPreloadDistance>
+			<defaultHeightMapLod>	2	</defaultHeightMapLod>
+			<detailHeightMapDistance>	500.000000	</detailHeightMapDistance>
+			<lodDistances>
+				<distance0>	25.000000	</distance0>
+				<distance1>	120.000000	</distance1>
+				<distance2>	250.000000	</distance2>
+				<distance3>	700.000000	</distance3>
+			</lodDistances>
+			<server>
+				<heightMapLod>	0	</heightMapLod>
+			</server>
+		</lodInfo>
+		<soundOcclusion>
+			<directOcclusion>	0.000000	</directOcclusion>
+			<reverbOcclusion>	0.000000	</reverbOcclusion>
+		</soundOcclusion>
+	</terrain>
+</space.settings>

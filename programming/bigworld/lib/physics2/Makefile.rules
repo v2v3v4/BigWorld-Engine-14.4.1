@@ -1,0 +1,20 @@
+$(call includeUnitTestDirectory)
+
+name         := physics2
+type         := library
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =			\
+	bsp				\
+	hulltree		\
+	material_kinds	\
+	quad_tree		\
+	worldpoly		\
+	worldtri		\
+	sweep_helpers	
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - libphysics2

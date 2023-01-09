@@ -1,0 +1,15 @@
+name         := sqlite
+type         := library
+
+include $(BW_COMPONENT_HEADER)
+
+cSource = ../../third_party/sqlite/sqlite3
+
+cxxSource =				\
+	sqlite_connection	\
+	sqlite_statement	\
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - libsqlite

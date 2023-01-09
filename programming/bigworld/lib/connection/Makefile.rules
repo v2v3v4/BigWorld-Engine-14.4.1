@@ -1,0 +1,41 @@
+name         := connection
+type         := library
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =									\
+	avatar_filter							\
+	avatar_filter_helper					\
+	baseapp_login_request_protocol			\
+	condemned_interfaces					\
+	cuckoo_cycle_login_challenge_factory	\
+	data_download							\
+	filter_helper							\
+	log_on_params							\
+	login_challenge_factory					\
+	login_challenge_task					\
+	login_handler							\
+	login_interface							\
+	login_request							\
+	login_request_protocol					\
+	login_request_transport					\
+	loginapp_login_request_protocol			\
+	movement_filter							\
+	replay_checksum_scheme					\
+	replay_controller						\
+	replay_data_file_reader					\
+	replay_header							\
+	replay_metadata							\
+	replay_tick_loader						\
+	server_connection						\
+	server_finder							\
+	smart_server_connection					\
+
+useOpenSSL = 1
+
+exportFor := bwentity
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - libconnection

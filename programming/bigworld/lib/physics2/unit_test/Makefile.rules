@@ -1,0 +1,17 @@
+name  := physics2
+type  := unit_test
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =							\
+	main							\
+	pch								\
+	test_bsptree					\
+	test_worldtri
+
+dependsOn += physics2 cstdmf math resmgr
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - physics2/unit_test

@@ -1,0 +1,37 @@
+name  := baseapp
+type  := unit_test
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =							\
+	main							\
+	test_recording 					\
+	test_sqlite_database			\
+	../replay_data_file_writer 		\
+	../sqlite_database				\
+	../write_to_db_reply			\
+
+useOpenSSL = 1
+
+dependsOn  += 	\
+	chunk		\
+	scene		\
+	connection	\
+	entitydef	\
+	pyscript	\
+	server		\
+	resmgr		\
+	network 	\
+	sqlite 		\
+	math  		\
+	cstdmf 		\
+	zip
+
+incFlags_$(binName) += -I$(BW_ABS_SRC_SERVER)
+ldLibs_$(binName) += -ldl
+cxxFlags_$(binName) += -Wno-float-equal
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - baseapp/unit_test

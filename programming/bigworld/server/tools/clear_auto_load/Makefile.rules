@@ -1,0 +1,41 @@
+ifneq ($(SYSTEM_HAS_MYSQL),0)
+
+$(warning MySQL development libraries not installed. Skipping clear_auto_load build.)
+
+else
+
+name  := clear_auto_load
+type  := binary
+bindir = $(BW_COMMAND_BIN_DIR)
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource = 			\
+	clear_auto_load		\
+	main
+
+buildTimeFile := main
+
+incFlags_$(binName) += -I$(BW_SRC)/server
+
+usePython = 1
+useOpenSSL = 1
+useMySQL = 1
+
+dependsOn =				\
+	chunk				\
+	db_storage_mysql	\
+	db_storage			\
+	db 					\
+	entitydef			\
+	pyscript			\
+	script				\
+	server
+
+include $(BW_COMPONENT_FOOTER)
+
+endif
+# endif MySQL development libraries installed. 
+
+# vi: filetype=make
+# Makefile.rules - clear_auto_load

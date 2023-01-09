@@ -1,0 +1,84 @@
+<graphics_settings.xml>
+	<flora>
+		<!-- Defines what flora density options are available for
+		the user. Each option actually defines the size of the
+		vertex buffer used to render the flora. This field is 
+		optional. If not provided, flora density settings will 
+		not be available and <value> will be used instead. -->
+		
+		<option>
+			<label>	Very High	</label>
+			<!-- option's associated label -->
+			
+			<value>	6.0	</value>	
+			<!-- vertex buffer size when this option is selected -->
+			
+		</option>
+		<option>
+			<label> High	</label>
+			<value>	2.0	</value>
+		</option>
+
+		<option>
+			<label>	Medium	</label>
+			<value>	1.0	</value>
+		</option>
+		<option>
+			<label>	Low	</label>
+			<value>	0.25	</value>
+		</option>
+		<option>
+			<label>	Off	</label>
+			<value>	0	</value>
+			<!-- zero has the special meaning of disabling flora rendering -->
+			
+		</option>
+	</flora>
+	
+	<farPlane>
+		<!-- Defines what far plane options are available for
+		the user. Each option actually defines a multiplier 
+		that is applied to the space or sky far plane value. 
+		This field is optional. If not provided the full far 
+		plane will always be used, instead. -->
+	
+		<option>
+			<label>Far</label>
+			<!-- option's associated label -->
+
+			<value>1.0</value>
+			<!-- multiplier to be used when this option is selected -->
+
+		</option>
+		<option>
+			<value>0.75</value>
+			<label>Medium</label>
+		</option>
+		<option>
+			<value>0.5</value>
+			<label>Near</label>
+		</option>
+	</farPlane>
+
+	<objectLOD>
+		<!-- todo: DOC. -->
+	
+		<option>
+			<label>High</label>
+			<!-- option's associated label -->
+
+			<value>1.0</value>
+			<!-- multiplier to be used when this option is selected -->
+
+		</option>
+		<option>
+			<value>0.66</value>
+			<label>Medium</label>
+		</option>
+		<option>
+			<value>0.33</value>
+			<label>Low</label>
+		</option>
+	</objectLOD>
+
+</graphics_settings.xml>

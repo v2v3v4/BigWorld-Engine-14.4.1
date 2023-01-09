@@ -1,0 +1,13 @@
+name         := speedtree
+type         := library
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =					\
+	speedtree_collision		\
+
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - libspeedtree

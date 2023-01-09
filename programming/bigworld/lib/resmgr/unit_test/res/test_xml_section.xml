@@ -1,0 +1,27 @@
+<src.xml>
+	<!-- This is the source xml for the test packed section-->
+	<test_bool> 	true 		</test_bool>
+	<test_int8> 	-128		</test_int8>
+	<test_int16> 	-32768		</test_int16>
+	<test_int32> 	-2147483648	</test_int32>
+	<test_uint8> 	255			</test_uint8>
+	<test_uint16> 	65535		</test_uint16>
+	<test_uint32>	4294967295	</test_uint32>
+	<test_long>		-2147483648	</test_long> <!-- Long implementation varies so just test for 32-bit values -->
+	<test_int64>	-9223372036854775808	</test_int64>
+	<test_int64_2>	9223372036854775807		</test_int64_2>
+	<test_uint64>	18446744073709551615	</test_uint64>
+	<test_uint64_2>	9223372036854775808	</test_uint64_2>
+	<test_float> 	3.142f 		</test_float>
+	<test_string> 	000600060006000600060006000300030003000300030003	</test_string>
+	<test_vector2>  1.000000 2.000000 		</test_vector2>
+	<test_vector3>  1.000000 2.000000 3.000000 		</test_vector3>
+	<test_vector4>  1.000000 2.000000 3.000000 4.000000 		</test_vector4>
+	<test_matrix34>
+			<row0>	1.000000 2.000000 3.000000		</row0>
+			<row1>	4.000000 5.000000 6.000000		</row1>
+			<row2>	7.000000 8.000000 9.000000		</row2>
+			<row3>	10.000000 11.000000 12.000000	</row3>
+	</test_matrix34>
+</src.xml>
+

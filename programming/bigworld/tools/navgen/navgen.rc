@@ -1,0 +1,352 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU 
+BEGIN
+    POPUP "`RC_ID_FILE"
+    BEGIN
+        MENUITEM "`RC_ID_FILE_OPENSPACE",       ID_FILE_OPENSPACE
+        MENUITEM "`RC_ID_FILE_OPEN",            ID_FILE_OPEN1
+        MENUITEM SEPARATOR
+        MENUITEM "`RC_ID_FILE_REMOVE_ALL",      40013
+        MENUITEM SEPARATOR
+        MENUITEM "`RC_ID_FILE_GENERATE_ALL",    ID_FILE_GENERATE_ALL
+        MENUITEM "`RC_ID_FILE_GENERATE_ALL_OVERWRITE", ID_FILE_GENERATE_ALL_OVERWRITE
+        MENUITEM "`RC_ID_FILE_CLUSTERGENERATE", ID_FILE_CLUSTERGENERATE
+        MENUITEM SEPARATOR
+        MENUITEM "`RC_ID_FILE_EXIT",            ID_FILE_EXIT
+    END
+    POPUP "`RC_ID_VIEW"
+    BEGIN
+        POPUP "`RC_ID_VIEW_SET"
+        BEGIN
+            MENUITEM "`RC_ID_VIEW_SET_ALL",     ID_VIEW_SET_ALL
+            MENUITEM "`RC_ID_VIEW_SET_NONE",    ID_VIEW_SET_NONE
+        END
+        MENUITEM "`RC_ID_VIEW_ADJACENCIES",     ID_VIEW_ADJACENCIES
+        MENUITEM "`RC_ID_VIEW_BSPNODES",        ID_VIEW_BSPNODES
+        MENUITEM "`RC_ID_VIEW_POLYGONAREA",     ID_VIEW_POLYGONAREA, CHECKED
+        MENUITEM "`RC_ID_VIEW_POLYGONBORDERS",  ID_VIEW_POLYGONBORDERS, CHECKED
+        MENUITEM SEPARATOR
+        MENUITEM "`RC_ID_VIEW_STATISTICS",      ID_VIEW_STATISTICS
+        MENUITEM "`RC_ID_VIEW_WAYPOINTINFO",    ID_VIEW_WAYPOINTINFO
+        MENUITEM "`RC_ID_VIEW_RENDEREDSCENE",   ID_VIEW_RENDEREDSCENE
+        MENUITEM "`RC_ID_VIEW_ERRORLOG",        ID_VIEW_ERRORLOG
+    END
+    POPUP "`RC_ID_ZOOM"
+    BEGIN
+        MENUITEM "`RC_ID_ZOOM_IN",              ID_ZOOM_IN
+        MENUITEM "`RC_ID_ZOOM_OUT",             ID_ZOOM_OUT
+    END
+    POPUP "`RC_ID_CHUNK"
+    BEGIN
+        MENUITEM "`RC_ID_CHUNK_DISPLAY",        ID_CHUNK_DISPLAY
+        MENUITEM "`RC_ID_CHUNK_GENERATE",       ID_CHUNK_GENERATE
+        MENUITEM "`RC_ID_CHUNK_GENERATE_SHRUNK", ID_CHUNK_GENERATE_SHRUNK
+        MENUITEM "`RC_ID_CHUNK_REANNOTATE",     ID_CHUNK_REANNOTATE
+    END
+    POPUP "`RC_ID_HELP"
+    BEGIN
+        MENUITEM "`RC_ID_HELP_HELP",            ID_HELP_HELP
+    END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_WAYPOINT_INFO DIALOGEX 0, 0, 371, 190
+STYLE DS_SETFONT | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "`RC_WAYPOINT_INFO_CAPTION"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "`RC_WAYPOINT_INFO_ID",IDC_STATIC,5,6,38,8
+    CONTROL         "List1",IDC_LIST1,"SysListView32",LVS_REPORT | WS_BORDER | WS_TABSTOP,5,20,359,165
+    LTEXT           "",IDC_WAYPOINT_ID,54,6,27,8
+    LTEXT           "`RC_WAYPOINT_INFO_HEIGHT",IDC_STATIC,105,7,24,8
+    LTEXT           "",IDC_WAYPOINT_HEIGHT,138,7,226,8
+END
+
+IDD_MESSAGEDIALOG DIALOGEX 0, 0, 488, 174
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "`RC_MESSAGE_CAPTION"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LISTBOX         IDC_MESSAGELIST,7,7,474,160,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_CLUSTERGENDIALOG DIALOGEX 0, 0, 271, 131
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "`RC_CLUSTER_GEN_CAPTION"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "`RC_CLUSTER_GEN_ID_OK",IDOK,161,110,50,14
+    PUSHBUTTON      "`RC_CLUSTER_GEN_ID_CANCEL",IDCANCEL,215,110,50,14
+    LTEXT           "`RC_CLUSTER_GEN_NUM_COMPUTERS",IDC_STATIC,7,14,93,8
+    LTEXT           "`RC_CLUSTER_GEN_INDEX",IDC_STATIC,8,29,33,8
+    COMBOBOX        IDC_MYINDEX,116,27,48,87,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_TOTALCOMPUTER,116,11,48,80,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "`RC_CLUSTER_GEN_WARNING",IDC_STATIC,7,81,257,26
+    LTEXT           "`RC_CLUSTER_GEN_USAGE",IDC_STATIC,7,46,257,33
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_WAYPOINT_INFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 364
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 183
+    END
+
+    IDD_MESSAGEDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 481
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 167
+    END
+
+    IDD_CLUSTERGENDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 264
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 124
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_APPICON             ICON                    "navgen.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+#include "cstdmf/bwversion.hpp" 
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION BW_VERSION_MSVC_RC
+ PRODUCTVERSION BW_VERSION_MSVC_RC
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Part of the BigWorld Technology Suite"
+            VALUE "CompanyName", "BigWorld Pty. Ltd"
+            VALUE "FileDescription", "BigWorld Navigation Mesh Generator"
+            VALUE "FileVersion", BW_VERSION_MSVC_RC_STRING
+            VALUE "InternalName", "NavGen"
+            VALUE "LegalCopyright", BW_COPYRIGHT_NOTICE
+            VALUE "OriginalFilename", "navgen.exe"
+            VALUE "ProductName", "NavGen"
+            VALUE "ProductVersion", BW_VERSION_MSVC_RC_STRING
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (Australia) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENA)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_AUS
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_STATISTICS DIALOGEX 0, 0, 142, 121
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "`RC_STATISTICS_CAPTION"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "`RC_STATISTICS_ID_OK",IDOK,45,100,50,14
+    LTEXT           "`RC_STATISTICS_BSP_NODES",IDC_STATIC,5,5,65,8
+    LTEXT           "`RC_STATISTICS_NAV_POLYS",IDC_STATIC,5,20,68,8
+    LTEXT           "`RC_STATISTICS_NAV_VERTS",IDC_STATIC,5,35,65,8
+    LTEXT           "`RC_STATISTICS_ID_BSP_NODES",IDC_BSP_NODES,85,5,50,8
+    LTEXT           "`RC_STATISTICS_ID_WAYPOINT_POLYS",IDC_WAYPOINT_POLYGONS,85,20,50,8
+    LTEXT           "`RC_STATISTICS_ID_WAYPOINT_VERTS",IDC_WAYPOINT_VERTICES,85,35,50,8
+    LTEXT           "`RC_STATISTICS_BINARY_FILE_SIZE",IDC_STATIC,5,65,60,8
+    LTEXT           "`RC_STATISTICS_ID_BINARY_FILE_SIZE",IDC_BINARY_FILE_SIZE,85,65,50,8
+    LTEXT           "`RC_STATISTICS_NAVPOLY_ADJACENCIES",IDC_STATIC,5,50,75,8
+    LTEXT           "`RC_STATISTICS_WAYPOINT_ADJACENCIES",IDC_WAYPOINT_ADJACENCIES,85,50,50,8
+END
+
+IDD_MODELESS_INFO DIALOGEX 0, 0, 186, 90
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "`RC_INFO_CAPTION"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "`RC_INFO_ID_OK",IDOK,67,69,50,14
+    LTEXT           "`RC_INFO_MESSAGE",IDC_INFO_MSG,7,7,172,59
+END
+
+IDD_HELP DIALOGEX 0, 0, 323, 121
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "`RC_CHUNK_GEN_COLOURS_CAPTION"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "`RC_CHUNK_GEN_CAPTION",IDOK,266,101,50,14
+    LTEXT           "`RC_CHUNK_GEN_USAGE_PROGRESS_BAR",IDC_STATIC,14,12,299,20
+    LTEXT           "`RC_CHUNK_GEN_USAGE_WHITE",IDC_STATIC,21,34,295,10
+    LTEXT           "`RC_CHUNK_GEN_USAGE_CYAN",IDC_STATIC,21,44,295,8
+    LTEXT           "`RC_CHUNK_GEN_USAGE_BLUE_YELLOW",IDC_STATIC,21,54,295,8
+    LTEXT           "`RC_CHUNK_GEN_USAGE_GREY",IDC_STATIC,21,65,295,17
+    LTEXT           "`RC_CHUNK_GEN_USAGE_ORANGE",IDC_STATIC,21,83,295,8
+    LTEXT           "`RC_CHUNK_GEN_USAGE_GREEN",IDC_STATIC,21,92,295,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_STATISTICS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 135
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 114
+    END
+
+    IDD_MODELESS_INFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_HELP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 316
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 114
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCELERATORS ACCELERATORS 
+BEGIN
+    VK_F1,          ID_HELP_HELP,           VIRTKEY, NOINVERT
+END
+
+#endif    // English (Australia) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

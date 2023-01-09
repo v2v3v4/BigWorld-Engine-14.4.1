@@ -1,0 +1,123 @@
+$(call includeUnitTestDirectory)
+
+name  := baseapp
+type  := binary
+bindir = $(BW_SERVER_BIN_DIR)
+
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =								\
+	main								\
+	archiver							\
+	backed_up_base_app					\
+	backed_up_base_apps					\
+	backup_sender						\
+	base								\
+	base_message_forwarder				\
+	bases								\
+	baseapp								\
+	baseapp_config						\
+	baseappmgr_gateway					\
+	bwtracer							\
+	client_entity_mailbox				\
+	client_entity_mailbox_wrapper		\
+	controlled_shutdown_handler			\
+	create_cell_entity_handler			\
+	data_downloads						\
+	dead_cell_apps						\
+	download_streamer					\
+	download_streamer_config			\
+	eg_tcpecho							\
+	entity_channel_finder				\
+	entity_creator						\
+	entity_type							\
+	external_interfaces					\
+	global_bases						\
+	id_config							\
+	initial_connection_filter			\
+	load_entity_handler					\
+	loading_thread						\
+	login_handler						\
+	mailbox								\
+	message_handlers					\
+	offloaded_backups					\
+	pending_logins						\
+	ping_manager						\
+	proxy								\
+	py_bases							\
+	py_cell_data						\
+	py_cell_spatial_data				\
+	py_replay_data_file_reader 			\
+	py_replay_data_file_writer			\
+	py_replay_header 					\
+	rate_limit_config					\
+	rate_limit_message_filter			\
+	remote_client_method 				\
+	replay_data_file_writer				\
+	script_bigworld						\
+	service								\
+	service_starter						\
+	shared_data_manager					\
+	sqlite_database						\
+	worker_thread						\
+	write_to_db_reply					\
+	../../common/py_network				\
+	../../common/py_server_lib			\
+	../../common/py_timer				\
+
+
+buildTimeFile := main
+
+dependsOn  = 			\
+	db					\
+	chunk				\
+	scene				\
+	connection			\
+	entitydef			\
+	entitydef_script	\
+	server				\
+	script				\
+	pyscript			\
+	sqlite				\
+	delegate_interface	\
+
+usePython = 1
+useOpenSSL = 1
+usePyURLRequest = 1
+
+# TODO: dbapp shares this code
+ifeq ($(usePyURLRequest),1)
+useCurl = 1
+cxxSource += ../../common/py_urlrequest
+cppFlags_$(binName) += -DBUILD_PY_URLREQUEST
+
+dependsOn += urlrequest
+endif
+
+incFlags_$(binName) += -I$(BW_ABS_SRC)
+incFlags_$(binName) += -I$(BW_ABS_SRC_SERVER)
+
+cxxFlags_$(binName) += -Wno-float-equal
+
+$(binName)_additionalComponentsToBuild:	baseapp_extensions
+
+clean_$(binName)_additionalComponentsToBuild:	clean_baseapp_extensions
+
+postBuildTargets := $(binName)_additionalComponentsToBuild
+
+include $(BW_COMPONENT_FOOTER)
+
+# This PHONY target provides the trigger to build both the baseapp and
+# serviceapp binary when performing a 'make' in the local directory.
+.PHONY: baseapp_and_serviceapp clean_baseapp_and_serviceapp
+baseapp_and_serviceapp: baseapp serviceapp
+clean_baseapp_and_serviceapp: clean_baseapp clean_serviceapp
+
+.PHONY: baseapp_and_serviceapp cleandeps_baseapp_and_serviceapp
+cleandeps_baseapp_and_serviceapp: cleandeps_baseapp cleandeps_serviceapp
+
+include $(BW_SRC)/server/baseapp/Makefile.serviceapp
+
+# vi: filetype=make
+# Makefile.rules - baseapp

@@ -1,0 +1,45 @@
+
+/* home/news page */
+.articles
+{
+	width:				100%;
+	margin:				0;
+	padding:			0;
+}
+
+.article-alt1, .article-alt2, .article-alt1-first
+{
+	background-color:	#FFFFFF;
+	padding:			3px 5px 2px 5px;
+}
+
+
+.article-readmore
+{
+	font-weight:		bold;
+	font-size:			10px;
+	text-align:			right;
+	border-bottom:		1px #569FDC dashed;
+	padding-bottom:		3px;
+}
+
+.article-readmore a:link, .article-readmore a:visited, .article-readmore a:hover .article-readmore a:active
+{
+	color:				#FF6600;
+	text-decoration:	none;
+}
+
+.article-header
+{
+	font-weight:		bold;
+	color: 				black;
+	margin-bottom:		2px;
+}
+
+.article-date
+{
+	font-weight:		bold;
+	font-size:			10px;
+	color:				#569FDC;
+}
+

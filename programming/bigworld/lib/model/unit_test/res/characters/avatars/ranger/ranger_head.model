@@ -1,0 +1,85 @@
+<ranger_head.model>
+	<extent>	73.000000	</extent>
+	<materialNames />
+	<visibilityBox>
+		<min>	-0.094697 1.592797 -0.139969	</min>
+		<max>	0.100198 1.953652 0.140494	</max>
+	</visibilityBox>
+	<dye>
+		<matter>	Head_skinned	</matter>
+		<replaces>	Head_skinned	</replaces>
+		<tint>
+			<name>	Merchant	</name>
+			<material>
+				<identifier>	Head_skinned	</identifier>
+				<fx>	shaders/std_effects/subsurface_skinned.fx	</fx>
+				<collisionFlags>	0	</collisionFlags>
+				<materialKind>	0	</materialKind>
+				<property>	specularMap
+					<Texture>	characters/avatars/ranger/ranger_face_spec.bmp	</Texture>
+				</property>
+				<property>	normalMap
+					<Texture>	characters/avatars/ranger/ranger_face_norms.bmp	</Texture>
+				</property>
+				<property>	diffuseMap
+					<Texture>	characters/avatars/ranger/ranger_face.tga	</Texture>
+				</property>
+			</material>
+		</tint>
+	</dye>
+	<dye>
+		<matter>	Hair_skinned	</matter>
+		<replaces>	Hair_skinned	</replaces>
+		<tint>
+			<name>	Merchant	</name>
+			<material>
+				<identifier>	Hair_skinned	</identifier>
+				<fx>	shaders/std_effects/lightonly_skinned.fx	</fx>
+				<collisionFlags>	0	</collisionFlags>
+				<materialKind>	0	</materialKind>
+				<property>	alphaReference
+					<Int>	77	</Int>
+				</property>
+				<property>	alphaTestEnable
+					<Bool>	true	</Bool>
+				</property>
+				<property>	doubleSided
+					<Bool>	true	</Bool>
+				</property>
+				<property>	diffuseMap
+					<Texture>	characters/avatars/ranger/ranger_hairstyle.tga	</Texture>
+				</property>
+			</material>
+		</tint>
+	</dye>
+	<dye>
+		<matter>	chrome_eyes_skinned	</matter>
+		<replaces>	chrome_eyes_skinned	</replaces>
+		<tint>
+			<name>	Merchant	</name>
+			<material>
+				<identifier>	chrome_eyes_skinned	</identifier>
+				<fx>	shaders/std_effects/normalmap_chrome_skinned.fx	</fx>
+				<collisionFlags>	0	</collisionFlags>
+				<materialKind>	11	</materialKind>
+				<property>	materialSpecular
+					<Vector4>	1.000000 0.996078 0.984314 1.000000	</Vector4>
+				</property>
+				<property>	normalMap
+					<Texture>	characters/avatars/ranger/ranger_face_norms.bmp	</Texture>
+				</property>
+				<property>	diffuseMap
+					<Texture>	characters/avatars/ranger/ranger_face.tga	</Texture>
+				</property>
+			</material>
+		</tint>
+	</dye>
+	<metaData>
+		<copyright>	Copyright BigWorld Pty Ltd.  Use freely in any BigWorld licensed game.	</copyright>
+		<created_by>	adamm	</created_by>
+		<created_on>	1255671200	</created_on>
+		<modified_by>	adamm	</modified_by>
+		<modified_on>	1405307083	</modified_on>
+	</metaData>
+	<nodefullVisual>	characters/avatars/ranger/ranger_head	</nodefullVisual>
+</ranger_head.model>

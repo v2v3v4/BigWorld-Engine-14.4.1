@@ -1,0 +1,144 @@
+$(call includeUnitTestDirectory)
+
+name  := cellapp
+type  := binary
+bindir = $(BW_SERVER_BIN_DIR)
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =									\
+	ack_cell_app_death_helper				\
+	aoi_update_schemes						\
+	buffered_entity_messages				\
+	buffered_ghost_message					\
+	buffered_ghost_message_factory			\
+	buffered_ghost_message_queue			\
+	buffered_ghost_messages					\
+	buffered_ghost_messages_for_entity		\
+	buffered_input_messages					\
+	cell									\
+	cell_info								\
+	cells									\
+	cellapp									\
+	cellapp_config							\
+	cellappmgr_gateway						\
+	cellapp_death_listener					\
+	cell_app_channel						\
+	cell_app_channels						\
+	cell_chunk								\
+	cell_profiler							\
+	cell_range_list							\
+	cell_viewer_connection					\
+	cell_viewer_server						\
+	controllers								\
+	emergency_throttle						\
+	entity									\
+	entity_cache							\
+	entity_callback_buffer					\
+	entity_extra							\
+	entity_ghost_maintainer					\
+	entity_navigate							\
+	entity_population						\
+	entity_range_list_node					\
+	entity_type								\
+	entity_vision							\
+	external_interfaces						\
+	history_event							\
+	id_config								\
+	mailbox									\
+	main									\
+	message_handlers						\
+	mobile_range_list_node					\
+	navmesh_navigation_system				\
+	noise_config							\
+	offload_checker							\
+	passenger_extra							\
+	passengers								\
+	physical_chunk_space					\
+	physical_delegate_space					\
+	profile									\
+	py_client								\
+	py_entities								\
+	range_list_appeal_trigger				\
+	range_list_node							\
+	range_trigger							\
+	real_caller								\
+	real_entity								\
+	replay_data_collector					\
+	space									\
+	space_branch							\
+	spaces									\
+	throttle_config							\
+	witness									\
+	controller								\
+	accelerate_along_path_controller		\
+	accelerate_to_entity_controller			\
+	accelerate_to_point_controller			\
+	base_acceleration_controller			\
+	face_entity_controller					\
+	move_controller							\
+	navigation_controller					\
+	passenger_controller					\
+	portal_config_controller				\
+	proximity_controller					\
+	scan_vision_controller					\
+	timer_controller						\
+	turn_controller							\
+	visibility_controller					\
+	vision_controller						\
+	../../common/py_chunk					\
+	../../common/py_network					\
+	../../common/py_physics2				\
+	../../common/py_server_lib				\
+	../../common/py_terrain					\
+	../../common/py_timer					\
+
+
+buildTimeFile := main
+
+dependsOn  = 			\
+	db 					\
+	server				\
+	script				\
+	pyscript			\
+	entitydef			\
+	entitydef_script	\
+	waypoint			\
+	chunk_loading		\
+	chunk				\
+	scene				\
+	terrain				\
+	physics2			\
+	moo					\
+	speedtree			\
+	png					\
+	delegate_interface	\
+
+
+usePython = 1
+useOpenSSL = 1
+
+usePyURLRequest = 1
+
+# TODO: dbapp shares this code
+ifeq ($(usePyURLRequest),1)
+useCurl = 1
+cxxSource += ../../common/py_urlrequest
+cppFlags_$(binName) += -DBUILD_PY_URLREQUEST
+
+dependsOn += urlrequest
+endif
+
+incFlags_$(binName) += -I$(BW_ABS_SRC)
+incFlags_$(binName) += -I$(BW_ABS_SRC_SERVER)
+
+$(binName)_additionalComponentsToBuild:	cellapp_extensions
+
+clean_$(binName)_additionalComponentsToBuild:	clean_cellapp_extensions
+
+postBuildTargets := $(binName)_additionalComponentsToBuild
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - cellapp

@@ -1,0 +1,5 @@
+This file lists the changes made by BigWorld to the zlib distribution.
+
+1.  The file Makefile was modified to build using the BigWorld system.
+2.  Project files for Visual Studio were added to the top-level directory.
+3.  Default memory functions were implemented to use the BigWorld allocator.

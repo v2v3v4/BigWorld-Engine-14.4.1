@@ -1,0 +1,30 @@
+
+name  := process_defs
+type  := binary
+
+# Always build for the host platform, not the target
+bindir := $(BW_HOST_SERVER_TOOLS_BIN_DIR)
+bwBuildPlatform = $(BW_HOST_PLATFORM)
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =	\
+	help_msg_handler \
+	main
+
+buildTimeFile := main
+
+dependsOn =		\
+	chunk		\
+	scene		\
+	entitydef	\
+	pyscript	\
+	script
+
+usePython = 1
+useOpenSSL = 1
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - process_defs

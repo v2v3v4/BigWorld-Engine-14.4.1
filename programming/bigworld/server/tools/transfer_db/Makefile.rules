@@ -1,0 +1,25 @@
+name  := transfer_db
+type  := binary
+bindir = $(BW_COMMAND_BIN_DIR)
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =			\
+	main 			\
+	transfer_db		\
+	consolidate		\
+	snapshot
+
+dependsOn =		\
+	db			\
+	server		\
+	sqlite
+
+buildTimeFile := main
+
+ldLibs_$(binName) += -ldl
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - transfer_db

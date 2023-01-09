@@ -1,0 +1,12 @@
+name         := delegate_interface
+type         := library
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =					\
+		game_delegate				
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - libdelegate_interface

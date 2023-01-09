@@ -1,0 +1,72 @@
+name  := _bwlog
+type  := shared_library
+bindir = $(BW_SERVER_TOOLS_BIN_DIR)
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =						\
+	mldb/log_common				\
+	mldb/log_reader				\
+	categories					\
+	mldb/categories             \
+	mlutil						\
+	file_handler				\
+	text_file_handler			\
+	binary_file_handler			\
+	unary_integer_file			\
+	hostnames					\
+	mldb/hostnames              \
+	format_strings				\
+	mldb/format_strings         \
+	log_component_names			\
+	mldb/log_component_names    \
+	log_string_interpolator		\
+	log_string_writer			\
+	log_string_printer			\
+	user_log					\
+	user_log_reader				\
+	user_segment				\
+	user_segment_reader			\
+	user_components				\
+	logging_component			\
+	log_time					\
+	log_entry_address			\
+	log_entry_address_reader	\
+	mldb/metadata               \
+	query_params				\
+	query_range					\
+	query_range_iterator		\
+	query_result				\
+	bwlog_module				\
+	py_bwlog					\
+	py_query					\
+	py_user_log					\
+	py_query_result				\
+
+
+# NB: the ordering here is important because of the dynamic library that is
+#     built. errors will not show up until runtime.
+dependsOn = 		\
+	network 		\
+	pyscript 		\
+	script			\
+	resmgr 			\
+	server 			\
+	math 			\
+	cstdmf
+
+usePython = 1
+useSystemPython := 1
+noObjectDirectoryRule := 1
+
+ifeq ($(SYSTEM_HAS_MONGODB),1)
+
+cxxFlags_$(binName) += -DHAS_MONGODB_SUPPORT
+useMongoDB := 1
+
+endif
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.message_reader - bwlog

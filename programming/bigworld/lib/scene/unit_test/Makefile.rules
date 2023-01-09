@@ -1,0 +1,25 @@
+name  := scene
+type  := unit_test
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =							\
+	main							\
+	pch \
+	test_drawoperation \
+	test_polymesh \
+	test_scene \
+	test_sceneview \
+	test_staticsceneprovider \
+	test_scenetypesystem 
+
+# Currently Windows only
+#	test_blend_transform			\
+
+dependsOn += scene cstdmf
+
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - scene/unit_test

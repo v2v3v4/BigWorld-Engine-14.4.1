@@ -1,0 +1,37 @@
+$(call includeUnitTestDirectory)
+
+name         := pyscript
+type         := library
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =						\
+	personality					\
+	pickler						\
+	py_data_section				\
+	py_traceback				\
+	py_to_stl					\
+	pyobject_plus				\
+	py_factory_method_link 		\
+	py_import_paths				\
+	py_logging					\
+	python_input_substituter	\
+	pywatcher					\
+	res_mgr_script				\
+	resource_table				\
+	script						\
+	script_events				\
+	script_math					\
+	stl_to_py					\
+	py_debug_message_file_logger	\
+
+usePython = 1
+
+cxxFlags_$(binName) += -Wno-float-equal
+
+exportFor := bwentity
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - libpyscript

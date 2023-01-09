@@ -1,0 +1,13 @@
+name         := moo
+type         := library
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =		\
+	node		\
+	png
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - libmoo

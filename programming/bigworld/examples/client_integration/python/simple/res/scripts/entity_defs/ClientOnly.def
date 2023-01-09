@@ -1,0 +1,46 @@
+<root>
+	<Volatile>
+		<position/>
+		<yaw/>
+		<pitch> 20 </pitch>
+	</Volatile>
+
+	<Properties>
+		<name>
+			<Type>			STRING				</Type>
+			<Flags>			ALL_CLIENTS			</Flags>
+			<Editable>		true				</Editable>
+		</name>
+
+		<prop1>
+			<Type>			INT32				</Type>
+			<Flags>			OWN_CLIENT			</Flags>
+			<Default>		1					</Default>
+		</prop1>
+
+		<prop2>
+			<Type>			INT16				</Type>
+			<Flags>			OWN_CLIENT			</Flags>
+			<Default>		2					</Default>
+		</prop2>
+
+		<prop3>
+			<Type>			INT8				</Type>
+			<Flags>			OWN_CLIENT			</Flags>
+			<Default>		3					</Default>
+		</prop3>
+
+
+	</Properties>
+
+	<ClientMethods>
+		<method1>
+			<Arg>	STRING	</Arg>
+		</method1>
+	</ClientMethods>
+
+	<CellMethods/>
+
+	<BaseMethods/>
+
+</root>

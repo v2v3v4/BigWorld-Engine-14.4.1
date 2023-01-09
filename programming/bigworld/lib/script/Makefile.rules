@@ -1,0 +1,21 @@
+$(call includeUnitTestDirectory)
+
+name         := script
+type         := library
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =						\
+	init_time_job				\
+	py_script_object			\
+	py_script_output_writer		\
+	script_output_hook
+
+usePython := 1
+
+exportFor := bwentity
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - libscript

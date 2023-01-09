@@ -1,0 +1,14 @@
+<tree_lod3.model>
+	<metaData>
+		<created_by>	AdamM	</created_by>
+		<created_on>	1280194634	</created_on>
+		<modified_by>	AdamM	</modified_by>
+		<modified_on>	1281506856	</modified_on>
+	</metaData>
+	<materialNames>	</materialNames>
+	<visibilityBox>
+		<min>	-22.751780 -11.499998 -0.503566	</min>
+		<max>	22.248217 78.499992 0.251789	</max>
+	</visibilityBox>
+	<nodelessVisual>	sets/minspec/props/tree/model/tree_lod3	</nodelessVisual>
+</tree_lod3.model>

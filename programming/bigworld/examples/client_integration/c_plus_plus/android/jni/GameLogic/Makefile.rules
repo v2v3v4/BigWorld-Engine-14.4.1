@@ -1,0 +1,2 @@
+MY_LOGIC_SRC_FILES +=	AccountGameLogic.cpp \
+						AvatarGameLogic.cpp

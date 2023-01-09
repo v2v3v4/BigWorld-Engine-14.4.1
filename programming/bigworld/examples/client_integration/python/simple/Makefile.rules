@@ -1,0 +1,33 @@
+name  := simple_python_client
+type  := binary
+bindir := $(BW_SERVER_EXAMPLES_DIR)
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =									\
+	main									\
+	entity									\
+	entity_type								\
+	py_server								\
+	py_entity								\
+	py_entities								\
+	../../../../common/simple_client_entity \
+
+dependsOn = 			\
+	entitydef 			\
+	pyscript 			\
+	script				\
+	chunk 				\
+	scene				\
+	connection_model 	\
+	connection
+
+usePython = 1
+useOpenSSL = 1
+
+incFlags_$(binName) += -I$(BW_ABS_SRC)/.
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - client_integration/python/simple

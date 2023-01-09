@@ -1,0 +1,19 @@
+name  := server
+type  := unit_test
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =							\
+	main							\
+	test_entity_profiler			\
+	test_rendezvous_hash_scheme 	\
+	test_updatables					\
+
+dependsOn += 	server 	\
+				network \
+				cstdmf
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - server/unit_test

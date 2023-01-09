@@ -1,0 +1,123 @@
+CMAKE_MINIMUM_REQUIRED( VERSION 2.8 )
+PROJECT( message_logger )
+
+INCLUDE( BWStandardProject )
+
+SET( ALL_SRCS
+	mldb/log_common.cpp
+	mldb/log_common.hpp
+	log_storage.cpp
+	log_storage.hpp
+	mldb/log_storage.cpp
+	mldb/log_storage.hpp
+	categories.cpp
+	categories.hpp
+	mldb/categories.cpp
+	mldb/categories.hpp
+	user_log.cpp
+	user_log.hpp
+	user_log_writer.cpp
+	user_log_writer.hpp
+	user_segment.cpp
+	user_segment.hpp
+	user_segment_writer.cpp
+	user_segment_writer.hpp
+	user_components.cpp
+	user_components.hpp
+	logging_component.cpp
+	logging_component.hpp
+	log_entry_address.cpp
+	log_entry_address.hpp
+	log_time.cpp
+	log_time.hpp
+	query_result.cpp
+	query_result.hpp
+	hostnames.cpp
+	hostnames.hpp
+	mldb/hostnames.cpp
+	mldb/hostnames.hpp
+	hostnames_validator.cpp
+	hostnames_validator.hpp
+	mldb/hostnames_validator.cpp
+	mldb/hostnames_validator.hpp
+	file_handler.cpp
+	file_handler.hpp
+	binary_file_handler.cpp
+	binary_file_handler.hpp
+	text_file_handler.cpp
+	text_file_handler.hpp
+	active_files.cpp
+	active_files.hpp
+	unary_integer_file.cpp
+	unary_integer_file.hpp
+	log_component_names.cpp
+	log_component_names.hpp
+	mldb/log_component_names.cpp
+	mldb/log_component_names.hpp
+	format_strings.cpp
+	format_strings.hpp
+	mldb/format_strings.cpp
+	mldb/format_strings.hpp
+	log_string_interpolator.cpp
+	log_string_interpolator.hpp
+	log_string_writer.cpp
+	log_string_writer.hpp
+	log_string_printer.cpp
+	log_string_printer.hpp
+	logger.cpp
+	logger.hpp
+	mldb/metadata.cpp
+	mldb/metadata.hpp
+	main.cpp
+	metadata.cpp
+	metadata.hpp
+	mlutil.cpp
+	mlutil.hpp
+)
+SOURCE_GROUP( "" FILES ${ALL_SRCS} )
+
+SET( MONGODB_SRCS
+	mongodb/categories.cpp
+	mongodb/categories.hpp
+	mongodb/connection_info.hpp
+	mongodb/connection_thread_data.cpp
+	mongodb/connection_thread_data.hpp
+	mongodb/constants.hpp
+	mongodb/format_strings.cpp
+	mongodb/format_strings.hpp
+	mongodb/hostnames.cpp
+	mongodb/hostnames.hpp
+	mongodb/log_component_names.cpp
+	mongodb/log_component_names.hpp
+	mongodb/log_storage.cpp
+	mongodb/log_storage.hpp
+	mongodb/metadata.cpp
+	mongodb/metadata.hpp
+	mongodb/types.hpp
+	mongodb/user_log_buffer.hpp
+	mongodb/user_log_writer.cpp
+	mongodb/user_log_writer.hpp
+	mongodb/tasks/add_server_start_task.cpp
+	mongodb/tasks/add_server_start_task.hpp
+	mongodb/tasks/flush_task.cpp
+	mongodb/tasks/flush_task.hpp
+	mongodb/tasks/mongodb_background_task.cpp
+	mongodb/tasks/mongodb_background_task.hpp
+	mongodb/tasks/reconnect_task.hpp
+	mongodb/tasks/roll_task.cpp
+	mongodb/tasks/roll_task.hpp
+	mongodb/tasks/update_id_string_pair_task.hpp
+	mongodb/tasks/write_id_string_pair_task.hpp
+	mongodb/tasks/update_appid_task.hpp
+	mongodb/tasks/write_appid_task.hpp
+)
+SOURCE_GROUP( "MongoDB" FILES ${MONGODB_SRCS} )
+
+BW_ADD_EXECUTABLE( message_logger ${ALL_SRCS} ${MONGODB_SRCS} )
+
+
+BW_TARGET_LINK_LIBRARIES( message_logger
+	server
+)
+
+BW_PROJECT_CATEGORY( message_logger "Tools" )

@@ -1,0 +1,30 @@
+ifneq ($(SYSTEM_HAS_MYSQL),0)
+
+$(warning MySQL development libraries not installed. Skipping bwengine_mysql build.)
+
+else
+
+name  := bwengine_mysql
+type  := shared_library
+component := dbapp
+bindir = $(BW_SERVER_COMPONENT_DIR)
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource = mysql_engine_creator
+
+usePython = 1
+useMySQL = 1
+
+dependsOn = db_storage_mysql
+
+include $(BW_COMPONENT_FOOTER)
+
+# Add this extension to the target one level up which is used by DBApp
+BW_DBAPP_EXTENSIONS += bwengine_mysql
+
+endif
+# endif MySQL development libraries installed. 
+
+# vi: filetype=make
+# Makefile.rules - server/dbapp_extensions/bwengine_mysql

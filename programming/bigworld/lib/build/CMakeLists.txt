@@ -1,0 +1,22 @@
+CMAKE_MINIMUM_REQUIRED( VERSION 2.8 )
+PROJECT( build )
+
+INCLUDE( BWStandardProject )
+INCLUDE( BWStandardLibrary )
+
+SET( ALL_SRCS
+	build.cpp
+	build.hpp
+)
+SOURCE_GROUP( "" FILES ${ALL_SRCS} )
+
+BW_BLOB_SOURCES( BLOB_SRCS ${ALL_SRCS} )
+BW_ADD_LIBRARY( build
+	${BLOB_SRCS}
+)
+
+BW_TARGET_LINK_LIBRARIES( build INTERFACE
+	cstdmf
+	)
+
+BW_PROJECT_CATEGORY( build "BigWorld Libs" )

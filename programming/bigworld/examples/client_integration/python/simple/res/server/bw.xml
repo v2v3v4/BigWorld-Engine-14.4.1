@@ -1,0 +1,19 @@
+<root>
+	<!-- See the Server Operations Guide for options that can be specified in
+		this file. -->
+
+	<parentFile> server/development_defaults.xml </parentFile>
+	<!-- This can be included if bigworld/res is part of your BW_RES_PATH. -->
+
+	<personality>	egclient4	</personality>
+
+	<baseApp>
+		<!-- Disable archiving -->
+		<archivePeriod>	0	</archivePeriod>
+	</baseApp>
+
+	<billingSystem>
+		<shouldAcceptUnknownUsers> true </shouldAcceptUnknownUsers>
+		<entityTypeForUnknownUsers> ClientAvatar </entityTypeForUnknownUsers>
+	</billingSystem>
+</root>

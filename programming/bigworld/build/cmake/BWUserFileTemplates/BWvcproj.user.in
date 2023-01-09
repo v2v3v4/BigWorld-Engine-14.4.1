@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioUserFile
+ProjectType="Visual C++"
+Version="@BW_USERFILE_VC_VERSION@"
+ShowAllFiles="false"
+>
+<Configurations>
+@BW_USERFILE_CONFIGSECTIONS@
+</Configurations>
+</VisualStudioUserFile>

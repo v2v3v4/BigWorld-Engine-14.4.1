@@ -1,0 +1,20 @@
+name  := bwengine_xml
+type  := shared_library
+component := dbapp
+bindir = $(BW_SERVER_COMPONENT_DIR)
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource = xml_engine_creator
+
+usePython = 1
+
+dependsOn = db_storage_xml
+
+include $(BW_COMPONENT_FOOTER)
+
+# Add this extension to the target one level up which is used by DBApp
+BW_DBAPP_EXTENSIONS += bwengine_xml
+
+# vi: filetype=make
+# Makefile.rules - server/dbapp_extensions/bwengine_xml

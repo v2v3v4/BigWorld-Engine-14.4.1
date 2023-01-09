@@ -1,0 +1,24 @@
+
+define projectSpecificFlags
+	useBigWorld := 1
+	cxxFlags_$(binName) += -Wextra -Wno-unused-parameter
+endef
+
+subdirs =		\
+	lib			\
+	server		\
+	third_party \
+	tools		\
+
+ifneq ($(user_shouldBuildExamples),0)
+subdirs += examples
+else
+$(info not building examples [user_shouldBuildExamples = 0])
+endif
+
+$(call includeMakefilesFrom,$(subdirs))
+
+projectSpecificFlags :=
+
+# vi: filetype=make
+

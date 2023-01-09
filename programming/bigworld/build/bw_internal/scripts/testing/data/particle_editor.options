@@ -1,0 +1,117 @@
+<root>
+	<personality>	Personality	</personality>
+	<help>
+		<toolsReferenceGuide>	..\..\doc\content_tools_reference_guide.pdf	</toolsReferenceGuide>
+		<contentCreationManual>	..\..\doc\content_creation.chm	</contentCreationManual>
+		<shortcutsHtml>	resources/html/shortcuts.html	</shortcutsHtml>
+	</help>
+	<space>	helpers/spaces/pe	</space>
+	<app>
+		<maxTimeDelta>	0.5	</maxTimeDelta>
+		<timeScale>	1.000000	</timeScale>
+	</app>
+	<romp>
+		<watcherValues>
+			<Client.Settings>
+				<Time.of.Day>	12:00	</Time.of.Day>
+				<Secs.Per.Hour>	0	</Secs.Per.Hour>
+			</Client.Settings>
+		</watcherValues>
+	</romp>
+	<camera>
+		<speed>	SuperFast
+			<Slow>	1
+				<turbo>	8	</turbo>
+			</Slow>
+			<Medium>	8
+				<turbo>	24	</turbo>
+			</Medium>
+			<Fast>	24
+				<turbo>	64	</turbo>
+			</Fast>
+			<SuperFast>	48
+				<turbo>	128	</turbo>
+			</SuperFast>
+		</speed>
+		<invert>	0	</invert>
+		<mode>	4	</mode>
+		<rotDir>	0	</rotDir>
+	</camera>
+	<render>
+		<environment>	1
+			<drawFog>	1	</drawFog>
+			<drawShimmer>	1	</drawShimmer>
+			<drawBloom>	1	</drawBloom>
+			<drawClouds>	1	</drawClouds>
+			<drawSky>	1	</drawSky>
+			<drawSunAndMoon>	1	</drawSunAndMoon>
+			<drawDetailObjects>	1	</drawDetailObjects>
+			<drawWater>	1
+				<reflection>	1	</reflection>
+				<refraction>	1	</refraction>
+				<simulation>	1	</simulation>
+			</drawWater>
+			<drawStaticSky>	0	</drawStaticSky>
+		</environment>
+		<showGrid>	0	</showGrid>
+		<showBB>	0	</showBB>
+		<lighting>	0	</lighting>
+		<scenery>
+			<wireFrame>	0	</wireFrame>
+		</scenery>
+		<terrain>	1
+			<wireFrame>	0	</wireFrame>
+		</terrain>
+	</render>
+	<precompileEffects>	0	</precompileEffects>
+	<settings>
+		<floorTexture>	helpers/maps/system/default.bmp	</floorTexture>
+		<floorGrid>	1.0	</floorGrid>
+		<zoomDuration>	0.250000	</zoomDuration>
+	</settings>
+	<startup>
+		<lastOrigin>	0.000000 0.000000 0.000000	</lastOrigin>
+		<lastView>
+			<row0>	-0.720234 -0.242571 -0.649940	</row0>
+			<row1>	-0.000000 0.936876 -0.349661	</row1>
+			<row2>	0.693731 -0.251838 -0.674770	</row2>
+			<row3>	-0.000000 -0.000000 11.126639	</row3>
+		</lastView>
+	</startup>
+	<consoles>
+		<darkenBackground>	true	</darkenBackground>
+		<numMessageLines>	5	</numMessageLines>
+	</consoles>
+	<currentCountry>	</currentCountry>
+	<currentLanguage>	</currentLanguage>
+	<graphics>
+		<bpp>	32	</bpp>
+		<fullScreen>	false	</fullScreen>
+		<height>	768	</height>
+		<shadows>	false	</shadows>
+		<width>	1024	</width>
+	</graphics>
+	<input>
+		<exclusive>	false	</exclusive>
+	</input>
+	<ualConfigPath>	resources/ual/ual_config.xml	</ualConfigPath>
+	<language>	helpers/languages/files_en.xml	</language>
+	<language>	helpers/languages/files_cn.xml	</language>
+	<language>	helpers/languages/particleeditor_gui_en.xml	</language>
+	<language>	helpers/languages/particleeditor_gui_cn.xml	</language>
+	<language>	helpers/languages/particleeditor_rc_en.xml	</language>
+	<language>	helpers/languages/particleeditor_rc_cn.xml	</language>
+	<checkFileCase>	false	</checkFileCase>
+	<defaults>
+		<backgroundColour>	0.630000 0.630000 0.810000 0.000000	</backgroundColour>
+		<bkgMode>	Terrain	</bkgMode>
+		<drawScene>	true	</drawScene>
+		<flareXML>	system/data//fx_corona.xml	</flareXML>
+		<startDirectory>	particles/	</startDirectory>
+	</defaults>
+	<resourceGlue>
+		<environment>
+			<sunFlareXML>	</sunFlareXML>
+		</environment>
+	</resourceGlue>
+</root>

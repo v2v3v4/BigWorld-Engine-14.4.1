@@ -1,0 +1,964 @@
+So, a SuperModel is a collection of parts. Each part has a tree of nodes in it.
+Parts are connected to each other, and the nodes in each part are attached as
+a subtree to the connecting node to form a skeleton. The set of parts in a
+supermodel may change over the life of the supermodel. The skeleton is dynamic
+but not recursive, because node names must be unique in their own right
+(i.e. without the hierarchy)
+
+So do only the parts have files describing their animations...?
+How does whole-model LODding work if there is no schema for a
+supermodel?
+
+
+Overriding works from bottom up ... worry about bottom LOD first then
+specialise by splitting into configurable pieces instead of generalise
+by joining certain groups of pieces... This does mean that we have a
+supermodel template file ... and it restricts the way we can put pieces
+together ...(e.g. can't switch head and legs) but I guess it kinda makes
+sense in a LOD way (information LOD as well as visual repr. LOD. hell yeah.
+makes sense for these to go hand in hand)
+
+With animations, do we want specific parts to have their own animations
+as opposed to only having those which override other anims? I think yes.
+How do we manage this complexity? (bluuurrrrrgh) Do all animation names
+exist on a flat level, and if the component hasn't the animation it
+does nothing (or goes to initial state...?), or are they inside the component
+that has them (too?) e.g. model.head.OrcFaceRoar ... or even referring to the
+specilialisation in whihc they're defined explicitly ... model.head.Orc["face_roar"]?.
+The first option would be more compatible with the existing
+python way but would require explict blendingy things for cases that don't
+really need them... (e.g. orc's roar + other anim for rest of body). hmmm... 
+
+
+Animations on lower LODs... for model-swapping LODs ... and for
+billboard-swapping LODs (almost like animated textures)...
+
+
+Should blending factors be pushed down into this level of description?
+(optimisations for digital (i.e. fully on and fully off) blending factors
+to make flat-namespace animations more desirable?)
+
+
+
+From a user (script or level-builder) point of view, I think that the supermodel
+schema idea is actually prefable ... you'd often prefer not to have
+that kind of customisation power if it means that you've got to build
+everything yourself every time (just look at the particle system
+experience ... we made functions to abstract the building of systems into
+useful unit systems. and it would have been no great loss if we required
+them to be defined in files instead of being able to build anything in
+script ... well, not the way we've used them so far anyway (maybe different
+if you had attribute access... but can still do this with files ... in fact
+could redirect/rename attributes... anyway, later.))
+
+So let's explore this supermodel schema option a bit more. And we'll take on
+board the 'from-the-ground-up' idea too.
+
+But how far should we take this? Should (e.g.) human-male and human-female
+have a common ancestor? (probably - all have same named walk anims after all)
+So should all models eventually derive from some root model? Or at least
+do so logically anyway... (perhaps) (This blows away the all-in-one-file possibility)
+
+Given this, how do you specify what you create when you actually make the
+supermodel? i.e. can you change from a male to female model with the same
+supermodel instance? how about from a normal head to a ponytail head? just
+changing your pants? (the pt is, if we definitely want the last one,
+and we probably want the second-last one ... then we have the same problems
+to solve as with the first one.) If info goes hand-in-hand with LOD, then the
+information you provide for the lowest LOD levels will necessarily determine
+what information you can provide for higher LOD levels. e.g. if you're got
+a human male model, and you select brown-loddy instead of green-loddy, then
+you can only choose brownish clothes (ok, not a brilliant example). How about,
+if you select head-with-spiky-hair, then you can later select long-spiky-hair
+or short-spiky-hair, but not if you select head-with-no-hair. okok, the example
+that I'm really thinking of is if we have this all-in-one-hierarchy thing,
+then if you choose a female model at a low level, this determines the language
+you can use to describe the model in more detail (similar to items - with a base
+item of sword, it can have a sharpness, but with a base item of binoculars this
+is meaningless ... hmmm seeing an interesting new structure for data here...)
+i.e. can only select female heads and bodies not beziel ones. The more I describe
+the problem, the more obvious it seems that it's a natural consequence and
+not really a problem after all. hmmm... (for python, it sounds like the '.' operator
+would be useful to realize this kind of required hierarchy)
+
+Also worried about having to specify repeated things due to the tree-like
+(as opposed to a more general graph-like) nature of hierarchies ... i.e.
+if same trousers can appear on both male and female models would have to
+specify them twice. Or even (if we had it) pluggable hair, etc.
+
+So what we're looking at is a data structure (like would be ideal for items)
+where the format (and 'length') cannot be known until the contents of the full
+structure are read. Yes you could try to do this with inheritance but it
+would be _very_ messy. [btw I realise at this point that this is a sidetrack]
+
+... something like this maybe...
+struct ModelDesc
+{
+	int modelID
+	switch (modelID)
+	{
+	case Character:
+		int race;
+		switch (race)
+		{
+		case Human:
+			bool male
+			switch (male)
+			{
+			case false:
+				int headType;
+				int bodyType;
+				int legsType;
+				// etc.
+			}
+		}
+	}
+};
+
+
+
+If we allow a supermodel instance to reconfigure its parts, then a good thing
+to happen would be that any animation playing on them kept on playing - but what
+happens when they're replaced by a part that doesn't have a corresponding
+animation? I guess nothing. This was going to lead into an argument for fully
+specifying a model when it's created, but after writing that question down it
+doesn't support it at all.
+
+
+Re: building models ... we can't posibly have a separate file for each combination
+of head, body and legs. So worry about that a bit more. Or does the top-level
+file just say 'I am a model with configureable head, body and legs, and they're
+connected like this...'? And then you actually plug supermodels into those
+connections (hmmm.... don't like it - they really need nodes, and supermodels
+don't guarantee nodes)
+
+
+
+
+
+OK, let's sketch.
+
+
+PluggableMale:
+<supermodel>
+	<parent>	UnpluggableMale </parent>
+
+	<part>
+		<identifier>	Body	</identifier>
+		<connection>				# maybe move out to main section?
+			<node>	biped Neck </node>
+			<part>
+				<identifier> Head	</identifier>
+			</part>
+		</connection>
+		<connection>
+			<node>	biped Hip </node>
+			<part>
+				<identifier> Legs	</identifier>
+			</part>
+		</connection>
+
+		<models>
+			<resource>	neo_body	</resource>
+			<resource>	nexus_body	</resource>
+		</models>
+		<animations>
+			<resource>	idle	</resource>
+			<resource>	walk	</resource>
+		</animations>
+	</part>
+</supermodel>
+
+
+UnpluggableMale:
+<supermodel>
+	<parent>	StaticMeshCharacter	<parent>
+
+	<part>
+		<identifier>	Whole	</identifier>
+	</part>
+</supermodel>
+
+
+StaticMeshCharacter:
+<supermodel>
+	<parent>	BillboardCharacter	</parent>
+
+	<part>
+		<identifier>	Whole	</identifier>
+	</part
+</supermodel>
+
+
+Notes:
+- Flat namespace for animations, accumulated from all parents
+
+
+
+Hmmm... but what about parts with different/overriding animations.
+Maybe we'll petition the class metaphor here ... supermodel files
+describe only one resource for each part, and any resource that
+inherits from that resource may be put there.
+
+It is looking increasingly like actually having supermodel files
+is going to be a waste of time... because there is so little
+information in them vs the part files they reference (which
+should have animations in them)
+
+
+Let's try this then:
+
+characters/male/head/base.part:
+<part>
+	<mfx> characters/male/head/base.mfx	</mfx>
+	<animations>
+		<animation>	characters/male/head/smile.animation	</animation>
+		<animation>	characters/male/head/frown.animation	</animation>
+	</animations>
+	<connector>
+		<name>	Root		</name>
+		<node>	biped Head	</node>
+	</connector>
+</part>
+
+characters/male/head/orc/base.part:
+<part>
+	<parent>	characters/male/head/base.part		</parent>
+	<mfx>		characters/male/head/orc/base.mfx	</mfx>
+	<animations>
+		<animation>	characters/male/head/orc/roar.animation		</animation>	[addition]
+		<animation>	characters/male/head/orc/frown.animation	</animation>	[override]
+	</animations>
+</part>
+
+characters/male/base.part:
+<part>
+	<parent>	characters/base.mfx	</mfx>
+	<mfx>		characters/male/base.mfx		</mfx>
+	<animations>
+		<animation>	characters/male/idle.animation		</animation>
+		<animation>	characters/male/walk.animation		</animation>
+		<animation>	characters/male/dash.animation		</animation>
+	</animations>
+</part>
+
+characters/male/neo.part:
+<part>
+	<parent>	characters/male/base.part	</parent>
+	<mfx>		characters/male/neo.mfx		</mfx>
+</part>
+
+characters/male/nexus.part:
+<part>
+	<parent>	characters/male/base.part	</parent>
+	<mfx>		characters/male/neo.mfx		</mfx>
+</part>
+
+characters/base.part
+<part>
+	<parent>	base.part	</parent>
+	<mfx>		characters/lodman.mfx		</mfx>
+</part>
+
+
+characters/male/body/base.part:
+<part>
+	<mfx> characters/male/body/base.mfx	</mfx>
+	<connector>
+		<name>	Head		</name>
+		<node>	biped Head	</node>
+	</connector>
+	<connector>
+		<name>	Legs		</name>
+		<node>	biped Hip	</node>
+	</connector>
+</part>
+
+
+
+
+So there's no supermodel description file. They are dynamically built
+of parts from connections specified.
+How then do we specify that the whole supermodel of n parts actually
+dervies from 'male/base' We don't. Bugger. Unless maybe the _body_ inherits
+and the other parts are tacked on ('tho this would violate the
+no-nodes-deleted-in-derivation assumption). (So these things I've been
+calling parts would become supermodels)
+
+Added wrinkle - what if, with a certain combination of parts,
+we actually want to fall back to neo say instead of nexus (or
+rather to 'brown male' instead of 'green male') AAAaaargh!
+Then we add the parts to a framework that inherits from neo
+instead of one that inherits from nexus, or male/base, or whatever.
+(btw yesyes I realise that that the intention is that neo will be
+replaced with multi-part models, not that they will be a specialisation
+of him. Something like this would still probably want to be done however)
+
+So it looks like we do need some kind of supermodel shell file for
+these. But shouldn't need to create wrappers around other 'part'
+files ... i.e. they could all be called supermodel files, even
+'tho one type might not specify any mfxs but specify connections
+between other classes of supermodels. So this class would be
+'abstract' until its parts were filled in. No, that sounds silly.
+And with the 'different types' idea, could keep usual files
+called parts and programatically wrap them with supermodels
+(would be less confusing)...
+
+Maybe should start with neo or some other whole model
+and _replace_ parts? (Reason for all this kerfuffle is the wanting
+to keep supermodels in the inheritance chain.)
+
+Specify inheritance dynamically for multi-part supermodels?
+No that's bound to wreak everything... sfkjbwqfh.
+
+
+
+So what we want to do with inheritance is:
+- accrue animations
+- LOD out
+It should not be too hard to marry these two aims, as they are
+ quite related. Or maybe we should have separate chains ...
+ or separate mechanisms...?
+What happens when you want to play an animation defined only
+ for model-swapping on a much higher LOD? Well, hopefully it
+ will have been overriden, but if not, then model-swapping
+ will only work if the supermodel has selected that LOD level.
+ So it doesn't happen. Same with billobard texture animation
+ (yes they are special cases ... but not terribly special)
+
+We also want to specify a connection system for putting parts
+ together, while maintaining at least the LOD part of inheritance,
+ and hopefully the animation part as well.
+
+
+---
+
+< Insert various ramblings recorded only on paper >
+
+-------------------------------------------------------------------------
+
+
+OK, some solid ideas at last:
+
+There are no supermodel files. There is a supermodel class, which
+holds together and controlls the animation and rendering of a number
+of models. These are instance-like classes, i.e. there is nothing
+analogous to PyModelInfo.
+
+There are model files, ending in '.model'. When a supermodel is
+created, the models it is made up of are specified. In the case
+of our human character, the switch between drawing three parts
+and drawning one simpler part is engineered using LOD ratios
+(i.e. the '60 degree fov drawing distance' in which that model
+is to be drawn). So each part is really LODded independently
+(this could change if it was thought to be too clunky, and
+special significance could be given to the first model...)
+
+Animations are accumulated on the same inheritance hierarchy,
+and the animation most appropriate to the current LOD level
+is used. All the animations for all the LOD levels are
+interpreted and selected from a flat namespace. Attempting
+to play an animation that does not exist (or does not exist
+at the current LOD level) selects an infinite length animation
+of the model's initial pose. Again, some care may need to be
+taken to ensure that multi-model supermodels don't waste time
+animating unnecessarily (e.g. when all the small parts have an
+animation overriding the whole part's animation, it would be
+a waste of time to apply the whole part's animation). We
+probably need some sort of 'node mask' concept to make this
+work elegantly.
+
+The mesh files themselves specify how a part is connected to
+other parts for multi-part supermodels.
+
+OK, file specifications:
+
+In a chunk:
+...
+	<supermodel>	<!-- Two-part supermodel -->
+		<model>		a.model	</model>
+		<model>		b.model	</model>
+	</supermodel>
+...
+(maybe inside a <model> section? ... confusing - perhaps this would
+be a good time to broach <staticModel> and <animatedModel>?)
+
+
+Some model files:
+<root>
+	<parent>		alpha.model		</parent>
+	<extent>		100.0			</extent>	<!-- can see from this distance -->
+	<visual>		a.visual		</visual>	<!-- mfx, mesh, whatever -->
+	<animation>		letters/alpha/a/idle.animation	</animation>	<!-- override -->
+	<animation>		letters/alpha/a/walk.animation	</animation>
+</root>
+
+<root>
+	<visual>		alpha.visual		</visual>
+	<animation>		letters/alpha/idle.animation	</animation>
+</root>
+
+<root>
+	<parent>		beta.model		</parent>
+	<extent>		95.0			</extent>
+	<visual>		b.visual		</visual>
+	<clod>			true
+		<max>			0.3				</max>	<!-- clod may be quantised -->
+	</clod>
+</root>
+
+
+
+Open to better names for 'extent'! 'range'? 'far'? One word preferred.
+Maybe 'mesh' is a better word than 'visual', which is a bit too generic, hmmm?
+
+
+After a model is loaded it's constant like a map (texture) is after it's loaded.
+Each model has an animation map, which (logically) maps animation names to
+details. However, I think we'd want to have a (transient) global animation
+name table, whereby names are turned into global ids and those are used
+forever after. And it has to be global (not one for each root model), because
+they have to be unique in a supermodel and you can't tell beforehand what
+a supermodel will use. Hmmm... I was thinking of using vectors to look up
+animation ids (numbers) too. Not very scalable that. Maybe there's some
+association compromises we can come up with ... or just stick with the
+string lookup and a v. small (like one entry) cache... stringmap's pretty fast.
+Anyway, details, details. When a supermodel wants to play an animation
+(at a certain frame number) on a model, it gets all its parts to play them in
+turn (see note about about probable need for node masks - for both order
+and efficiency (heh :))
+
+A supermodel is also the beast in charge of storing the node transform
+table for its conglomeration of models. This is passed into animations as
+a thing to output into. It is also in charge of priming the render context
+transform stack (or whoever's) with the appropriate transforms before
+each visual (in the model) is traversed to ensure that the part tree turns
+out properly.
+
+As hinted at above, the supermodel also controls LODding, by keeping track
+of and changing the current model to draw based on the 'extent' specified
+in the models files in the chain. Extent chains that aren't monotonous
+generate a warning when the offending model is loaded, as they could
+cause the (envisaged) system to get caught in a local minimum.
+The absence of an extent is interpreted as 'forever', i.e. the parent
+model will never be shown (although its animations will be considered
+and used if not overidded).
+It is legal to not specify any visual at all, and again, all the animations
+are available to any supermodel using that model (obviously it would
+only be useful if there were other parts that the animation could affect)
+
+The placement of the model visibility extent value on the child side
+of the inheritance boundary is intentional - not only so that different
+children can have different extents, but also because extents need
+to be able to be specified when there is no parent model, beyond which
+nothing is drawn or animated. I'm willing to risk the possibility
+that the levels of all children would want to be changed at once.
+Maybe we could have an child extent multiplier or some on the parent
+side of the relationship...
+
+I'm not sure what the best units for extent are, currently I'm using
+metres 'coz that's what the existing structure uses, but whatever
+they are, and whatever scaling is applied to them, the scale factor
+will be the same for the whole supermodel (i.e. without reference
+to the offsets of individual pieces). This is not only easier to write,
+but also important for the switching of multi-part models to a
+single-part model, because this switch relies on the synchronisation
+of extents across a number of different models, in slightly different
+locations.
+
+Externally controlled material overrides (mainly through script - but
+also possibly specified in a supermodel section in a chunk) are
+treated in a similar way to animations. They are accumulated and
+placed in a flat namespace. Hmmm... actually, maybe these do actually
+cross over to the billboard texture style of animation ... except they
+are all single frames, or states (like the 'initial pose' animation!)
+Still wondering whether there shuld be some enumeration of the allowable
+materials (with names), or if you should just specify a texture name
+and be done with it. Leaning towards the enumeration at the moment...
+although it'd probably be specified in some base model that doesn't
+actually use it (but that is OK). So it could be like
+
+<materialModification>
+	<name>		pocket		</name>
+	<material>	body_map	</material>
+	<stage>		1			</stage>
+	<option>
+		<name>	none				</name>
+		<resource>	maps/none.tga	</resource>
+	</option>
+	<option>
+		<name>	DLC				</name>
+		<resource>	maps/pockets/dlc.tga	</resource>
+	</option>
+	<option>
+		<name>	FrontierGuard				</name>
+		<resource>	maps/pockets/frontier_guard.tga	</resource>
+	</option>
+</materialModification>
+
+Then:	model.pocket = "FrontierGuard"
+or:		model.materials["pocket"] = "FrontierGuard"
+or:		model.pocket.FrontierGuard.select()
+or:		model.pocket.FrontierGuard()	# like animations!
+or:		model.FrontierGuard("pocket")
+etc, etc, etc.
+
+
+Animations encompass more than just nodes, despite the assumptions
+above. We need a way of getting an animation to select static
+models or billboard textures when that is the model displayed, but
+not to stuff things up if it's played when there's bones around
+(this would be nice, anyway.... or maybe we want to require that
+those animations are overidden or else it goes back to a static
+mesh animation.... hmmm...)
+
+<animation>
+	<name>				walk	</name>
+	<frameRateScale>	10.f	</frameRateScale>
+	<visual>	frame_1.visual	</visual>
+	<visual>	frame_2.visual	</visual>
+	<visual>	frame_3.visual	</visual>
+	<visual>	frame_4.visual	</visual>
+</animation>
+
+For billboard textures, replace 'visual' with 'texture'. The main section
+of the model file would have a <texture> section instead of a <visual> one.
+Maybe we want to say <bonelessVisual> instead of <visual> everywhere to
+distinguish the distinct classes of models (unless you can mix and match...
+static mesh animations with boned characters... please no!)
+
+These could maybe live in their own files. maybe even .animation
+(that would probably be bad) or some other extension. 'tho really want
+them all together in one file. so keep in model file for now I guess.
+
+Hmmm. Because framerates are (currently) specified in actions, we need
+to specify a frameRate multiplier here so an action expecting to play
+at say 30fps doesn't play this ridiculously fast (or could just
+repeat models...) This kinda suggests that framerates really belong
+with the animation and not the action. It'd certainly make the
+pymodel files a lot cleaner (and you get into the whole models/supermodels
+reference debate again with animations/actions! Maybe PyModel should get
+all animations as actions ('tho names do suck) .... hmmm difficult again)
+
+Actions would use inbuilt offsets from highest LOD of model so hopefully
+there's no need to specify them here. (Ack! future of pymodel files
+which want to get actions from model, but can't know because config
+changes all the time! Damn I really didn't want to have to redesign
+any of that now. Something will have to be done about it 'tho. Also
+end of previous paragraph is very relevant)
+
+
+OK, I think Actions will have to live in model files. Despite the
+weirdness of specifying script-related things there, it's the only
+way it can work properly. Plus it means we don't have weird
+parallel ibnheritance stuff. I should have realeised this would have
+to change earlier! duh!. Anyway, so all the actions in your supermodel
+are available all the time. And they're determined at supermodel
+creation time based on the models you include. The animations they
+actually select however are taken from the model for the current LOD
+level. The information used for action matching is always taken from
+the highest LOD level. What happens for all those flags you can set?
+It'll have to be looked at on a case-by-case basis:
+isMovement: remove movement for current animation
+isImpacting: add impact of nearest animation (ignores overriden animations)
+isCoordinated: remove offset for current animation
+This is just a first guess ... the feasability and consequences of
+these approaches will need to be looked at a bit closer.
+
+When multiple animations want to be played on a static mesh then
+obviously only one can succeed. So choose the one with the highest
+blend ratio I guess. (Imagining interface from action system to
+be along the lines of the current one: Animate(vector<(Anim,Frame,Blend)>)
+
+OK, that's not too bad then - it looks like most of the problems this
+causes can be solved, and some of the outcomes actually result in
+a better system than the current one. So it looks like frameRate is
+going to live with the animations now... unless there are any
+gainsayers...? Putting the actions here makes ModelViewer's new
+task a bit easier too, 'coz it's always needed to create and
+manage actions, and now they're all in the same place for it.
+
+[Aside: This is not really that complicated a system. Not really.
+I can't believe how much work time I've wasted thinking about it!
+I must be losing my touch... it's all very confusing]
+
+Maybe we can allow static mesh anims to mix with bone anims...
+animations are simply considered in order of blend ratio priority -
+if a static mesh anim is first it is played, otherwise it is ignored.
+Hmmmm... it's probably a bit of a waste of time :) And it'll probably
+all fall out when the animation system with its table of nodes is
+examined further.
+
+So how do material states work? We don't really want them to be
+in the full blend-ratio'd animation system (alTHOUGH a blend ratio
+DOES actually make sense for materials ... and could be a cool
+effect ... um, let's leave it for now, shall we? :)
+No, they'd work like 'animation' states ... the volatile model data
+record (being the node transform table expanded to include the material
+override texture table and the static mesh replacement table) would be
+initialised with the appropriate states based on the current states
+in effect, before all the animations get to have their go at it.
+The resultant table would then be passed to the model when it was drawn,
+which would know what to do with it. The supermodel would first be
+traversed to calculate the world node transforms from all the relative
+node transforms. I'm not sure whether we want to write them back to
+the same table or into the nodes of the model's visual ... it would
+be nice in some way to keep the visual const ('tho worldTransform_
+could be mutable... hmmm... nah...), but I can't say whether either
+way is better for the cache, and there's something to be said for
+the model drawing process to NOT modify the table.... (space for
+separate transforms a waste since we don't want to overwrite them?)
+let's leave it in the visual for now then, eh? Even though this could maybe
+solve some of those tick/draw problems... let's come back to this later.
+
+The point of the paragraph above is that material states work by
+setting their state in some record kept in the supermodel. Individual
+models which have overridable materials then set their texture pointers/
+whatever to the appropriate texture (specified in the record)
+when they're drawn. Static mesh models can replace their static mesh
+in the same way (only because it's consistent... it's just a pointer
+operation, don't panic everybody! it's consistent in that drawing
+a model twice will draw it again in the state that it was last drawn
+in. The fact that no-one wants or uses this behaviour is irrelevant :)
+
+
+OK, well that's a bit more progess then. I'm going home.
+
+
+14/8/2001
+
+--------------------------------------------------------------------------
+
+
+Current .model file format specifiation:
+
+<root>
+	?<parent>	MODEL_RESOURCE			</parent>
+	?<extent>	.f						</extent>
+
+	[<nodefullVisual>	VISUAL_RESOURCE				</nodefullVisual>
+	|<nodelessVisual>	VISUAL_RESOURCE				</nodelessVisual>
+	|<billboardVisual>	TEXTURE_RESOURCE			</billboardVisual>]
+
+	<! if nodeless !>
+		?<batched>	false		</batched>
+	<! else if billboard !>
+		[<source>
+			+<model>	MODEL_RESOURCE		</model>
+			?<width>		128.i	</width>
+			?<height>		128.i	</height>
+			*<dye>
+				<matter>	MATTER_NAME			</matter>
+				<tint>		TINT_NAME			</tint>
+				*<PROPERTY_NAME>	0.f 0.f 0.f 0.f		</PROPERTY_NAME>
+			</dye>
+		</source>
+		&|<boundingBox>
+			?<min>	0.f 0.f 0.f	</min>
+			?<max>	1.f 1.f 1.f	</max>
+		</boundingBox>]
+		?<material>
+			<!-- materials/billboard.mfm is the preset material -->
+			[ standard material sections ]
+		</material>
+	<! endif !>
+
+	*<animation>
+		<! if nodefull !>
+			?<name>			ANIMATION_NAME			</name>
+			<nodes>			ANIMATION_RESOURCE		</nodes>
+			<!-- last part of nodes spec used if name missing -->
+			?<firstFrame>		0		</firstFrame>
+			?<lastFrame>		-1		</lastFrame>
+			?<alpha>
+				*<NODE_NAME>	0.f		</NODE_NAME>
+			</alpha>
+			?<cognate>		ANIMATION_NAME			</cognate>
+		<! else !>
+			<name>			ANIMATION_NAME			</name>
+			<! if nodeless !>
+				+<visual>		VISUAL_RESOURCE			</visual>
+			<! else !>
+				<frameCount>	.i						</frameCount>
+			<! endif !>
+		<! endif !>
+		?<frameRate>	30.f					</frameRate>
+	</animation>
+
+	*<action>
+		<name>			ACTION_NAME		</name>
+		?<animation>	ANIMATION_NAME	</animation>
+		?<blendInTime>		0.3f		</blendInTime>
+		?<blendOutTime>		0.3f		</blendOutTime>
+		?<track>			0		</track>
+		?<filler>			false	</filler>
+		?<blended>			false	</blended>	<!-- deprecated 19/9/02: use track -->
+		?<isMovement>		false	</isMovement>
+		?<isCoordinated>	false	</isCoordinated>
+		?<isImpacting>		false	</isImpacting>
+		?<match>
+			?<trigger>
+				?<minEntitySpeed>	-1000.f	</minEntitySpeed>
+				?<maxEntitySpeed>	-1.f	</maxEntitySpeed>
+				?<minEntityAux1>	-180.f	</minEntityAux1>
+				?<maxEntityAux1>	-573.f	</maxEntityAux1>
+				?<minModelYaw>		-180.f	</minModelYaw>
+				?<maxModelYaw>		-573.f	</maxModelYaw>
+				?<capsOn>					</capsOn>	<!-- e.g. 0,1,4 -->
+				?<capsOff>					</capsOff>	<!--   max 31   -->
+			</trigger>
+			?<cancel>
+				?<minEntitySpeed>	-1000.f	</minEntitySpeed>
+				?<maxEntitySpeed>	100.f	</maxEntitySpeed>
+				?<minEntityAux1>	-180.f	</minEntityAux1>
+				?<maxEntityAux1>	180.f	</maxEntityAux1>
+				?<minModelYaw>		-180.f	</minModelYaw>
+				?<maxModelYaw>		180.f	</maxModelYaw>
+				?<capsOn>					</capsOn>
+				?<capsOff>					</capsOff>
+			</cancel>
+			?<scalePlaybackSpeed>	false	</scalePlaybackSpeed>
+			?<feetFollowDirection>	false	</feetFollowDirection>
+			?<oneShot>				false	</oneShot>
+			?<promoteMotion>		false	</promoteMotion>
+		</match>
+	</action>
+
+	<! if not billboard !>
+		*<dye>
+			<matter>		MATTER_NAME				</matter>
+			<replaces>		VISUAL_MATERIAL_ID		</replaces>
+
+			*<tint>
+				<name>		TINT_NAME			</name>
+				
+				<material>
+					[ standard material sections ]
+				</material>
+				*<property>
+						<name>		PROPERTY_NAME		</name>
+						?<controls>	0					</controls>
+						?<mask>		0					</mask>
+						?<default>	0.f 0.f 0.f 0.f				</default>
+				</property>
+			</tint>
+		</dye>
+	<! else !>
+		*<dye>
+			<matter>		MATTER_NAME			</matter>
+			*<tint>
+				<name>		TINT_NAME		</name>
+				*<dye>		<!-- in source model -->
+					<matter>	MATTER_NAME			</matter>
+					<tint>		TINT_NAME			</tint>
+					*<PROPERTY_NAME>	0.f 0.f 0.f 0.f		</PROPERTY_NAME>
+				</dye>
+			</tint>
+		</dye>
+	<! endif !>
+</root>
+
+
+6/12/2001
+
+
+--------------------------------------------------------------------------
+
+
+
+Spec of a dye ... in a .model file.
+
+<dye>
+	<matter>		Pants		</matter>
+	<replaces>		Material #2 </replaces>
+
+	<tint>
+		<name>		Khaki		</name>
+		
+		[<mfm>	MFM_RESOURCE_ID		</mfm>]
+		[<material>
+			[ std sections ]
+			<textureStage>
+				[ std sections ]
+			</textureStage>
+			<textureStage>
+				[ std sections ]
+			</textureStage>
+		</material>]
+		<property>
+				<name>		opacity				</name>
+				<controls>	TEXTUREFACTOR		</controls>
+				<mask>		ALPHA				</mask>
+				<default>	0 0 0 0		</default>
+		</property>
+	</tint>
+
+	<tint>
+		<name>		Denim		</name>
+	</tint>
+</dye>
+
+
+
+
+
+Each model has a stringmap of all its dye defs, keyed by matter name.
+
+When inheriting, the parent model's map is _copied_ and any dye defs
+ whose materials can't be found are replaced with empty ones.
+New dye defs are then added to the map, or allowed to override
+ existing entries if their matter names match.
+
+A dye is what you get when you actually pair up the matter
+ with the tint, i.e. this is what the user can ask the SuperModel to
+ create, and this is what inherits from the Fashion class.
+ It includes any property settings.
+
+OK, so what do we do with properties?
+
+Property names go into a global stringmap, where names are associated
+with values. The size of the data (as determined by what it controls,
+and the mask is specified. Always from 1 to 4 floats) controlled by
+properties with the same name must be the same, although the material
+field that is controlled may be different. Dyes have a vector of
+the offset of the property in the global table and the value to
+set for it. This vector is created from the union of the properties
+available in all its models' dyes.
+
+When the supermodel is dressed in the dye, the properties are set
+in the global table. When the model is dressed in the dye, the
+material pointer is set in the visual, and the properties are set
+in the material from the global table. So this table is just the
+communication mechanism between models both with neighbours and
+with parents. (But mainly needed so neighbours can work...
+models can't know their neighbours when they are created)
+
+The default used to put in the dye will be that of the first model's
+top lod level.
+
+When a material is sorted, if it has any properties then they
+need to still be set to the same values when the sorted triangles
+are drawn. Since this is hoped to be a reasonably rare case, and
+the approach to sorted materials is going to change sometime
+in the future anyway, the system is not optimised for this case.
+To handle it if it occurs, a new material will be created in a
+big buffer (vectornodestructor) that is cleared every frame and
+the pointer to that will be put into the visual.
+
+[Possibly specify simple functions from property value? And if
+duplicate say from x to yzw was one of those then wouldn't have
+to worry about different sized values. Ordinary functions would
+be things like 2x, 1-x, etc. (specify as an expression in Python!
+Just kidding :)]
+
+[Can have both a mfm and a material seciton. The mfm is used as
+a base, then anything in the material section is applied on top.
+If there's no mfm, then the default material from the default
+material constructor is used as a base. Default texture stages
+are added if necessary]
+
+
+What about tints? How do we efficiently select the tint we want
+based on the name? I guess each dye def as it's inherited can't
+lose any of its tints. They are cleared out if the 'replaces'
+material isn't found, but they are not deleted. So the
+SuperModelDye stores an offset into the stringmap for that
+dye def (maybe 'matter' would be a better internal name for this)
+as well as the index in the model's stringmap of dye defs.
+Prolly packed into one int so it looks the same as SuperModelAction
+and SuperModelAnimation. So the dye function in the model
+just takes two ints; the offset into (parent-accumulated) stringmap
+of dye defs, and then the offset into that dye def's stringmap
+of tints. And the model's dye function is the thing that reads
+the property values out of of the global table and sets them
+into its (internal) Material, before setting the pointer to that
+into its visual ... (or copies it into a temporary buffer
+if it turns out the be sorted) Phew!
+
+OK, this might just work!
+
+23/11/2001
+
+--------------------------------------------------------------------------
+
+
+Inheritance in this and other Fashions. It would be nice for
+a fashion to explicitly specify a fashion in its parent model
+that it inherits from. So we could store a vector of pointers
+in the top level fashion for each model that specify the
+fashions for the chain of parent lod levels. In fact, this
+vector would be what you got out of the fashion stringmap in
+the first place. Then we just have to remember how many
+levels down we are in the supermodel, ad use this as an argument
+to the (supermodel) fashion when it is applied. It would then
+trivially select the appropriate (model) fashion to dress that
+model in.
+
+This sounds like a good thing. However, initially I will implement
+dyes in the same way that the other fashions have been - i.e.
+storing indicies into stringmaps.
+
+6/12/2001
+
+--------------------------------------------------------------------------
+
+Billboard models.
+
+We really want to be able to do all the things that the other models
+can do - probably not all at once, but in different cases we'll at least
+want to be able to do some sort of animation, and some sort of dyes.
+
+So billboards are going the whole hog - they'll be a first class type
+of model.
+
+What we're going to do is have a reference in the billboard to a
+'source model'. This is the model which should be photographed to
+produce the billboard textures. The textures will be produced on-demand
+if they do not exist, so we will not try to load the source model
+when the billboard model is being constructed (because we would very
+likely be its parent, so it'll already be recursively loading us)
+
+To accomodate dyes we will have simply a specification of what dyes
+we want to have (and there'll be no replaces section). The tint name
+selections for each matter are appended (in in-file order, say) to the
+name of the resource to retrieve a specific selection of tints.
+If the texture does not exist then they are generated from the source
+model with the same tints for the same matters. (Possibly want some
+way of specifying any other dyes to use for each tint option in the
+source model - or at least for the billboard as a whole. Also need
+some way to say what any parameters for source model dyes should be
+set to)
+
+Animations are handled in a similar way - the name of the animation,
+and then the name of the frame of the animation, are appended to
+the texture name (after any tint names) to find the textures for
+the frames of that specific animation (for a specific selection of dyes).
+Again, the source model animation with the same name is used to
+generate the textures if they are missing.
+
+OK, so in the source section we'll need the model resource, the size
+of the texture to create, and any dyes to apply (hmmmm... maybe it
+could be a whole supermodel instead of just a model - that might be
+cool ... in fact, why not - just do it with multiple 'model' sections)
+
+In the animation sections we'll need the number of frames to use - and
+the source animation will simply be divided automatically into these.
+How does this interact with the framerate? If there is no framerate
+specified then the source model is consulted to calculate this, otherwise
+the recorded framerate will be used. I do not intend to allow the
+(normal client) use of a model file to change that file - they are all
+const as far as the supermodel system is concerned.
+
+In the dye sections we'll also need the parameters and any other dyes
+which go with it I guess. May as well do this properly now. So how
+about if you want to specify a parameter, you simply have a dye with
+the same name as the current one, which can then specify properties
+in the usual way. In fact, for consistency, let's always specify this
+here (or whenever you want to get stuff out of a source model). Yes,
+this will be good.
+
+Exact texture file name composition:
+TEXTURE_RESOURCE.?[ANIMATION_NAME.FRAME_NUMBER].*TINT_NAME.dds
+
+11/1/2002
+

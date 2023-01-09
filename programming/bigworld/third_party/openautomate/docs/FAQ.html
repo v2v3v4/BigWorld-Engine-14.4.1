@@ -1,0 +1,385 @@
+<HTML>
+
+<HEAD>
+<TITLE>OpenAutomate SDK Frequently Asked Questions</TITLE>
+
+</HEAD>
+
+<BODY>
+
+
+
+
+
+<BLOCKQUOTE>
+<UL>
+ <LI><A HREF="#1" CLASS="toc-item">OpenAutomate Frequently Asked Questions
+
+</A></LI>
+     <UL>
+      <LI><A HREF="#2" CLASS="toc-item">What is OpenAutomate? 
+
+</A></LI>
+      <LI><A HREF="#3" CLASS="toc-item">Who can use OpenAutomate?
+
+</A></LI>
+      <LI><A HREF="#4" CLASS="toc-item">I'm an application developer/publisher, what can OpenAutomate do for me?
+
+</A></LI>
+      <LI><A HREF="#5" CLASS="toc-item">I'm an application user, what can OpenAutomate do for me?
+
+</A></LI>
+      <LI><A HREF="#6" CLASS="toc-item">Where can I get OpenAutomate?
+
+</A></LI>
+      <LI><A HREF="#7" CLASS="toc-item">Whom should I contact if I have problems with OpenAutomate?
+
+</A></LI>
+      <LI><A HREF="#8" CLASS="toc-item">How is OpenAutomate licensed?
+
+</A></LI>
+      <LI><A HREF="#9" CLASS="toc-item">Why is OpenAutomate called Open?
+
+</A></LI>
+      <LI><A HREF="#10" CLASS="toc-item">Is it difficult to integrate OpenAutomate into my application?
+
+</A></LI>
+      <LI><A HREF="#11" CLASS="toc-item">Can OpenAutomate add benchmarks to my application for me?
+
+</A></LI>
+      <LI><A HREF="#12" CLASS="toc-item">What if my application needs to restart after settings have been changed?
+
+</A></LI>
+      <LI><A HREF="#13" CLASS="toc-item">Is OpenAutomate only for games?
+
+</A></LI>
+      <LI><A HREF="#14" CLASS="toc-item">What is the OpenAutomate conformance test suite (oatest)?
+
+</A></LI>
+      <LI><A HREF="#15" CLASS="toc-item">What operating systems does OpenAutomate support?
+
+</A></LI>
+      <LI><A HREF="#16" CLASS="toc-item">Is OpenAutomate restricted to usage with any particular graphics APIs (DirectX, OpenGL, etc...)
+
+</A></LI>
+      <LI><A HREF="#17" CLASS="toc-item">Is OpenAutomate restricted to any particular hardware?
+
+</A></LI>
+     </UL>
+</UL>
+
+<HR SIZE="1" NOSHADE>
+
+<H1><A NAME="OPENAUTOMATE_FREQUENTLY_ASKED_QUESTIONS"><A NAME="1">OpenAutomate Frequently Asked Questions
+
+</A></A></H1>
+
+<H2><A NAME="WHAT_IS_OPENAUTOMATE?"><A NAME="2">What is OpenAutomate? 
+
+</A></A></H2>
+<P>
+OpenAutomate (OA) is a standard API for automating the testing and benchmarking 
+of applications.  Applications that provide an OpenAutomate interface, can 
+be controlled by any testing harness that is OpenAutomate compatible, without
+the harness knowing any specifics about the application a priori.
+
+
+</P>
+<P>
+The application exposes the following functionality via the OpenAutomate 
+interface: 
+
+
+</P>
+<UL>
+<LI>
+enumerating all available application options
+
+</LI>
+<LI>
+querying current application option values
+
+</LI>
+<LI>
+setting current application option values persistently
+
+</LI>
+<LI>
+enumerating all available benchmarks (tests)
+
+</LI>
+<LI>
+running benchmarks (tests) and getting resulting information
+
+</LI>
+<LI>
+running an application as normal
+
+</LI>
+</UL>
+<P>
+These basic functions provide everything necessary to generically test almost
+any application.
+
+
+</P>
+
+<H2><A NAME="WHO_CAN_USE_OPENAUTOMATE?"><A NAME="3">Who can use OpenAutomate?
+
+</A></A></H2>
+<P>
+OpenAutomate can be useful for anybody interested in testing applications in
+an efficient and automated fashion.  These may include but are not limited to:
+
+
+</P>
+<UL>
+<LI>
+application developers
+
+</LI>
+<LI>
+application publishers
+
+</LI>
+<LI>
+independent hardware vendors (IHVs)
+
+</LI>
+<LI>
+application reviewers
+
+</LI>
+<LI>
+etc...
+
+</LI>
+</UL>
+
+<H2><A NAME="I'M_AN_APPLICATION_DEVELOPER/PUBLISHER,_WHAT_CAN_OPENAUTOMATE_DO_FOR_ME?"><A NAME="4">I'm an application developer/publisher, what can OpenAutomate do for me?
+
+</A></A></H2>
+<P>
+For application developers/publishers, adding OpenAutomate to your application 
+allows the application to be used with any OpenAutomate compatible tools 
+(e.g. oaMan).
+It also allows others (e.g. IHVs) to test your applications within their 
+internal testing infrastructure with minimal custom development to integrate
+your application into their process.
+
+
+</P>
+
+<H2><A NAME="I'M_AN_APPLICATION_USER,_WHAT_CAN_OPENAUTOMATE_DO_FOR_ME?"><A NAME="5">I'm an application user, what can OpenAutomate do for me?
+
+</A></A></H2>
+<P>
+OpenAutomate allows manipulation of application settings, and running 
+benchmarks/tests for all OpenAutomate-enabled applications in a standardized,
+and centralized way.  
+
+
+</P>
+<P>
+For example, a user running oaMan with their OpenAutomate compatible 
+applications can:
+
+
+</P>
+<UL>
+<LI>
+create a list of benchmarks from different OA-enabled applications, each with specific settings
+
+</LI>
+<LI>
+run these benchmarks in batch mode, and collect all the results in unified manner
+
+</LI>
+<LI>
+save the benchmark list, and rerun it with oaMan on another machine with the same settings
+
+</LI>
+</UL>
+<P>
+The ability to query and manipulate application settings combined with the the 
+ability to run benchmarks/tests allows for a multitude of very interesting tools
+that can benefit users.
+
+
+</P>
+
+<H2><A NAME="WHERE_CAN_I_GET_OPENAUTOMATE?"><A NAME="6">Where can I get OpenAutomate?
+
+</A></A></H2>
+<P>
+You can find the latest release of the OpenAutomate SDK and related tools 
+at:  <A HREF="http://openautomate.com">openautomate.com</A> 
+
+
+</P>
+
+<H2><A NAME="WHOM_SHOULD_I_CONTACT_IF_I_HAVE_PROBLEMS_WITH_OPENAUTOMATE?"><A NAME="7">Whom should I contact if I have problems with OpenAutomate?
+
+</A></A></H2>
+<P>
+Questions related to OpenAutomate should be directed by email to
+OpenAutomate-Support@nvidia.com.
+
+
+</P>
+
+<H2><A NAME="HOW_IS_OPENAUTOMATE_LICENSED?"><A NAME="8">How is OpenAutomate licensed?
+
+</A></A></H2>
+<P>
+The OpenAutomate SDK is made freely available for integration into any 
+application.  To the best of our knowledge, it is compatible with both commercial 
+and open source licenses.
+
+
+</P>
+<P>
+Please refer to the ''LICENSE'' file included in the root directory of the SDK 
+for more information.
+
+
+</P>
+
+<H2><A NAME="WHY_IS_OPENAUTOMATE_CALLED_OPEN?"><A NAME="9">Why is OpenAutomate called Open?
+
+</A></A></H2>
+<P>
+OpenAutomate is open, because it is free--both as in speech and as in beer--
+for anyone to integrate into their applications, tools, and testing 
+infrastructure.  The OpenAutomate SDK is provided in source form, and can be 
+inspected and modified by anyone who is interested in doing so.  
+
+
+</P>
+<P>
+The only restriction is with the OpenAutomate name.  Currently it is trademarked
+by NVIDIA.  Any branches of the OpenAutomate SDK that are made public must either
+be approved by NVIDIA, or renamed to something other than <B>OpenAutomate</B>.
+
+
+</P>
+
+<H2><A NAME="IS_IT_DIFFICULT_TO_INTEGRATE_OPENAUTOMATE_INTO_MY_APPLICATION?"><A NAME="10">Is it difficult to integrate OpenAutomate into my application?
+
+</A></A></H2>
+<P>
+We've found that almost all developers can integrate OpenAutomate into their 
+applications in less than a day, as long as they know their way around the 
+options and benchmarking/testing functionality in their applications well 
+enough.  
+
+
+</P>
+<P>
+The single hardest part of integrating OpenAutomate is not related to the
+OpenAutomate SDK; it's ensuring there is good benchmark/testing scaffolding as
+well as good benchmarks/tests within your application.
+
+
+</P>
+
+<H2><A NAME="CAN_OPENAUTOMATE_ADD_BENCHMARKS_TO_MY_APPLICATION_FOR_ME?"><A NAME="11">Can OpenAutomate add benchmarks to my application for me?
+
+</A></A></H2>
+<P>
+OpenAutomate is a very thin interface for querying and modify settings, as well
+as running benchmarks/tests.  It can only expose existing benchmarks/tests within
+your application.  It is not some magic way of adding useful tests to an existing
+application.
+
+
+</P>
+
+<H2><A NAME="WHAT_IF_MY_APPLICATION_NEEDS_TO_RESTART_AFTER_SETTINGS_HAVE_BEEN_CHANGED?"><A NAME="12">What if my application needs to restart after settings have been changed?
+
+</A></A></H2>
+<P>
+The OpenAutomate standard does not require that the entry executable for 
+OpenAutomate to be the same as the main executable for your application.  If 
+your application needs to restart the application when settings are changed; 
+it's best to create a porxy executable that exposes the OpenAutomate interface,
+can manipulate and query applications options, and starts and stops the main
+application executable when the <B>OA_CMD_RUN_BENCHMARK</B> command is issued.
+
+
+</P>
+<P>
+See <A TARGET="_top" HREF="OpenAutomate.html#OPENAUTOMATE_PROXY_EXECUTABLES">the <I>"OpenAutomate Proxy Executables"</I> section of the <I>"OpenAutomate"</I> document</A> for more information.
+
+
+</P>
+
+<H2><A NAME="IS_OPENAUTOMATE_ONLY_FOR_GAMES?"><A NAME="13">Is OpenAutomate only for games?
+
+</A></A></H2>
+<P>
+Although adoption of OpenAutomate has primarily been within the game community,
+there is nothing specific about OpenAutomate that restricts it to games.  
+OpenAutomate can just as easily be used with any type of application.
+
+
+</P>
+
+<H2><A NAME="WHAT_IS_THE_OPENAUTOMATE_CONFORMANCE_TEST_SUITE_(OATEST)?"><A NAME="14">What is the OpenAutomate conformance test suite (oatest)?
+
+</A></A></H2>
+<P>
+The OpenAutomate conformance test suite (oatest) is collection of various tests
+included with the OpenAutomate SDK, used to ensure that an application has 
+OpenAutomate implemented correctly.  Applications must pass oatest without any
+test failures in order to be "OpenAutomate compatible".
+
+
+</P>
+<P>
+Please see <A TARGET="_top" HREF="oatest.html">the <I>"oatest"</I> document</A> for more information.
+
+
+</P>
+
+<H2><A NAME="WHAT_OPERATING_SYSTEMS_DOES_OPENAUTOMATE_SUPPORT?"><A NAME="15">What operating systems does OpenAutomate support?
+
+</A></A></H2>
+<P>
+OpenAutomate is currently compatible with any Win32, and Win64 operating 
+systems (e.g.  WinXP, Vista, Windows 7, ...) as well as POSIX compliant
+platforms (e.g. Linux, Cygwin, ...).  However, OpenAutomate has currently only 
+been extensively tested and used on Windows platforms.  
+
+
+</P>
+
+<H2><A NAME="IS_OPENAUTOMATE_RESTRICTED_TO_USAGE_WITH_ANY_PARTICULAR_GRAPHICS_APIS_(DIRECTX,_OPENGL,_ETC...)"><A NAME="16">Is OpenAutomate restricted to usage with any particular graphics APIs (DirectX, OpenGL, etc...)
+
+</A></A></H2>
+<P>
+OpenAutomate can be used with any type of application (see 
+<A HREF="#IS_OPENAUTOMATE_ONLY_FOR_GAMES?">the <I>"Is OpenAutomate only for games?"</I> section within this document</A>), and is not related to graphical 
+applications and hence any graphics APIs.
+
+
+</P>
+
+<H2><A NAME="IS_OPENAUTOMATE_RESTRICTED_TO_ANY_PARTICULAR_HARDWARE?"><A NAME="17">Is OpenAutomate restricted to any particular hardware?
+
+</A></A></H2>
+<P>
+OpenAutomate is hardware agnostic.  As long as a particular hardware can run 
+on one of the supported operating systems 
+(see <A TARGET="_top" HREF="What operating systems does OpenAutomate support?.html">the <I>"What operating systems does OpenAutomate support?"</I> document</A>), the hardware can 
+support OpenAutomate.
+
+
+</P>
+
+</BLOCKQUOTE>
+
+
+
+</BODY>
+

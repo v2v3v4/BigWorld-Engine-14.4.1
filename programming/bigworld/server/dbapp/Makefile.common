@@ -1,0 +1,84 @@
+# This Makefile provides common definitions for both regular and indie packages
+
+cxxSource +=								\
+	authenticate_account_handler			\
+	consolidator							\
+	custom									\
+	dbapp									\
+	delete_entity_handler					\
+	dbapp_config							\
+	dbappmgr_gateway						\
+	entity_auto_loader						\
+	get_entity_handler						\
+	load_entity_handler						\
+	login_app_check_status_reply_handler	\
+	login_conditions_config					\
+	login_handler							\
+	log_on_records_cache					\
+	look_up_dbid_handler					\
+	look_up_entity_handler					\
+	look_up_entities_handler				\
+	message_handlers						\
+	relogon_attempt_handler					\
+	write_entity_handler					\
+	../baseappmgr/baseappmgr_interface		\
+	../baseapp/baseapp_int_interface		\
+	../../common/py_network					\
+	../../common/py_server_lib				\
+	../../lib/db/dbappmgr_interface			\
+	$(dbAppBillingSystemSrc)
+
+
+ifeq ($(SYSTEM_HAS_MYSQL),0)
+
+# When building with MySQL support, make sure we also attempt to build the
+# sync_db and consolidate_dbs binaries.
+
+$(binName)_additionalComponentsToBuild:	\
+		clear_auto_load \
+		consolidate_dbs \
+		sync_db 		\
+		transfer_db
+
+clean_$(binName)_additionalComponentsToBuild:	\
+		clean_clear_auto_load \
+		clean_consolidate_dbs \
+		clean_sync_db 		\
+		clean_transfer_db
+
+endif
+
+# This rule must be performed regardless of MySQL being installed
+$(binName)_additionalComponentsToBuild: 	dbapp_extensions
+clean_$(binName)_additionalComponentsToBuild:	clean_dbapp_extensions
+
+postBuildTargets := $(binName)_additionalComponentsToBuild
+
+dependsOn +=	\
+	db			\
+	db_storage	\
+	server		\
+	chunk		\
+	entitydef	\
+	pyscript	\
+	script		\
+	connection
+
+
+usePython = 1
+useOpenSSL = 1
+usePyURLRequest = 1
+
+# TODO: Baseapp shares this code
+ifeq ($(usePyURLRequest),1)
+useCurl = 1
+cxxSource += ../../common/py_urlrequest
+cppFlags_$(binName) += -DBUILD_PY_URLREQUEST
+
+dependsOn += urlrequest
+endif
+
+incFlags_$(binName) += -I$(BW_ABS_SRC)
+incFlags_$(binName) += -I$(BW_ABS_SRC_SERVER)
+
+# Makefile.common - dbapp

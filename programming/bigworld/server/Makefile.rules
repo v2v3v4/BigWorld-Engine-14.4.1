@@ -1,0 +1,25 @@
+ifneq ($(wildcard $(BW_ABS_SRC_SERVER)/cellappmgr/Makefile),$(BW_ABS_SRC_SERVER)/cellappmgr/Makefile)
+	LICENSE_SERVER = 1
+endif
+
+subdirs =					\
+	baseapp					\
+	baseapp_extensions		\
+	baseappmgr				\
+	cellapp					\
+	cellapp_extensions		\
+	dbapp					\
+	dbapp_extensions		\
+	dbappmgr				\
+	loginapp				\
+	reviver					\
+	tools
+
+ifneq ($(LICENSE_SERVER),1)
+subdirs += cellappmgr
+endif
+
+$(call includeMakefilesFrom,$(subdirs))
+
+# vi: filetype=make
+# Makefile.rules - src/server

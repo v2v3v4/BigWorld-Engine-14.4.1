@@ -1,0 +1,7 @@
+subdirs =			\
+	python/simple
+
+$(call includeMakefilesFrom,$(subdirs))
+
+# vi: filetype=make
+# Makefile.rules - examples/client_integration

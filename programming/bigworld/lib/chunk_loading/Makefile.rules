@@ -1,0 +1,17 @@
+name         := chunk_loading
+type         := library
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =							\
+	chunk_loading_ref_count			\
+	loading_column					\
+	loading_edge					\
+	preloaded_chunk_space			\
+	edge_geometry_mapping			\
+	edge_geometry_mappings			\
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - libchunk_loading

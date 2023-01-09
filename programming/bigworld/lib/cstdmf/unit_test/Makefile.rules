@@ -1,0 +1,44 @@
+name  := cstdmf
+type  := unit_test
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =						\
+	main						\
+	test_aligned_allocate		\
+	test_allocate				\
+	test_asserts				\
+	test_background_file_writer \
+	test_bgtasks				\
+	test_binary_file		 	\
+	test_bit_reader				\
+	test_bw_containers			\
+	test_bw_snprintf 			\
+	test_bw_string_ref			\
+	test_bw_util				\
+	test_checksum_stream 		\
+	test_circular_queue			\
+	test_concurrency			\
+	test_debug					\
+	test_dependency_graph	 	\
+	test_dogwatch				\
+	test_float					\
+	test_log_meta_data			\
+	test_log_msg				\
+	test_md5					\
+	test_memory_debug			\
+	test_static_array			\
+	test_string_utils			\
+	test_stringmap				\
+	test_time_queue
+
+dependsOn += cstdmf
+
+# TODO: This is currently not working due to Makefile stub rules. The affected
+# test has been disabled.
+cxxFlags_$(binName) += -Wno-float-equal
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - cstdmf/unit_test

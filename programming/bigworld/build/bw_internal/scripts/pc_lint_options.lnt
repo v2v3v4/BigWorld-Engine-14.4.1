@@ -1,0 +1,936 @@
+// Please note -- this is a representative set of error suppression
+//                options.  Please adjust to suit your own policies
+//                See  manual (chapter LIVING WITH LINT)
+//                for further details.
+
+-e1		    	// Unclosed Comment (Location)
+-e2				//Unclosed Quote
+-e3				//#else without a #if
+-e4				//Too many #if levels
+-e5				//Too many #endif's
+-e6				//Stack Overflow
+-e7				//Unable to open include file: FileName
+-e8				//Unclosed #if (Location)
+-e9				//Too many #else's in #if (Location)
+-e10			//Expecting 'String'
+-e11			//Excessive Size
+-e12			//Need < or "
+-e13			//Bad type
+-e14			//Symbol 'Symbol' previously defined (Location)
+-e15			//Symbol 'Symbol' redeclared (TypeDiff) (Location)
+-e16			//Unrecognized name
+-e17			//Unrecognized name
+-e18			//Symbol 'Symbol' redeclared (TypeDiff) conflicts with Location 
+-e19			//Useless Declaration
+-e20			//Illegal use of =
+-e21			//Expected {
+-e22			//Illegal operator
+-e23			//Expected colon
+-e24			//Expected an expression, found 'String'
+-e25			//Illegal constant
+-e26			//Expected an expression, found 'String'
+-e27			//Illegal character (0xhh)
+-e28			//Redefinition of symbol 'Symbol' Location
+-e30			//Expected a constant
+-e31			//Redefinition of symbol 'Symbol' conflicts with Location
+-e32			//Field size (member 'Symbol') should not be zero
+-e33			//Illegal constant
+-e34			//Non-constant initializer
+-e35			//Initializer has side-effects
+-e36			//Redefining the storage class of symbol 'Symbol' conflicts with Location
+-e37			//Value of enumerator 'Symbol' inconsistent (conflicts with Location)
+-e38			//Offset of symbol 'Symbol' inconsistent (Location)
+-e39			//Redefinition of symbol 'Symbol' conflicts with Location
+-e40			//Undeclared identifier 'Name'
+-e41			//Redefinition of symbol 'Symbol'
+-e42			//Expected a statement
+-e43			//Vacuous type for variable 'Symbol'
+-e44			//Need a switch
+-e45			//Bad use of register
+-e46			//Field type should be int
+-e47			//Bad type
+-e48			//Bad type
+-e49			//Expected a type
+-e50			//Attempted to take the address of a non-lvalue
+-e51			//Expected integral type
+-e52			//Expected an lvalue
+-e53			//Expected a scalar
+-e54			//Division by 0
+-e55			//Bad type
+-e56			//Bad type
+-e57			//Bad type
+-e58			//Bad type
+-e59			//Bad type
+-e60			//Bad type
+-e61			//Bad type
+-e62			//Incompatible types (TypeDiff) for operator ':'
+-e63			//Expected an lvalue
+-e64			//Type mismatch (Context) (TypeDiff)
+-e65			//Expected a member name
+-e66			//Bad type
+-e67			//Can't cast from Type to Type
+-e68			//Can't cast from Type to Type
+-e69			//Can't cast from Type to Type
+-e70			//Can't cast from Type to Type
+-e71			//Can't cast from Type to Type
+-e72			//Bad option 'String'
+-e73			//Bad left operand
+-e74			//Address of Register
+-e75			//Too late to change sizes (option 'String')
+-e76			//can't open file  String
+-e77			//Address of bit-field cannot be taken
+-e78			//Symbol 'Symbol' typedef'ed at Location used in expression
+-e79			//Bad type for % operator
+-e80			//this use of ellipsis is not strictly ANSI
+-e81			//struct/union not permitted in equality comparison
+-e82			//return <exp>; illegal with void function
+-e83			//Incompatible pointer types with subtraction
+-e84			//sizeof object is zero or object is undefined
+-e85			//Array 'Symbol' has dimension 0
+-e86			//Structure 'Symbol' has no data elements
+-e87			//Expression too complicated for #ifdef or #ifndef
+-e88			//Symbol 'Symbol' is an array of empty elements
+-e89			//Argument or option too long ('String')
+-e90			//Option 'String' is only appropriate within a lint comment
+-e91			//Line exceeds Integer characters (use +linebuf)
+-e92			//Negative array dimension or bit field length (Integer)
+-e93			//New-line is not permitted within string arguments to macros
+-e95			//Expected a macro parameter but instead found 'Name'
+-e96			//Unmatched left brace for String on Location
+-e98			//Recovery Error (String)
+-e101			//Expected an identifier
+-e102			//Illegal parameter specification
+-e103			//Unexpected declaration
+-e104			//Conflicting types
+-e105			//Conflicting modifiers
+-e106			//Illegal constant
+-e107			//Label 'Symbol' (Location) not defined
+-e108			//Invalid context
+-e109			//The combination 'short long' is not standard, 'long'is assumed
+-e110			//Attempt to assign to void
+-e111			//Assignment to const object
+-e113			//Inconsistent enum declaration
+-e114			//Inconsistent structure declaration for tag 'Symbol'
+-e115			//Struct/union not defined
+-e116			//Inappropriate storage class
+-e117			//Inappropriate storage class
+-e118			//Too few arguments for prototype
+-e119			//Too many arguments for prototype
+-e120			//Initialization without braces of dataless type 'Symbol'
+-e121			//Attempting to initialize an object of undefined type 'Symbol'
+-e122			//Digit (Char) too large for radix
+-e123			//Macro 'Symbol' defined with arguments at Location this is just a warning
+-e124			//Pointer to void not allowed
+-e125			//Too many storage class specifiers
+-e126			//Inconsistent structure definition 'Symbol'
+-e127			//Illegal constant
+-e128			//Pointer to function not allowed
+-e129			//declaration expected, identifier 'Symbol' ignored
+-e130			//Expected integral type
+-e131			//syntax error in call of macro 'Symbol' at location Location 
+-e132			//Expected function definition
+-e133			//Too many initializers for aggregate
+-e134			//Missing initializer
+-e135			//comma assumed in initializer
+-e136			//Illegal macro name
+-e137			//constant 'Symbol' used twice within switch
+-e138			//Can't add parent 'Symbol' to strong type String; creates loop 
+-e139			//Can't take sizeof function
+-e140			//Type appears after modifier
+-e141			//The following option has too many elements: 'String'
+-e142			//case constant '0' used previously in this switch
+-e143			//Erroneous option: String
+-e144			//Non-existent return value for symbol 'Symbol', compare with Location
+-e145			//Type expected before operator, void assumed
+-e146			//Assuming a binary constant
+-e147			//sizeof takes just one argument
+-e148			//member 'Symbol' previously declared at Location
+-e149			//C++ construct 'String' found in C code
+-e150			//Token 'String' unexpected String
+-e151			//Token 'Name' inconsistent with abstract type
+-e152			//Lob base file 'file name' missing
+-e153			//Could not create temporary file
+-e154			//Could not evaluate type 'String', int assumed
+-e155			//Ignoring { }'ed sequence within an expression, 0 assumed
+-e156			//Braced initializer for scalar type 'Name'
+-e157			//No data may follow an incomplete array
+-e158			//Assignment to variable 'Symbol' (Location) increases capability
+-e159			//enum following a type is non-standard
+-e160			//The sequence '( {' is non standard and is taken to introduce a GNU statement expression
+-e161			//Repeated use of parameter 'Symbol' in parameter list
+-e200			//Internal Error 200-299
+-e265			//Internal Error; contact Gimpel Software
+-e301			//Stack overflow
+-e302			//Exceeded Available Memory
+-e303			//String too long (try +macros)
+-e304			//Corrupt object file, code Integer, symbol=String
+-e305			//Unable to open module 'file name'
+-e306			//Previously encountered module 'FileName'
+-e307			//Can't open indirect file 'FileName'
+-e308			//Can't write to standard out
+-e309			//#error ...
+-e310			//Declaration too long: 'String...'
+-e312			//Lint Object Module has obsolete or foreign version id
+-e313			//Too many files
+-e314			//Previously used .lnt file: FileName
+-e315			//Exceeded message limit (see -limit)
+-e316			//Error while writing to file "file name"
+-e317			//File encoding, String, not currently supported; unable to continue
+-e321			//Declaration stack overflow
+-e322			//Unable to open include file FileName
+-e323			//Token String too long
+-e324			//Too many symbols Integer
+-e325			//Cannot re-open file 'file name'
+-e326			//String 'String ...' too long, exceeds Integer characters
+-e327			//Bad pipe, code Integer
+-e328			//Bypass header 'Name' follows a different header sequence than in module 'String' which includes File1 where the current module includes File2
+-e401			//symbol 'Symbol' not previously declared static at Location 
+-e402			//static function 'Symbol' (Location) not defined
+-e403			//static symbol 'Symbol' has unusual type modifier
+-e404			//struct not completed within file 'FileName'
+-e405			//#if not closed off within file 'FileName'
+-e406			//Comment not closed off within file 'FileName'
+-e407			//Inconsistent use of tag 'Symbol' conflicts with Location
+-e408			//Type mismatch with switch expression
+-e409			//Expecting a pointer or array
+-e410			//size_t not what was expected from fzl and/or fzu, using 'Type'
+-e411			//ptrdiff_t not what was expected from fdl option, using 'Type' 
+-e412			//Ambiguous format specifier '%X'
+-e413			//Likely use of null pointer 'Symbol' in [left/right] argument to operator 'String' Reference
+-e414			//Possible division by 0
+-e415			//access of out-of-bounds pointer ('Integer' beyond end of data) by operator 'String'
+-e416			//creation of out-of-bounds pointer ('Integer' beyond end of data) by operator 'String'
+-e417			//integral constant 'String' longer than long long int
+-e418			//Passing null pointer to function 'Symbol', Context Reference 
+-e419			//Apparent data overrun for function 'Symbol', argument Integer exceeds argument Integer
+-e420			//Apparent access beyond array for function 'Symbol', argument Integer exceeds Integer Reference
+-e421			//Caution - function 'Symbol' is considered dangerous
+-e422			//Passing to function 'Symbol' a negative value (Integer), Context Reference
+-e423			//Creation of memory leak in assignment to variable 'Symbol'
+-e424			//Inappropriate deallocation (Name1) for 'Name2' data.
+-e425			//'Message' in processing semantic 'String' at token 'String' 
+-e426			//Call to function 'Symbol' violates semantic 'String'
+-e427			//// comment terminates in \
+-e428			//negative subscript (Integer) in operator 'String'
+-e429			//Custodial pointer 'Symbol' (Location) has not been freed or returned
+-e430			//Character '@', taken to specify variable location, is not standard C/C++
+-e431			//Missing identifier for template parameter number Integer
+-e432			//Suspicious argument to malloc
+-e433			//Allocated area not large enough for pointer
+-e434			//White space ignored between back-slash and new-line
+-e435			//integral constant 'String' has precision Integer, use +fll to enable long long"
+-e436			//Preprocessor directive in invocation of macro 'Symbol' at Location
+-e437			//Passing struct 'Symbol' to ellipsis
+-e438			//Last value assigned to variable 'Symbol' not used
+-e440			//for clause irregularity: variable 'Symbol' tested in 2nd expression does not match 'Symbol' modified in 3rd
+-e441			//for clause irregularity: loop variable 'Symbol' not found in 2nd for expression
+-e442			//for clause irregularity: testing direction inconsistent with increment direction
+-e443			//for clause irregularity: variable 'Symbol' initialized in 1st expression does not match 'Symbol' modified in 3rd 
+-e446			// Warning 446: side effect in initializer
+-e447			//Extraneous whitespace ignored in include directive for file 'FileName'; opening file 'FileName'
+-e448			//Likely access of pointer pointing Integer bytes past nul character by operator 'String'
+-e449			//Pointer variable 'Symbol' previously deallocated
+-e451			//Header file 'FileName' repeatedly included but does not have a standard include guard
+-e452			//typedef Symbol 'BW::FlyThroughSplinePtr' redeclared (basic)
+-e453			//Function 'Symbol', previously designated pure, String 'Name'
+-e454			//A thread mutex has been locked but not unlocked
+-e455			//A thread mutex that had not been locked is being unlocked
+-e456			//Two execution paths are being combined with different mutex lock states
+-e457			//Thread 'Symbol1' has an unprotected write access to variable 'Symbol2' which is used by thread 'Symbol3'
+-e459			//Function 'Symbol' whose address was taken has an unprotected access to variable 'Symbol'
+-e460			//Thread 'Symbol' has unprotected call to thread unsafe function 'Symbol' which is also called by thread 'Symbol'
+-e461			//Thread 'Symbol' has unprotected call to function 'Symbol' of group 'Name' while thread 'Symbol' calls function 'Symbol' of the same group
+-e462			//Thread 'Symbol' calling function 'Symbol' is inconsistent with the 'String' semantic
+-e464			//Buffer argument will be copied into itself
+-e501			//Expected signed type
+-e502			//Expected unsigned type
+-e503			//Boolean argument to relational
+-e504			//Unusual shift value
+-e505			//Redundant left argument to comma
+-e506			//Constant value Boolean
+-e507			//Size incompatibility
+-e508			//extern used with definition
+-e509			//extern used with definition
+-e511			//Size incompatibility
+-e512			//Symbol 'Symbol' previously used as static (Location)
+-e514			//Unusual use of a Boolean
+-e515			//Symbol 'Symbol' has arg. count conflict (Integer vs. Integer) with Location
+-e516			//Symbol 'Symbol' has arg. type conflict (no. Integer - TypeDiff) with Location
+-e517			//defined not K&R
+-e518			//Expected '('
+-e519			//Size incompatibility
+-e520			//Expected void type, assignment, increment or decrement.
+-e521			//Expected void type, assignment, increment or decrement.
+-e522			//Expected void type, assignment, increment or decrement.
+-e522			//Highest operator or function lacks side-effects
+-e524			//Loss of precision (Context) (Type to Type)
+-e525			//Negative indentation from Location
+-e526			//Symbol 'Symbol' (Location) not defined
+-e527			//Unreachable
+-e528			//Symbol 'Symbol' (Location) not referenced
+-e529			//Symbol 'Symbol' (Location) not subsequently referenced
+-e530			//Symbol 'Symbol' (Location) not initialized
+-e531			//Field size too large for 'Symbol'
+-e532			//Return mode of function 'Symbol' inconsistent with Location
+-e533			//function 'Symbol' should (not) return a value (see Location) 
+-e534			//Ignoring return value of function 'Symbol' (compare with Location)
+-e537			//Repeated include file 'FileName'
+-e538			//Excessive size
+-e539			//Did not expect positive indentation from Location
+-e540			//Excessive size
+-e541			//Excessive size
+-e542			//Excessive size for bit field
+-e544			//endif or else not followed by EOL
+-e545			//Suspicious use of &
+-e546			//Suspicious use of &
+-e547			//Redefinition of symbol 'Symbol' conflicts with Location
+-e548			//else expected
+-e549			//Suspicious cast
+-e550			//Symbol 'Symbol' (Location) not accessed
+-e551			//Symbol 'Symbol' (Location) not accessed
+-e552			//Symbol 'Symbol' (Location) not accessed
+-e553			//Undefined preprocessor variable 'Name', assumed 0
+-e555			//#elif not K&R
+-e556			//indented #
+-e557			//unrecognized format
+-e558			//number of arguments inconsistent with format
+-e559			//size of argument number Integer inconsistent with format
+-e560			//argument no. Integer should be a pointer
+-e561			//(arg. no. Integer) indirect object inconsistent with format 
+-e562			//Ellipsis (...) assumed
+-e563			//Label 'Symbol' (Location) not referenced
+-e564			//variable 'Symbol' depends on order of evaluation
+-e565			//tag 'Symbol' not previously seen, assumed file-level scope 
+-e566			//Inconsistent or redundant format char 'Char'
+-e567			//Expected a numeric field before char 'Char'
+-e568			//nonnegative quantity is never less than zero.
+-e569			//Loss of information (Context) (Integer bits to Integer bits) 
+-e570			//Loss of sign (Context) (Type to Type)
+-e571			//Suspicious Cast
+-e572			//Excessive shift value (precision integer shifted right by Integer)
+-e573			//Signed-unsigned mix with divide
+-e574			//Signed-unsigned mix with relational
+-e575			//enumeration constant exceeds range for integers
+-e577			//Mixed memory model (option 'String')
+-e578			//Declaration of symbol 'Symbol' hides symbol 'Symbol' (Location)
+-e579			//parameter preceding ellipsis has invalid type
+-e580			//Redeclaration of function 'Symbol' (hiding Location) causes loss of prototype
+-e581			//Option 'String' is obsolete and should no longer be used
+-e582			//esym (or emacro) name 'String' should not contain '('
+-e583			//Comparing type 'Type' with EOF
+-e584			//Trigraph sequence (??Character) detected
+-e585			//The sequence (??Char) is not a valid Trigraph sequence
+-e586			//String 'Name' is deprecated. String
+-e587			//Predicate 'String' can be pre-determined and always evaluates to String
+-e588			//Predicate 'String' will always evaluate to String unless an overflow occurs
+-e589			//Predicate 'String' will always evaluate to String assuming standard division semantics
+-e590			//Predicate 'String' will always evaluate to String assuming standard shift semantics
+-e591			//Variable 'Symbol' depends on the order of evaluation; it is used/modified through function 'Symbol' via calls: String
+-e592			//Non-literal format specifier used without arguments
+-e593			//Custodial pointer 'Symbol' (Location) possibly not freed or returned
+-e598			//Excessive shift value (precision 32 shifted left by 40)
+-e601			//Expected a type for symbol Symbol, int assumed
+-e602			//Comment within comment
+-e603			//Symbol 'Symbol' (Location) not initialized
+-e604			//Returning address of auto variable 'Symbol'
+-e605			//Increase in pointer capability (Context)
+-e606			//Non-ANSI escape sequence: '\String'
+-e607			//Parameter 'Symbol' of macro found within string
+-e608			//Assigning to an array parameter
+-e609			//Suspicious pointer conversion
+-e610			//Suspicious pointer combination
+-e611			//Suspicious cast
+-e612			//Expected a declarator
+-e613			//Possible use of null pointer 'Symbol' in [left/right] argument to operator 'String' Reference
+-e614			//auto aggregate initializer not constant
+-e615			//auto aggregate initializer has side effects
+-e616			//control flows into case/default
+-e617			//String is both a module and an include file
+-e618			//Storage class specified after a type
+-e619			//Loss of precision (Context) (Pointer to Pointer)
+-e620			//Suspicious constant (L or one?)
+-e621			//Identifier clash (Symbol 'Name' with Symbol 'Name' at String) 
+-e622			//Size of argument no. Integer inconsistent with format
+-e623			//redefining the storage class of symbol 'Symbol' conflicts with Location
+-e624			//typedef 'Symbol' redeclared (TypeDiff) (Location)
+-e625			//auto symbol 'Symbol' has unusual type modifier
+-e626			//argument no. Integer inconsistent with format
+-e627			//(arg. no. Integer) indirect object inconsistent with format 
+-e628			//no argument information provided for function 'Symbol' (Location)
+-e629			//static class for function 'Symbol' is non standard
+-e630			//ambiguous reference to symbol 'Name'
+-e631			//tag 'Symbol' defined differently at Location
+-e632			//Assignment to strong type 'Name' in context: Context
+-e633			//Assignment from a strong type 'Name' in context: Context
+-e634			//Strong type mismatch (type 'Symbol') in equality or conditional
+-e635			//resetting strong parent of type 'Symbol', old parent == type 'Symbol'
+-e636			//ptr to strong type 'Name' versus another type
+-e637			//Expected index type 'Symbol' for strong type 'Symbol'
+-e638			//Strong type mismatch for type 'Name' in relational
+-e639			//Strong type mismatch for type 'Name' in binary operation
+-e640			//Expected strong type 'Name' in Boolean context
+-e641			//Converting enum to int
+-e642			//Format char 'Char' not supported by wsprintf
+-e643			//Loss of precision in pointer cast
+
+-e646			//case/default within Kind loop; may have been misplaced
+-e647			//Suspicious truncation
+-e648			//Overflow in computing constant for operation: String 
+-e649			//Sign fill during constant shift
+-e650			//Constant out of range for operator String
+-e651			//Potentially confusing initializer
+-e652			//#define of symbol 'Symbol' declared previously at Location
+-e653			//Possible loss of fraction
+-e654			//Option String obsolete; use -width(W,I)
+-e655			//bit-wise operation uses (compatible) enum's
+-e656			//Arithmetic operation uses (compatible) enum's
+-e657			//Unusual (nonportable) anonymous struct or union
+-e658			//Anonymous union assumed (use flag +fan)
+-e659			//Nothing follows '}' on line within struct/union/enum declaration
+-e660			//Option 'String' requests removing an extent that is not on the list
+-e661			//possible access of out-of-bounds pointer ('Integer' beyond end of data) by operator 'String'
+-e662			//possible creation of out-of-bounds pointer ('Integer' beyond end of data) by operator 'String'
+-e663			//Suspicious array to pointer conversion
+-e664			//Left side of logical OR (||) or logical AND (&&) does not return
+-e665			//Unparenthesized parameter Integer in macro 'Symbol' is passed an expression
+-e666			//Expression with side effects passed to repeated parameter Integer of macro 'Symbol'
+-e667			//Inconsistent use of qualifiers for symbol 'Symbol' (type 'Type' vs. 'Type') conflicts with Location
+-e668			//Possibly passing a null pointer to function 'Symbol', Context Reference
+-e669			//Possible data overrun for function 'Symbol', argument Integer exceeds argument Integer Reference
+-e670			//Possible access beyond array for function 'Symbol', argument Integer exceeds Integer Reference
+-e671			//Possibly passing to function 'Symbol' a negative value (Integer), Context Reference
+-e672			//Possible memory leak in assignment to pointer 'Symbol'
+-e673			//Possibly inappropriate deallocation (Name1) for 'Name2' data. 
+-e674			//Returning address of auto through variable 'Symbol'.
+-e675			//No prior semantics associated with 'Name' in option 'String' 
+-e676			//Possibly negative subscript (Integer) in operator 'String'
+-e677			//sizeof used within preprocessor statement.
+-e678			//Member 'Symbol' field length (Integer) too small for enum precision (Integer)
+-e679			//Suspicious Truncation in arithmetic expression combining with pointer
+-e680			//Suspicious Truncation in arithmetic expression converted to pointer
+-e681			//Loop is not entered
+-e682			//sizeof applied to a parameter 'Symbol' whose type is a sized array
+-e683			//function 'Symbol' #define'd
+-e684			//Passing address of auto variable 'Symbol' into caller space 
+-e685			//Relational operator 'String,' always evaluates to 'String' 
+-e686			//Option 'String' is suspicious because of 'Name'
+-e687			//Suspicious use of comma operator
+-e688			//Cast used within a preprocessor conditional statement
+-e689			//Apparent end of comment ignored
+-e690			//Possible access of pointer pointing Integer bytes past nul character by operator 'String'
+-e691			//Suspicious use of backslash
+-e692			//Decimal character 'Char' follows octal escape sequence 'String'
+-e693			//Hexadecimal digit 'Char' immediately after 'String' is suspicious in string literal.
+-e694			//The type of constant 'String' (precision Integer) is dialect dependent
+-e695			//Inline function 'Symbol' defined without a storage-class specifier ('static' recommended)
+-e696			//Variable 'Symbol' has value 'String' that is out of range for operator 'String'
+-e697			//Quasi-boolean values should be equality-compared only with 0
+-e698			//Casual use of realloc can create a memory leak
+-e701			//Shift left of signed quantity (int)
+-e702			//Shift right of signed quantity (int)
+-e703			//Shift left of signed quantity (long)
+-e704			//Shift right of signed quantity (long)
+-e705			//argument no. Integer nominally inconsistent with format
+-e706			//(argument no. Integer) indirect object inconsistent with format
+-e707			//Mixing narrow and wide string literals in concatenation
+-e708			//union initialization
+-e712			//Loss of precision (Context) (Type to Type)
+-e713			//Loss of precision (Context) (Type to Type)
+-e714			//Symbol 'Symbol' (Location) not referenced
+-e715			//Symbol 'Symbol' (Location) not referenced
+-e716			//while(1) ...
+-e717			//do ... while(0)
+-e718			//Symbol 'Symbol' undeclared, assumed to return int
+-e719			//Too many arguments for format (Integer too many)
+-e720			//Boolean test of assignment
+-e721			//Suspicious use of ;
+-e722			//Suspicious use of ;
+-e723			//Suspicious use of =
+-e725			//Expected positive indentation from Location
+-e726			//Extraneous comma ignored
+-e727			//Symbol 'Symbol' (Location) not explicitly initialized
+-e728			//Symbol 'Symbol' (Location) not explicitly initialized
+-e729			//Symbol 'Symbol' (Location) not explicitly initialized
+-e730			//Boolean argument to function
+-e731			//Boolean argument to equal/not equal
+-e732			//Loss of sign (Context) (Type to Type)
+-e733			//Assigning address of auto variable 'Symbol' to outer scope symbol 'Symbol'
+-e734			//Loss of precision (Context) (Integer bits to Integer bits)
+-e735			//Loss of precision (Context) (Integer bits to Integer bits)
+-e736			//Loss of precision (Context) (Integer bits to Integer bits)
+-e737			//Loss of sign in promotion from Type to Type
+-e738			//Symbol 'Symbol' (Location) not explicitly initialized
+-e739			//Trigraph Sequence 'String' in literal (Quiet Change)
+-e740			//Unusual pointer cast (incompatible indirect types)
+-e741			//Unusual pointer cast (function qualification)
+-e742			//Multiple character constant
+-e743			//Negative character constant
+-e744			//switch statement has no default
+-e745			//function 'Name' has no explicit type or class, int assumed
+-e746			//call to function 'Name' not made in the presence of a prototype
+-e747			//Significant prototype coercion (Context) Type to Type
+-e748			//Symbol 'Symbol' (Location) is a register variable used with setjmp
+-e749			//local enumeration constant 'Symbol' (Location) not referenced 
+-e750			//local macro 'Symbol' (Location) not referenced
+-e751			//local typedef 'Symbol' (Location) not referenced
+-e752			//local declarator 'Symbol' (Location) not referenced
+-e753			//local struct, union or enum tag 'Symbol' (Location) not referenced
+-e754			//local structure member 'Symbol' (Location) not referenced
+-e755			//global macro 'Symbol' (Location) not referenced
+-e756			//global typedef 'Symbol' (Location) not referenced
+-e757			//global declarator 'Symbol' (Location) not referenced
+-e758			//global struct, union or enum tag 'Symbol' (Location) not referenced
+-e759			//header declaration for symbol 'Symbol' (Location) could be moved from header to module
+-e760			//Redundant macro 'Symbol' defined identically at Location
+-e761			//Redundant typedef 'Symbol' previously declared at Location
+-e762			//Redundantly declared symbol 'Symbol' previously declared at Location
+-e763			//Redundant declaration for symbol 'Symbol' previously declared at Location
+-e764			//switch statement does not have a case
+-e765			//external 'Symbol' (Location) could be made static
+-e766			//Include of header file FileName not used in module String
+-e767			//macro 'Symbol' was defined differently in another module (Location)
+-e768			//global struct member 'Symbol' (Location) not referenced
+-e769			//global enumeration constant 'Symbol' (Location) not referenced
+-e770			//tag 'Symbol' defined identically at Location
+-e771			//Symbol 'Symbol' (Location) conceivably not initialized
+-e772			//Symbol 'Symbol' (Location) conceivably not initialized
+-e773			//Expression-like macro 'Symbol' not parenthesized
+-e774			//Boolean within 'String' always evaluates to [True/False]
+-e775			//non-negative quantity cannot be less than zero
+-e776			//Possible truncation of addition
+-e777			//Testing float's for equality
+-e778			//Constant expression evaluates to 0 in operation: String
+-e779			//String constant in comparison operator: Operator
+-e780			//Vacuous array element
+-e781			//Inconsistent use of tag 'Symbol' conflicts with Location
+-e782			//Line exceeds Integer characters
+-e783			//Line does not end with new-line
+-e784			//Nul character truncated from string
+-e785			//Too few initializers for aggregate
+-e786			//String concatenation within initializer
+-e787			//enum constant 'Symbol' not used within switch
+-e788			//enum constant 'Symbol' not used within defaulted switch
+-e789			//Assigning address of auto variable 'Symbol' to static
+-e790			//Suspicious truncation, integral to float.
+-e791			//unusual option sequence
+-e792			//void cast of void expression
+-e793			//ANSI limit of 'String' 'String' 'Name' exceeded
+-e794			//Conceivable use of null pointer 'Symbol' in [left/right] argument to operator 'String Reference'
+-e795			//Conceivable division by 0
+-e796			//Conceivable access of out-of-bounds pointer ('Integer' beyond end of data) by operator 'String'
+-e797			//Conceivable creation of out-of-bounds pointer ('Integer' beyond end of data) by operator 'String'
+-e798			//Redundant character 'Char'
+-e799			//numerical constant 'Integer' larger than unsigned long
+-e801			//Use of goto is deprecated
+-e802			//Conceivably passing a null pointer to function 'Symbol', Context Reference
+-e803			//Conceivable data overrun for function 'Symbol', argument Integer exceeds argument Integer Reference
+-e804			//Conceivable access beyond array for function 'Symbol', argument Integer exceeds Integer Reference
+-e805			//Expected L"..." to initialize wide char string
+-e806			//Small bit field is signed rather than unsigned
+-e807			//Conceivably passing to function 'Symbol' a negative value (Integer), Context Reference
+-e808			//No explicit type given symbol 'Sybmol' given, assumed int
+-e809			//Possible return of address of auto through variable 'Symbol' 
+-e810			//Arithmetic modification of custodial variable 'Symbol'
+-e811			//Possible deallocation of pointer alias
+-e812			//static variable 'Symbol' has size 'Integer'
+-e813			//auto variable 'Symbol' in function 'Symbol' has size 'Integer'
+-e814			//useless declaration
+-e815			//Arithmetic modification of unsaved pointer
+-e816			//Non-ANSI format specification
+-e817			//Conceivably negative subscript (Integer) in operator 'String' 
+-e818			//Pointer parameter 'Symbol' (Location) could be declared ptr to const
+-e820			//Boolean test of a parenthesized assignment
+-e821			//Right hand side of assignment not parenthesized
+-e825			//control flows into case/default without -fallthrough comment 
+-e826			//Suspicious pointer-to-pointer conversion (area too small)
+-e827			//Loop not reachable
+-e828			//Semantics of function 'Name' copied to function 'Name'
+-e830			//Location cited in prior message
+-e831			//Reference cited in prior message
+-e832			//Parameter 'Symbol' not explicitly declared, int assumed
+-e833			//"Symbol 'Symbol' is typed differently (String)
+-e834			//Operator '-' followed by operator '-' is confusing.  Use parentheses.
+-e835			//A zero has been given as [left/right] argument to operator 'Name'
+-e836			//Conceivable access of pointer pointing Integer bytes past nul character by operator 'String'
+-e838			//Previously assigned value to variable 'Symbol' has not been used
+-e839			//Storage class of symbol 'Symbol' assumed static (Location)
+-e840			//Use of nul character in a string literal
+-e843			//Variable 'Symbol' (Location) could be declared as const
+-e844			//Pointer variable 'Symbol' (Location) could be declared as pointing to const
+-e845			//The [left/right] argument to operator 'Name' is certain to be 0
+-e846			//Signedness of bit-field is implementation defined
+-e847			//Thread 'Symbol' has unprotected call to thread unsafe function 'Symbol'
+-e849			//Symbol 'Symbol' has same enumerator value 'String' as enumerator 'Symbol'
+-e850			//for loop index variable 'Symbol' whose type category is 'String' modified in body of the for loop
+-e864			//Expression involving variable 'Symbol' possibly depends on order of evaluation
+-e866			//Unusual use of 'String' in argument to sizeof
+-e900			//Successful completion, 'Integer' messages produced
+-e904			//Return statement before end of function 'Symbol'
+-e905			//Non-literal format specifier used (with arguments)
+-e909			//Implicit conversion from Type to bool
+-e910			//Implicit conversion (Context) from 0 to pointer
+-e911			//Implicit expression promotion from Type to Type
+-e912			//Implicit binary conversion from Type to Type
+-e913			//Implicit adjustment of expected argument type from Type to Type
+-e914			//Implicit adjustment of function return value from Type to Type
+-e915			//Implicit conversion (Context) Type to Type
+-e916			//Implicit pointer assignment conversion (Context)
+-e917			//Prototype coercion (Context) Type to Type
+-e918			//Prototype coercion (Context) of pointers
+-e919			//Implicit conversion (Context) Type to Type
+-e920			//Cast from Type to void
+-e921			//Cast from Type to Type
+-e922			//Cast from Type to Type
+-e923			//Cast from Type to Type
+-e924			//Cast from Type to Type
+-e925			//Cast from pointer to pointer
+-e926			//Cast from pointer to pointer
+-e927			//Cast from pointer to pointer
+-e928			//Cast from pointer to pointer
+-e929			//Cast from pointer to pointer
+-e930			//Cast from Type to Type
+-e931			//Both sides have side effects
+-e932			//Passing near pointer to library function 'Symbol' (Context)
+-e933			//Passing near pointer to far function (Context)
+-e934			//taking address of near auto variable 'Symbol' (Context)
+-e935			//int within struct
+-e936			//old-style function definition for function 'Symbol'
+-e937			//old-style function declaration for function 'Symbol'
+-e938			//parameter 'Symbol' not explicitly declared
+-e939			//return type defaults to int for function 'Symbol'
+-e940			//omitted braces within an initializer
+-e941			//Result 0 due to operand(s) equaling 0 in operation 'String' 
+-e942			//Possibly truncated addition promoted to float
+-e943			//Too few initializers for aggregate
+-e944			//[left/right/] argument for operator 'String' always evaluates to [True/False]
+-e945			//Undefined struct used with extern
+-e946			//Relational or subtract operator applied to pointers
+-e947			//Subtract operator applied to pointers
+-e948			//Operator 'String' always evaluates to [True/False]
+-e950			//Non-ANSI reserved word or construct: 'Symbol'
+-e951			//Pointer to incomplete type 'Symbol' employed in operation
+-e952			//Parameter 'Symbol' (Location) could be declared const
+-e953			//Variable 'Symbol' (Location) could be declared as const
+-e954			//Pointer variable 'Symbol' (Location) could be declared as pointing to a const
+-e955			//Parameter name missing from prototype for function 'Symbol' 
+-e956			//Non const, non volatile static or external variable 'Symbol' 
+-e957			//Function 'Symbol' defined without a prototype in scope
+-e958			//Padding of Integer byte(s) is required to align member on Integer byte boundary
+-e959			//struct size (Integer bytes) is not an even multiple of the maximum member alignment (Integer bytes)
+-e960			//Violates MISRA Year Required Rule Name, String
+-e961			//Violates MISRA Year Advisory Rule Name, String
+-e962			//Macro 'Symbol' defined identically at another location (Location)
+-e963			//Qualifier const or volatile follows/precedes a type; use -fqb/+fqb to reverse the test
+-e964			//Header file FileName not directly used in module String
+-e966			//Indirectly included header file 'FileName' not used in module 'String'
+-e967			//Header file 'FileName' does not have a standard include guard
+-e970			//Use of modifier or type 'Name' outside of a typedef
+-e971			//Use of 'char' without 'signed' or 'unsigned'
+-e973			//Unary operator in macro 'Symbol' not parenthesized
+-e974			//Worst case function for stack usage: String
+-e975			//Unrecognized pragma 'Name' will be ignored
+-e1001			//Scope 'Name' must be a struct or class name
+-e1002			//'this' must be used in class member function
+-e1003			//'this' may not be used in a static member function
+-e1004			//Expected a pointer to member after .* or ->*
+-e1005			//Destructor declaration requires class
+-e1006			//Language feature 'String' not supported
+-e1007			//Pure specifier for function 'Symbol' requires a virtual function
+-e1008			//Expected '0' to follow '=', text ignored
+-e1009			//operator String not redefinable
+-e1010			//Expected a type or an operator
+-e1011			//Conversion Type Name too long
+-e1012			//Type not needed before 'operator type'
+-e1013			//Symbol 'Name' not a member of class 'Name'
+-e1014			//Explicit storage class not needed for member function 'Symbol'
+-e1015			//Symbol 'Name' not found in class
+-e1016			//Symbol 'Symbol' is supposed to denote a class
+-e1017			//conflicting access-specifier 'String'
+-e1018			//Expected a type after 'new'
+-e1019			//Could not find match for function 'Symbol(String)'
+-e1020			//template specialization for 'Symbol' declared without a 'template<>' prefix
+-e1022			//Function: 'String' must be a class member
+-e1023			//Call String(String) is ambiguous; candidates: String
+-e1024			//No function has same argument count as 'Name'
+-e1025			//No function matches invocation 'Name' on arg no. Integer
+-e1026			//Undominated function 'String' does not dominate 'String' on call to 'String'
+-e1027			//Non-consecutive default arguments in function 'String', assumed 0
+-e1028			//Last argument not default in first instance of function 'String', assumed 0
+-e1029			//Default argument repeated in function 'String'
+-e1030			//Not all arguments after arg no. Integer are default in function 'String'
+-e1031			//Local variable 'Symbol' used in default argument expression 
+-e1032			//Member 'String' cannot be called without object
+-e1033			//Static member functions cannot be virtual
+-e1034			//Static member 'Symbol' is global and cannot be redefined
+-e1035			//Non-static member 'Symbol' cannot initialize a default argument
+-e1036			//ambiguous reference to constructor; candidates: 'String' 
+-e1037			//ambiguous reference to conversion function; candidates: 'String'
+-e1038			//type 'Name' not found, nested type 'Name::String' assumed
+-e1039			//Symbol 'Symbol' is not a member of class 'String'
+-e1040			//Symbol 'Symbol' is not a legal declaration within class 'String'
+-e1041			//Can't declare 'String', assumed 'operator String'
+-e1042			//At least one class-like operand is required with Name
+-e1043			//Attempting to 'delete' a non-pointer
+-e1046			//member 'Symbol', referenced in a static function, requires an object
+-e1047			//a template declaration must be made at file scope
+-e1048			//expected a constant expression
+-e1049			//Too many template arguments
+-e1050			//expected a template argument list '<...>' for template 'Symbol'
+-e1051			//Symbol 'Name' is both a function and a variable
+-e1052			//a type was expected, 'class' assumed
+-e1053			//'String' cannot be distinguished from 'String'
+-e1054			//template variable declaration expects a type, int assumed
+-e1055			//Symbol 'Symbol' undeclared, assumed to return int
+-e1056			//assignment from void * is not allowed in C++
+-e1057			//member 'Symbol' cannot be used  without an object
+-e1058			//Initializing a non-const reference 'Symbol' with a non-lvalue 
+-e1059			//Can't convert from Type to Type
+-e1060			//String member 'Symbol is not accessible to non-member non-friend functions
+-e1061			//String member 'Symbol' is not accessible through non-public inheritance
+-e1062			//template must be either a class or a function
+-e1063			//Argument to copy constructor for class 'Symbol' should be a reference
+-e1064			//Template parameter list for template 'Symbol' inconsistent with Location
+-e1065			//Symbol 'Symbol' not declared as "C" conflicts with Location
+-e1066			//Symbol 'Symbol' declared as "C" conflicts with Location
+-e1067			//invalid prototype for function 'Symbol'
+-e1068			//Symbol 'Symbol' can not be overloaded
+-e1069			//Symbol 'Name' is not a base class of class 'Name'
+-e1070			//No scope in which to find symbol 'Name'
+-e1071			//Constructors and destructors can not have return type 
+-e1072			//Reference variable 'Symbol' must be initialized
+-e1073			//Insufficient number of template parameters; 'String' assumed 
+-e1074			//Expected a namespace identifier
+-e1075			//Ambiguous reference to symbol 'Symbol' and symbol 'Symbol' 
+-e1076			//Anonymous union assumed to be 'static'
+-e1077			//Could not evaluate default template parameter 'String'
+-e1078			//class 'Symbol' should not have itself as a base class
+-e1079			//Could not find '>' or ',' to terminate template parameter at Location
+-e1081			//Object parameter does not contain the address of a variable
+-e1080			//Definition for class 'Matrix' is not in scope
+-e1082			//Object parameter for a reference type should be an external symbol
+-e1083			//Ambiguous conversion between 2nd and 3rd operands of conditional operator
+-e1086			//Compound literals may only be used in C99 programs
+-e1087			//Previous declaration of 'Name' (Location) is incompatible with 'Name' (Location) which was introduced by the current usingdeclaration
+-e1088			//A using-declaration must name a qualified-id
+-e1089			//A using-declaration must not name a namespace
+-e1090			//A using-declaration must not name a template-id
+-e1091			//'Name' is not a base class of 'Name'
+-e1092			//A using-declaration that names a class member must be a  memberdeclaration 
+-e1093			//A pure specifier was given for function 'Symbol' which was not declared virtual
+-e1094			//Could not find ')' or ',' to terminate default function argument at Location
+-e1095			//Effective type 'Type' of non-type template parameter #Integer (corresponding to argument expression 'String') depends on an unspecialized parameter of this partial specialization
+-e1098			//Function template specialization 'incrementReferenceCount(int)' does not match any function template
+-e1100			//Declaration of 'callFunction<BW::PyTarget>' does not declare an explicit specialization, explicit instantiation or friend
+-e1111			//ISO C++ requires an explicit specialization to appear at namespace scope
+-e1112			//In a type-id, the form 'auto D(parms)->type' (where D is either empty or a parenthesized region) is the only valid way to use a trailing-return-type.
+-e1401			//member symbol 'Symbol' (Location) not initialized by constructor
+-e1402			//member 'Symbol' (Location) not initialized
+-e1403			//member 'Symbol' (Location) not initialized
+-e1404			//deleting an object of type 'Symbol' before type is defined 
+-e1405			//Header <typeinfo> must be included before typeid is used
+-e1411			//Member with different signature hides virtual member 'Symbol' (Location)
+-e1412			//Reference member 'Symbol' is not initialized
+-e1413			//function 'Symbol' is returning a temporary via a reference
+-e1414			//Assigning address of auto variable 'Symbol' to member of this
+-e1415			//Pointer to non-POD class 'Name' passed to function 'Symbol' (Context)
+-e1416			//An uninitialized reference 'Symbol' is being used to initialize reference 'Symbol'
+-e1417			//reference member 'Symbol' not initialized by constructor initializer list
+-e1501			//data member 'Symbol' has zero size
+-e1502			//defined object 'Symbol' has no data members
+-e1503			//a tagged union is not anonymous
+-e1504			//useless struct declaration
+-e1505			//no access specifier provided, 'String' assumed
+-e1506			//Call to virtual function 'Symbol' within a constructor or destructor
+-e1507			//attempting to 'delete' an array
+-e1509			//base class destructor for class 'Name' is not virtual
+-e1510			//base class 'Name' has no destructor
+-e1511			//Member hides non-virtual member 'Symbol' (Location)
+-e1512			//destructor for base class 'Symbol' (Location) is not virtual 
+-e1513			//storage class ignored
+-e1514			//Creating temporary to copy 'Type' to 'Type' (context: Context)
+-e1515			//Default constructor not available for member 'Symbol'
+-e1516			//Data member hides inherited member 'Symbol' (Location)
+-e1520			//Multiple assignment operators for class 'Symbol'
+-e1521			//Multiple copy constructors for class 'Symbol'
+-e1522			//Symbol 'Symbol' is an array of empty objects
+-e1524			//new in constructor for class 'Name' which has no explicit destructor
+-e1526			//Member function 'Symbol' (Location) not defined
+-e1527			//static member 'Symbol' (Location) not defined
+-e1528			//call to String does not match function template String
+-e1529			//Symbol 'Symbol' not first checking for assignment to this
+-e1531			//Symbol 'Symbol' (Location) should have compared argument against sizeof(class)
+-e1532			//Symbol 'Symbol' not checking argument for NULL
+-e1533			//Repeated friend declaration for symbol 'Symbol'
+-e1534			//static variable 'Symbol' found within inline function in header
+-e1535			//Exposing low access data through member 'Symbol'
+-e1536			//Exposing low access member 'Symbol'
+-e1537			//const function returns pointer data member 'Symbol'
+-e1538			//base class 'Name' absent from initializer list for copy constructor
+-e1539			//member 'Symbol' (Location) not assigned by assignment operator
+-e1540			//pointer member 'Symbol' (Location) neither freed nor zero'ed by destructor
+-e1541			//member 'Symbol' (Location) possibly not initialized by constructor
+-e1542			//member 'Symbol' (Location) possibly not initialized
+-e1543			//member 'Symbol' (Location) possibly not initialized
+-e1544			//value of variable 'Symbol' (Location) indeterminate (order of initialization)
+-e1545			//value of variable 'Symbol' used previously to initialize variable 'Symbol' (Location)
+-e1546			//throw() called within destructor 'Symbol'
+-e1547			//Assignment of array to pointer to base class (Context)
+-e1548			//Exception specification for 'Symbol' conflicts with Location 
+-e1549			//Exception thrown for function 'Symbol' not declared to throw 
+-e1550			//exception 'Name' thrown by function 'Symbol' is not on throw-list of function 'Symbol'
+-e1551			//function 'Symbol' may throw an exception in destructor 'Symbol'
+-e1552			//Converting pointer to array-of-derived to pointer to base 
+-e1553			//struct 'Symbol' declared as extern "C" contains C++ substructure 'Symbol' (Location)
+-e1554			//Direct pointer copy of member 'Symbol' within copy constructor: 'Symbol'
+-e1555			//Direct pointer copy of member 'Symbol' within copy assignment operator: 'Symbol'
+-e1556			//'new Type(integer)' is suspicious
+-e1557			//const member 'Symbol' is not initialized
+-e1558			//'virtual' coupled with 'inline' is an unusual combination
+-e1559			//Uncaught exception 'Name' may be thrown in destructor 'Symbol'
+-e1560			//Uncaught exception 'Name' not on throw-list of function 'Symbol'
+-e1561			//Reference initialization causes loss of const/volatile integrity (Context)
+-e1562			//Exception specification for 'Symbol' is not a subset of 'Symbol' (Location)
+-e1563			//Suspicious third argument to ?: operator
+-e1564			//Assigning a non-zero-one constant to a bool
+-e1565			//member 'Symbol' (Location) not assigned by initializer function
+-e1566			//member 'Symbol' (Location) might have been initialized by a separate function but no '- sem(Name,initializer)' was seen
+-e1567			//Initialization of variable 'Symbol' (Location) is indeterminate as it uses variable 'Symbol' through calls: 'String'
+-e1568			//Variable 'Symbol' (Location) accesses variable 'Symbol' before the latter is initialized through calls: 'String'
+-e1569			//Initializing a reference with a temporary
+-e1570			//Initializing a reference class member with an auto variable 'Symbol'
+-e1571			//Returning an auto variable 'Symbol' via a reference type
+-e1572			//Initializing a static reference variable with an auto variable 'Symbol'
+-e1573			//Generic function template 'Symbol' declared in namespace associated with type 'Symbol' (Location)
+-e1576			//Specialization of template 'Symbol' not declared in same file as primary template
+-e1577			//Partial or explicit specialization does not occur in the same file as primary template 'Symbol' (Location)
+-e1578			//Pointer member 'Symbol' (Location) neither freed nor zeroed by cleanup function
+-e1579			//Pointer member 'Symbol' (Location) might have been freed by a separate function but no '-sem(Name,cleanup)' was seen
+-e1701			//redundant access-specifier 'String'
+-e1702			//operator 'Name' is both an ordinary function 'String' and a member function 'String'
+-e1703			//Function 'String' arbitrarily selected.  Refer to Error 'Integer'
+-e1704			//Constructor 'Symbol' has private access specification
+-e1705			//static class member may be accessed by the scoping operator
+-e1706			//Declaration with scope operator is unusual within a class 
+-e1707			//static assumed for String
+-e1708			//typedef 'Symbol not declared as "C" conflicts with Location
+-e1709			//typedef 'Symbol' declared as "C" conflicts with Location
+-e1710			//An implicit 'typename' was assumed
+-e1711			//class 'Symbol' (Location) has a virtual function but is not inherited
+-e1712			//default constructor not defined for class 'Name'
+-e1713			//Redundant parentheses ignored
+-e1713			//Parentheses have inconsistent interpretation
+-e1714			//Member function 'Symbol' (Location) not referenced
+-e1715			//static member 'Symbol' (Location) not referenced
+-e1716			//Virtual member function 'Symbol' (Location) not referenced
+-e1717			//empty prototype for function declaration, assumed '(void)'
+-e1718			//expression within brackets ignored
+-e1719			//assignment operator for class 'Symbol' has non-reference parameter
+-e1720			//assignment operator for class 'Symbol' has non-const parameter
+-e1721			//operator =() for class 'Symbol' is not assignment operator 
+-e1722			//assignment operator for class 'Symbol' does not return a reference to class
+-e1724			//Argument to copy constructor for class 'Symbol' should be a const reference
+-e1725			//class member 'Symbol' is a reference
+-e1726			//taking address of overloaded function name 'Symbol'
+-e1727			//inline 'Symbol' not previously defined inline at (Location)
+-e1728			//Symbol 'Symbol' was previously defined inline at (Location)
+-e1729			//Initializer inversion detected for member 'Symbol'
+-e1730			//class/struct inconsistency for symbol 'Symbol' (conflicts with Location)
+-e1732			//new in constructor for class 'Name' which has no assignment operator
+-e1733			//new in constructor for class 'Name' which has no copy constructor
+-e1734			//Had difficulty compiling template function: 'Symbol'
+-e1735			//Virtual function 'Symbol' has default parameter
+-e1736			//Redundant access specifier (String)
+-e1737			//Symbol 'Symbol' hides global operator new
+-e1738			//non-copy constructor 'Symbol' used to initialize copy constructor
+-e1739			//Binary operator 'Symbol' should be non-member function
+-e1740			//pointer member 'Symbol' (Location) not directly freed or zero'ed by destructor
+-e1741			//member 'Symbol' (Location) conceivably not initialized by constructor
+-e1742			//member 'Symbol' (Location) conceivably not initialized
+-e1743			//member 'Symbol' (Location) conceivably not initialized
+-e1744			//member 'Symbol' (Location) possibly not initialized by private constructor
+-e1745			//member 'Symbol' (Location) not assigned by private assignment operator
+-e1746			//parameter 'Symbol' of function 'Symbol' could be made const reference
+-e1747			//binary operator 'Symbol' returning a reference
+-e1748			//non-virtual base class 'Name' included twice in class 'Name' 
+-e1749			//base class 'Symbol' of class 'Symbol' need not be virtual
+-e1750			//local template 'Symbol' (Location) not referenced
+-e1752			//catch parameter Integer is not a reference
+-e1753			//Overloading special operator 'Symbol'
+-e1754			//Expected symbol 'Symbol' to be declared for class 'Symbol' 
+-e1755			//global template 'Symbol' (Location) not referenced
+-e1757			//Discarded instance of post decrement/increment
+-e1758			//Prefix increment/decrement operator 'Symbol' returns a non-reference
+-e1759			//Postfix increment/decrement operator 'Symbol' returns a reference.
+-e1760			//Redundant template 'Symbol' defined identically at Location
+-e1761			//Declaration of function 'Symbol' hides overloaded function 'Symbol' (Location)
+-e1762			//Member function 'Symbol' could be made const
+-e1763			//Member function 'Symbol' marked as const indirectly modifies class
+-e1764			//Reference parameter could be declared const reference
+-e1768			//Virtual function 'Symbol' has an access (String) different from the access (String) in the base class (String) 
+-e1769			//Member or base class 'Symbol' has no constructor
+-e1770			//function 'Symbol' defined without function 'String'
+-e1771			//function 'Symbol' replaces global function
+-e1772			//Assignment operator 'Symbol' is not returning *this
+-e1773			//Attempt to cast away const (or volatile)
+-e1774			//Could use dynamic_cast to downcast ptr to polymorphic type 'Symbol'
+-e1775			//Catch block does not catch any declared exception
+-e1776			//Converting string literals to char * is deprecated (Context) 
+-e1777			//Template recursion limit (Integer) reached, use -tr_limit(n)
+-e1778			//Assignment of string literal to variable 'Symbol' (Location) is not const safe
+-e1780			//Returning address of reference parameter 'Symbol'
+-e1781			//Passing address of reference parameter 'Symbol' into caller address space
+-e1782			//Assigning address of reference parameter 'Symbol' to a static variable
+-e1784			//Symbol 'Symbol' previously declared as "C", compare with Location
+-e1785			//Implicit conversion from Boolean (Context) (Type to Type)
+-e1786			//Implicit conversion to Boolean (Context) (Type to Type)
+-e1787			//Access declarations are deprecated in favor of using declarations
+-e1788			//Variable 'Symbol' (Location) (type 'Name') is referenced only by its constructor or destructor
+-e1789			//Template constructor 'Symbol' cannot be a copy constructor
+-e1790			//Base class 'Symbol' has no non-destructor virtual functions
+-e1791			//No token on this line follows the 'return' keyword
+-e1793			//While calling 'Symbol': Initializing the implicit object parameter 'Type' (a non-const reference) with a non-lvalue
+-e1794			//Using-declaration introduces 'Name' (Location), which has the same parameter list as 'Name' (Location), which was also introduced here by previous using-declaration 'Name' (Location)
+-e1795			//Defined template 'Symbol' was not instantiated
+-e1796			//Explicit specialization of overloaded function template 'Symbol'
+-e1901			//Creating a temporary of type 'Symbol'
+-e1902			//useless ';' follows '}' in function definition
+-e1904			//Old-style C comment
+-e1905			//implicit default constructor generated for class 'Name'
+-e1907			//implicit destructor generated for class 'Name'
+-e1908			//'virtual' assumed for destructor'~Name()' (inherited from base class 'Name()
+-e1909			//'virtual' assumed, see: function 'Symbol' (Location)
+-e1911			//Implicit call of constructor 'Symbol' (see text)
+-e1912			//Implicit call of conversion function from class 'Name' to type 'Type'
+-e1914			//Default constructor 'Symbol' (Location) not referenced
+-e1916			//Ellipsis encountered
+-e1917			//empty prototype for definition, assumed '(void)'
+-e1917			//Empty prototype for String, assumed '(void)'
+-e1918			//empty prototype for member declaration, assumed (void)
+-e1919			//Multiple assignment operators for class 'Symbol'
+-e1920			//Casting to a reference
+-e1921			//Symbol 'Symbol' not checking argument against sizeof(class) 
+-e1922			//Symbol 'Symbol' not checking argument for NULL
+-e1923			//macro 'Symbol' could become const variable
+-e1924			//C-style cast
+-e1925			//Symbol 'Symbol' is a public data member
+-e1926			//Symbol 'Symbol's default constructor implicitly called
+-e1927			//Symbol 'Symbol' was not initialized in the constructor initializer list
+-e1928			//Symbol 'Name' did not appear in the constructor initializer list
+-e1929			//function 'Symbol' returning a reference
+-e1930			//Conversion operator 'Symbol' found
+-e1931			//Constructor 'Symbol' can be used for implicit conversions
+-e1932			//Base class 'Symbol' is not abstract.
+-e1933			//Call to unqualified virtual function 'Symbol' from non-static member function
+-e1934			//Shift operator 'Symbol' should be non-member function
+-e1935			//Dynamic initialization for class object 'Symbol1' (references 'Symbol2')
+-e1936			//Dynamic initialization for variable 'Symbol1' (references 'Symbol2')
+-e1937			//Static variable 'Symbol' has a destructor.
+-e1938			//constructor 'Symbol' accesses global data.
+-e1939			//Down cast detected
+-e1940			//Address of reference parameter 'Symbol' transferred outside of function
+-e1941			//Assignment operator for class 'Symbol' does not return a const reference to class
+-e1942			//Unqualified name 'Symbol' subject to misinterpretation owing to dependent base class
+-e1960			//Violates MISRA C++ Required Rule Name, String
+-e1961			//virtual member function 'Symbol' could be made const
+-e1962			//Non-const member function 'Symbol' contains a deep modification.
+-e1963			//Violates MISRA C++ Required Rule Name, String

@@ -1,0 +1,146 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_VISUALEXPORT_DLG DIALOGEX 0, 0, 249, 271
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Visual exporter"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CONTROL         "&Visual",IDC_VISUAL,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,78,12,35,10
+    CONTROL         "&Animation",IDC_ANIMATION,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,158,12,46,10
+    CONTROL         "A&nimated, skinned (Bones, rigged)",IDC_EXPORT_NORMAL,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,14,50,217,11
+    CONTROL         "&Static (No bones)",IDC_EXPORT_STATIC,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,14,63,214,11
+    CONTROL         "Static &with nodes (Non-skinned objects with a hierarchy)",IDC_EXPORT_STATIC_WITH_NODES,
+                    "Button",BS_AUTORADIOBUTTON | WS_TABSTOP,14,76,222,11
+    CONTROL         "Mesh &particles",IDC_EXPORT_MESH_PARTICLES,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,14,88,220,11
+    CONTROL         "Transform to origin",IDC_TRANSFORMTOORIGIN,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,14,109,225,10
+    CONTROL         "A&llow scale",IDC_ALLOWSCALE,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,14,121,225,10
+    CONTROL         "N&ormal mapped",IDC_BUMPMAP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,133,225,10
+    CONTROL         "&Keep existing materials",IDC_KEEP_EXISTING_MATERIALS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,145,225,10
+    CONTROL         "Snap &vertices (Does not affect Animated visual type)",IDC_SNAP_VERTICES,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,157,225,10
+    CONTROL         "&Use reference node",IDC_USE_REFERENCE_NODE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,169,225,10
+    CONTROL         "Strip &reference prefix",IDC_STRIP_REF_PREFIX,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,181,225,10
+    DEFPUSHBUTTON   "&OK",IDOK,27,249,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,91,249,50,14
+    PUSHBUTTON      "A&dvanced Settings",IDSETTINGS,155,249,66,14
+    GROUPBOX        "Visual type:",IDC_STATIC,7,40,234,61
+    LTEXT           "(Visual Type Id)",IDC_VISUAL_TYPE_ID,6,30,108,8
+    LTEXT           "Export Type:",IDC_STATIC,7,14,39,8
+    GROUPBOX        "Textures",IDC_TEXTURES,7,197,234,46
+    CONTROL         "Copy external textures",IDC_COPY_TEXTURES_OPTION,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,211,217,10
+    EDITTEXT        IDC_COPY_TEXTURES_LOCATION,44,224,175,14,ES_AUTOHSCROLL
+    LTEXT           "Copy to :",IDC_COPY_TEXTURES,14,226,29,8
+    PUSHBUTTON      "...",IDC_COPY_TEXTURES_BROWSE,220,224,18,14
+END
+
+IDD_SETTINGSDIALOG DIALOGEX 0, 0, 153, 106
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Bone count",IDC_STATIC,27,6,36,8
+    EDITTEXT        IDC_BONE_STEP,67,4,35,12,ES_RIGHT | ES_AUTOHSCROLL
+    CONTROL         "",IDC_BONE_STEP_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS | WS_TABSTOP,105,4,11,11
+    CONTROL         "Use decimetres (Ignore Maya units)",IDC_LEGACY_SCALING,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,20,128,10
+    CONTROL         "Disable visual checker",IDC_VISUALCHECKER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,32,128,10
+    CONTROL         "Fix cylindrical mapping",IDC_CYLINDRICAL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,44,128,10
+    CONTROL         "Opposite facing direction",IDC_LEGACY_ORIENTATION,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,56,128,10
+    CONTROL         "Scene root added",IDC_SCENE_ROOT_ADDED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,68,128,10
+    DEFPUSHBUTTON   "OK",IDOK,15,84,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,79,84,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_VISUALEXPORT_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 241
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 265
+    END
+
+    IDD_SETTINGSDIALOG, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 98
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

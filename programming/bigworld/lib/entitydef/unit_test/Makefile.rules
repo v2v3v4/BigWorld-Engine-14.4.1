@@ -1,0 +1,50 @@
+name  := entitydef
+type  := unit_test
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =											\
+	main											\
+	test_datatype_const_iterator					\
+	test_datatype_persistent_only_const_iterator	\
+	unittest_mailbox								\
+	test_datasection								\
+	test_method_description							\
+	test_script_data_sink							\
+	test_script_data_source							\
+	test_single_data_sink							\
+	test_single_data_source							\
+	test_stream										\
+	test_conversion									\
+	test_streamsizes								\
+	integer_range_checker	\
+
+# TODO: entitydef library should not depend on network
+# TODO: entitydef library should not depend on chunk
+# TODO: entitydef library should not depend on physics2
+# TODO: entitydef library should not depend on terrain
+# TODO: entitydef library should not depend on moo
+# TODO: entitydef library should not depend on png
+dependsOn += 	\
+	pyscript 	\
+	script		\
+	entitydef 	\
+	chunk 		\
+	scene		\
+	terrain 	\
+	moo		\
+	png		\
+	physics2 	\
+	network 	\
+	resmgr 		\
+	zip 		\
+	math 		\
+	cstdmf
+
+usePython  := 1
+useOpenSSL := 1
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - entitydef/unit_test

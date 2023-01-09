@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="nvmath">
+      <UniqueIdentifier>{f31dd969-e25f-44db-80cb-592a3a4bdd02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nvtt">
+      <UniqueIdentifier>{6f006eb8-dc73-4b78-8eae-78dff41de404}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nvimage">
+      <UniqueIdentifier>{a9900c29-71fd-4e9b-aa7f-67372fdde8a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nvcore">
+      <UniqueIdentifier>{d7c4d6f3-8546-407b-87c4-a1d3b3530a00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="squish">
+      <UniqueIdentifier>{f24adf29-241d-4e82-a40a-638bdc05c2a9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\src\nvmath\Box.h">
+      <Filter>nvmath</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvmath\Color.h">
+      <Filter>nvmath</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvmath\Matrix.h">
+      <Filter>nvmath</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvmath\Plane.h">
+      <Filter>nvmath</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvmath\Vector.h">
+      <Filter>nvmath</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvtt\cuda\Bitmaps.h">
+      <Filter>nvtt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvtt\CompressDXT.h">
+      <Filter>nvtt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvtt\CompressionOptions.h">
+      <Filter>nvtt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvtt\Compressor.h">
+      <Filter>nvtt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvtt\CompressRGB.h">
+      <Filter>nvtt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvtt\cuda\CudaCompressDXT.h">
+      <Filter>nvtt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvtt\cuda\CudaMath.h">
+      <Filter>nvtt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvtt\cuda\CudaUtils.h">
+      <Filter>nvtt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvtt\InputOptions.h">
+      <Filter>nvtt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvtt\nvtt.h">
+      <Filter>nvtt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvtt\nvtt_wrapper.h">
+      <Filter>nvtt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvtt\OptimalCompressDXT.h">
+      <Filter>nvtt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvtt\OutputOptions.h">
+      <Filter>nvtt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvtt\QuickCompressDXT.h">
+      <Filter>nvtt</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>nvtt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvimage\BlockDXT.h">
+      <Filter>nvimage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvimage\ColorBlock.h">
+      <Filter>nvimage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvimage\DirectDrawSurface.h">
+      <Filter>nvimage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvimage\Filter.h">
+      <Filter>nvimage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvimage\FloatImage.h">
+      <Filter>nvimage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvimage\Image.h">
+      <Filter>nvimage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvimage\ImageIO.h">
+      <Filter>nvimage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvimage\NormalMap.h">
+      <Filter>nvimage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvimage\nvimage.h">
+      <Filter>nvimage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvimage\PixelFormat.h">
+      <Filter>nvimage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvimage\PsdFile.h">
+      <Filter>nvimage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvimage\Quantize.h">
+      <Filter>nvimage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvimage\TgaFile.h">
+      <Filter>nvimage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvcore\Containers.h">
+      <Filter>nvcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvcore\Debug.h">
+      <Filter>nvcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvcore\DefsVcWin32.h">
+      <Filter>nvcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvcore\Library.h">
+      <Filter>nvcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvcore\Memory.h">
+      <Filter>nvcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\nvconfig.h">
+      <Filter>nvcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvcore\nvcore.h">
+      <Filter>nvcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvcore\Ptr.h">
+      <Filter>nvcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvcore\StrLib.h">
+      <Filter>nvcore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvtt\squish\clusterfit.h">
+      <Filter>squish</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvtt\squish\colourblock.h">
+      <Filter>squish</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvtt\squish\colourfit.h">
+      <Filter>squish</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvtt\squish\colourset.h">
+      <Filter>squish</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvtt\squish\fastclusterfit.h">
+      <Filter>squish</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvtt\squish\maths.h">
+      <Filter>squish</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvtt\squish\simd.h">
+      <Filter>squish</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvtt\squish\simd_sse.h">
+      <Filter>squish</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\nvtt\squish\weightedclusterfit.h">
+      <Filter>squish</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\nvmath\Plane.cpp">
+      <Filter>nvmath</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\nvtt\CompressDXT.cpp">
+      <Filter>nvtt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\nvtt\CompressionOptions.cpp">
+      <Filter>nvtt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\nvtt\Compressor.cpp">
+      <Filter>nvtt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\nvtt\CompressRGB.cpp">
+      <Filter>nvtt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\nvtt\cuda\CudaCompressDXT.cpp">
+      <Filter>nvtt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\nvtt\cuda\CudaUtils.cpp">
+      <Filter>nvtt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\nvtt\InputOptions.cpp">
+      <Filter>nvtt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\nvtt\nvtt.cpp">
+      <Filter>nvtt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\nvtt\nvtt_wrapper.cpp">
+      <Filter>nvtt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\nvtt\OptimalCompressDXT.cpp">
+      <Filter>nvtt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\nvtt\OutputOptions.cpp">
+      <Filter>nvtt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\nvtt\QuickCompressDXT.cpp">
+      <Filter>nvtt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\nvimage\BlockDXT.cpp">
+      <Filter>nvimage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\nvimage\ColorBlock.cpp">
+      <Filter>nvimage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\nvimage\DirectDrawSurface.cpp">
+      <Filter>nvimage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\nvimage\Filter.cpp">
+      <Filter>nvimage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\nvimage\FloatImage.cpp">
+      <Filter>nvimage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\nvimage\Image.cpp">
+      <Filter>nvimage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\nvimage\ImageIO.cpp">
+      <Filter>nvimage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\nvimage\NormalMap.cpp">
+      <Filter>nvimage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\nvimage\Quantize.cpp">
+      <Filter>nvimage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\nvcore\Debug.cpp">
+      <Filter>nvcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\nvcore\Library.cpp">
+      <Filter>nvcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\nvcore\Memory.cpp">
+      <Filter>nvcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\nvcore\StrLib.cpp">
+      <Filter>nvcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\nvcore\TextReader.cpp">
+      <Filter>nvcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\nvcore\TextWriter.cpp">
+      <Filter>nvcore</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\nvtt\squish\clusterfit.cpp">
+      <Filter>squish</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\nvtt\squish\colourblock.cpp">
+      <Filter>squish</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\nvtt\squish\colourfit.cpp">
+      <Filter>squish</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\nvtt\squish\colourset.cpp">
+      <Filter>squish</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\nvtt\squish\fastclusterfit.cpp">
+      <Filter>squish</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\nvtt\squish\maths.cpp">
+      <Filter>squish</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\nvtt\squish\weightedclusterfit.cpp">
+      <Filter>squish</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="nvtt.rc">
+      <Filter>nvtt</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuildStep Include="..\..\..\src\nvtt\cuda\ConvolveKernel.cu">
+      <Filter>nvtt</Filter>
+    </CustomBuildStep>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\src\nvtt\cuda\CompressKernel.cu">
+      <Filter>nvtt</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

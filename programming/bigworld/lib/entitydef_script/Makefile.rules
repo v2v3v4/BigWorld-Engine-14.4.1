@@ -1,0 +1,15 @@
+name         := entitydef_script
+type         := library
+
+include $(BW_COMPONENT_HEADER)
+
+cxxSource =												\
+		delegate_entity_method							\
+		py_component
+
+usePython = 1
+
+include $(BW_COMPONENT_FOOTER)
+
+# vi: filetype=make
+# Makefile.rules - libentitydef_script
