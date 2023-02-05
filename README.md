@@ -34,10 +34,6 @@ To start with this project you will need at least the following software:
 Server installation instructions are located in a separate [Server Installation Guide](<docs/pdf/Server Installation Guide.pdf>) document.
 Server build instructions can be found in [Server Build Guide](<docs/pdf/Server Build Guide.pdf>).
 
-## Getting help
-
-If you have questions, concerns, bug reports, etc, please file an issue in this repository's Issue Tracker.
-
 ## Getting involved
 
 Instructions on _how_ to contribute can be found in [CONTRIBUTING](CONTRIBUTING.md) document.
