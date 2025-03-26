@@ -41,3 +41,6 @@ Instructions on _how_ to contribute can be found in [CONTRIBUTING](CONTRIBUTING.
 <a href="https://sourceforge.net/p/bigworld/code/HEAD/tree/" target="_blank">Forked from </a>
 
 <a href="https://drive.google.com/file/d/1hLm_Ox0v-xIen8c4MvwRHQhkutf9bIpK/view?usp=share_link" target="_blank">Full resources link</a>
+
+<a href="https://blog.csdn.net/antsmall/article/details/139781143" target="_blank">Fantasydemo Server&Client tutorial</a>
+
