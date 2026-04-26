@@ -105,7 +105,7 @@ CMAKE_GENERATORS = [
 		generator = 'Visual Studio 17 2022',
 		architecture = 'x64',
 		dirsuffix = 'vc17_win64',
-		toolset = 'v141_xp',
+		toolset = 'v143',
 		experimental = True
 	),
 	dict(
